@@ -520,6 +520,18 @@ tbody tr.eliminated {
 /* ================= Bracket ================= */
 .bracket-section {
   margin-top: 2.5rem;
+  padding: 1.25rem 1.25rem 1.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  /* knockout stage sits on the trophy-on-flags photo (light wash for
+     readability); group stage keeps the tiled flag mosaic */
+  background-image:
+    linear-gradient(rgba(248, 250, 253, 0.66), rgba(248, 250, 253, 0.72)),
+    url("images/wc-flags-trophy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: 0 10px 26px rgba(22, 34, 59, 0.12);
 }
 
 .bracket-scroll {
