@@ -6,22 +6,9 @@
 
 "use strict";
 
-/* ---- Official groups (2026 draw). Playoff paths kept as slots.
-   [display name, ISO-3166 alpha-2 for the flag; "" = playoff/TBD]   */
-const DEFAULT_GROUPS = {
-  A: [["Mexico", "MX"], ["South Africa", "ZA"], ["Korea Republic", "KR"], ["Czechia", "CZ"]],
-  B: [["Canada", "CA"], ["Bosnia", "BA"], ["Qatar", "QA"], ["Switzerland", "CH"]],
-  C: [["Brazil", "BR"], ["Morocco", "MA"], ["Haiti", "HT"], ["Scotland", "SCT"]],
-  D: [["USA", "US"], ["Paraguay", "PY"], ["Australia", "AU"], ["Turkey", "TR"]],
-  E: [["Germany", "DE"], ["Curaçao", "CW"], ["Côte d'Ivoire", "CI"], ["Ecuador", "EC"]],
-  F: [["Netherlands", "NL"], ["Japan", "JP"], ["Sweden", "SE"], ["Tunisia", "TN"]],
-  G: [["Belgium", "BE"], ["Egypt", "EG"], ["IR Iran", "IR"], ["New Zealand", "NZ"]],
-  H: [["Spain", "ES"], ["Cabo Verde", "CV"], ["Saudi Arabia", "SA"], ["Uruguay", "UY"]],
-  I: [["France", "FR"], ["Senegal", "SN"], ["Iraq", "IQ"], ["Norway", "NO"]],
-  J: [["Argentina", "AR"], ["Algeria", "DZ"], ["Austria", "AT"], ["Jordan", "JO"]],
-  K: [["Portugal", "PT"], ["DR Congo", "CD"], ["Uzbekistan", "UZ"], ["Colombia", "CO"]],
-  L: [["England", "ENG"], ["Croatia", "HR"], ["Ghana", "GH"], ["Panama", "PA"]],
-};
+/* ---- Tournament data (teams & flags) lives in data.js as the global
+   `WC`, loaded before this file. Edit data.js to keep lineups current. */
+const DEFAULT_GROUPS = WC.groups;
 
 const GROUP_LETTERS = Object.keys(DEFAULT_GROUPS);
 
