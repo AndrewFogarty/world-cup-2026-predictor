@@ -7,7 +7,10 @@ vanilla JavaScript — no build step, no dependencies.
 
 ## Features
 - **All 12 groups (A–L)** from the official 2026 draw, full round-robin (6
-  matches each). Playoff paths (e.g. `CZE/DEN/IRL/MKD`) are kept as slots.
+  matches each), with the European/intercontinental playoff winners filled in
+  (Sweden, Czechia, Turkey, Bosnia, Iraq, DR Congo).
+- **Two input modes** — predict each match by exact **Scoreline**, or by
+  **Win / Draw / Loss** (1·X·2). Toggle at the top.
 - **Live standings** with FIFA tiebreakers: points → goal difference → goals
   for → head-to-head → name.
 - **Best third-placed teams** panel ranking all 12 thirds; the top 8 advance.

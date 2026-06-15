@@ -9,17 +9,17 @@
 /* ---- Official groups (2026 draw). Playoff paths kept as slots.
    [display name, ISO-3166 alpha-2 for the flag; "" = playoff/TBD]   */
 const DEFAULT_GROUPS = {
-  A: [["Mexico", "MX"], ["South Africa", "ZA"], ["Korea Republic", "KR"], ["CZE/DEN/IRL/MKD", ""]],
-  B: [["Canada", "CA"], ["BIH/ITA/NIR/WAL", ""], ["Qatar", "QA"], ["Switzerland", "CH"]],
+  A: [["Mexico", "MX"], ["South Africa", "ZA"], ["Korea Republic", "KR"], ["Czechia", "CZ"]],
+  B: [["Canada", "CA"], ["Bosnia", "BA"], ["Qatar", "QA"], ["Switzerland", "CH"]],
   C: [["Brazil", "BR"], ["Morocco", "MA"], ["Haiti", "HT"], ["Scotland", "SCT"]],
-  D: [["USA", "US"], ["Paraguay", "PY"], ["Australia", "AU"], ["KOS/ROU/SVK/TUR", ""]],
+  D: [["USA", "US"], ["Paraguay", "PY"], ["Australia", "AU"], ["Turkey", "TR"]],
   E: [["Germany", "DE"], ["Curaçao", "CW"], ["Côte d'Ivoire", "CI"], ["Ecuador", "EC"]],
-  F: [["Netherlands", "NL"], ["Japan", "JP"], ["ALB/POL/SWE/UKR", ""], ["Tunisia", "TN"]],
+  F: [["Netherlands", "NL"], ["Japan", "JP"], ["Sweden", "SE"], ["Tunisia", "TN"]],
   G: [["Belgium", "BE"], ["Egypt", "EG"], ["IR Iran", "IR"], ["New Zealand", "NZ"]],
   H: [["Spain", "ES"], ["Cabo Verde", "CV"], ["Saudi Arabia", "SA"], ["Uruguay", "UY"]],
-  I: [["France", "FR"], ["Senegal", "SN"], ["BOL/IRQ/SUR", ""], ["Norway", "NO"]],
+  I: [["France", "FR"], ["Senegal", "SN"], ["Iraq", "IQ"], ["Norway", "NO"]],
   J: [["Argentina", "AR"], ["Algeria", "DZ"], ["Austria", "AT"], ["Jordan", "JO"]],
-  K: [["Portugal", "PT"], ["COD/JAM/NCL", ""], ["Uzbekistan", "UZ"], ["Colombia", "CO"]],
+  K: [["Portugal", "PT"], ["DR Congo", "CD"], ["Uzbekistan", "UZ"], ["Colombia", "CO"]],
   L: [["England", "ENG"], ["Croatia", "HR"], ["Ghana", "GH"], ["Panama", "PA"]],
 };
 
@@ -30,7 +30,7 @@ const FIXTURES = [
   [0, 1], [2, 3], [0, 2], [1, 3], [0, 3], [1, 2],
 ];
 
-const STORAGE_KEY = "wc2026-predictor-v2";
+const STORAGE_KEY = "wc2026-predictor-v3";
 
 /* ---- Official Round-of-32 pairings (FIFA match numbers 73–88).
    "1X"/"2X" = winner/runner-up of group X. "3:ABCDF" = a best
@@ -104,11 +104,11 @@ for (const [id, kids] of Object.entries(LATER)) {
 BRACKET[103] = { round: "TP", home: { loser: 101 }, away: { loser: 102 } };
 
 /* ---- Application state ---- */
-let state = { names: {}, scores: {}, bracket: {} };
+let state = { names: {}, scores: {}, bracket: {}, mode: "score" };
 
 /* ================= Persistence ================= */
 function loadState() {
-  const fresh = { names: {}, scores: {}, bracket: {} };
+  const fresh = { names: {}, scores: {}, bracket: {}, mode: "score" };
   for (const g of GROUP_LETTERS) {
     fresh.names[g] = DEFAULT_GROUPS[g].map((t) => t[0]);
     fresh.scores[g] = FIXTURES.map(() => [null, null]);
@@ -125,6 +125,7 @@ function loadState() {
         }
       }
       if (saved.bracket && typeof saved.bracket === "object") fresh.bracket = saved.bracket;
+      if (saved.mode === "score" || saved.mode === "result") fresh.mode = saved.mode;
     }
   } catch (e) {
     /* ignore malformed storage */
@@ -290,15 +291,24 @@ function buildGroups() {
       const [hi, ai] = fx;
       const row = document.createElement("div");
       row.className = "match";
+      row.dataset.group = g;
+      row.dataset.match = m;
       row.innerHTML = `
         <span class="team home">
           <span class="flag">${flagEmoji(codeFor(g, hi))}</span>
           <span class="tname" data-group="${g}" data-idx="${hi}" contenteditable="true" spellcheck="false"></span>
         </span>
-        <span class="score">
-          <input class="goal" type="number" min="0" max="99" inputmode="numeric" data-group="${g}" data-match="${m}" data-side="0" aria-label="${g} match ${m + 1} home goals" />
-          <span class="dash">–</span>
-          <input class="goal" type="number" min="0" max="99" inputmode="numeric" data-group="${g}" data-match="${m}" data-side="1" aria-label="${g} match ${m + 1} away goals" />
+        <span class="mid">
+          <span class="score">
+            <input class="goal" type="number" min="0" max="99" inputmode="numeric" data-group="${g}" data-match="${m}" data-side="0" aria-label="${g} match ${m + 1} home goals" />
+            <span class="dash">–</span>
+            <input class="goal" type="number" min="0" max="99" inputmode="numeric" data-group="${g}" data-match="${m}" data-side="1" aria-label="${g} match ${m + 1} away goals" />
+          </span>
+          <span class="result" role="group" aria-label="${g} match ${m + 1} result">
+            <button class="res-btn" data-res="home" type="button" title="Home win" aria-label="Home win">1</button>
+            <button class="res-btn" data-res="draw" type="button" title="Draw" aria-label="Draw">X</button>
+            <button class="res-btn" data-res="away" type="button" title="Away win" aria-label="Away win">2</button>
+          </span>
         </span>
         <span class="team away">
           <span class="tname" data-group="${g}" data-idx="${ai}" contenteditable="true" spellcheck="false"></span>
@@ -465,9 +475,36 @@ function renderBracket() {
     finalCol;
 }
 
+/* ================= Result mode (Win/Draw/Loss) ================= */
+/* A result pick stores a canonical scoreline so the standings and
+   bracket engines stay unchanged: home win 1-0, draw 0-0, away 0-1. */
+function resultOf(score) {
+  if (score[0] === null || score[1] === null) return null;
+  if (score[0] > score[1]) return "home";
+  if (score[0] < score[1]) return "away";
+  return "draw";
+}
+
+function updateResultButtons() {
+  document.querySelectorAll(".match").forEach((row) => {
+    const res = resultOf(state.scores[row.dataset.group][+row.dataset.match]);
+    row.querySelectorAll(".res-btn").forEach((b) => {
+      b.classList.toggle("sel", b.dataset.res === res);
+    });
+  });
+}
+
+function setMode(mode) {
+  state.mode = mode === "result" ? "result" : "score";
+  document.body.classList.toggle("mode-result", state.mode === "result");
+  document.getElementById("mode-score").classList.toggle("active", state.mode === "score");
+  document.getElementById("mode-result").classList.toggle("active", state.mode === "result");
+}
+
 /* ================= Render all ================= */
 function renderAll() {
   GROUP_LETTERS.forEach(renderGroup);
+  updateResultButtons();
   renderThirds();
   renderBracket();
 }
@@ -490,9 +527,35 @@ function onNameEdit(e) {
   saveState();
 }
 
+function onResultClick(e) {
+  const btn = e.target.closest(".res-btn");
+  if (!btn) return;
+  const row = btn.closest(".match");
+  const g = row.dataset.group;
+  const m = +row.dataset.match;
+  const res = btn.dataset.res;
+  const cur = resultOf(state.scores[g][m]);
+  state.scores[g][m] =
+    res === cur ? [null, null] : res === "home" ? [1, 0] : res === "away" ? [0, 1] : [0, 0];
+  syncInputs();
+  renderAll();
+  saveState();
+}
+
 function wireEvents() {
   groupsEl.addEventListener("input", onGoalInput);
+  groupsEl.addEventListener("click", onResultClick);
   groupsEl.addEventListener("blur", onNameEdit, true);
+
+  document.getElementById("mode-score").addEventListener("click", () => {
+    setMode("score");
+    saveState();
+  });
+  document.getElementById("mode-result").addEventListener("click", () => {
+    setMode("result");
+    saveState();
+  });
+
   groupsEl.addEventListener("keydown", (e) => {
     if (e.target.classList.contains("tname") && e.key === "Enter") {
       e.preventDefault();
@@ -538,4 +601,5 @@ loadState();
 buildGroups();
 syncInputs();
 wireEvents();
+setMode(state.mode);
 renderAll();
