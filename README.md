@@ -30,23 +30,17 @@ Open `index.html` in any browser — that's it.
 open index.html
 ```
 
-## Live data (optional)
-A scheduled GitHub Action (`.github/workflows/update-data.yml`) can refresh team
-badges and match results and commit them back, so Pages auto-redeploys. To turn
-it on:
+## Live data
+Actual match results come from the community-maintained
+[openfootball/worldcup.json](https://github.com/openfootball/worldcup.json)
+project — **no API key**. In the app, click **"📥 Actual results"** to fill in
+the scores played so far; the standings and bracket update from them.
 
-1. **Get free API key(s):** [football-data.org](https://www.football-data.org/client/register)
-   for results; [TheSportsDB](https://www.thesportsdb.com/) for badges (optional —
-   a free test key is used otherwise).
-2. **Add them as repo secrets:** Settings → Secrets and variables → Actions →
-   *New repository secret* — `FOOTBALL_DATA_TOKEN` and (optionally)
-   `THESPORTSDB_KEY`.
-3. **Allow Actions to commit:** Settings → Actions → General → Workflow
-   permissions → **Read and write permissions**.
-
-The fetcher is `scripts/fetch-live-data.js`; it writes `data/live-data.json` and
-`live-data.js` (`window.WC_LIVE`). Wiring `WC_LIVE` into the UI (badges, real
-results) is the next step once the first run confirms the data shape.
+A scheduled GitHub Action (`.github/workflows/update-data.yml`) re-runs
+`scripts/fetch-live-data.js` every 6 hours, regenerates `live-data.js`
+(`window.WC_LIVE`) + `data/live-data.json`, and commits so Pages redeploys. The
+only setup required is to let the Action push: **Settings → Actions → General →
+Workflow permissions → Read and write permissions**.
 
 ## Notes
 - Default lineups follow the published draw; playoff slots resolve once those

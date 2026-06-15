@@ -33,6 +33,7 @@
             <button id="mode-score" class="mode-opt" type="button">Scoreline</button>
             <button id="mode-result" class="mode-opt" type="button">Win / Draw / Loss</button>
           </div>
+          <button id="load-actual" class="btn" type="button">📥 Actual results</button>
           <button id="randomize" class="btn" type="button">🎲 Randomize</button>
           <button id="reset" class="btn ghost" type="button">↺ Reset all</button>
         </div>
@@ -121,6 +122,8 @@
 
     <!-- data.js defines the editable tournament data; must load first -->
     <script src="data.js"></script>
+    <!-- live-data.js (optional) provides WC_LIVE actual results -->
+    <script src="live-data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

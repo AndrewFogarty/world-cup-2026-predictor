@@ -21,10 +21,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Fetch live data
-        env:
-          THESPORTSDB_KEY: ${{ secrets.THESPORTSDB_KEY }}
-          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+      - name: Fetch live data (openfootball — no API key needed)
         run: node scripts/fetch-live-data.js
 
       - name: Commit & push if changed

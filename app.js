@@ -496,6 +496,31 @@ function setMode(mode) {
   document.getElementById("mode-result").classList.toggle("active", state.mode === "result");
 }
 
+/* ================= Live (actual) results ================= */
+function countLiveResults() {
+  const r = (window.WC_LIVE && window.WC_LIVE.results) || {};
+  let n = 0;
+  for (const g of GROUP_LETTERS) (r[g] || []).forEach((x) => { if (x) n++; });
+  return n;
+}
+
+function loadActualResults() {
+  const live = window.WC_LIVE && window.WC_LIVE.results;
+  if (!live) return;
+  const n = countLiveResults();
+  if (!confirm(`Fill in the ${n} actual result(s) played so far? This overwrites the score for those matches.`)) return;
+  for (const g of GROUP_LETTERS) {
+    (live[g] || []).forEach((sc, i) => {
+      if (Array.isArray(sc) && sc.length === 2) {
+        state.scores[g][i] = [normScore(sc[0]), normScore(sc[1])];
+      }
+    });
+  }
+  syncInputs();
+  renderAll();
+  saveState();
+}
+
 /* ================= Render all ================= */
 function renderAll() {
   GROUP_LETTERS.forEach(renderGroup);
@@ -589,6 +614,20 @@ function wireEvents() {
     renderAll();
     saveState();
   });
+
+  // "Load actual results" — only enabled when live data is present
+  const la = document.getElementById("load-actual");
+  if (la) {
+    const n = countLiveResults();
+    if (window.WC_LIVE && n > 0) {
+      la.textContent = `📥 Actual results (${n})`;
+      const when = (window.WC_LIVE.updated || "").slice(0, 10);
+      la.title = `From ${window.WC_LIVE.source || "live data"}${when ? ", updated " + when : ""}`;
+      la.addEventListener("click", loadActualResults);
+    } else {
+      la.style.display = "none";
+    }
+  }
 }
 
 /* ================= Init ================= */

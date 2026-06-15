@@ -29,10 +29,16 @@ body {
   margin: 0;
   font-family: var(--sans);
   color: var(--ink);
-  background:
-    radial-gradient(1100px 480px at 88% -8%, rgba(200, 16, 46, 0.08), transparent),
-    radial-gradient(900px 460px at -8% 4%, rgba(37, 99, 201, 0.06), transparent),
-    var(--bg);
+  /* Tiled flag mosaic of all 48 nations behind everything (a light wash
+     keeps content readable); shows through group-stage & knockout gaps. */
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(244, 246, 251, 0.85), rgba(244, 246, 251, 0.9)),
+    url("images/flag-mosaic.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center, center;
+  background-size: cover, 360px auto;
+  background-attachment: fixed, fixed;
   min-height: 100vh;
   line-height: 1.5;
 }
@@ -44,13 +50,15 @@ body {
   position: relative;
   overflow: hidden;
   color: #fff;
-  background-color: #0c1220; /* fallback if the photo fails */
+  background-color: #0c1220; /* fallback */
+  /* Layers: dark tint -> trophy photo (right) -> tiled flag mosaic behind */
   background-image:
-    /* dark, left-weighted tint keeps the title legible over the photo */
-    linear-gradient(100deg, rgba(8, 12, 24, 0.9) 0%, rgba(8, 12, 24, 0.55) 48%, rgba(8, 12, 24, 0.18) 100%),
-    url("images/trophy.jpg");
-  background-size: cover;
-  background-position: center 32%;
+    linear-gradient(100deg, rgba(8, 12, 24, 0.92) 0%, rgba(8, 12, 24, 0.62) 48%, rgba(8, 12, 24, 0.5) 100%),
+    url("images/trophy.jpg"),
+    url("images/flag-mosaic.png");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: center, right center, center;
+  background-size: cover, auto 120%, 150px auto;
   box-shadow: 0 8px 28px rgba(12, 18, 32, 0.35);
 }
 

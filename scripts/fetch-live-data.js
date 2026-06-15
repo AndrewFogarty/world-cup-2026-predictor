@@ -1,16 +1,14 @@
 /* =====================================================================
    fetch-live-data.js — runs in GitHub Actions (Node 20) to refresh
-   live tournament data. Writes:
+   actual match results from openfootball/worldcup.json (no API key).
+
+   Writes:
      - data/live-data.json  (machine-readable snapshot)
      - live-data.js         (browser-loadable: sets window.WC_LIVE)
 
-   Sources:
-     - TheSportsDB  -> team badges/crests   (free; key optional)
-     - football-data.org -> match results   (needs FOOTBALL_DATA_TOKEN)
-
-   Secrets (repo → Settings → Secrets and variables → Actions):
-     - THESPORTSDB_KEY      (optional; falls back to the free test key)
-     - FOOTBALL_DATA_TOKEN  (required to pull results)
+   Group results are mapped into our group/fixture layout (the same
+   ordering app.js uses), so the app's "Load actual results" button can
+   apply them directly.
    ===================================================================== */
 
 "use strict";
@@ -19,90 +17,68 @@ const fs = require("fs");
 const path = require("path");
 const WC = require("../data.js");
 
-const TSDB_KEY = process.env.THESPORTSDB_KEY || "3"; // "3" = free test key
-const FD_TOKEN = process.env.FOOTBALL_DATA_TOKEN || "";
+const SRC_URL =
+  "https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json";
 
-/* Our display name -> TheSportsDB search name, where they differ. */
-const TSDB_NAME = {
-  "USA": "United States",
-  "Korea Republic": "South Korea",
-  "IR Iran": "Iran",
-  "DR Congo": "DR Congo",
-  "Cabo Verde": "Cape Verde",
-  "Côte d'Ivoire": "Ivory Coast",
-  "Bosnia": "Bosnia and Herzegovina",
-  "Turkey": "Turkey",
-  "Czechia": "Czech Republic",
+/* openfootball team name -> our display name, where they differ. */
+const NAME_MAP = {
+  "Bosnia & Herzegovina": "Bosnia",
+  "Cape Verde": "Cabo Verde",
+  "Czech Republic": "Czechia",
+  "Iran": "IR Iran",
+  "Ivory Coast": "Côte d'Ivoire",
+  "South Korea": "Korea Republic",
 };
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+/* Must match FIXTURES in app.js. */
+const FIX = [[0, 1], [2, 3], [0, 2], [1, 3], [0, 3], [1, 2]];
 
-async function fetchBadge(name) {
-  const q = encodeURIComponent(TSDB_NAME[name] || name);
-  const url = `https://www.thesportsdb.com/api/v1/json/${TSDB_KEY}/searchteams.php?t=${q}`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    const json = await res.json();
-    const teams = json.teams || [];
-    const team = teams.find((t) => t.strSport === "Soccer") || teams[0];
-    return team ? team.strBadge || team.strTeamBadge || null : null;
-  } catch (e) {
-    console.warn(`badge fetch failed for ${name}: ${e.message}`);
-    return null;
+function build(src) {
+  const groups = {};
+  const idx = {};
+  const results = {};
+  for (const g of Object.keys(WC.groups)) {
+    groups[g] = WC.groups[g].map((t) => t[0]);
+    idx[g] = {};
+    groups[g].forEach((n, i) => (idx[g][n] = i));
+    results[g] = [null, null, null, null, null, null];
   }
-}
-
-/* TODO: finalize once FOOTBALL_DATA_TOKEN is set and the 2026 World Cup
-   competition is live. football-data.org competition code for the World
-   Cup is "WC". This pulls finished matches; mapping each match to our
-   group letters is the remaining step (match team names -> WC.groups). */
-async function fetchResults() {
-  if (!FD_TOKEN) {
-    console.log("No FOOTBALL_DATA_TOKEN set — skipping results.");
-    return null;
-  }
-  try {
-    const res = await fetch("https://api.football-data.org/v4/competitions/WC/matches?status=FINISHED", {
-      headers: { "X-Auth-Token": FD_TOKEN },
-    });
-    if (!res.ok) {
-      console.warn(`football-data responded ${res.status}`);
-      return null;
+  let filled = 0;
+  for (const m of src.matches || []) {
+    const grp = String(m.group || "");
+    if (!grp.startsWith("Group")) continue;
+    const g = grp.split(" ").pop();
+    if (!groups[g]) continue;
+    const t1 = NAME_MAP[m.team1] || m.team1;
+    const t2 = NAME_MAP[m.team2] || m.team2;
+    if (!(t1 in idx[g]) || !(t2 in idx[g])) {
+      console.warn("unmapped team:", g, m.team1, "/", m.team2);
+      continue;
     }
-    const json = await res.json();
-    // Return the raw finished matches for now; UI mapping is a follow-up.
-    return (json.matches || []).map((m) => ({
-      home: m.homeTeam && m.homeTeam.name,
-      away: m.awayTeam && m.awayTeam.name,
-      homeGoals: m.score && m.score.fullTime ? m.score.fullTime.home : null,
-      awayGoals: m.score && m.score.fullTime ? m.score.fullTime.away : null,
-      utcDate: m.utcDate,
-      stage: m.stage,
-      group: m.group,
-    }));
-  } catch (e) {
-    console.warn(`results fetch failed: ${e.message}`);
-    return null;
+    const ft = m.score && m.score.ft;
+    if (!ft) continue;
+    const i1 = idx[g][t1];
+    const i2 = idx[g][t2];
+    const fi = FIX.findIndex(
+      (p) => (p[0] === i1 && p[1] === i2) || (p[0] === i2 && p[1] === i1)
+    );
+    results[g][fi] =
+      FIX[fi][0] === i1 && FIX[fi][1] === i2 ? [ft[0], ft[1]] : [ft[1], ft[0]];
+    filled++;
   }
+  return { results, filled };
 }
 
 async function main() {
-  const names = [...new Set(Object.values(WC.groups).flat().map((t) => t[0]))];
-
-  const badges = {};
-  for (const name of names) {
-    badges[name] = await fetchBadge(name);
-    await sleep(350); // stay polite to the free API
-  }
-  const badgeCount = Object.values(badges).filter(Boolean).length;
-
-  const results = await fetchResults();
+  const res = await fetch(SRC_URL);
+  if (!res.ok) throw new Error(`fetch failed: ${res.status}`);
+  const src = await res.json();
+  const { results, filled } = build(src);
 
   const out = {
+    source: "openfootball/worldcup.json (2026)",
     updated: new Date().toISOString(),
-    badges,
-    results, // null until FOOTBALL_DATA_TOKEN is configured
+    results,
   };
 
   const root = path.join(__dirname, "..");
@@ -110,11 +86,10 @@ async function main() {
   fs.writeFileSync(path.join(root, "data", "live-data.json"), JSON.stringify(out, null, 2));
   fs.writeFileSync(
     path.join(root, "live-data.js"),
-    "/* generated by scripts/fetch-live-data.js — do not edit by hand */\n" +
+    "/* generated from openfootball/worldcup.json — refreshed by the Update live data Action */\n" +
       "window.WC_LIVE = " + JSON.stringify(out) + ";\n"
   );
-
-  console.log(`Wrote ${badgeCount}/${names.length} badges; results: ${results ? results.length + " matches" : "none"}.`);
+  console.log(`Filled ${filled} group results from openfootball.`);
 }
 
 main().catch((e) => {
