@@ -148,11 +148,19 @@ function normScore(v) {
 }
 
 /* ================= Helpers ================= */
-function flagEmoji(code) {
-  if (code === "ENG") return "\u{1F3F4}\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}";
-  if (code === "SCT") return "\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}";
-  if (!code || code.length !== 2) return "\u{26BD}";
-  return String.fromCodePoint(...[...code.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
+/* Map an internal code to a flagcdn slug (subdivisions handled). */
+function flagSlug(code) {
+  if (code === "ENG") return "gb-eng";
+  if (code === "SCT") return "gb-sct";
+  if (!code || code.length !== 2) return null;
+  return code.toLowerCase();
+}
+
+/* Crisp SVG flag (flagcdn). Falls back to a ball if the code is unknown. */
+function flagHtml(code) {
+  const slug = flagSlug(code);
+  if (!slug) return '<span class="flag-fallback">\u{26BD}</span>';
+  return `<img class="flag-img" src="https://flagcdn.com/${slug}.svg" alt="" loading="lazy" decoding="async" />`;
 }
 
 function codeFor(group, idx) {
@@ -295,7 +303,7 @@ function buildGroups() {
       row.dataset.match = m;
       row.innerHTML = `
         <span class="team home">
-          <span class="flag">${flagEmoji(codeFor(g, hi))}</span>
+          <span class="flag">${flagHtml(codeFor(g, hi))}</span>
           <span class="tname" data-group="${g}" data-idx="${hi}" contenteditable="true" spellcheck="false"></span>
         </span>
         <span class="mid">
@@ -312,7 +320,7 @@ function buildGroups() {
         </span>
         <span class="team away">
           <span class="tname" data-group="${g}" data-idx="${ai}" contenteditable="true" spellcheck="false"></span>
-          <span class="flag">${flagEmoji(codeFor(g, ai))}</span>
+          <span class="flag">${flagHtml(codeFor(g, ai))}</span>
         </span>`;
       matches.appendChild(row);
     });
@@ -353,7 +361,7 @@ function renderGroup(group) {
     tr.className = pos < 2 ? "qualified" : pos === 2 ? "third" : "";
     tr.innerHTML = `
       <td class="col-pos">${pos + 1}</td>
-      <td class="col-team"><span class="flag">${flagEmoji(codeFor(group, s.idx))}</span><span>${escapeHtml(s.name)}</span></td>
+      <td class="col-team"><span class="flag">${flagHtml(codeFor(group, s.idx))}</span><span>${escapeHtml(s.name)}</span></td>
       <td>${s.pld}</td><td>${s.w}</td><td>${s.d}</td><td>${s.l}</td>
       <td>${s.gf}</td><td>${s.ga}</td><td>${s.gd > 0 ? "+" + s.gd : s.gd}</td>
       <td class="pts">${s.pts}</td>`;
@@ -370,7 +378,7 @@ function renderThirds() {
     tr.className = pos < 8 ? "qualified" : "eliminated";
     tr.innerHTML = `
       <td class="col-pos">${pos + 1}</td>
-      <td class="col-team"><span class="flag">${flagEmoji(codeFor(s.group, s.idx))}</span><span>${escapeHtml(s.name)}</span></td>
+      <td class="col-team"><span class="flag">${flagHtml(codeFor(s.group, s.idx))}</span><span>${escapeHtml(s.name)}</span></td>
       <td>${s.group}</td><td>${s.pld}</td>
       <td>${s.gd > 0 ? "+" + s.gd : s.gd}</td><td>${s.gf}</td>
       <td class="pts">${s.pts}</td>
@@ -425,7 +433,7 @@ function rowHtml(id, side, p, selected) {
   const label = known
     ? `<span class="bm-name">${escapeHtml(p.name)}</span>`
     : `<span class="bm-name ph">${escapeHtml(p.label || "—")}</span>`;
-  const flag = known ? flagEmoji(p.code) : "•";
+  const flag = known ? flagHtml(p.code) : "•";
   return `<button class="bm-row ${selected ? "sel" : ""}" data-id="${id}" data-side="${side}" type="button">
       <span class="flag">${flag}</span>${label}
     </button>`;
@@ -450,7 +458,7 @@ function renderBracket() {
   const champ = winnerOf(104);
   const champHtml = champ && champ.known && champ.name
     ? `<div class="champion"><span class="trophy">🏆</span>
-         <span class="champ-flag">${flagEmoji(champ.code)}</span>
+         <span class="champ-flag">${flagHtml(champ.code)}</span>
          <span class="champ-name">${escapeHtml(champ.name)}</span>
          <span class="champ-label">Your champion</span></div>`
     : `<div class="champion empty"><span class="trophy">🏆</span><span class="champ-label">Pick winners to crown a champion</span></div>`;

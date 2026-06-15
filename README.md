@@ -18,6 +18,8 @@ vanilla JavaScript — no build step, no dependencies.
   32 → Final, plus third-place match). Group winners, runners-up, and the 8 best
   thirds seed automatically; **click a team to advance it** round by round, up to
   a crowned champion.
+- **Crisp SVG flags** for every team (via flagcdn, with proper England/Scotland
+  flags), plus card/champion/hero animations.
 - **Editable team names** (click any name), plus **Randomize** and **Reset**.
 - Predictions and bracket picks **auto-save** in the browser (localStorage).
 

@@ -722,3 +722,69 @@ tbody tr.eliminated {
     max-width: 9ch;
   }
 }
+
+/* ================= Flags & visual polish ================= */
+.flag-img {
+  height: 0.95em;
+  width: auto;
+  max-width: 1.7em;
+  vertical-align: -0.14em;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+.flag-fallback {
+  font-size: 0.95em;
+}
+
+/* group cards: one-time entrance + hover lift */
+.group-card {
+  animation: cardIn 0.5s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(22, 34, 59, 0.13);
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* champion celebration */
+.champion:not(.empty) {
+  animation: champGlow 2.4s ease-in-out infinite;
+}
+
+.champion:not(.empty) .trophy {
+  display: inline-block;
+  animation: trophyBounce 2.4s ease-in-out infinite;
+}
+
+@keyframes champGlow {
+  0%, 100% { box-shadow: 0 0 0 1px var(--amber), 0 6px 18px rgba(224, 160, 8, 0.25); }
+  50% { box-shadow: 0 0 0 1px var(--amber), 0 12px 34px rgba(224, 160, 8, 0.55); }
+}
+
+@keyframes trophyBounce {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-6px) rotate(3deg); }
+}
+
+/* hero trophy gentle float */
+.site-header::after {
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(-48%); }
+  50% { transform: translateY(-54%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; }
+  .group-card:hover { transform: none; }
+}
