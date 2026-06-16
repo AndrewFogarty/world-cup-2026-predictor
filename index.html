@@ -126,7 +126,9 @@
           <input id="username" type="text" maxlength="24" placeholder="Your username"
                  aria-label="Username" autocomplete="off" />
           <button id="submit-bracket" class="btn" type="button">🔒 Submit &amp; lock</button>
+          <button id="refresh-board" class="btn ghost" type="button">↻ Refresh</button>
           <button id="clear-board" class="btn ghost" type="button">Clear all</button>
+          <span id="board-scope" class="board-scope"></span>
         </div>
         <div class="table-wrap">
           <table id="leaderboard-table">
@@ -162,6 +164,9 @@
     <script src="data.js"></script>
     <!-- live-data.js (optional) provides WC_LIVE actual results -->
     <script src="live-data.js"></script>
+    <!-- Supabase client + config for the shared leaderboard (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

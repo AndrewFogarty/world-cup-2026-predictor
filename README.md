@@ -45,6 +45,32 @@ A scheduled GitHub Action (`.github/workflows/update-data.yml`) re-runs
 only setup required is to let the Action push: **Settings → Actions → General →
 Workflow permissions → Read and write permissions**.
 
+## Shared leaderboard (optional)
+By default the leaderboard is local to each device. To make it shared across
+everyone, point it at a free [Supabase](https://supabase.com) project:
+
+1. Create a free Supabase project.
+2. In the **SQL Editor**, run:
+   ```sql
+   create table if not exists submissions (
+     id uuid primary key default gen_random_uuid(),
+     username text not null,
+     created_at timestamptz not null default now(),
+     mode text,
+     payload jsonb not null
+   );
+   alter table submissions enable row level security;
+   create policy "anyone can read"   on submissions for select using (true);
+   create policy "anyone can insert" on submissions for insert with check (true);
+   ```
+3. **Settings → API**: copy the **Project URL** and the **anon/public** key.
+4. Put both into `supabase-config.js`. The anon key is public by design; access
+   is governed by the RLS policies above (read + insert only — no edits/deletes).
+
+When configured, the app shows “🌐 Shared leaderboard”, submissions go to the
+database, and it polls every 45s (plus a **↻ Refresh** button). Blank config =
+local-only (“💾 This device”).
+
 ## Notes
 - Default lineups follow the published draw; playoff slots resolve once those
   qualifiers are known. Every team name is editable.

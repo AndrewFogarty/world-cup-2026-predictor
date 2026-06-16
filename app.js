@@ -526,6 +526,13 @@ function loadActualResults() {
 const BOARD_KEY = "wc2026-leaderboard-v1";
 let board = [];
 
+/* Shared leaderboard via Supabase when configured; else local-only. */
+const SB =
+  window.SUPABASE_CONFIG && window.SUPABASE_CONFIG.url && window.supabase
+    ? window.supabase.createClient(window.SUPABASE_CONFIG.url, window.SUPABASE_CONFIG.anonKey)
+    : null;
+const SHARED = !!SB;
+
 function loadBoard() {
   try {
     const s = JSON.parse(localStorage.getItem(BOARD_KEY));
@@ -539,6 +546,42 @@ function saveBoard() {
     localStorage.setItem(BOARD_KEY, JSON.stringify(board));
   } catch (e) {
     /* ignore */
+  }
+}
+
+async function loadBoardRemote() {
+  try {
+    const { data, error } = await SB.from("submissions")
+      .select("*")
+      .order("created_at", { ascending: true });
+    if (error) throw error;
+    board = (data || []).map((r) => ({
+      id: r.id,
+      username: r.username,
+      createdAt: r.created_at,
+      mode: r.mode,
+      ...(r.payload || {}),
+    }));
+    renderLeaderboard();
+  } catch (e) {
+    console.warn("leaderboard load failed:", e.message || e);
+  }
+}
+
+function refreshBoard() {
+  if (SHARED) loadBoardRemote();
+  else { loadBoard(); renderLeaderboard(); }
+}
+
+function setupBoardUI() {
+  const scope = document.getElementById("board-scope");
+  const clear = document.getElementById("clear-board");
+  if (SHARED) {
+    if (scope) scope.textContent = "🌐 Shared leaderboard";
+    if (clear) clear.style.display = "none";
+    setInterval(loadBoardRemote, 45000); // keep roughly in sync
+  } else if (scope) {
+    scope.textContent = "💾 This device";
   }
 }
 
@@ -626,23 +669,42 @@ function scoreSubmission(sub) {
   return { total, exact, outcome: outc, miss, scored, locked, koHits, champ };
 }
 
-function submitPredictions() {
+async function submitPredictions() {
   const input = document.getElementById("username");
   const name = (input.value || "").trim();
   if (!name) { input.focus(); return; }
-  board.push({
-    id: Date.now() + "-" + Math.random().toString(36).slice(2, 7),
-    username: name,
-    createdAt: new Date().toISOString(),
-    mode: state.mode,
+  const payload = {
     scores: JSON.parse(JSON.stringify(state.scores)),
     bracket: JSON.parse(JSON.stringify(state.bracket)),
     locked: confirmedKeysNow(), // matches already official at submit time → excluded
     predicted: predictedAdvancement(), // teams sent to each knockout round
-  });
-  saveBoard();
-  input.value = "";
-  renderLeaderboard();
+  };
+  if (SHARED) {
+    const btn = document.getElementById("submit-bracket");
+    btn.disabled = true;
+    try {
+      const { error } = await SB.from("submissions").insert({ username: name, mode: state.mode, payload });
+      if (error) throw error;
+      input.value = "";
+      await loadBoardRemote();
+    } catch (e) {
+      alert("Submit failed: " + (e.message || e));
+      return;
+    } finally {
+      btn.disabled = false;
+    }
+  } else {
+    board.push({
+      id: Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+      username: name,
+      createdAt: new Date().toISOString(),
+      mode: state.mode,
+      ...payload,
+    });
+    saveBoard();
+    input.value = "";
+    renderLeaderboard();
+  }
   document.getElementById("leaderboard-section").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
@@ -666,7 +728,7 @@ function renderLeaderboard() {
         <td>${e.sub.mode === "result" ? "W/D/L" : "Score"}</td>
         <td class="lb-actions">
           <button class="lb-view" data-id="${e.sub.id}" type="button">View</button>
-          <button class="lb-del" data-id="${e.sub.id}" type="button" title="Remove entry" aria-label="Remove">✕</button>
+          ${SHARED ? "" : `<button class="lb-del" data-id="${e.sub.id}" type="button" title="Remove entry" aria-label="Remove">✕</button>`}
         </td>
       </tr>`)
     .join("");
@@ -837,6 +899,7 @@ function wireEvents() {
 
   // Leaderboard
   document.getElementById("submit-bracket").addEventListener("click", submitPredictions);
+  document.getElementById("refresh-board").addEventListener("click", refreshBoard);
   document.getElementById("username").addEventListener("keydown", (e) => {
     if (e.key === "Enter") { e.preventDefault(); submitPredictions(); }
   });
@@ -876,5 +939,6 @@ syncInputs();
 wireEvents();
 setMode(state.mode);
 renderAll();
-renderLeaderboard();
+setupBoardUI();
+refreshBoard();
 markConfirmedMatches();

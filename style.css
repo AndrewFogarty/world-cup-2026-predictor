@@ -1057,3 +1057,10 @@ tbody tr.eliminated {
   color: #7a869c;
   border: 1px dashed var(--line-strong);
 }
+
+.board-scope {
+  align-self: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-left: auto;
+}
