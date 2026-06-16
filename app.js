@@ -524,6 +524,7 @@ function loadActualResults() {
 
 /* ================= Leaderboard ================= */
 const BOARD_KEY = "wc2026-leaderboard-v1";
+const HIDDEN_USERS = new Set(["__setup_test__"]); // setup test row, hidden from the board
 let board = [];
 
 /* Shared leaderboard via Supabase when configured; else local-only. */
@@ -712,6 +713,7 @@ function renderLeaderboard() {
   const tbody = document.querySelector("#leaderboard-table tbody");
   if (!tbody) return;
   const rows = board
+    .filter((s) => !HIDDEN_USERS.has(s.username))
     .map((s) => ({ sub: s, sc: scoreSubmission(s) }))
     .sort((a, b) => b.sc.total - a.sc.total || a.sub.createdAt.localeCompare(b.sub.createdAt));
   if (rows.length === 0) {
