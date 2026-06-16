@@ -20,6 +20,9 @@ vanilla JavaScript — no build step, no dependencies.
   a crowned champion.
 - **Crisp SVG flags** for every team (via flagcdn, with proper England/Scotland
   flags), plus card/champion/hero animations.
+- **Leaderboard (local):** submit predictions under a username to lock them in;
+  scored live vs actual results — **30** for an exact score, **10** for the right
+  result (W/D/L picks cap at 10). Each entry has a green/gold/red scorecard.
 - **Editable team names** (click any name), plus **Randomize** and **Reset**.
 - Predictions and bracket picks **auto-save** in the browser (localStorage).
 

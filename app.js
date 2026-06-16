@@ -521,6 +521,153 @@ function loadActualResults() {
   saveState();
 }
 
+/* ================= Leaderboard ================= */
+const BOARD_KEY = "wc2026-leaderboard-v1";
+let board = [];
+
+function loadBoard() {
+  try {
+    const s = JSON.parse(localStorage.getItem(BOARD_KEY));
+    if (Array.isArray(s)) board = s;
+  } catch (e) {
+    /* ignore */
+  }
+}
+function saveBoard() {
+  try {
+    localStorage.setItem(BOARD_KEY, JSON.stringify(board));
+  } catch (e) {
+    /* ignore */
+  }
+}
+
+function outcome(s) {
+  if (!s || s[0] === null || s[1] === null) return null;
+  return s[0] > s[1] ? "home" : s[0] < s[1] ? "away" : "draw";
+}
+
+/* allowExact=false for Win/Draw/Loss submissions (capped at 10). */
+function scoreMatch(pred, actual, allowExact) {
+  if (!actual || actual[0] === null || actual[1] === null) return { kind: "pending", pts: 0 };
+  if (!pred || pred[0] === null || pred[1] === null) return { kind: "none", pts: 0 };
+  if (allowExact && pred[0] === actual[0] && pred[1] === actual[1]) return { kind: "exact", pts: 30 };
+  if (outcome(pred) === outcome(actual)) return { kind: "outcome", pts: 10 };
+  return { kind: "miss", pts: 0 };
+}
+
+function liveResults() {
+  return (window.WC_LIVE && window.WC_LIVE.results) || {};
+}
+
+function scoreSubmission(sub) {
+  const live = liveResults();
+  const allowExact = sub.mode !== "result";
+  let total = 0, exact = 0, outc = 0, miss = 0, scored = 0;
+  for (const g of GROUP_LETTERS) {
+    const preds = (sub.scores && sub.scores[g]) || [];
+    const acts = live[g] || [];
+    for (let i = 0; i < 6; i++) {
+      const r = scoreMatch(preds[i], acts[i], allowExact);
+      if (r.kind === "exact") { total += 30; exact++; scored++; }
+      else if (r.kind === "outcome") { total += 10; outc++; scored++; }
+      else if (r.kind === "miss") { miss++; scored++; }
+    }
+  }
+  return { total, exact, outcome: outc, miss, scored };
+}
+
+function submitPredictions() {
+  const input = document.getElementById("username");
+  const name = (input.value || "").trim();
+  if (!name) { input.focus(); return; }
+  board.push({
+    id: Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+    username: name,
+    createdAt: new Date().toISOString(),
+    mode: state.mode,
+    scores: JSON.parse(JSON.stringify(state.scores)),
+    bracket: JSON.parse(JSON.stringify(state.bracket)),
+  });
+  saveBoard();
+  input.value = "";
+  renderLeaderboard();
+  document.getElementById("leaderboard-section").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderLeaderboard() {
+  const tbody = document.querySelector("#leaderboard-table tbody");
+  if (!tbody) return;
+  const rows = board
+    .map((s) => ({ sub: s, sc: scoreSubmission(s) }))
+    .sort((a, b) => b.sc.total - a.sc.total || a.sub.createdAt.localeCompare(b.sub.createdAt));
+  if (rows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-row">No entries yet — submit a bracket above to start the leaderboard.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = rows
+    .map((e, i) => `
+      <tr class="${i === 0 ? "leader" : ""}">
+        <td class="col-pos">${i + 1}</td>
+        <td class="col-team">${escapeHtml(e.sub.username)}</td>
+        <td class="pts">${e.sc.total}</td>
+        <td class="col-breakdown">${e.sc.exact}×30 · ${e.sc.outcome}×10 <span class="muted">(${e.sc.scored} scored)</span></td>
+        <td>${e.sub.mode === "result" ? "W/D/L" : "Score"}</td>
+        <td class="lb-actions">
+          <button class="lb-view" data-id="${e.sub.id}" type="button">View</button>
+          <button class="lb-del" data-id="${e.sub.id}" type="button" title="Remove entry" aria-label="Remove">✕</button>
+        </td>
+      </tr>`)
+    .join("");
+}
+
+/* Detailed scorecard with green/gold/red highlighting per match. */
+function renderScorecard(id) {
+  const host = document.getElementById("scorecard");
+  const sub = board.find((s) => s.id === id);
+  if (!sub) { host.innerHTML = ""; return; }
+  const live = liveResults();
+  const allowExact = sub.mode !== "result";
+  const sc = scoreSubmission(sub);
+
+  const sym = (s) => {
+    const o = outcome(s);
+    return o === "home" ? "1" : o === "draw" ? "X" : o === "away" ? "2" : "—";
+  };
+  const fmt = (s) => (s && s[0] !== null ? `${s[0]}–${s[1]}` : "—");
+
+  let html = `<div class="sc-head">
+      <span class="sc-name">${escapeHtml(sub.username)}</span>
+      <span class="sc-total">${sc.total} pts</span>
+      <span class="sc-sub">${sc.exact} exact · ${sc.outcome} result · ${sc.miss} miss</span>
+      <button class="sc-close" type="button" aria-label="Close">✕</button>
+    </div>
+    <div class="sc-legend">
+      <span class="sc-chip exact">30</span> exact
+      <span class="sc-chip outcome">10</span> result
+      <span class="sc-chip miss">0</span> miss
+      <span class="sc-chip pending">·</span> not played
+    </div>
+    <div class="sc-groups">`;
+
+  for (const g of GROUP_LETTERS) {
+    html += `<div class="sc-grp"><span class="sc-grp-tag">${g}</span><div class="sc-chips">`;
+    FIXTURES.forEach((fx, i) => {
+      const [hi, ai] = fx;
+      const pred = (sub.scores[g] || [])[i];
+      const act = (live[g] || [])[i];
+      const r = scoreMatch(pred, act, allowExact);
+      const shown = sub.mode === "result" ? sym(pred) : fmt(pred);
+      const nm = state.names[g];
+      const title = `${nm[hi]} v ${nm[ai]} — you ${sub.mode === "result" ? sym(pred) : fmt(pred)}, actual ${fmt(act)}${r.pts ? " (+" + r.pts + ")" : ""}`;
+      html += `<span class="sc-chip ${r.kind}" title="${escapeHtml(title)}">${shown === "—" ? "·" : shown}</span>`;
+    });
+    html += `</div></div>`;
+  }
+  html += `</div>`;
+  host.innerHTML = html;
+  host.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
 /* ================= Render all ================= */
 function renderAll() {
   GROUP_LETTERS.forEach(renderGroup);
@@ -628,12 +775,46 @@ function wireEvents() {
       la.style.display = "none";
     }
   }
+
+  // Leaderboard
+  document.getElementById("submit-bracket").addEventListener("click", submitPredictions);
+  document.getElementById("username").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); submitPredictions(); }
+  });
+  document.getElementById("clear-board").addEventListener("click", () => {
+    if (!board.length) return;
+    if (!confirm("Remove all leaderboard entries on this device?")) return;
+    board = [];
+    saveBoard();
+    renderLeaderboard();
+    document.getElementById("scorecard").innerHTML = "";
+  });
+  document.getElementById("leaderboard-table").addEventListener("click", (e) => {
+    const view = e.target.closest(".lb-view");
+    const del = e.target.closest(".lb-del");
+    if (view) renderScorecard(view.dataset.id);
+    if (del) {
+      const id = del.dataset.id;
+      const s = board.find((x) => x.id === id);
+      if (s && confirm(`Remove ${s.username}'s entry?`)) {
+        board = board.filter((x) => x.id !== id);
+        saveBoard();
+        renderLeaderboard();
+        document.getElementById("scorecard").innerHTML = "";
+      }
+    }
+  });
+  document.getElementById("scorecard").addEventListener("click", (e) => {
+    if (e.target.closest(".sc-close")) document.getElementById("scorecard").innerHTML = "";
+  });
 }
 
 /* ================= Init ================= */
 loadState();
+loadBoard();
 buildGroups();
 syncInputs();
 wireEvents();
 setMode(state.mode);
 renderAll();
+renderLeaderboard();

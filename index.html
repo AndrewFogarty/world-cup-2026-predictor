@@ -42,6 +42,7 @@
         <a href="#groups">Group Stage</a>
         <a href="#thirds-section">Best Thirds</a>
         <a href="#bracket-section">Knockout Bracket</a>
+        <a href="#leaderboard-section">Leaderboard</a>
       </nav>
     </header>
 
@@ -106,6 +107,41 @@
         <div class="bracket-scroll">
           <div id="bracket" class="bracket"><!-- filled by app.js --></div>
         </div>
+      </section>
+
+      <!-- Leaderboard (local to this device) -->
+      <section id="leaderboard-section" class="leaderboard">
+        <div class="section-head">
+          <h2>Leaderboard</h2>
+          <p>
+            Submit your predictions under a username to <strong>lock them in</strong>.
+            Scoring vs the live results: <strong>30 pts</strong> for an exact
+            score, <strong>10 pts</strong> for the correct result (Win/Draw/Loss
+            picks score up to 10). Entries are saved on this device.
+          </p>
+        </div>
+        <div class="submit-bar">
+          <input id="username" type="text" maxlength="24" placeholder="Your username"
+                 aria-label="Username" autocomplete="off" />
+          <button id="submit-bracket" class="btn" type="button">🔒 Submit &amp; lock</button>
+          <button id="clear-board" class="btn ghost" type="button">Clear all</button>
+        </div>
+        <div class="table-wrap">
+          <table id="leaderboard-table">
+            <thead>
+              <tr>
+                <th class="col-pos">#</th>
+                <th class="col-team">Username</th>
+                <th>Pts</th>
+                <th class="col-breakdown">Breakdown</th>
+                <th>Mode</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody><!-- filled by app.js --></tbody>
+          </table>
+        </div>
+        <div id="scorecard" class="scorecard"><!-- filled by app.js on View --></div>
       </section>
     </main>
 
