@@ -15,7 +15,7 @@
   --red-dark: #9c0c24;
   --green: #18a05a; /* qualify */
   --amber: #e0a008; /* third place */
-  --blue: #2563c9;
+  --blue: #d8a43a;
 
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --cond: "Barlow Condensed", "Inter", sans-serif;
@@ -344,7 +344,7 @@ body {
 }
 
 .tname:focus {
-  background: rgba(37, 99, 201, 0.1);
+  background: rgba(216, 164, 58, 0.1);
   border-bottom-color: var(--blue);
   max-width: none;
 }
@@ -432,7 +432,7 @@ body.mode-result .result {
 .goal:focus {
   outline: none;
   border-color: var(--blue);
-  box-shadow: 0 0 0 2px rgba(37, 99, 201, 0.2);
+  box-shadow: 0 0 0 2px rgba(216, 164, 58, 0.2);
 }
 
 /* ================= Tables ================= */
@@ -863,7 +863,7 @@ tbody tr.eliminated {
 #username:focus {
   outline: none;
   border-color: var(--blue);
-  box-shadow: 0 0 0 2px rgba(37, 99, 201, 0.2);
+  box-shadow: 0 0 0 2px rgba(216, 164, 58, 0.2);
 }
 
 #leaderboard-table .col-team {
@@ -1367,4 +1367,77 @@ body {
   -webkit-mask-image: linear-gradient(90deg, transparent 52%, #000 90%);
   mask-image: linear-gradient(90deg, transparent 52%, #000 90%);
   pointer-events: none;
+}
+
+/* =================================================================
+   Polish pass — #5 calmer backdrop, #4 consistent panels,
+   #6 typographic rhythm, #3 warm palette
+   ================================================================= */
+
+/* #5: quiet the backdrop — blurred flags, deeper wash, center vignette */
+body {
+  background-color: #0a0e20;
+  background-image:
+    radial-gradient(125% 95% at 50% 28%, transparent 42%, rgba(0, 0, 0, 0.55) 100%),
+    linear-gradient(180deg, rgba(8, 12, 30, 0.76) 0%, rgba(40, 8, 24, 0.72) 55%, rgba(92, 12, 40, 0.68) 100%),
+    url("images/flag-mosaic-blur.png");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: center, center, center;
+  background-size: cover, cover, 460px auto;
+  background-attachment: fixed, fixed, fixed;
+}
+
+/* hero backdrop matches: blurred flags, deeper tint */
+.site-header {
+  background-image:
+    linear-gradient(100deg, rgba(8, 12, 24, 0.94) 0%, rgba(8, 12, 24, 0.7) 48%, rgba(8, 12, 24, 0.6) 100%),
+    url("images/flag-mosaic-blur.png");
+  background-size: cover, 300px auto;
+}
+
+/* #4: one consistent treatment for every content panel */
+#groups,
+.thirds,
+.bracket-section,
+.leaderboard {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+#groups {
+  background-image: linear-gradient(rgba(8, 10, 26, 0.72), rgba(16, 8, 26, 0.78)), url("images/wc-flags-trophy.jpg");
+  background-attachment: scroll;
+}
+.thirds {
+  background-image: linear-gradient(rgba(8, 10, 26, 0.72), rgba(16, 8, 26, 0.78)), url("images/champagne.jpg");
+}
+.bracket-section {
+  background-image: linear-gradient(rgba(8, 10, 26, 0.72), rgba(16, 8, 26, 0.78)), url("images/ko-batman.jpg");
+}
+.leaderboard {
+  background-image: linear-gradient(rgba(8, 10, 26, 0.72), rgba(16, 8, 26, 0.78)), url("images/podium.svg");
+}
+
+/* #6: consistent section headers + rhythm */
+.thirds,
+.bracket-section,
+.leaderboard {
+  margin-top: 2rem;
+}
+
+.section-head {
+  margin-bottom: 1rem;
+}
+
+.section-head h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  letter-spacing: 0.03em;
+  margin: 0 0 0.4rem;
+}
+
+.section-head p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  max-width: 64ch;
 }
