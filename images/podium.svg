@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#1b2552"/>
+      <stop offset="100%" stop-color="#0b1030"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="3" fill="#0a0e22" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1200" height="620" fill="url(#sky)"/>
+
+  <!-- comic sunburst -->
+  <g>
+    <!-- long spikes -->
+    <g fill="#ffcf33">
+      <polygon points="600,310 585,30 615,30"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(30 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(60 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(90 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(120 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(150 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(180 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(210 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(240 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(270 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(300 600 310)"/>
+      <polygon points="600,310 585,30 615,30" transform="rotate(330 600 310)"/>
+    </g>
+    <!-- short offset spikes -->
+    <g fill="#ff9e2c">
+      <polygon points="600,310 590,150 610,150" transform="rotate(15 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(45 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(75 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(105 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(135 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(165 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(195 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(225 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(255 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(285 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(315 600 310)"/>
+      <polygon points="600,310 590,150 610,150" transform="rotate(345 600 310)"/>
+    </g>
+    <circle cx="600" cy="310" r="120" fill="#ffd23f"/>
+    <circle cx="600" cy="310" r="120" fill="url(#dots)"/>
+  </g>
+
+  <!-- halftone corners -->
+  <rect width="1200" height="620" fill="url(#dots)" opacity="0.12"/>
+
+  <!-- ===== Podium blocks ===== -->
+  <g stroke="#0a0e22" stroke-width="7" stroke-linejoin="round">
+    <!-- 2nd (left) -->
+    <rect x="360" y="450" width="170" height="170" fill="#3b5bdb"/>
+    <!-- 1st (center) -->
+    <rect x="530" y="370" width="170" height="250" fill="#e63946"/>
+    <!-- 3rd (right) -->
+    <rect x="700" y="490" width="170" height="130" fill="#2a9d8f"/>
+  </g>
+  <g font-family="Arial Black, Arial, sans-serif" font-weight="900" fill="#fff" text-anchor="middle" stroke="#0a0e22" stroke-width="3">
+    <text x="445" y="560" font-size="92">2</text>
+    <text x="615" y="510" font-size="104">1</text>
+    <text x="785" y="572" font-size="80">3</text>
+  </g>
+
+  <!-- ===== Stick figures ===== -->
+  <!-- 1st: arms up, crown -->
+  <g stroke="#0a0e22" stroke-width="12" stroke-linecap="round" fill="none">
+    <line x1="615" y1="246" x2="615" y2="310"/>
+    <line x1="615" y1="310" x2="589" y2="370"/>
+    <line x1="615" y1="310" x2="641" y2="370"/>
+    <line x1="615" y1="262" x2="571" y2="214"/>
+    <line x1="615" y1="262" x2="659" y2="214"/>
+  </g>
+  <line x1="615" y1="246" x2="615" y2="310" stroke="#ffd23f" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="615" cy="214" r="28" fill="#ffd9a8" stroke="#0a0e22" stroke-width="7"/>
+  <polygon points="591,188 591,166 603,180 615,160 627,180 639,166 639,188" fill="#ffd23f" stroke="#0a0e22" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- 2nd -->
+  <g stroke="#0a0e22" stroke-width="12" stroke-linecap="round" fill="none">
+    <line x1="445" y1="330" x2="445" y2="392"/>
+    <line x1="445" y1="392" x2="421" y2="450"/>
+    <line x1="445" y1="392" x2="469" y2="450"/>
+    <line x1="445" y1="346" x2="405" y2="372"/>
+    <line x1="445" y1="346" x2="485" y2="372"/>
+  </g>
+  <line x1="445" y1="330" x2="445" y2="392" stroke="#4895ef" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="445" cy="300" r="26" fill="#ffd9a8" stroke="#0a0e22" stroke-width="7"/>
+
+  <!-- 3rd -->
+  <g stroke="#0a0e22" stroke-width="12" stroke-linecap="round" fill="none">
+    <line x1="785" y1="372" x2="785" y2="432"/>
+    <line x1="785" y1="432" x2="761" y2="490"/>
+    <line x1="785" y1="432" x2="809" y2="490"/>
+    <line x1="785" y1="388" x2="747" y2="414"/>
+    <line x1="785" y1="388" x2="823" y2="414"/>
+  </g>
+  <line x1="785" y1="372" x2="785" y2="432" stroke="#2a9d8f" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="785" cy="342" r="25" fill="#ffd9a8" stroke="#0a0e22" stroke-width="7"/>
+
+  <!-- ground line -->
+  <rect x="0" y="612" width="1200" height="8" fill="#0a0e22"/>
+</svg>
