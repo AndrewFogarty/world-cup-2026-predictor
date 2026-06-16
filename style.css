@@ -1312,3 +1312,13 @@ body {
   background: rgba(12, 18, 40, 0.42);
   pointer-events: none;
 }
+
+/* Knockout & Best-Thirds: fit the whole image (contain), dark fill, static */
+.bracket-section,
+.thirds {
+  background-size: cover, contain;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-attachment: scroll;
+  background-color: #0c1030;
+}
