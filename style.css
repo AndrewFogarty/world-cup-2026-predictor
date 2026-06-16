@@ -1178,3 +1178,99 @@ body {
 .leaderboard .sc-grp-tag {
   color: #ffd23f;
 }
+
+/* =================================================================
+   Full dark-glass theme (group / thirds), comic section backgrounds,
+   and the leaderboard scoring legend
+   ================================================================= */
+
+/* ---- Group cards: translucent dark glass with light text ---- */
+.group-card {
+  background: rgba(12, 18, 40, 0.55);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #eaf0fb;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.group-card .match { background: rgba(255, 255, 255, 0.06); }
+.group-card .match:hover { background: rgba(255, 255, 255, 0.11); }
+.group-card .match.confirmed { background: rgba(255, 255, 255, 0.04); }
+.group-card .dash { color: rgba(255, 255, 255, 0.55); }
+.group-card .tname { color: #eaf0fb; }
+.group-card .tname:hover { border-bottom-color: rgba(255, 255, 255, 0.4); }
+
+.group-card .goal {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.group-card .standings thead th {
+  color: rgba(255, 255, 255, 0.62);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+.group-card .standings tbody td { border-bottom-color: rgba(255, 255, 255, 0.1); }
+.group-card .standings td.pts { color: #fff; }
+.group-card .standings .col-pos { color: rgba(255, 255, 255, 0.55); }
+.group-card .standings tbody tr.qualified { background: rgba(24, 160, 90, 0.24); }
+.group-card .standings tbody tr.third { background: rgba(224, 160, 8, 0.22); }
+
+/* ---- Best Thirds: champagne comic background, dark glass ---- */
+.thirds {
+  color: #eaf0fb;
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: #0c1030;
+  background-image:
+    linear-gradient(rgba(8, 10, 28, 0.7), rgba(22, 8, 30, 0.78)),
+    url("images/champagne.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.thirds .section-head h2 { color: #fff; }
+.thirds .section-head p { color: rgba(255, 255, 255, 0.82); }
+.thirds .section-head p strong { color: #ffd23f; }
+#thirds-table thead th { color: rgba(255, 255, 255, 0.62); border-bottom-color: rgba(255, 255, 255, 0.18); }
+#thirds-table tbody td { border-bottom-color: rgba(255, 255, 255, 0.1); color: #eaf0fb; }
+#thirds-table td.pts { color: #fff; }
+#thirds-table .col-pos { color: rgba(255, 255, 255, 0.55); }
+#thirds-table tbody tr.qualified { background: rgba(24, 160, 90, 0.24); }
+#thirds-table tbody tr.eliminated { color: rgba(255, 255, 255, 0.5); }
+
+/* ---- Knockout: Batman "ZOK!" comic background ---- */
+.bracket-section {
+  background-image:
+    linear-gradient(rgba(8, 10, 26, 0.74), rgba(10, 8, 24, 0.8)),
+    url("images/ko-batman.jpg");
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.bracket-section .section-head h2 { color: #fff; }
+.bracket-section .section-head p { color: rgba(255, 255, 255, 0.82); }
+.bracket-section .section-head p strong { color: #ffd23f; }
+.round-title { color: #ffd23f; border-bottom-color: rgba(255, 255, 255, 0.18); }
+
+/* ---- Leaderboard scoring legend ---- */
+.legend {
+  width: auto;
+  margin: 0.5rem 0 0.85rem;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.legend th {
+  text-align: left;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.86);
+  padding: 0.22rem 1.1rem 0.22rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+.legend td {
+  text-align: right;
+  font-family: var(--cond);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffd23f;
+  padding: 0.22rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}

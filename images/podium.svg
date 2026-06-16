@@ -9,8 +9,7 @@
     </pattern>
   </defs>
 
-  <!-- backdrop -->
-  <rect width="1200" height="620" fill="url(#sky)"/>
+  <!-- transparent backdrop (page shows through) -->
 
   <!-- comic sunburst -->
   <g>
