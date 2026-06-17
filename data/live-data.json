@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-16T20:55:50.596109Z",
+  "updated": "2026-06-17T13:51:18.878929Z",
   "results": {
     "A": [
       [
@@ -115,16 +115,28 @@
       null
     ],
     "I": [
-      null,
-      null,
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        4
+      ],
       null,
       null,
       null,
       null
     ],
     "J": [
-      null,
-      null,
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
       null,
       null,
       null,
@@ -642,8 +654,8 @@
       "s": "I",
       "h": "France",
       "a": "Senegal",
-      "hg": null,
-      "ag": null
+      "hg": 3,
+      "ag": 1
     },
     {
       "n": null,
@@ -652,8 +664,8 @@
       "s": "I",
       "h": "Iraq",
       "a": "Norway",
-      "hg": null,
-      "ag": null
+      "hg": 1,
+      "ag": 4
     },
     {
       "n": null,
@@ -702,8 +714,8 @@
       "s": "J",
       "h": "Argentina",
       "a": "Algeria",
-      "hg": null,
-      "ag": null
+      "hg": 3,
+      "ag": 0
     },
     {
       "n": null,
@@ -712,8 +724,8 @@
       "s": "J",
       "h": "Austria",
       "a": "Jordan",
-      "hg": null,
-      "ag": null
+      "hg": 3,
+      "ag": 1
     },
     {
       "n": null,
