@@ -16,6 +16,13 @@ const GROUP_LETTERS = Object.keys(DEFAULT_GROUPS);
 const NAME_CODE = {};
 GROUP_LETTERS.forEach((g) => DEFAULT_GROUPS[g].forEach(([n, c]) => (NAME_CODE[n] = c)));
 
+/* team name -> index within its group (for venue mapping) */
+const GROUP_IDX = {};
+GROUP_LETTERS.forEach((g) => {
+  GROUP_IDX[g] = {};
+  DEFAULT_GROUPS[g].forEach(([n], i) => (GROUP_IDX[g][n] = i));
+});
+
 /* Round-robin schedule for 4 teams (indices into the group's team list) */
 const FIXTURES = [
   [0, 1], [2, 3], [0, 2], [1, 3], [0, 3], [1, 2],
@@ -319,7 +326,8 @@ function buildGroups() {
           <span class="tname" data-group="${g}" data-idx="${ai}" contenteditable="true" spellcheck="false"></span>
           <span class="flag">${flagHtml(codeFor(g, ai))}</span>
         </span>
-        <span class="match-lock" title="Officially confirmed result — predictions for this match don't score on the leaderboard" aria-hidden="true">🔒</span>`;
+        <span class="match-lock" title="Officially confirmed result — predictions for this match don't score on the leaderboard" aria-hidden="true">🔒</span>
+        <span class="match-venue"></span>`;
       matches.appendChild(row);
     });
     card.appendChild(matches);
@@ -444,9 +452,11 @@ function matchCard(id, extraClass) {
   const a = participant(id, "away");
   const w = state.bracket[id];
   const acc = w ? bracketAccuracy(id, w) : "";
+  const v = VENUE.byNum[id];
   return `<div class="bm ${extraClass || ""}" data-id="${id}">
       ${rowHtml(id, "home", h, w === "home", w === "home" ? acc : "")}
       ${rowHtml(id, "away", a, w === "away", w === "away" ? acc : "")}
+      ${v ? `<div class="bm-venue">${escapeHtml(v)}</div>` : ""}
     </div>`;
 }
 
@@ -867,6 +877,36 @@ function renderSchedule() {
     .join("");
 }
 
+/* ================= Venues (stadium · city, country) ================= */
+let VENUE = { byNum: {}, byGF: {} };
+function buildVenues() {
+  const sched = (window.WC_LIVE && window.WC_LIVE.schedule) || [];
+  const byNum = {};
+  const byGF = {};
+  GROUP_LETTERS.forEach((g) => (byGF[g] = [null, null, null, null, null, null]));
+  for (const m of sched) {
+    if (!m.v) continue;
+    if (m.n != null) byNum[m.n] = m.v;
+    if (m.s && m.s.length === 1 && GROUP_IDX[m.s]) {
+      const g = m.s;
+      const i1 = GROUP_IDX[g][m.h];
+      const i2 = GROUP_IDX[g][m.a];
+      if (i1 != null && i2 != null) {
+        const fi = FIXTURES.findIndex((p) => (p[0] === i1 && p[1] === i2) || (p[0] === i2 && p[1] === i1));
+        if (fi >= 0) byGF[g][fi] = m.v;
+      }
+    }
+  }
+  VENUE = { byNum, byGF };
+}
+
+function fillGroupVenues() {
+  document.querySelectorAll(".match").forEach((row) => {
+    const el = row.querySelector(".match-venue");
+    if (el) el.textContent = (VENUE.byGF[row.dataset.group] || [])[+row.dataset.match] || "";
+  });
+}
+
 /* ================= Prediction vs actual (#2) ================= */
 function markPredictionAccuracy() {
   const live = liveResults();
@@ -1053,11 +1093,13 @@ function wireEvents() {
 loadState();
 loadBoard();
 buildGroups();
+buildVenues();
 syncInputs();
 wireEvents();
 setMode(state.mode);
 renderAll();
 renderSchedule();
+fillGroupVenues();
 setupBoardUI();
 refreshBoard();
 markConfirmedMatches();

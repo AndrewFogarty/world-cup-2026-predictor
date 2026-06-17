@@ -38,6 +38,33 @@ const ROUND_CODE = {
   "Semi-final": "SF", "Match for third place": "TP", "Final": "F",
 };
 
+/* openfootball "ground" -> [stadium, country] (2026 host venues). */
+const STADIUMS = {
+  "Vancouver": ["BC Place", "Canada"],
+  "Seattle": ["Lumen Field", "USA"],
+  "San Francisco Bay Area (Santa Clara)": ["Levi's Stadium", "USA"],
+  "Los Angeles (Inglewood)": ["SoFi Stadium", "USA"],
+  "Guadalajara (Zapopan)": ["Estadio Akron", "Mexico"],
+  "Mexico City": ["Estadio Azteca", "Mexico"],
+  "Monterrey (Guadalupe)": ["Estadio BBVA", "Mexico"],
+  "Houston": ["NRG Stadium", "USA"],
+  "Dallas (Arlington)": ["AT&T Stadium", "USA"],
+  "Kansas City": ["Arrowhead Stadium", "USA"],
+  "Atlanta": ["Mercedes-Benz Stadium", "USA"],
+  "Miami (Miami Gardens)": ["Hard Rock Stadium", "USA"],
+  "Toronto": ["BMO Field", "Canada"],
+  "Boston (Foxborough)": ["Gillette Stadium", "USA"],
+  "Philadelphia": ["Lincoln Financial Field", "USA"],
+  "New York/New Jersey (East Rutherford)": ["MetLife Stadium", "USA"],
+};
+
+function venue(ground) {
+  if (!ground) return null;
+  const city = ground.replace(/\s*\(.*\)$/, "");
+  const s = STADIUMS[ground];
+  return s ? `${s[0]} · ${city}, ${s[1]}` : city;
+}
+
 function build(src) {
   const groups = {};
   const idx = {};
@@ -82,6 +109,7 @@ function build(src) {
       a: NAME_MAP[m.team2] || m.team2,
       hg: ft ? ft[0] : null,
       ag: ft ? ft[1] : null,
+      v: venue(m.ground),
     };
   });
 

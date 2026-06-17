@@ -1532,3 +1532,29 @@ body {
   padding: 0.05rem 0.35rem;
   vertical-align: middle;
 }
+
+/* ================= Match venue (stadium · city, country) ================= */
+.match-venue {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.66rem;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.match-venue:empty { display: none; }
+
+.bm-venue {
+  font-size: 0.62rem;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 0.2rem 0.4rem 0.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

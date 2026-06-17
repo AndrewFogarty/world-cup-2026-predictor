@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-17T13:51:18.878929Z",
+  "updated": "2026-06-17T14:20:46.093275Z",
   "results": {
     "A": [
       [
@@ -175,7 +175,8 @@
       "h": "Mexico",
       "a": "South Africa",
       "hg": 2,
-      "ag": 0
+      "ag": 0,
+      "v": "Estadio Azteca · Mexico City, Mexico"
     },
     {
       "n": null,
@@ -185,7 +186,8 @@
       "h": "Korea Republic",
       "a": "Czechia",
       "hg": 2,
-      "ag": 1
+      "ag": 1,
+      "v": "Estadio Akron · Guadalajara, Mexico"
     },
     {
       "n": null,
@@ -195,7 +197,8 @@
       "h": "Czechia",
       "a": "South Africa",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": null,
@@ -205,7 +208,8 @@
       "h": "Mexico",
       "a": "Korea Republic",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Akron · Guadalajara, Mexico"
     },
     {
       "n": null,
@@ -215,7 +219,8 @@
       "h": "Czechia",
       "a": "Mexico",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Azteca · Mexico City, Mexico"
     },
     {
       "n": null,
@@ -225,7 +230,8 @@
       "h": "South Africa",
       "a": "Korea Republic",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio BBVA · Monterrey, Mexico"
     },
     {
       "n": null,
@@ -235,7 +241,8 @@
       "h": "Canada",
       "a": "Bosnia",
       "hg": 1,
-      "ag": 1
+      "ag": 1,
+      "v": "BMO Field · Toronto, Canada"
     },
     {
       "n": null,
@@ -245,7 +252,8 @@
       "h": "Qatar",
       "a": "Switzerland",
       "hg": 1,
-      "ag": 1
+      "ag": 1,
+      "v": "Levi's Stadium · San Francisco Bay Area, USA"
     },
     {
       "n": null,
@@ -255,7 +263,8 @@
       "h": "Switzerland",
       "a": "Bosnia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": null,
@@ -265,7 +274,8 @@
       "h": "Canada",
       "a": "Qatar",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": null,
@@ -275,7 +285,8 @@
       "h": "Switzerland",
       "a": "Canada",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": null,
@@ -285,7 +296,8 @@
       "h": "Bosnia",
       "a": "Qatar",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lumen Field · Seattle, USA"
     },
     {
       "n": null,
@@ -295,7 +307,8 @@
       "h": "Brazil",
       "a": "Morocco",
       "hg": 1,
-      "ag": 1
+      "ag": 1,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": null,
@@ -305,7 +318,8 @@
       "h": "Haiti",
       "a": "Scotland",
       "hg": 0,
-      "ag": 1
+      "ag": 1,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": null,
@@ -315,7 +329,8 @@
       "h": "Scotland",
       "a": "Morocco",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": null,
@@ -325,7 +340,8 @@
       "h": "Brazil",
       "a": "Haiti",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lincoln Financial Field · Philadelphia, USA"
     },
     {
       "n": null,
@@ -335,7 +351,8 @@
       "h": "Scotland",
       "a": "Brazil",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": null,
@@ -345,7 +362,8 @@
       "h": "Morocco",
       "a": "Haiti",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": null,
@@ -355,7 +373,8 @@
       "h": "USA",
       "a": "Paraguay",
       "hg": 4,
-      "ag": 1
+      "ag": 1,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": null,
@@ -365,7 +384,8 @@
       "h": "Australia",
       "a": "Turkey",
       "hg": 2,
-      "ag": 0
+      "ag": 0,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": null,
@@ -375,7 +395,8 @@
       "h": "USA",
       "a": "Australia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lumen Field · Seattle, USA"
     },
     {
       "n": null,
@@ -385,7 +406,8 @@
       "h": "Turkey",
       "a": "Paraguay",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Levi's Stadium · San Francisco Bay Area, USA"
     },
     {
       "n": null,
@@ -395,7 +417,8 @@
       "h": "Turkey",
       "a": "USA",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": null,
@@ -405,7 +428,8 @@
       "h": "Paraguay",
       "a": "Australia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Levi's Stadium · San Francisco Bay Area, USA"
     },
     {
       "n": null,
@@ -415,7 +439,8 @@
       "h": "Germany",
       "a": "Curaçao",
       "hg": 7,
-      "ag": 1
+      "ag": 1,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": null,
@@ -425,7 +450,8 @@
       "h": "Côte d'Ivoire",
       "a": "Ecuador",
       "hg": 1,
-      "ag": 0
+      "ag": 0,
+      "v": "Lincoln Financial Field · Philadelphia, USA"
     },
     {
       "n": null,
@@ -435,7 +461,8 @@
       "h": "Germany",
       "a": "Côte d'Ivoire",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BMO Field · Toronto, Canada"
     },
     {
       "n": null,
@@ -445,7 +472,8 @@
       "h": "Ecuador",
       "a": "Curaçao",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Arrowhead Stadium · Kansas City, USA"
     },
     {
       "n": null,
@@ -455,7 +483,8 @@
       "h": "Curaçao",
       "a": "Côte d'Ivoire",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lincoln Financial Field · Philadelphia, USA"
     },
     {
       "n": null,
@@ -465,7 +494,8 @@
       "h": "Ecuador",
       "a": "Germany",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": null,
@@ -475,7 +505,8 @@
       "h": "Netherlands",
       "a": "Japan",
       "hg": 2,
-      "ag": 2
+      "ag": 2,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": null,
@@ -485,7 +516,8 @@
       "h": "Sweden",
       "a": "Tunisia",
       "hg": 5,
-      "ag": 1
+      "ag": 1,
+      "v": "Estadio BBVA · Monterrey, Mexico"
     },
     {
       "n": null,
@@ -495,7 +527,8 @@
       "h": "Netherlands",
       "a": "Sweden",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": null,
@@ -505,7 +538,8 @@
       "h": "Tunisia",
       "a": "Japan",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio BBVA · Monterrey, Mexico"
     },
     {
       "n": null,
@@ -515,7 +549,8 @@
       "h": "Japan",
       "a": "Sweden",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": null,
@@ -525,7 +560,8 @@
       "h": "Tunisia",
       "a": "Netherlands",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Arrowhead Stadium · Kansas City, USA"
     },
     {
       "n": null,
@@ -535,7 +571,8 @@
       "h": "Belgium",
       "a": "Egypt",
       "hg": 1,
-      "ag": 1
+      "ag": 1,
+      "v": "Lumen Field · Seattle, USA"
     },
     {
       "n": null,
@@ -545,7 +582,8 @@
       "h": "IR Iran",
       "a": "New Zealand",
       "hg": 2,
-      "ag": 2
+      "ag": 2,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": null,
@@ -555,7 +593,8 @@
       "h": "Belgium",
       "a": "IR Iran",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": null,
@@ -565,7 +604,8 @@
       "h": "New Zealand",
       "a": "Egypt",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": null,
@@ -575,7 +615,8 @@
       "h": "Egypt",
       "a": "IR Iran",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lumen Field · Seattle, USA"
     },
     {
       "n": null,
@@ -585,7 +626,8 @@
       "h": "New Zealand",
       "a": "Belgium",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": null,
@@ -595,7 +637,8 @@
       "h": "Spain",
       "a": "Cabo Verde",
       "hg": 0,
-      "ag": 0
+      "ag": 0,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": null,
@@ -605,7 +648,8 @@
       "h": "Saudi Arabia",
       "a": "Uruguay",
       "hg": 1,
-      "ag": 1
+      "ag": 1,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": null,
@@ -615,7 +659,8 @@
       "h": "Spain",
       "a": "Saudi Arabia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": null,
@@ -625,7 +670,8 @@
       "h": "Uruguay",
       "a": "Cabo Verde",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": null,
@@ -635,7 +681,8 @@
       "h": "Cabo Verde",
       "a": "Saudi Arabia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": null,
@@ -645,7 +692,8 @@
       "h": "Uruguay",
       "a": "Spain",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Akron · Guadalajara, Mexico"
     },
     {
       "n": null,
@@ -655,7 +703,8 @@
       "h": "France",
       "a": "Senegal",
       "hg": 3,
-      "ag": 1
+      "ag": 1,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": null,
@@ -665,7 +714,8 @@
       "h": "Iraq",
       "a": "Norway",
       "hg": 1,
-      "ag": 4
+      "ag": 4,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": null,
@@ -675,7 +725,8 @@
       "h": "France",
       "a": "Iraq",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lincoln Financial Field · Philadelphia, USA"
     },
     {
       "n": null,
@@ -685,7 +736,8 @@
       "h": "Norway",
       "a": "Senegal",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": null,
@@ -695,7 +747,8 @@
       "h": "Norway",
       "a": "France",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": null,
@@ -705,7 +758,8 @@
       "h": "Senegal",
       "a": "Iraq",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BMO Field · Toronto, Canada"
     },
     {
       "n": null,
@@ -715,7 +769,8 @@
       "h": "Argentina",
       "a": "Algeria",
       "hg": 3,
-      "ag": 0
+      "ag": 0,
+      "v": "Arrowhead Stadium · Kansas City, USA"
     },
     {
       "n": null,
@@ -725,7 +780,8 @@
       "h": "Austria",
       "a": "Jordan",
       "hg": 3,
-      "ag": 1
+      "ag": 1,
+      "v": "Levi's Stadium · San Francisco Bay Area, USA"
     },
     {
       "n": null,
@@ -735,7 +791,8 @@
       "h": "Argentina",
       "a": "Austria",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": null,
@@ -745,7 +802,8 @@
       "h": "Jordan",
       "a": "Algeria",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Levi's Stadium · San Francisco Bay Area, USA"
     },
     {
       "n": null,
@@ -755,7 +813,8 @@
       "h": "Algeria",
       "a": "Austria",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Arrowhead Stadium · Kansas City, USA"
     },
     {
       "n": null,
@@ -765,7 +824,8 @@
       "h": "Jordan",
       "a": "Argentina",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": null,
@@ -775,7 +835,8 @@
       "h": "Portugal",
       "a": "DR Congo",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": null,
@@ -785,7 +846,8 @@
       "h": "Uzbekistan",
       "a": "Colombia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Azteca · Mexico City, Mexico"
     },
     {
       "n": null,
@@ -795,7 +857,8 @@
       "h": "Portugal",
       "a": "Uzbekistan",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": null,
@@ -805,7 +868,8 @@
       "h": "Colombia",
       "a": "DR Congo",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Akron · Guadalajara, Mexico"
     },
     {
       "n": null,
@@ -815,7 +879,8 @@
       "h": "Colombia",
       "a": "Portugal",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": null,
@@ -825,7 +890,8 @@
       "h": "DR Congo",
       "a": "Uzbekistan",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": null,
@@ -835,7 +901,8 @@
       "h": "England",
       "a": "Croatia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": null,
@@ -845,7 +912,8 @@
       "h": "Ghana",
       "a": "Panama",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BMO Field · Toronto, Canada"
     },
     {
       "n": null,
@@ -855,7 +923,8 @@
       "h": "England",
       "a": "Ghana",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": null,
@@ -865,7 +934,8 @@
       "h": "Panama",
       "a": "Croatia",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BMO Field · Toronto, Canada"
     },
     {
       "n": null,
@@ -875,7 +945,8 @@
       "h": "Panama",
       "a": "England",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": null,
@@ -885,7 +956,8 @@
       "h": "Croatia",
       "a": "Ghana",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lincoln Financial Field · Philadelphia, USA"
     },
     {
       "n": 73,
@@ -895,7 +967,8 @@
       "h": "2A",
       "a": "2B",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": 74,
@@ -905,7 +978,8 @@
       "h": "1E",
       "a": "3A/B/C/D/F",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": 75,
@@ -915,7 +989,8 @@
       "h": "1F",
       "a": "2C",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio BBVA · Monterrey, Mexico"
     },
     {
       "n": 76,
@@ -925,7 +1000,8 @@
       "h": "1C",
       "a": "2F",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": 77,
@@ -935,7 +1011,8 @@
       "h": "1I",
       "a": "3C/D/F/G/H",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": 78,
@@ -945,7 +1022,8 @@
       "h": "2E",
       "a": "2I",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": 79,
@@ -955,7 +1033,8 @@
       "h": "1A",
       "a": "3C/E/F/H/I",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Azteca · Mexico City, Mexico"
     },
     {
       "n": 80,
@@ -965,7 +1044,8 @@
       "h": "1L",
       "a": "3E/H/I/J/K",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": 81,
@@ -975,7 +1055,8 @@
       "h": "1D",
       "a": "3B/E/F/I/J",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Levi's Stadium · San Francisco Bay Area, USA"
     },
     {
       "n": 82,
@@ -985,7 +1066,8 @@
       "h": "1G",
       "a": "3A/E/H/I/J",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lumen Field · Seattle, USA"
     },
     {
       "n": 83,
@@ -995,7 +1077,8 @@
       "h": "2K",
       "a": "2L",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BMO Field · Toronto, Canada"
     },
     {
       "n": 84,
@@ -1005,7 +1088,8 @@
       "h": "1H",
       "a": "2J",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": 85,
@@ -1015,7 +1099,8 @@
       "h": "1B",
       "a": "3E/F/G/I/J",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": 86,
@@ -1025,7 +1110,8 @@
       "h": "1J",
       "a": "2H",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": 87,
@@ -1035,7 +1121,8 @@
       "h": "1K",
       "a": "3D/E/I/J/L",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Arrowhead Stadium · Kansas City, USA"
     },
     {
       "n": 88,
@@ -1045,7 +1132,8 @@
       "h": "2D",
       "a": "2G",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": 89,
@@ -1055,7 +1143,8 @@
       "h": "W74",
       "a": "W77",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lincoln Financial Field · Philadelphia, USA"
     },
     {
       "n": 90,
@@ -1065,7 +1154,8 @@
       "h": "W73",
       "a": "W75",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "NRG Stadium · Houston, USA"
     },
     {
       "n": 91,
@@ -1075,7 +1165,8 @@
       "h": "W76",
       "a": "W78",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     },
     {
       "n": 92,
@@ -1085,7 +1176,8 @@
       "h": "W79",
       "a": "W80",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Estadio Azteca · Mexico City, Mexico"
     },
     {
       "n": 93,
@@ -1095,7 +1187,8 @@
       "h": "W83",
       "a": "W84",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": 94,
@@ -1105,7 +1198,8 @@
       "h": "W81",
       "a": "W82",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Lumen Field · Seattle, USA"
     },
     {
       "n": 95,
@@ -1115,7 +1209,8 @@
       "h": "W86",
       "a": "W88",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": 96,
@@ -1125,7 +1220,8 @@
       "h": "W85",
       "a": "W87",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "BC Place · Vancouver, Canada"
     },
     {
       "n": 97,
@@ -1135,7 +1231,8 @@
       "h": "W89",
       "a": "W90",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Gillette Stadium · Boston, USA"
     },
     {
       "n": 98,
@@ -1145,7 +1242,8 @@
       "h": "W93",
       "a": "W94",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "SoFi Stadium · Los Angeles, USA"
     },
     {
       "n": 99,
@@ -1155,7 +1253,8 @@
       "h": "W91",
       "a": "W92",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": 100,
@@ -1165,7 +1264,8 @@
       "h": "W95",
       "a": "W96",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Arrowhead Stadium · Kansas City, USA"
     },
     {
       "n": 101,
@@ -1175,7 +1275,8 @@
       "h": "W97",
       "a": "W98",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "AT&T Stadium · Dallas, USA"
     },
     {
       "n": 102,
@@ -1185,7 +1286,8 @@
       "h": "W99",
       "a": "W100",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Mercedes-Benz Stadium · Atlanta, USA"
     },
     {
       "n": 103,
@@ -1195,7 +1297,8 @@
       "h": "L101",
       "a": "L102",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "Hard Rock Stadium · Miami, USA"
     },
     {
       "n": 104,
@@ -1205,7 +1308,8 @@
       "h": "W101",
       "a": "W102",
       "hg": null,
-      "ag": null
+      "ag": null,
+      "v": "MetLife Stadium · New York/New Jersey, USA"
     }
   ]
 }
