@@ -1552,11 +1552,25 @@ body {
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  padding: 0.2rem 0.4rem 0.3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.4rem 0.3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.lb-edit {
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 1px solid var(--line-strong);
+  background: #fff;
+  border-radius: 7px;
+  padding: 0.2rem 0.5rem;
+  color: var(--ink);
+}
+.lb-edit:hover {
+  border-color: var(--amber);
+  color: var(--red-dark);
 }
 
 /* ================= Mobile (PWA) pass ================= */
@@ -1580,4 +1594,11 @@ body {
   .board-scope { margin-left: 0; }
   .sch-card { min-width: 10.5rem; }
   .legend { font-size: 0.8rem; }
+}
+
+/* locked (already-played) match inputs are not editable */
+.goal:disabled,
+.res-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

@@ -596,7 +596,10 @@ function confirmedKeysNow() {
 /* Add a 🔒 to group matches whose result is already official. */
 function markConfirmedMatches() {
   document.querySelectorAll(".match").forEach((row) => {
-    row.classList.toggle("confirmed", isConfirmed(row.dataset.group, +row.dataset.match));
+    const conf = isConfirmed(row.dataset.group, +row.dataset.match);
+    row.classList.toggle("confirmed", conf);
+    // only non-locked games can be changed
+    row.querySelectorAll(".goal, .res-btn").forEach((el) => { el.disabled = conf; });
   });
 }
 
@@ -687,6 +690,27 @@ function updateSubmitLabel() {
   if (btn) btn.textContent = getMine() ? "✏️ Update my entry" : "🔒 Submit & lock";
 }
 
+/* Load a submission's predictions back into the editor (group scores +
+   bracket). Already-played (locked) matches are left untouched. */
+function loadSubmissionIntoEditor(id) {
+  const sub = board.find((s) => s.id === id);
+  if (!sub) return;
+  if (!confirm(`Load ${sub.username}'s predictions into the editor? Already-played (locked) matches won't change.`)) return;
+  for (const g of GROUP_LETTERS) {
+    const arr = (sub.scores && sub.scores[g]) || [];
+    arr.forEach((sc, i) => {
+      if (isConfirmed(g, i)) return; // locked → leave as-is
+      state.scores[g][i] = Array.isArray(sc) && sc.length === 2 ? [normScore(sc[0]), normScore(sc[1])] : [null, null];
+    });
+  }
+  if (sub.bracket) state.bracket = JSON.parse(JSON.stringify(sub.bracket));
+  syncInputs();
+  renderAll();
+  saveState();
+  const g = document.getElementById("groups");
+  if (g) g.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function renderLeaderboard() {
   const tbody = document.querySelector("#leaderboard-table tbody");
   if (!tbody) return;
@@ -708,6 +732,7 @@ function renderLeaderboard() {
         <td class="col-breakdown">${e.sc.exact}×50 · ${e.sc.outcome}×10${e.sc.koHits ? " · KO " + e.sc.koHits + "×20" : ""}${e.sc.champ ? " · 🏆100" : ""}</td>
         <td>${e.sub.mode === "result" ? "W/D/L" : "Score"}</td>
         <td class="lb-actions">
+          <button class="lb-edit" data-id="${e.sub.id}" type="button" title="Load these picks into the editor">Edit</button>
           <button class="lb-view" data-id="${e.sub.id}" type="button">View</button>
           ${SHARED ? "" : `<button class="lb-del" data-id="${e.sub.id}" type="button" title="Remove entry" aria-label="Remove">✕</button>`}
         </td>
@@ -780,6 +805,18 @@ function shortTime(t) {
   return (t || "").split(" ")[0];
 }
 
+/* Convert an openfootball "HH:MM UTC±O" time to US Eastern (EDT, UTC-4). */
+function toEasternTime(t) {
+  const m = /(\d{1,2}):(\d{2})\s*UTC([+-]\d+)/.exec(t || "");
+  if (!m) return shortTime(t);
+  let h = parseInt(m[1], 10) - parseInt(m[3], 10) - 4;
+  h = ((h % 24) + 24) % 24;
+  const ampm = h >= 12 ? "PM" : "AM";
+  let h12 = h % 12;
+  if (h12 === 0) h12 = 12;
+  return `${h12}:${m[2]} ${ampm}`;
+}
+
 function renderSchedule() {
   const host = document.getElementById("schedule-strip");
   if (!host) return;
@@ -795,7 +832,7 @@ function renderSchedule() {
       const mid = played ? `<span class="sch-score">${m.hg}–${m.ag}</span>` : `<span class="sch-v">v</span>`;
       const stage = m.s.length === 1 ? "Group " + m.s : m.s;
       return `<div class="sch-card${played ? " done" : ""}">
-        <div class="sch-meta">${fmtDate(m.d)} · ${shortTime(m.t)} · ${stage}</div>
+        <div class="sch-meta">${fmtDate(m.d)} · ${toEasternTime(m.t)} ET · ${stage}</div>
         <div class="sch-row">
           <span class="sch-team">${flagFor(m.h)}<span class="sch-name">${escapeHtml(m.h)}</span></span>
           ${mid}
@@ -1000,7 +1037,9 @@ function wireEvents() {
   });
   document.getElementById("leaderboard-table").addEventListener("click", (e) => {
     const view = e.target.closest(".lb-view");
+    const edit = e.target.closest(".lb-edit");
     const del = e.target.closest(".lb-del");
+    if (edit) loadSubmissionIntoEditor(edit.dataset.id);
     if (view) renderScorecard(view.dataset.id);
     if (del) {
       const id = del.dataset.id;
