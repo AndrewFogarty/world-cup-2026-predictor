@@ -1710,3 +1710,12 @@ body {
   color: #eaf0fb;
   font-weight: 600;
 }
+
+/* submit button confirmation: green "✓ Submitted" once locked */
+.btn.submitted {
+  background: #18a05a;
+  color: #fff;
+}
+.btn.submitted:hover {
+  background: #15894e;
+}

@@ -642,6 +642,7 @@ function hydrateMyGuesses() {
   for (const g of GROUP_LETTERS) {
     const arr = sub.scores[g] || [];
     arr.forEach((sc, i) => {
+      if (isConfirmed(g, i)) return; // don't auto-fill played matches (avoids false grades)
       const cur = state.scores[g][i];
       if ((cur[0] == null || cur[1] == null) && Array.isArray(sc) && sc[0] != null && sc[1] != null) {
         state.scores[g][i] = [normScore(sc[0]), normScore(sc[1])];
@@ -785,13 +786,22 @@ async function submitPredictions() {
     saveBoard();
     renderLeaderboard();
   }
-  updateSubmitLabel();
+  setSubmitted();
   document.getElementById("leaderboard-section").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function updateSubmitLabel() {
   const btn = document.getElementById("submit-bracket");
-  if (btn) btn.textContent = myId() ? "✏️ Update my entry" : "🔒 Submit & lock";
+  if (btn && !btn.classList.contains("submitted")) {
+    btn.textContent = myId() ? "✏️ Update my entry" : "🔒 Submit & lock";
+  }
+}
+
+function setSubmitted() {
+  const btn = document.getElementById("submit-bracket");
+  if (!btn) return;
+  btn.textContent = "✓ Submitted";
+  btn.classList.add("submitted");
 }
 
 /* Load a submission's predictions back into the editor (group scores +
@@ -838,7 +848,7 @@ function renderLeaderboard() {
         <td class="lb-actions">
           <button class="lb-edit" data-id="${e.sub.id}" type="button" title="Load these picks into the editor">Edit</button>
           <button class="lb-view" data-id="${e.sub.id}" type="button">View</button>
-          ${SHARED ? "" : `<button class="lb-del" data-id="${e.sub.id}" type="button" title="Remove entry" aria-label="Remove">✕</button>`}
+          ${(!SHARED || e.sub.id === mineId) ? `<button class="lb-del" data-id="${e.sub.id}" type="button" title="Delete my entry" aria-label="Delete">✕</button>` : ""}
         </td>
       </tr>`)
     .join("");
@@ -1048,12 +1058,20 @@ function renderAll() {
 }
 
 /* ================= Events ================= */
+/* Reset the green "Submitted" state when the user changes anything. */
+function markDirty() {
+  const btn = document.getElementById("submit-bracket");
+  if (btn) btn.classList.remove("submitted");
+  updateSubmitLabel();
+}
+
 function onGoalInput(e) {
   const el = e.target;
   if (!el.classList.contains("goal")) return;
   state.scores[el.dataset.group][+el.dataset.match][+el.dataset.side] = normScore(el.value);
   renderAll();
   saveState();
+  markDirty();
 }
 
 function onNameEdit(e) {
@@ -1063,6 +1081,7 @@ function onNameEdit(e) {
   state.names[g][idx] = el.textContent.trim() || DEFAULT_GROUPS[g][idx][0];
   renderAll();
   saveState();
+  markDirty();
 }
 
 function onResultClick(e) {
@@ -1078,6 +1097,7 @@ function onResultClick(e) {
   syncInputs();
   renderAll();
   saveState();
+  markDirty();
 }
 
 function wireEvents() {
@@ -1109,6 +1129,7 @@ function wireEvents() {
     state.bracket[id] = state.bracket[id] === side ? null : side;
     renderBracket();
     saveState();
+    markDirty();
   });
 
   document.getElementById("reset").addEventListener("click", () => {
@@ -1118,6 +1139,7 @@ function wireEvents() {
     syncInputs();
     renderAll();
     saveState();
+    markDirty();
   });
 
   document.getElementById("randomize").addEventListener("click", () => {
@@ -1131,6 +1153,7 @@ function wireEvents() {
     syncInputs();
     renderAll();
     saveState();
+    markDirty();
   });
 
   // "Load actual results" — only enabled when live data is present
@@ -1172,11 +1195,19 @@ function wireEvents() {
     if (del) {
       const id = del.dataset.id;
       const s = board.find((x) => x.id === id);
-      if (s && confirm(`Remove ${s.username}'s entry?`)) {
+      if (!s || !confirm(`Delete ${s.username}'s entry? This can't be undone.`)) return;
+      document.getElementById("scorecard").innerHTML = "";
+      if (SHARED) {
+        SB.from("submissions").delete().eq("id", id).then(({ error }) => {
+          if (error) { alert("Delete failed: " + (error.message || error)); return; }
+          if (myId() === null) setMine(null); // your own entry removed
+          loadBoardRemote();
+          updateSubmitLabel();
+        });
+      } else {
         board = board.filter((x) => x.id !== id);
         saveBoard();
         renderLeaderboard();
-        document.getElementById("scorecard").innerHTML = "";
       }
     }
   });
