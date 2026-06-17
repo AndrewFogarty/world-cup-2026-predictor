@@ -26,6 +26,22 @@ test("scoreMatch() — Win/Draw/Loss mode caps at 10 (no exact bonus)", () => {
   assert.equal(GSB.scoreMatch([1, 0], [0, 2], false).pts, 0);
 });
 
+test("kickoffMs() — parses date + UTC-offset time into a UTC timestamp", () => {
+  // 13:00 in UTC-6 == 19:00 UTC the same day.
+  assert.equal(GSB.kickoffMs("2026-06-11", "13:00 UTC-6"), Date.UTC(2026, 5, 11, 19, 0));
+  // 20:00 in UTC-6 rolls into 02:00 UTC the next day.
+  assert.equal(GSB.kickoffMs("2026-06-17", "20:00 UTC-6"), Date.UTC(2026, 5, 18, 2, 0));
+  // Positive offset: 18:00 in UTC+2 == 16:00 UTC.
+  assert.equal(GSB.kickoffMs("2026-07-19", "18:00 UTC+2"), Date.UTC(2026, 6, 19, 16, 0));
+});
+
+test("kickoffMs() — returns null for missing or malformed input", () => {
+  assert.equal(GSB.kickoffMs(null, "13:00 UTC-6"), null);
+  assert.equal(GSB.kickoffMs("2026-06-11", null), null);
+  assert.equal(GSB.kickoffMs("2026-06-11", "TBD"), null);
+  assert.equal(GSB.kickoffMs("", ""), null);
+});
+
 test("computeStats() — points and goal aggregates", () => {
   // A beats B 2-0 (fixture 0). Others unplayed.
   const stats = GSB.computeStats(["A", "B", "C", "D"], [[2, 0], [null, null], [null, null], [null, null], [null, null], [null, null]]);

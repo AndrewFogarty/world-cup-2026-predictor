@@ -3,13 +3,14 @@
    - HTML/CSS/JS/live data: network-first (always fresh online, cached offline)
    - images/fonts: cache-first (rarely change)
    Bump CACHE on meaningful releases to evict old caches.                     */
-const CACHE = "gsb-v2";
+const CACHE = "gsb-v4";
 const CORE = [
   "./",
   "./index.html",
   "./style.css",
   "./data.js",
   "./lib/engine.js",
+  "./weather.js",
   "./app.js",
   "./supabase-config.js",
   "./live-data.js",
@@ -36,8 +37,8 @@ self.addEventListener("fetch", (e) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
 
-  // Don't touch Supabase API calls — always go to network.
-  if (url.host.includes("supabase.co")) return;
+  // Don't touch Supabase or weather API calls — always go to network.
+  if (url.host.includes("supabase.co") || url.host.includes("open-meteo.com")) return;
 
   if (isAsset(url)) {
     // cache-first for static assets

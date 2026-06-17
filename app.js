@@ -16,6 +16,28 @@ const GROUP_LETTERS = Object.keys(DEFAULT_GROUPS);
 const NAME_CODE = {};
 GROUP_LETTERS.forEach((g) => DEFAULT_GROUPS[g].forEach(([n, c]) => (NAME_CODE[n] = c)));
 
+/* team name -> 3-letter shorthand (FIFA/IOC codes) for the mini bracket */
+const CODE3 = {
+  "Mexico": "MEX", "South Africa": "RSA", "Korea Republic": "KOR", "Czechia": "CZE",
+  "Canada": "CAN", "Bosnia": "BIH", "Qatar": "QAT", "Switzerland": "SUI",
+  "Brazil": "BRA", "Morocco": "MAR", "Haiti": "HAI", "Scotland": "SCO",
+  "USA": "USA", "Paraguay": "PAR", "Australia": "AUS", "Turkey": "TUR",
+  "Germany": "GER", "Curaçao": "CUW", "Côte d'Ivoire": "CIV", "Ecuador": "ECU",
+  "Netherlands": "NED", "Japan": "JPN", "Sweden": "SWE", "Tunisia": "TUN",
+  "Belgium": "BEL", "Egypt": "EGY", "IR Iran": "IRN", "New Zealand": "NZL",
+  "Spain": "ESP", "Cabo Verde": "CPV", "Saudi Arabia": "KSA", "Uruguay": "URU",
+  "France": "FRA", "Senegal": "SEN", "Iraq": "IRQ", "Norway": "NOR",
+  "Argentina": "ARG", "Algeria": "ALG", "Austria": "AUT", "Jordan": "JOR",
+  "Portugal": "POR", "DR Congo": "COD", "Uzbekistan": "UZB", "Colombia": "COL",
+  "England": "ENG", "Croatia": "CRO", "Ghana": "GHA", "Panama": "PAN",
+};
+function code3(name) {
+  if (!name) return "—";
+  if (CODE3[name]) return CODE3[name];
+  // fallback: first three letters, uppercased (strip non-letters like "DR ")
+  return name.replace(/[^A-Za-zÀ-ÿ]/g, "").slice(0, 3).toUpperCase();
+}
+
 /* team name -> index within its group (for venue mapping) */
 const GROUP_IDX = {};
 GROUP_LETTERS.forEach((g) => {
@@ -236,6 +258,35 @@ function thirdAssignments() {
 /* ================= Group rendering ================= */
 const groupsEl = document.getElementById("groups");
 
+/* Masonry layout: place each group card (in A→L order) into the currently
+   shortest column. Keeps A,B,C across the top row while packing cards tightly
+   so a taller card never leaves empty space below its neighbours. */
+let groupCardOrder = null;
+function layoutGroups() {
+  if (!groupsEl) return;
+  if (!groupCardOrder) {
+    groupCardOrder = GROUP_LETTERS.map((g) => groupsEl.querySelector(`.group-card[data-group="${g}"]`)).filter(Boolean);
+  }
+  if (!groupCardOrder.length) return;
+  const width = groupsEl.clientWidth || window.innerWidth;
+  const cols = Math.max(1, Math.min(3, Math.floor(width / 360)));
+  groupsEl.querySelectorAll(".groups-col").forEach((c) => c.remove());
+  const colEls = [];
+  for (let i = 0; i < cols; i++) {
+    const d = document.createElement("div");
+    d.className = "groups-col";
+    groupsEl.appendChild(d);
+    colEls.push(d);
+  }
+  const heights = new Array(cols).fill(0);
+  for (const card of groupCardOrder) {
+    let min = 0;
+    for (let i = 1; i < cols; i++) if (heights[i] < heights[min]) min = i;
+    colEls[min].appendChild(card);
+    heights[min] += card.offsetHeight + 20; // card height + column gap
+  }
+}
+
 function buildGroups() {
   groupsEl.innerHTML = "";
   for (const g of GROUP_LETTERS) {
@@ -274,7 +325,7 @@ function buildGroups() {
           <span class="tname" data-group="${g}" data-idx="${ai}" contenteditable="true" spellcheck="false"></span>
           <span class="flag">${flagHtml(codeFor(g, ai))}</span>
         </span>
-        <span class="match-lock" title="Officially confirmed result — predictions for this match don't score on the leaderboard" aria-hidden="true">🔒</span>
+        <span class="match-lock" title="Locked — the match has kicked off; this prediction can no longer be changed" aria-hidden="true">🔒</span>
         <span class="match-actual"></span>
         <span class="match-venue"></span>`;
       matches.appendChild(row);
@@ -524,8 +575,10 @@ async function initAuth() {
     const { data } = await SB.auth.getSession();
     authUser = (data && data.session && data.session.user) || null;
   } catch (e) { /* ignore */ }
+  if (authUser) { markEntered(); showApp(); }
   SB.auth.onAuthStateChange((_event, sess) => {
     authUser = (sess && sess.user) || null;
+    if (authUser) { markEntered(); showApp(); }
     applyAuthUI();
     refreshBoard();
   });
@@ -589,6 +642,51 @@ async function signOut() {
   refreshBoard();
 }
 
+/* ---- Title / sign-in gate ---- */
+const ENTERED_KEY = "wc2026-entered-v1";
+function hasEntered() {
+  try { return localStorage.getItem(ENTERED_KEY) === "1"; } catch (e) { return false; }
+}
+function markEntered() {
+  try { localStorage.setItem(ENTERED_KEY, "1"); } catch (e) { /* ignore */ }
+}
+function showApp() {
+  const ts = document.getElementById("title-screen");
+  if (ts) ts.classList.add("hidden");
+  document.body.classList.remove("title-active");
+}
+function enterAsGuest() {
+  const u = document.getElementById("title-username");
+  const name = (u && u.value || "").trim();
+  if (name) {
+    const main = document.getElementById("username");
+    if (main) main.value = name;
+    if (!SHARED) {
+      const mine = getMine() || {};
+      setMine({ ...mine, username: name });
+    }
+  }
+  markEntered();
+  showApp();
+}
+function initTitleScreen() {
+  const ts = document.getElementById("title-screen");
+  if (!ts) return;
+  const google = document.getElementById("title-google");
+  // No shared backend -> Google sign-in isn't available; guest only.
+  if (!SHARED && google) google.style.display = "none";
+
+  if (google) google.addEventListener("click", () => { markEntered(); signInWithGoogle(); });
+  const guest = document.getElementById("title-guest");
+  if (guest) guest.addEventListener("click", enterAsGuest);
+  const u = document.getElementById("title-username");
+  if (u) u.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); enterAsGuest(); } });
+
+  // Already signed in or previously entered -> skip straight to the app.
+  if (authUser || hasEntered()) { showApp(); return; }
+  document.body.classList.add("title-active");
+}
+
 function loadBoard() {
   try {
     const s = JSON.parse(localStorage.getItem(BOARD_KEY));
@@ -638,11 +736,12 @@ function hydrateMyGuesses() {
   if (!id) return;
   const sub = board.find((s) => s.id === id);
   if (!sub || !sub.scores) return;
+  setEditorLocked(sub);
   let changed = false;
   for (const g of GROUP_LETTERS) {
     const arr = sub.scores[g] || [];
     arr.forEach((sc, i) => {
-      if (isConfirmed(g, i)) return; // don't auto-fill played matches (avoids false grades)
+      if (isLocked(g, i)) return; // don't auto-fill played or already-kicked-off matches
       const cur = state.scores[g][i];
       if ((cur[0] == null || cur[1] == null) && Array.isArray(sc) && sc[0] != null && sc[1] != null) {
         state.scores[g][i] = [normScore(sc[0]), normScore(sc[1])];
@@ -651,6 +750,7 @@ function hydrateMyGuesses() {
     });
   }
   if (changed) { syncInputs(); renderAll(); saveState(); }
+  else markPredictionAccuracy(); // apply locked-match blanking even if nothing was filled
 }
 
 function setupBoardUI() {
@@ -684,6 +784,24 @@ function predictedAdvancement() {
   };
 }
 
+/* Teams a submission predicted to reach each round. Uses the snapshot saved
+   at submit time; falls back to recomputing from the stored picks for older
+   entries that pre-date the snapshot. */
+function subPredicted(sub) {
+  if (sub.predicted) return sub.predicted;
+  const savedScores = state.scores, savedBracket = state.bracket, savedThird = thirdMap;
+  try {
+    if (sub.scores) state.scores = sub.scores;
+    if (sub.bracket) state.bracket = sub.bracket;
+    thirdMap = thirdAssignments();
+    return predictedAdvancement();
+  } finally {
+    state.scores = savedScores;
+    state.bracket = savedBracket;
+    thirdMap = savedThird;
+  }
+}
+
 function liveResults() {
   return (window.WC_LIVE && window.WC_LIVE.results) || {};
 }
@@ -691,6 +809,18 @@ function liveResults() {
 function isConfirmed(g, i) {
   const live = liveResults();
   return !!(live[g] && live[g][i] && live[g][i][0] !== null && live[g][i][1] !== null);
+}
+
+/* True once the match has kicked off (scheduled start time has passed). */
+function kickoffPassed(g, i) {
+  const ko = (KICKOFF.byGF[g] || [])[i];
+  return ko != null && Date.now() >= ko;
+}
+
+/* A match is locked for editing once it has an official result OR has kicked
+   off — you can no longer add or change a prediction for it. */
+function isLocked(g, i) {
+  return isConfirmed(g, i) || kickoffPassed(g, i);
 }
 
 /* Matches already officially confirmed when a submission was made — these
@@ -701,13 +831,14 @@ function confirmedKeysNow() {
   return keys;
 }
 
-/* Add a 🔒 to group matches whose result is already official. */
+/* Lock (🔒 + disable inputs) any group match that has kicked off or is
+   officially confirmed. Re-run on a timer so matches lock live at kickoff. */
 function markConfirmedMatches() {
   document.querySelectorAll(".match").forEach((row) => {
-    const conf = isConfirmed(row.dataset.group, +row.dataset.match);
-    row.classList.toggle("confirmed", conf);
-    // only non-locked games can be changed
-    row.querySelectorAll(".goal, .res-btn").forEach((el) => { el.disabled = conf; });
+    const locked = isLocked(row.dataset.group, +row.dataset.match);
+    row.classList.toggle("confirmed", locked);
+    // only un-started, unconfirmed games can be changed
+    row.querySelectorAll(".goal, .res-btn").forEach((el) => { el.disabled = locked; });
   });
 }
 
@@ -810,6 +941,7 @@ function loadSubmissionIntoEditor(id) {
   const sub = board.find((s) => s.id === id);
   if (!sub) return;
   if (!confirm(`Load ${sub.username}'s predictions into the editor? (Played matches stay locked — read-only.)`)) return;
+  setEditorLocked(sub);
   for (const g of GROUP_LETTERS) {
     const arr = (sub.scores && sub.scores[g]) || [];
     arr.forEach((sc, i) => {
@@ -905,6 +1037,33 @@ function renderScorecard(id) {
     html += `</div></div>`;
   }
   html += `</div>`;
+
+  // Simple knockout bracket: who they sent to each round (3-letter codes).
+  const pred = subPredicted(sub);
+  const adv = (window.WC_LIVE && window.WC_LIVE.advanced) || {};
+  const koCol = (title, key, list) => {
+    const chips = (list || [])
+      .map((n) => {
+        const hit = (adv[key] || []).includes(n);
+        return `<span class="ko-chip${hit ? " hit" : ""}" title="${escapeHtml(n)}">${escapeHtml(code3(n))}</span>`;
+      })
+      .join("");
+    return `<div class="ko-col"><span class="ko-rnd">${title}</span>
+        <div class="ko-chips">${chips || '<span class="ko-chip empty">—</span>'}</div></div>`;
+  };
+  const champHit = pred.champion && adv.champion && pred.champion === adv.champion;
+  html += `<div class="sc-ko">
+      <div class="sc-ko-title">Knockout picks</div>
+      <div class="ko-cols">
+        ${koCol("R16", "R16", pred.R16)}
+        ${koCol("QF", "QF", pred.QF)}
+        ${koCol("SF", "SF", pred.SF)}
+        ${koCol("Final", "FINAL", pred.FINAL)}
+        <div class="ko-col"><span class="ko-rnd">🏆</span>
+          <div class="ko-chips"><span class="ko-chip champ${champHit ? " hit" : ""}" title="${escapeHtml(pred.champion || "")}">${escapeHtml(code3(pred.champion))}</span></div></div>
+      </div>
+    </div>`;
+
   host.innerHTML = html;
   host.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
@@ -945,6 +1104,10 @@ function renderSchedule() {
       const played = m.hg !== null;
       const mid = played ? `<span class="sch-score">${m.hg}–${m.ag}</span>` : `<span class="sch-v">v</span>`;
       const stage = m.s.length === 1 ? "Group " + m.s : m.s;
+      const city = window.WCWeather ? WCWeather.cityFromVenue(m.v) : null;
+      const wx = !played && city
+        ? `<span class="sch-wx" data-city="${escapeHtml(city)}" data-date="${m.d}" title="Live match-day forecast"></span>`
+        : "";
       return `<div class="sch-card${played ? " done" : ""}">
         <div class="sch-meta">${fmtDate(m.d)} · ${toEasternTime(m.t)} ET · ${stage}</div>
         <div class="sch-row">
@@ -952,32 +1115,47 @@ function renderSchedule() {
           ${mid}
           <span class="sch-team away">${flagFor(m.a)}<span class="sch-name">${escapeHtml(m.a)}</span></span>
         </div>
+        ${wx}
       </div>`;
     })
     .join("");
+
+  // Populate live weather (Open-Meteo) for the upcoming-match cards.
+  if (window.WCWeather) WCWeather.fill(".schedule-strip .sch-wx");
 }
 
 /* ================= Venues (stadium · city, country) ================= */
+/* kickoffMs (date + "HH:MM UTC±O" -> UTC ms) lives in lib/engine.js. */
+const kickoffMs = GSB.kickoffMs;
+
 let VENUE = { byNum: {}, byGF: {} };
+let KICKOFF = { byGF: {} }; // ms timestamp per group fixture
 function buildVenues() {
   const sched = (window.WC_LIVE && window.WC_LIVE.schedule) || [];
   const byNum = {};
   const byGF = {};
-  GROUP_LETTERS.forEach((g) => (byGF[g] = [null, null, null, null, null, null]));
+  const koByGF = {};
+  GROUP_LETTERS.forEach((g) => {
+    byGF[g] = [null, null, null, null, null, null];
+    koByGF[g] = [null, null, null, null, null, null];
+  });
   for (const m of sched) {
-    if (!m.v) continue;
-    if (m.n != null) byNum[m.n] = m.v;
+    if (m.n != null && m.v) byNum[m.n] = m.v;
     if (m.s && m.s.length === 1 && GROUP_IDX[m.s]) {
       const g = m.s;
       const i1 = GROUP_IDX[g][m.h];
       const i2 = GROUP_IDX[g][m.a];
       if (i1 != null && i2 != null) {
         const fi = FIXTURES.findIndex((p) => (p[0] === i1 && p[1] === i2) || (p[0] === i2 && p[1] === i1));
-        if (fi >= 0) byGF[g][fi] = m.v;
+        if (fi >= 0) {
+          if (m.v) byGF[g][fi] = m.v;
+          koByGF[g][fi] = kickoffMs(m.d, m.t);
+        }
       }
     }
   }
   VENUE = { byNum, byGF };
+  KICKOFF = { byGF: koByGF };
 }
 
 function fillGroupVenues() {
@@ -1003,6 +1181,15 @@ function fillActuals() {
 }
 
 /* ================= Prediction vs actual (#2) ================= */
+/* Matches that were already finished when the bracket currently shown in the
+   editor was submitted. You can't meaningfully "predict" a match that was over
+   before you finished your bracket, so we blank the box and leave it
+   uncoloured (no gold). Populated from the loaded submission's `locked` snapshot. */
+let editorLockedSet = new Set();
+function setEditorLocked(sub) {
+  editorLockedSet = new Set((sub && sub.locked) || []);
+}
+
 function markPredictionAccuracy() {
   const live = liveResults();
   document.querySelectorAll(".match").forEach((row) => {
@@ -1013,6 +1200,13 @@ function markPredictionAccuracy() {
     const actual = (live[g] || [])[m];
     const pred = state.scores[g][m];
     row.classList.remove("guess-exact", "guess-ok", "guess-miss", "guess-none");
+    // Finished before the bracket was submitted → blank box, no gold/colour.
+    if (editorLockedSet.has(g + m)) {
+      badge.className = "match-grade";
+      badge.textContent = "";
+      row.querySelectorAll(".goal").forEach((el) => { el.value = ""; });
+      return;
+    }
     const played = actual && actual[0] !== null && actual[1] !== null;
     const guessed = pred && pred[0] !== null && pred[1] !== null;
     if (!played) { badge.className = "match-grade"; badge.textContent = ""; return; }
@@ -1022,9 +1216,16 @@ function markPredictionAccuracy() {
       row.classList.add("guess-none");
       return;
     }
+    // Exact scoreline → gold. This is the ONLY thing that earns gold.
+    if (pred[0] === actual[0] && pred[1] === actual[1]) {
+      badge.className = "match-grade exact";
+      badge.textContent = "★";
+      badge.title = `Exact! ${pred[0]}–${pred[1]}`;
+      row.classList.add("guess-exact");
+      return;
+    }
     let kind, sym;
-    if (pred[0] === actual[0] && pred[1] === actual[1]) { kind = "exact"; sym = "★"; }
-    else if (outcome(pred) === outcome(actual)) { kind = "ok"; sym = "✓"; }
+    if (outcome(pred) === outcome(actual)) { kind = "ok"; sym = "✓"; }
     else { kind = "miss"; sym = "✗"; }
     badge.className = "match-grade " + kind;
     badge.textContent = sym;
@@ -1055,6 +1256,7 @@ function renderAll() {
   fillActuals();
   renderThirds();
   renderBracket();
+  markConfirmedMatches(); // re-assert locks (kicked-off / confirmed) after any render
 }
 
 /* ================= Events ================= */
@@ -1230,7 +1432,19 @@ fillGroupVenues();
 setupBoardUI();
 refreshBoard();
 markConfirmedMatches();
+layoutGroups();
+initTitleScreen();
 initAuth();
+
+// Re-lock matches as their kickoff time passes while the page stays open.
+setInterval(markConfirmedMatches, 15000);
+
+// Re-flow the masonry columns when the viewport width changes.
+let layoutTimer = null;
+window.addEventListener("resize", () => {
+  clearTimeout(layoutTimer);
+  layoutTimer = setTimeout(layoutGroups, 150);
+});
 
 (function restoreIdentity() {
   const mine = getMine();
