@@ -522,29 +522,9 @@ function setMode(mode) {
 }
 
 /* ================= Live (actual) results ================= */
-function countLiveResults() {
-  const r = (window.WC_LIVE && window.WC_LIVE.results) || {};
-  let n = 0;
-  for (const g of GROUP_LETTERS) (r[g] || []).forEach((x) => { if (x) n++; });
-  return n;
-}
-
-function loadActualResults() {
-  const live = window.WC_LIVE && window.WC_LIVE.results;
-  if (!live) return;
-  const n = countLiveResults();
-  if (!confirm(`Fill in the ${n} actual result(s) played so far? This overwrites the score for those matches.`)) return;
-  for (const g of GROUP_LETTERS) {
-    (live[g] || []).forEach((sc, i) => {
-      if (Array.isArray(sc) && sc.length === 2) {
-        state.scores[g][i] = [normScore(sc[0]), normScore(sc[1])];
-      }
-    });
-  }
-  syncInputs();
-  renderAll();
-  saveState();
-}
+/* Actual results are never written into your predictions — a locked match is
+   either a real pick you entered before kickoff (graded) or blue (not entered
+   in time). The old "Load actual results" override has been removed. */
 
 /* ================= Leaderboard ================= */
 const BOARD_KEY = "wc2026-leaderboard-v1";
@@ -1790,7 +1770,10 @@ function markPredictionAccuracy() {
 
     if (preLocked || !hasGuess) {
       if (preLocked) row.querySelectorAll(".goal").forEach((el) => { el.value = ""; });
-      if (isLocked(g, m)) row.classList.add("guess-locked"); // locked, not your pick → blue
+      if (isLocked(g, m)) {
+        row.classList.add("guess-locked"); // locked with no pre-kickoff pick → blue
+        if (badge) badge.title = "Locked — no prediction entered before kickoff";
+      }
       return;
     }
 
@@ -1978,20 +1961,6 @@ function wireEvents() {
     saveState();
     markDirty();
   });
-
-  // "Load actual results" — only enabled when live data is present
-  const la = document.getElementById("load-actual");
-  if (la) {
-    const n = countLiveResults();
-    if (window.WC_LIVE && n > 0) {
-      la.textContent = `📥 Actual results (${n})`;
-      const when = (window.WC_LIVE.updated || "").slice(0, 10);
-      la.title = `From ${window.WC_LIVE.source || "live data"}${when ? ", updated " + when : ""}`;
-      la.addEventListener("click", loadActualResults);
-    } else {
-      la.style.display = "none";
-    }
-  }
 
   // Leaderboard
   document.getElementById("submit-bracket").addEventListener("click", submitPredictions);
