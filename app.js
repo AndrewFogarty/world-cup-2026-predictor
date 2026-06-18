@@ -738,15 +738,19 @@ function hydrateMyGuesses() {
   const sub = board.find((s) => s.id === id);
   if (!sub || !sub.scores) return;
   setEditorLocked(sub);
+  const lockedAtSubmit = new Set(sub.locked || []);
   let changed = false;
   for (const g of GROUP_LETTERS) {
     const arr = sub.scores[g] || [];
     arr.forEach((sc, i) => {
+      // Matches finished before you locked your bracket aren't your picks — skip
+      // them (markPredictionAccuracy renders them blank/grey).
+      if (lockedAtSubmit.has(g + i)) return;
       const valid = Array.isArray(sc) && sc[0] != null && sc[1] != null;
       if (!valid) return;
       if (isLocked(g, i)) {
-        // Played / kicked-off: show your stored pick read-only so it can be
-        // graded against the actual result (the input stays disabled).
+        // You predicted it before kickoff and it has since played: show your
+        // pick read-only so it can be graded against the actual result.
         state.scores[g][i] = [normScore(sc[0]), normScore(sc[1])];
         changed = true;
       } else {
@@ -899,12 +903,10 @@ function scoreSubmission(sub) {
     const preds = (sub.scores && sub.scores[g]) || [];
     const acts = live[g] || [];
     for (let i = 0; i < 6; i++) {
+      // Matches already finished when you first locked your bracket aren't
+      // predictions you made — they don't count and aren't shown as guesses.
+      if (lockedSet.has(g + i)) { locked++; continue; }
       const r = scoreMatch(preds[i], acts[i], allowExact);
-      // Every played match you predicted counts. You can't enter a prediction
-      // after kickoff (the inputs lock), so a stored pick was always made in
-      // time — there's nothing to exclude. `locked` is kept only as an FYI
-      // count of picks for matches already played when you last submitted.
-      if (lockedSet.has(g + i) && r.kind !== "pending" && r.kind !== "none") locked++;
       if (r.kind === "exact") { total += 50; exact++; scored++; }
       else if (r.kind === "outcome") { total += 10; outc++; scored++; }
       else if (r.kind === "miss") { miss++; scored++; }
@@ -927,10 +929,16 @@ function scoreSubmission(sub) {
 
 async function submitPredictions() {
   const input = document.getElementById("username");
+  // `locked` = matches already finished the FIRST time you committed a bracket.
+  // Preserve it across updates so editing later never excludes picks you'd made
+  // before those games kicked off (only set fresh on a brand-new entry).
+  const existing = SHARED && authUser
+    ? board.find((s) => s.user_id === authUser.id)
+    : (getMine() ? board.find((s) => s.id === getMine().id) : null);
   const payload = {
     scores: JSON.parse(JSON.stringify(state.scores)),
     bracket: JSON.parse(JSON.stringify(state.bracket)),
-    locked: confirmedKeysNow(), // matches already official at submit time → excluded
+    locked: (existing && Array.isArray(existing.locked)) ? existing.locked : confirmedKeysNow(),
     predicted: predictedAdvancement(), // teams sent to each knockout round
   };
   if (SHARED) {
@@ -1138,7 +1146,7 @@ function renderScorecard(id) {
   let html = `<div class="sc-head">
       <span class="sc-name">${escapeHtml(sub.username)}</span>
       <span class="sc-total">${sc.total} pts</span>
-      <span class="sc-sub">${sc.exact} exact · ${sc.outcome} result · ${sc.miss} miss${sc.koHits ? " · KO " + sc.koHits + "×20" : ""}${sc.champ ? " · 🏆+100" : ""}</span>
+      <span class="sc-sub">${sc.exact} exact · ${sc.outcome} result · ${sc.miss} miss${sc.locked ? " · " + sc.locked + " pre-locked" : ""}${sc.koHits ? " · KO " + sc.koHits + "×20" : ""}${sc.champ ? " · 🏆+100" : ""}</span>
       <button class="sc-close" type="button" aria-label="Close">✕</button>
     </div>
     <div class="sc-legend">
@@ -1146,6 +1154,7 @@ function renderScorecard(id) {
       <span class="sc-chip outcome">10</span> result
       <span class="sc-chip miss">0</span> miss
       <span class="sc-chip pending">·</span> not played
+      <span class="sc-chip none was-locked">·</span> done before you joined
     </div>
     <div class="sc-groups">`;
 
@@ -1157,15 +1166,17 @@ function renderScorecard(id) {
       const act = (live[g] || [])[i];
       const nm = state.names[g];
       const wasLocked = lockedSet.has(g + i);
+      // Already finished before this bracket was locked → not a real prediction:
+      // show neutral grey, never a coloured "correct" guess.
+      if (wasLocked) {
+        html += `<span class="sc-chip none was-locked" title="${escapeHtml(`${nm[hi]} v ${nm[ai]} — finished ${fmt(act)} before you locked your bracket (not your pick, not counted)`)}">·</span>`;
+        return;
+      }
       const r = scoreMatch(pred, act, allowExact);
       const shown = sub.mode === "result" ? sym(pred) : fmt(pred);
-      // Colour any played match with a prediction (red/gold/green). Matches that
-      // were already played when this entry was last submitted are marked, but
-      // they still earn their points.
-      const lockTitle = wasLocked ? " — already played when submitted" : "";
       const ptsTitle = r.pts ? " (+" + r.pts + ")" : "";
-      const title = `${nm[hi]} v ${nm[ai]} — you ${sub.mode === "result" ? sym(pred) : fmt(pred)}, actual ${fmt(act)}${ptsTitle}${lockTitle}`;
-      html += `<span class="sc-chip ${r.kind}${wasLocked ? " was-locked" : ""}" title="${escapeHtml(title)}">${shown === "—" ? "·" : shown}</span>`;
+      const title = `${nm[hi]} v ${nm[ai]} — you ${sub.mode === "result" ? sym(pred) : fmt(pred)}, actual ${fmt(act)}${ptsTitle}`;
+      html += `<span class="sc-chip ${r.kind}" title="${escapeHtml(title)}">${shown === "—" ? "·" : shown}</span>`;
     });
     html += `</div></div>`;
   }
@@ -1586,6 +1597,14 @@ function markPredictionAccuracy() {
     const badge = row.querySelector(".match-grade");
     if (badge) { badge.className = "match-grade"; badge.textContent = ""; badge.title = ""; }
 
+    // Finished before this bracket was locked → not your prediction: blank the
+    // box and show neutral grey (never gold), so it's clear it didn't count.
+    if (editorLockedSet.has(g + m)) {
+      row.querySelectorAll(".goal").forEach((el) => { el.value = ""; });
+      row.classList.add("guess-none");
+      return;
+    }
+
     const actual = (live[g] || [])[m];
     if (!actual || actual[0] == null || actual[1] == null) return; // not played yet
     const pred = state.scores[g][m];
@@ -1627,6 +1646,51 @@ function renderAll() {
   renderThirds();
   renderBracket();
   markConfirmedMatches(); // re-assert locks (kicked-off / confirmed) after any render
+}
+
+/* ================= Champion celebration ================= */
+/* Cascading flags of the team you crown as champion. Fires once when a new
+   champion is locked in (clears if you change/undo the pick). */
+let lastChampCelebrated = null;
+function maybeCelebrateChampion() {
+  const champ = winnerOf(104);
+  if (champ && champ.known && champ.name) {
+    if (champ.name !== lastChampCelebrated) {
+      lastChampCelebrated = champ.name;
+      celebrateChampion(champ.code);
+    }
+  } else {
+    lastChampCelebrated = null;
+  }
+}
+
+function celebrateChampion(code) {
+  const slug = flagSlug(code);
+  if (!slug) return;
+  let layer = document.getElementById("confetti-layer");
+  if (!layer) {
+    layer = document.createElement("div");
+    layer.id = "confetti-layer";
+    layer.className = "confetti-layer";
+    document.body.appendChild(layer);
+  }
+  layer.innerHTML = "";
+  const N = 42;
+  for (let i = 0; i < N; i++) {
+    const f = document.createElement("img");
+    f.className = "confetti-flag";
+    f.src = `https://flagcdn.com/${slug}.svg`;
+    f.alt = "";
+    f.style.left = (Math.random() * 100).toFixed(2) + "vw";
+    f.style.width = (15 + Math.random() * 18).toFixed(0) + "px";
+    f.style.animationDelay = (Math.random() * 0.9).toFixed(2) + "s";
+    f.style.animationDuration = (2.6 + Math.random() * 2).toFixed(2) + "s";
+    f.style.setProperty("--rot", (Math.random() * 800 - 400).toFixed(0) + "deg");
+    f.style.setProperty("--sway", (Math.random() * 60 - 30).toFixed(0) + "px");
+    layer.appendChild(f);
+  }
+  clearTimeout(celebrateChampion._t);
+  celebrateChampion._t = setTimeout(() => { if (layer) layer.innerHTML = ""; }, 5600);
 }
 
 /* ================= Events ================= */
@@ -1702,6 +1766,7 @@ function wireEvents() {
     renderBracket();
     saveState();
     markDirty();
+    maybeCelebrateChampion();
   });
 
   document.getElementById("reset").addEventListener("click", () => {

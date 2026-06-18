@@ -2276,6 +2276,7 @@ body.mi-open { overflow: hidden; }
   border-radius: 4px;
   text-align: center;
   vertical-align: middle;
+  text-shadow: none;
 }
 .pp-nm { font-weight: 600; vertical-align: middle; }
 
@@ -2308,3 +2309,30 @@ body.mi-open { overflow: hidden; }
   transition: opacity 0.15s, color 0.15s, transform 0.15s;
 }
 .match-info:hover { opacity: 1; color: var(--red); transform: scale(1.15); }
+
+/* ================= Champion flag confetti ================= */
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2000;
+  overflow: hidden;
+}
+.confetti-flag {
+  position: absolute;
+  top: -10vh;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  animation-name: confetti-fall;
+  animation-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}
+@keyframes confetti-fall {
+  0%   { transform: translate(0, -12vh) rotate(0deg); opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translate(var(--sway, 0), 112vh) rotate(var(--rot, 360deg)); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti-flag { display: none; }
+}
