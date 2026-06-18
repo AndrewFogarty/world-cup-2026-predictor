@@ -738,19 +738,15 @@ function hydrateMyGuesses() {
   const sub = board.find((s) => s.id === id);
   if (!sub || !sub.scores) return;
   setEditorLocked(sub);
-  const lockedAtSubmit = new Set(sub.locked || []);
   let changed = false;
   for (const g of GROUP_LETTERS) {
     const arr = sub.scores[g] || [];
     arr.forEach((sc, i) => {
-      // Matches finished before you locked your bracket aren't your picks — skip
-      // them (markPredictionAccuracy renders them blank/grey).
-      if (lockedAtSubmit.has(g + i)) return;
       const valid = Array.isArray(sc) && sc[0] != null && sc[1] != null;
       if (!valid) return;
+      // Load every stored pick (including ones that have since locked) so they
+      // show and grade. markPredictionAccuracy blanks only auto-filled ones.
       if (isLocked(g, i)) {
-        // You predicted it before kickoff and it has since played: show your
-        // pick read-only so it can be graded against the actual result.
         state.scores[g][i] = [normScore(sc[0]), normScore(sc[1])];
         changed = true;
       } else {
@@ -894,6 +890,19 @@ function markConfirmedMatches() {
   });
 }
 
+/* A match counts as "not your prediction" only if it was already finished when
+   you locked your bracket (in `locked`) AND your stored value is missing or
+   exactly equals the actual result — i.e. it was auto-filled, not predicted. A
+   locked match whose stored guess DIFFERS from the result is a genuine pick you
+   made before kickoff, so it still shows and scores. */
+function effectivelyPreLocked(g, i, pred, act, lockedSet) {
+  if (!lockedSet.has(g + i)) return false;
+  const hasGuess = pred && pred[0] != null && pred[1] != null;
+  if (!hasGuess) return true;
+  if (act && act[0] != null && pred[0] === act[0] && pred[1] === act[1]) return true;
+  return false;
+}
+
 function scoreSubmission(sub) {
   const live = liveResults();
   const allowExact = sub.mode !== "result";
@@ -903,9 +912,9 @@ function scoreSubmission(sub) {
     const preds = (sub.scores && sub.scores[g]) || [];
     const acts = live[g] || [];
     for (let i = 0; i < 6; i++) {
-      // Matches already finished when you first locked your bracket aren't
-      // predictions you made — they don't count and aren't shown as guesses.
-      if (lockedSet.has(g + i)) { locked++; continue; }
+      // Auto-filled / pre-locked matches don't count; genuine picks (incl. ones
+      // predicted before kickoff that later locked) do.
+      if (effectivelyPreLocked(g, i, preds[i], acts[i], lockedSet)) { locked++; continue; }
       const r = scoreMatch(preds[i], acts[i], allowExact);
       if (r.kind === "exact") { total += 50; exact++; scored++; }
       else if (r.kind === "outcome") { total += 10; outc++; scored++; }
@@ -1165,11 +1174,10 @@ function renderScorecard(id) {
       const pred = (sub.scores[g] || [])[i];
       const act = (live[g] || [])[i];
       const nm = state.names[g];
-      const wasLocked = lockedSet.has(g + i);
-      // Already finished before this bracket was locked → not a real prediction:
-      // show neutral grey, never a coloured "correct" guess.
-      if (wasLocked) {
-        html += `<span class="sc-chip none was-locked" title="${escapeHtml(`${nm[hi]} v ${nm[ai]} — finished ${fmt(act)} before you locked your bracket (not your pick, not counted)`)}">·</span>`;
+      // Auto-filled / pre-locked (no pick, or stored value == actual) → grey,
+      // not counted. A locked match with a differing guess is a real pick.
+      if (effectivelyPreLocked(g, i, pred, act, lockedSet)) {
+        html += `<span class="sc-chip none was-locked" title="${escapeHtml(`${nm[hi]} v ${nm[ai]} — ${fmt(act)} (not your pick, not counted)`)}">·</span>`;
         return;
       }
       const r = scoreMatch(pred, act, allowExact);
@@ -1772,18 +1780,20 @@ function markPredictionAccuracy() {
     const badge = row.querySelector(".match-grade");
     if (badge) { badge.className = "match-grade"; badge.textContent = ""; badge.title = ""; }
 
-    const preLocked = editorLockedSet.has(g + m); // already over when you locked in
     const pred = state.scores[g][m];
-    const guessed = !preLocked && pred && pred[0] != null && pred[1] != null;
+    const actual = (live[g] || [])[m];
+    const hasGuess = pred && pred[0] != null && pred[1] != null;
+    // Auto-filled / pre-locked (locked + no pick, or stored value == actual) is
+    // NOT your prediction: blank it and show blue. A locked match with a real
+    // (differing) pick still shows graded.
+    const preLocked = effectivelyPreLocked(g, m, pred, actual, editorLockedSet);
 
-    if (!guessed) {
+    if (preLocked || !hasGuess) {
       if (preLocked) row.querySelectorAll(".goal").forEach((el) => { el.value = ""; });
-      // Locked (kicked off / confirmed) but you never predicted it → blue.
-      if (isLocked(g, m)) row.classList.add("guess-locked");
+      if (isLocked(g, m)) row.classList.add("guess-locked"); // locked, not your pick → blue
       return;
     }
 
-    const actual = (live[g] || [])[m];
     if (!actual || actual[0] == null || actual[1] == null) return; // your pick, not played yet
 
     let kind, sym;
