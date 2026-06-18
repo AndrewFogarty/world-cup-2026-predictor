@@ -556,12 +556,13 @@ async function initAuth() {
     const { data } = await SB.auth.getSession();
     authUser = (data && data.session && data.session.user) || null;
   } catch (e) { /* ignore */ }
-  // A restored session is kept for identity, but it must NOT auto-enter the app
-  // or auto-sign-in. Only an explicit "Sign in with Google" click (which fires a
-  // SIGNED_IN event after the OAuth redirect) enters.
-  SB.auth.onAuthStateChange((event, sess) => {
+  // The predictor is gated behind Google sign-in: you enter only when actually
+  // signed in (a valid session counts). No account → the title screen stays up.
+  if (authUser) showApp();
+  SB.auth.onAuthStateChange((_event, sess) => {
     authUser = (sess && sess.user) || null;
-    if (event === "SIGNED_IN") { markEntered(); showApp(); }
+    if (authUser) showApp();
+    else showTitle(); // signed out → back to the gate
     applyAuthUI();
     refreshBoard();
   });
@@ -622,6 +623,9 @@ async function signInWithGoogle() {
 async function signOut() {
   try { await SB.auth.signOut(); } catch (e) { /* ignore */ }
   authUser = null;
+  hydratedFull = false;
+  resetEditor();   // don't leave your bracket on screen for the next person
+  showTitle();     // back to the sign-in gate
   applyAuthUI();
   refreshBoard();
 }
@@ -638,6 +642,11 @@ function showApp() {
   const ts = document.getElementById("title-screen");
   if (ts) ts.classList.add("hidden");
   document.body.classList.remove("title-active");
+}
+function showTitle() {
+  const ts = document.getElementById("title-screen");
+  if (ts) ts.classList.remove("hidden");
+  document.body.classList.add("title-active");
 }
 function enterAsGuest() {
   const u = document.getElementById("title-username");
@@ -657,18 +666,26 @@ function initTitleScreen() {
   const ts = document.getElementById("title-screen");
   if (!ts) return;
   const google = document.getElementById("title-google");
-  // No shared backend -> Google sign-in isn't available; guest only.
-  if (!SHARED && google) google.style.display = "none";
-
-  if (google) google.addEventListener("click", () => { markEntered(); signInWithGoogle(); });
   const guest = document.getElementById("title-guest");
-  if (guest) guest.addEventListener("click", enterAsGuest);
   const u = document.getElementById("title-username");
-  if (u) u.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); enterAsGuest(); } });
+  const or = ts.querySelector(".title-or");
 
-  // Returning user (already entered on this device once) -> straight to the app
-  // so they can edit immediately. A restored Google session alone does NOT skip
-  // the gate — signing in requires actually clicking the button.
+  if (SHARED) {
+    // Shared leaderboard → Google sign-in is required. No guest bypass, and the
+    // gate only lifts once you're actually signed in (see initAuth).
+    if (guest) guest.style.display = "none";
+    if (u) u.style.display = "none";
+    if (or) or.style.display = "none";
+    if (google) google.addEventListener("click", signInWithGoogle);
+    if (authUser) { showApp(); return; }
+    document.body.classList.add("title-active");
+    return;
+  }
+
+  // Local-only mode (no backend): guest entry, remembered per device.
+  if (google) google.style.display = "none";
+  if (guest) guest.addEventListener("click", enterAsGuest);
+  if (u) u.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); enterAsGuest(); } });
   if (hasEntered()) { showApp(); return; }
   document.body.classList.add("title-active");
 }
@@ -720,10 +737,25 @@ function refreshBoard() {
    full (every scoreline + the bracket), exactly like the old Edit did, so it
    looks complete (blue + gold) right away. Later background refreshes only fill
    gaps / locked matches so they never clobber edits you're making. */
+/* Wipe the editor back to a blank slate (no predictions, no bracket). */
+function resetEditor() {
+  for (const g of GROUP_LETTERS) state.scores[g] = FIXTURES.map(() => [null, null]);
+  state.bracket = {};
+  editorLockedSet = new Set();
+  syncInputs();
+  renderAll();
+  saveState();
+}
+
 let hydratedFull = false;
 function hydrateMyGuesses() {
   const id = myId();
-  if (!id) return;
+  if (!id) {
+    // Signed in but no saved entry yet → start clean once, so a different/prior
+    // account's locally-saved bracket never shows.
+    if (SHARED && authUser && !hydratedFull) { resetEditor(); hydratedFull = true; }
+    return;
+  }
   const sub = board.find((s) => s.id === id);
   if (!sub || !sub.scores) return;
   setEditorLocked(sub);
