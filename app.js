@@ -969,8 +969,25 @@ async function consumePendingJoin() {
   pendingJoin = null;
   clearGroupParam();
   const res = await joinGroup(code);
-  if (!res.ok && res.needPassword) openJoinPanel(code, `“${code}” needs a password.`);
+  // Arriving via an invite link → only ask for the password (hide the code box).
+  if (!res.ok && res.needPassword) openJoinPanel(code, "", true);
   else if (!res.ok && res.notFound) openJoinPanel(code, `No pool “${code}” yet.`);
+}
+
+/* Admin-only: set or change a pool's password (blank removes it). */
+async function setPoolPassword(code) {
+  if (!SHARED || !isAdmin()) return;
+  const g = myGroups.find((x) => x.code === code);
+  const name = (g && g.name) || code;
+  const pw = prompt(`Set a password for “${name}”.\nLeave blank to remove the password (anyone can join):`, "");
+  if (pw === null) return; // cancelled
+  try {
+    const { error } = await SB.rpc("set_group_password", { p_code: code, p_password: pw });
+    if (error) throw error;
+    alert(pw ? `Password updated for “${name}”.` : `Password removed — “${name}” is now open.`);
+  } catch (e) {
+    alert("Couldn't update password: " + (e.message || e));
+  }
 }
 function groupParam() {
   try { return new URLSearchParams(location.search).get("group"); } catch (e) { return null; }
@@ -1007,26 +1024,39 @@ function renderPoolActions() {
   const g = myGroups.find((x) => x.code === boardScope);
   el.innerHTML =
     `<button class="btn ghost" id="copy-invite" type="button">🔗 Copy invite link</button>` +
+    (isAdmin() ? `<button class="btn ghost" id="set-pass" type="button">🔒 Set password</button>` : "") +
     `<button class="btn ghost" id="leave-pool" type="button">Leave “${escapeHtml((g && g.name) || boardScope)}”</button>`;
 }
 
-function openJoinPanel(prefill, msg) {
+/* Open the join panel. In `lockCode` mode (arriving via an invite link) the
+   pool-code box is hidden and the person only enters the password. */
+function openJoinPanel(prefill, msg, lockCode) {
   const panel = document.getElementById("join-panel");
   if (!panel) return;
   panel.hidden = false;
   const code = document.getElementById("join-code");
   const pass = document.getElementById("join-pass");
   const go = document.getElementById("join-go");
+  const title = document.getElementById("join-title");
   const m = document.getElementById("join-msg");
   const admin = isAdmin();
-  // Only the admin can create pools / set passwords; everyone else only joins.
-  if (go) go.textContent = admin ? "Join / create" : "Join pool";
-  if (pass) pass.placeholder = admin ? "Set a password (optional)" : "Password (if required)";
-  if (code && prefill != null) code.value = prefill;
+  if (lockCode) {
+    if (code) { code.value = prefill || ""; code.style.display = "none"; }
+    if (title) { title.textContent = `Enter the password for “${prefill}”`; title.style.display = ""; }
+    if (go) go.textContent = "Join";
+    if (pass) pass.placeholder = "Password";
+  } else {
+    if (code) { code.style.display = ""; if (prefill != null) code.value = prefill; }
+    if (title) title.style.display = "none";
+    // Only the admin can create pools / set passwords; everyone else only joins.
+    if (go) go.textContent = admin ? "Join / create" : "Join pool";
+    if (pass) pass.placeholder = admin ? "Set a password (optional)" : "Password (if required)";
+  }
   if (pass) pass.value = "";
   if (m) m.textContent = msg || "";
-  const focusEl = prefill ? (pass || code) : code;
+  const focusEl = (lockCode || prefill) ? (pass || code) : code;
   if (focusEl) focusEl.focus();
+  panel.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 function closeJoinPanel() {
   const panel = document.getElementById("join-panel");
@@ -2950,6 +2980,7 @@ function wireEvents() {
       if (navigator.clipboard) navigator.clipboard.writeText(link).then(done, () => prompt("Copy this invite link:", link));
       else prompt("Copy this invite link:", link);
     }
+    if (e.target.closest("#set-pass")) setPoolPassword(boardScope);
     if (e.target.closest("#leave-pool")) leaveGroup(boardScope);
   });
   document.getElementById("leaderboard-table").addEventListener("click", (e) => {

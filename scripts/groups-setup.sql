@@ -88,6 +88,31 @@ $$;
 
 grant execute on function join_or_create_group(text, text, text) to anon, authenticated;
 
+-- Admin-only: set or change a pool's password (pass blank/empty to remove it
+-- and make the pool open). Lets the admin manage passwords from inside the app
+-- without touching SQL again.
+create or replace function set_group_password(p_code text, p_password text)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  admin_email constant text := 'andrewfogarty111@gmail.com';  -- keep in sync with join_or_create_group
+  v_email text := lower(coalesce(auth.jwt() ->> 'email', ''));
+  v_code  text := upper(btrim(p_code));
+begin
+  if v_email <> admin_email then raise exception 'not allowed'; end if;
+  update groups
+     set pass_hash = case when coalesce(p_password, '') = '' then null
+                          else crypt(p_password, gen_salt('bf')) end
+   where code = v_code;
+  if not found then raise exception 'pool not found'; end if;
+end;
+$$;
+
+grant execute on function set_group_password(text, text) to anon, authenticated;
+
 -- ---------------------------------------------------------------------
 --  One-time: move every EXISTING bracket into a "Family" pool.
 -- ---------------------------------------------------------------------
