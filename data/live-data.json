@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-18T23:55:19.889Z",
+  "updated": "2026-06-19T12:18:01.600Z",
   "results": {
     "A": [
       [
@@ -11,7 +11,10 @@
         2,
         1
       ],
-      null,
+      [
+        1,
+        0
+      ],
       [
         1,
         1
@@ -28,7 +31,10 @@
         1,
         1
       ],
-      null,
+      [
+        6,
+        0
+      ],
       [
         1,
         4
@@ -221,8 +227,8 @@
       "s": "A",
       "h": "Mexico",
       "a": "Korea Republic",
-      "hg": null,
-      "ag": null,
+      "hg": 1,
+      "ag": 0,
       "v": "Estadio Akron (Guadalajara, MEX)"
     },
     {
@@ -281,8 +287,8 @@
       "s": "B",
       "h": "Canada",
       "a": "Qatar",
-      "hg": null,
-      "ag": null,
+      "hg": 6,
+      "ag": 0,
       "v": "BC Place (Vancouver, CAN)"
     },
     {
