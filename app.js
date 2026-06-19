@@ -1483,7 +1483,7 @@ function renderScorecard(id) {
       <span class="sc-chip miss">0</span> miss
       <span class="sc-chip pending">·</span> not played
       <span class="sc-chip none was-locked">·</span> done before you joined
-      <span class="sc-chip missing">!</span> unfilled (blocks bracket)
+      <span class="sc-chip missing">!</span> unfilled (slot seeds roughly)
     </div>`;
 
   // Genuinely-missing entries in this submission — the cause of an unseeded
@@ -1495,7 +1495,8 @@ function renderScorecard(id) {
   if (gaps.length) {
     html += `<div class="sc-warn" role="status">⚠
       <strong>${totalMissing} unfilled match${totalMissing === 1 ? "" : "es"}</strong> —
-      knockout slots can't fully seed (3rd-place needs <em>all</em> groups):
+      touched groups still seed the bracket <em>roughly</em>; these aren't locked
+      (3rd-place teams lock once every group is done):
       ${gaps.map((g) => `Group ${g} (${[...missByGroup[g]].map((i) => escapeHtml(matchLabel(g, i))).join(", ")})`).join(" · ")}</div>`;
   }
 
@@ -1511,7 +1512,7 @@ function renderScorecard(id) {
       // Unfilled entry that blocks the bracket → red "!" chip (check first; a
       // missing match has no actual result so it can't be pre-locked).
       if (missByGroup[g].has(i)) {
-        html += `<span class="sc-chip missing" title="${escapeHtml(`${nm[hi]} v ${nm[ai]} — no prediction; blocks knockout seeding`)}">!</span>`;
+        html += `<span class="sc-chip missing" title="${escapeHtml(`${nm[hi]} v ${nm[ai]} — no prediction; the slot still seeds roughly from this group's other picks`)}">!</span>`;
         return;
       }
       // Auto-filled / pre-locked (no pick, or stored value == actual) → grey,
