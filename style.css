@@ -2472,15 +2472,56 @@ body.mi-open { overflow: hidden; }
   box-shadow: 0 10px 30px rgba(12, 18, 32, 0.3);
   background-color: #0a0e20;
   background-image:
-    linear-gradient(rgba(8, 12, 24, 0.80), rgba(8, 12, 24, 0.9)),
+    linear-gradient(
+      to bottom,
+      rgba(8, 12, 24, 0.78) 0%,
+      rgba(8, 12, 24, 0.88) 32%,
+      #0a0e20 58%,
+      #0a0e20 100%
+    ),
     url("images/Last Dance.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center, center top;
   /* Zoomed out a touch from "cover" so Neymar (left) and Messi (right) read
-     clearly; the gradient + base colour fill the rest. */
+     clearly; the gradient fades the image fully into the base colour by ~58%,
+     leaving the lower half dark so the Walk image below can fade up into it. */
   background-size: cover, 108%;
 }
-.wch-overlay { padding: 1.5rem 1.25rem 1.75rem; }
+/* "Walk.jpg" — the stars walking toward the trophy — fills the dark lower half
+   of the records panel. A top-edge mask fades it up out of the same #0a0e20
+   the Last Dance image fades down into, so the two meet in a dark, low-contrast
+   band with no visible seam. */
+.wc-history::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 62%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, rgba(10, 14, 32, 0.55), rgba(10, 14, 32, 0.32)),
+    url("images/Walk.jpg") center bottom / cover no-repeat;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 30%,
+    #000 55%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 30%,
+    #000 55%
+  );
+}
+/* Keep the heading + leaderboard cards above the Walk backdrop. */
+.wch-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem 1.25rem 1.75rem;
+}
 .wch-head { margin-bottom: 0.25rem; }
 .wch-head h2 { color: #fff; margin: 0 0 0.3rem; }
 .wch-note {
