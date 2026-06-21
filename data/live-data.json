@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-20T20:52:14.169Z",
+  "updated": "2026-06-21T10:46:42.848Z",
   "results": {
     "A": [
       [
@@ -91,8 +91,14 @@
         1,
         0
       ],
-      null,
-      null,
+      [
+        2,
+        1
+      ],
+      [
+        0,
+        0
+      ],
       null,
       null
     ],
@@ -109,7 +115,10 @@
         5,
         1
       ],
-      null,
+      [
+        4,
+        0
+      ],
       null,
       null
     ],
@@ -472,8 +481,8 @@
       "s": "E",
       "h": "Germany",
       "a": "Côte d'Ivoire",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 1,
       "v": "BMO Field (Toronto, CAN)"
     },
     {
@@ -482,8 +491,8 @@
       "s": "E",
       "h": "Ecuador",
       "a": "Curaçao",
-      "hg": null,
-      "ag": null,
+      "hg": 0,
+      "ag": 0,
       "v": "Arrowhead Stadium (Kansas City, USA)"
     },
     {
@@ -542,8 +551,8 @@
       "s": "F",
       "h": "Tunisia",
       "a": "Japan",
-      "hg": null,
-      "ag": null,
+      "hg": 0,
+      "ag": 4,
       "v": "Estadio BBVA (Monterrey, MEX)"
     },
     {
