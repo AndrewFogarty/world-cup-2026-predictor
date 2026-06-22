@@ -3136,6 +3136,37 @@ function liveGoalsForName(name, scorers) {
   return 0;
 }
 
+/* Monotonic 2026 goal count: max(official wcGoals + live in-play goals) ever
+   seen for a player, persisted per browser. This stops the count going
+   *backwards* when a live match ends but the official per-player stats haven't
+   caught up yet — the goal stays counted through that gap, then reconciles
+   with the official number (no dip, no double-count). A stale held value
+   reconciles down to official after 6h (covers a rare VAR/correction). */
+let _gmax = null;
+function gmaxStore() {
+  if (_gmax) return _gmax;
+  try { _gmax = JSON.parse(localStorage.getItem("wc2026-gmax") || "{}"); } catch (e) { _gmax = {}; }
+  return _gmax;
+}
+function bumped2026Goals(name, official, prov) {
+  const current = (official || 0) + (prov || 0);
+  const m = nameMatchKey(name);
+  if (!m.last) return current;
+  const key = m.last + "|" + m.initial;
+  const store = gmaxStore();
+  const e = store[key];
+  const now = Date.now();
+  const stale = e && (now - e.t) > 6 * 3600 * 1000;
+  if (!e || current >= e.v || stale) {
+    if (!e || e.v !== current) {
+      store[key] = { v: current, t: now };
+      try { localStorage.setItem("wc2026-gmax", JSON.stringify(store)); } catch (_) {}
+    }
+    return current;
+  }
+  return e.v; // hold the higher value until official catches up
+}
+
 /* Top goal+assist contributors in the current tournament. `scorers` adds the
    in-play goals on top of the official tally so it updates live. */
 function tournamentGARows(scorers) {
@@ -3145,9 +3176,10 @@ function tournamentGARows(scorers) {
     for (const [team, t] of Object.entries(f.teams)) {
       const code = NAME_CODE[team] || "";
       for (const p of t.players || []) {
-        const prov = liveGoalsForName(p.name, scorers || []);
-        const g = (p.wcGoals || 0) + prov, a = p.wcAssists || 0;
-        if (g + a > 0) rows.push({ name: p.name, code, displayValue: g + a, g, a, sub: `${g} G · ${a} A`, prov });
+        const official = p.wcGoals || 0;
+        const g = bumped2026Goals(p.name, official, liveGoalsForName(p.name, scorers || []));
+        const a = p.wcAssists || 0;
+        if (g + a > 0) rows.push({ name: p.name, code, displayValue: g + a, g, a, sub: `${g} G · ${a} A`, prov: g - official });
       }
     }
   }
@@ -3164,9 +3196,11 @@ function tournamentStatRows(metric, scorers) {
     for (const [team, t] of Object.entries(f.teams)) {
       const code = NAME_CODE[team] || "";
       for (const p of t.players || []) {
-        const prov = metric === "wcGoals" ? liveGoalsForName(p.name, scorers || []) : 0;
-        const v = (p[metric] || 0) + prov;
-        if (v > 0) rows.push({ name: p.name, code, displayValue: v, sub: team, prov });
+        const official = p[metric] || 0;
+        const v = metric === "wcGoals"
+          ? bumped2026Goals(p.name, official, liveGoalsForName(p.name, scorers || []))
+          : official;
+        if (v > 0) rows.push({ name: p.name, code, displayValue: v, sub: team, prov: v - official });
       }
     }
   }
@@ -3226,24 +3260,25 @@ function renderHistory() {
         : tournamentGARows(scorers);
     } else {
       rows = (p.rows || []).map((r) => {
-        const L = r.id ? live[r.id] : null;
-        // Provisional in-play goals for this player (goals panels only).
-        const prov = (p.key === "goals" || p.key === "ga") ? liveGoalsForName(r.name, scorers) : 0;
-        let value, sub = r.sub, add = 0;
+        const L = r.id ? live[r.id] : null;          // official 2026 tally (by id)
+        let value, sub = r.sub, add = 0, prov = 0;   // add = official badge, prov = live badge
         if (p.key === "ga") {
-          let g = r.g || 0, a = r.a || 0;
-          if (L) { g += L.goals; a += L.assists; add = L.goals + L.assists; }
-          g += prov; value = g + a; sub = `${g} G · ${a} A`;
+          const og = L ? L.goals : 0, oa = L ? L.assists : 0;
+          const total = bumped2026Goals(r.name, og, liveGoalsForName(r.name, scorers));
+          const g = (r.g || 0) + total, a = (r.a || 0) + oa;
+          value = g + a; sub = `${g} G · ${a} A`;
+          add = og + oa; prov = total - og;
+        } else if (p.key === "goals") {
+          const og = L ? L.goals : 0;
+          const total = bumped2026Goals(r.name, og, liveGoalsForName(r.name, scorers));
+          value = (r.value || 0) + total;
+          add = og; prov = total - og;
         } else if (p.key === "active_wins") {
           // Stage-weighted: title +6, Final 8, Semi 5, Quarter 3, R16 2.
           value = (r.t || 0) * 6 + (r.f || 0) * 8 + (r.sf || 0) * 5 + (r.qf || 0) * 3 + (r.r16 || 0) * 2;
         } else {
           value = r.value;
-          if (L) {
-            add = p.key === "goals" ? L.goals : p.key === "assists" ? L.assists : 0;
-            value += add;
-          }
-          value += prov;
+          if (L) { add = p.key === "assists" ? L.assists : 0; value += add; }
         }
         return { name: r.name, code: r.code, displayValue: value, sub, add, prov };
       });
