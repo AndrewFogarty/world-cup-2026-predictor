@@ -62,6 +62,15 @@
           </p>
         </div>
         <div class="controls">
+          <div class="mode-toggle" role="group" aria-label="Prediction input mode">
+            <button id="mode-score" class="mode-opt" type="button">Scoreline</button>
+            <button id="mode-result" class="mode-opt" type="button">Win / Draw / Loss</button>
+          </div>
+          <div class="view-toggle" role="group" aria-label="Game round">
+            <button id="view-main" class="mode-opt active" type="button">🏟️ Main Game</button>
+            <button id="view-second" class="mode-opt" type="button" disabled title="Opens when the group stage is decided">🎯 Second Chance</button>
+          </div>
+          <button id="randomize" class="btn" type="button" style="display:none">🎲 Randomize</button>
           <div id="countdowns" class="countdowns">
             <div class="cd cd-knockout">
               <span class="cd-label">⚽ Knockout begins in</span>
@@ -72,15 +81,6 @@
               <span id="cd-groups-time" class="cd-time">—</span>
             </div>
           </div>
-          <div class="mode-toggle" role="group" aria-label="Prediction input mode">
-            <button id="mode-score" class="mode-opt" type="button">Scoreline</button>
-            <button id="mode-result" class="mode-opt" type="button">Win / Draw / Loss</button>
-          </div>
-          <div class="view-toggle" role="group" aria-label="Game round">
-            <button id="view-main" class="mode-opt active" type="button">🏟️ Main Game</button>
-            <button id="view-second" class="mode-opt" type="button" disabled title="Opens when the group stage is decided">🎯 Second Chance</button>
-          </div>
-          <button id="randomize" class="btn" type="button" style="display:none">🎲 Randomize</button>
         </div>
       </div>
       <nav class="subnav">
