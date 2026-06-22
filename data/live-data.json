@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-22T16:15:55.025Z",
+  "updated": "2026-06-22T19:19:05.245Z",
   "results": {
     "A": [
       [
@@ -185,7 +185,10 @@
         3,
         1
       ],
-      null,
+      [
+        2,
+        0
+      ],
       null,
       null,
       null
@@ -793,8 +796,8 @@
       "s": "J",
       "h": "Argentina",
       "a": "Austria",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 0,
       "v": "AT&T Stadium (Dallas, USA)"
     },
     {
