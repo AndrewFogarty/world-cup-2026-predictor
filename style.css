@@ -112,6 +112,12 @@ body {
 
 .controls {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+.toggle-row {
+  display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.6rem;
@@ -176,12 +182,10 @@ body {
 
 /* ---- header countdowns (sit in the space above the toggles) ---- */
 .countdowns {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.15rem;
-  margin-bottom: 0.15rem;
 }
 .cd {
   display: flex;
