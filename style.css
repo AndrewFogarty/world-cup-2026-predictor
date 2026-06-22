@@ -202,19 +202,19 @@ body {
   font-weight: 700;
   color: #fff;
 }
-.cd-knockout .cd-label {
+.cd-lead .cd-label {
   font-size: 0.74rem;
   color: #ffd23f;
 }
-.cd-knockout .cd-time {
+.cd-lead .cd-time {
   font-size: 1.2rem;
   letter-spacing: 0.02em;
 }
-.cd-groups .cd-label {
+.cd-sub .cd-label {
   font-size: 0.6rem;
   color: rgba(255, 255, 255, 0.72);
 }
-.cd-groups .cd-time {
+.cd-sub .cd-time {
   font-size: 0.78rem;
 }
 @media (max-width: 640px) {
