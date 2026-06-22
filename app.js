@@ -3223,6 +3223,45 @@ function bumped2026Goals(name, official, prov) {
   return Math.max((official || 0) + (prov || 0), espn2026Goals(name));
 }
 
+/* ---- Full-tournament 2026 assist totals from finished-match reports ----
+   ESPN's live scoreboard only names the scorer, not the assister, so there is
+   no in-play assist source (hence no live red dot). But every finished match's
+   report names the assist provider, and that lands the instant the match ends —
+   ahead of the lagging official per-player assist feed. We tally those reports
+   so the assist count folds into the gold 2026 badge at full-time and, being a
+   running total, never goes backwards. Own goals carry no assist credit. */
+let espnAssistSig = "";     // cache key: invalidated when match reports change
+let espnAssistTally = {};   // nameKey -> assists
+function report2026AssistTally() {
+  const f = window.WC_FOOTBALL;
+  if (!f || !f.matches) return {};
+  const reports = Object.values(f.matches).filter((m) => m.report && m.report.goals);
+  const sig = Object.keys(f.matches).length + ":" + reports.length;
+  if (sig === espnAssistSig) return espnAssistTally;
+  const tally = {};
+  for (const m of reports) {
+    for (const ev of m.report.goals) {
+      if (!ev.assist || ev.own) continue;
+      const k = nameMatchKey(ev.assist);
+      if (!k.last) continue;
+      const key = k.last + "|" + k.initial;
+      tally[key] = (tally[key] || 0) + 1;
+    }
+  }
+  espnAssistSig = sig; espnAssistTally = tally;
+  return tally;
+}
+function report2026Assists(name) {
+  const k = nameMatchKey(name);
+  if (!k.last) return 0;
+  return report2026AssistTally()[k.last + "|" + k.initial] || 0;
+}
+/* Best 2026 assist count: the higher of the official tally and the report tally.
+   Both are totals, so the max never double-counts and never regresses. */
+function bumped2026Assists(name, official) {
+  return Math.max(official || 0, report2026Assists(name));
+}
+
 /* Top goal+assist contributors in the current tournament. `scorers` adds the
    in-play goals on top of the official tally so it updates live. */
 function tournamentGARows(scorers) {
@@ -3234,7 +3273,7 @@ function tournamentGARows(scorers) {
       for (const p of t.players || []) {
         const official = p.wcGoals || 0;
         const g = bumped2026Goals(p.name, official, liveGoalsForName(p.name, scorers || []));
-        const a = p.wcAssists || 0;
+        const a = bumped2026Assists(p.name, p.wcAssists || 0); // settle from match reports
         const inPlay = liveGoalsForName(p.name, scorers || []); // clears at full-time
         if (g + a > 0) rows.push({ name: p.name, code, displayValue: g + a, g, a, sub: `${g} G · ${a} A`, prov: inPlay });
       }
@@ -3257,6 +3296,8 @@ function tournamentStatRows(metric, scorers) {
         const inPlay = metric === "wcGoals" ? liveGoalsForName(p.name, scorers || []) : 0;
         const v = metric === "wcGoals"
           ? bumped2026Goals(p.name, official, inPlay)
+          : metric === "wcAssists"
+          ? bumped2026Assists(p.name, official) // settle from match reports
           : official;
         // Red live dot reflects only in-play goals, so it clears once the match ends.
         if (v > 0) rows.push({ name: p.name, code, displayValue: v, sub: team, prov: inPlay });
@@ -3325,24 +3366,32 @@ function renderHistory() {
           const og = L ? L.goals : 0, oa = L ? L.assists : 0;
           const inPlay = liveGoalsForName(r.name, scorers); // goals in a match in progress
           const total = bumped2026Goals(r.name, og, inPlay);
-          const g = (r.g || 0) + total, a = (r.a || 0) + oa;
+          const aTot = bumped2026Assists(r.name, oa);        // settled from match reports
+          const g = (r.g || 0) + total, a = (r.a || 0) + aTot;
           value = g + a; sub = `${g} G · ${a} A`;
           // Red live dot = in-play goals only (clears at full-time); everything
-          // settled — incl. a just-finished match ESPN has counted — folds into
-          // the gold 2026 badge so the total never moves backwards.
-          prov = inPlay; add = (total - inPlay) + oa;
+          // settled — incl. a just-finished match's goals (ESPN) and assists
+          // (reports) — folds into the gold 2026 badge so the total never moves
+          // backwards.
+          prov = inPlay; add = (total - inPlay) + aTot;
         } else if (p.key === "goals") {
           const og = L ? L.goals : 0;
           const inPlay = liveGoalsForName(r.name, scorers); // goals in a match in progress
           const total = bumped2026Goals(r.name, og, inPlay);
           value = (r.value || 0) + total;
           prov = inPlay; add = total - inPlay;
+        } else if (p.key === "assists") {
+          // Assists settle from finished-match reports — folds into the gold
+          // badge at full-time, never backwards. No in-play source, so no dot.
+          const oa = L ? L.assists : 0;
+          const total = bumped2026Assists(r.name, oa);
+          value = (r.value || 0) + total;
+          add = total;
         } else if (p.key === "active_wins") {
           // Stage-weighted: title +6, Final 8, Semi 5, Quarter 3, R16 2.
           value = (r.t || 0) * 6 + (r.f || 0) * 8 + (r.sf || 0) * 5 + (r.qf || 0) * 3 + (r.r16 || 0) * 2;
         } else {
           value = r.value;
-          if (L) { add = p.key === "assists" ? L.assists : 0; value += add; }
         }
         return { name: r.name, code: r.code, displayValue: value, sub, add, prov };
       });
