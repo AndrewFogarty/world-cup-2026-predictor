@@ -1,6 +1,6 @@
 {
   "source": "API-Football (api-sports.io)",
-  "updated": "2026-06-22T19:19:38.016Z",
+  "updated": "2026-06-22T22:28:35.319Z",
   "season": 2026,
   "teams": {
     "Mexico": {
@@ -13966,14 +13966,14 @@
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 9,
+          "fouls": 8,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.9,
+          "fpg": 0.8,
           "mpg": 46
         },
         {
@@ -19956,7 +19956,7 @@
           "pos": "Midfielder",
           "number": 14,
           "games": 14,
-          "minutes": 669,
+          "minutes": 664,
           "goals": 3,
           "assists": 10,
           "yellow": 0,
@@ -19969,7 +19969,7 @@
           "gpg": 0.21,
           "apg": 0.71,
           "fpg": 0.64,
-          "mpg": 48
+          "mpg": 47
         },
         {
           "id": 2598,
@@ -20066,7 +20066,7 @@
           "pos": "Defender",
           "number": 2,
           "games": 10,
-          "minutes": 472,
+          "minutes": 467,
           "goals": 2,
           "assists": 1,
           "yellow": 0,
@@ -20154,7 +20154,7 @@
           "pos": "Midfielder",
           "number": 17,
           "games": 13,
-          "minutes": 862,
+          "minutes": 857,
           "goals": 1,
           "assists": 1,
           "yellow": 0,
@@ -20176,7 +20176,7 @@
           "pos": "Defender",
           "number": 4,
           "games": 13,
-          "minutes": 1059,
+          "minutes": 1054,
           "goals": 1,
           "assists": 1,
           "yellow": 0,
@@ -20264,7 +20264,7 @@
           "pos": "Defender",
           "number": 21,
           "games": 11,
-          "minutes": 870,
+          "minutes": 865,
           "goals": 0,
           "assists": 1,
           "yellow": 1,
@@ -20308,7 +20308,7 @@
           "pos": "Midfielder",
           "number": 7,
           "games": 7,
-          "minutes": 489,
+          "minutes": 484,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
@@ -20321,7 +20321,7 @@
           "gpg": 0,
           "apg": 0.14,
           "fpg": 0.43,
-          "mpg": 70
+          "mpg": 69
         },
         {
           "id": 237131,
@@ -20572,7 +20572,7 @@
           "pos": "Goalkeeper",
           "number": 23,
           "games": 15,
-          "minutes": 1350,
+          "minutes": 1345,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -20858,7 +20858,7 @@
           "pos": "Defender",
           "number": 21,
           "games": 8,
-          "minutes": 477,
+          "minutes": 472,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -20871,7 +20871,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 1.38,
-          "mpg": 60
+          "mpg": 59
         },
         {
           "id": 33253,
@@ -20946,7 +20946,7 @@
           "pos": "Midfielder",
           "number": 20,
           "games": 5,
-          "minutes": 224,
+          "minutes": 219,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -20959,7 +20959,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 45
+          "mpg": 44
         },
         {
           "id": 304782,
@@ -21034,7 +21034,7 @@
           "pos": "Defender",
           "number": 4,
           "games": 4,
-          "minutes": 176,
+          "minutes": 171,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -21047,7 +21047,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.25,
-          "mpg": 44
+          "mpg": 43
         },
         {
           "id": 354506,
@@ -21210,7 +21210,7 @@
           "pos": "Attacker",
           "number": 26,
           "games": 3,
-          "minutes": 91,
+          "minutes": 93,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -21223,7 +21223,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.33,
-          "mpg": 30
+          "mpg": 31
         },
         {
           "id": 542861,
@@ -24048,7 +24048,7 @@
           "pos": "Defender",
           "number": 4,
           "games": 5,
-          "minutes": 373,
+          "minutes": 368,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -24061,7 +24061,7 @@
           "gpg": 0.2,
           "apg": 0,
           "fpg": 0.2,
-          "mpg": 75
+          "mpg": 74
         },
         {
           "id": 180560,
@@ -24070,7 +24070,7 @@
           "pos": "Midfielder",
           "number": 10,
           "games": 3,
-          "minutes": 263,
+          "minutes": 258,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
@@ -24083,7 +24083,7 @@
           "gpg": 0,
           "apg": 0.33,
           "fpg": 1.67,
-          "mpg": 88
+          "mpg": 86
         },
         {
           "id": 2962,
@@ -24092,7 +24092,7 @@
           "pos": "Attacker",
           "number": 19,
           "games": 5,
-          "minutes": 155,
+          "minutes": 150,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24105,7 +24105,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.2,
-          "mpg": 31
+          "mpg": 30
         },
         {
           "id": 18942,
@@ -24114,7 +24114,7 @@
           "pos": "Defender",
           "number": 20,
           "games": 3,
-          "minutes": 261,
+          "minutes": 256,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24127,7 +24127,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 2,
-          "mpg": 87
+          "mpg": 85
         },
         {
           "id": 21587,
@@ -24136,7 +24136,7 @@
           "pos": "Midfielder",
           "number": 17,
           "games": 6,
-          "minutes": 351,
+          "minutes": 349,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24149,7 +24149,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.17,
-          "mpg": 59
+          "mpg": 58
         },
         {
           "id": 25300,
@@ -24158,7 +24158,7 @@
           "pos": "Midfielder",
           "number": 13,
           "games": 5,
-          "minutes": 169,
+          "minutes": 166,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -24171,7 +24171,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.2,
-          "mpg": 34
+          "mpg": 33
         },
         {
           "id": 49423,
@@ -24202,7 +24202,7 @@
           "pos": "Goalkeeper",
           "number": 16,
           "games": 1,
-          "minutes": 95,
+          "minutes": 90,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24215,7 +24215,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 95
+          "mpg": 90
         },
         {
           "id": 49583,
@@ -24224,7 +24224,7 @@
           "pos": "Defender",
           "number": 2,
           "games": 4,
-          "minutes": 275,
+          "minutes": 273,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24237,7 +24237,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 2,
-          "mpg": 69
+          "mpg": 68
         },
         {
           "id": 50030,
@@ -24246,7 +24246,7 @@
           "pos": "Defender",
           "number": 3,
           "games": 4,
-          "minutes": 373,
+          "minutes": 368,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24259,7 +24259,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.25,
-          "mpg": 93
+          "mpg": 92
         },
         {
           "id": 57518,
@@ -24312,7 +24312,7 @@
           "pos": "Midfielder",
           "number": 25,
           "games": 5,
-          "minutes": 269,
+          "minutes": 264,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24325,7 +24325,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 54
+          "mpg": 53
         },
         {
           "id": 310196,
@@ -24334,7 +24334,7 @@
           "pos": "Midfielder",
           "number": 11,
           "games": 6,
-          "minutes": 188,
+          "minutes": 183,
           "goals": 0,
           "assists": 0,
           "yellow": 4,
@@ -24510,7 +24510,7 @@
           "pos": "Midfielder",
           "number": 7,
           "games": 3,
-          "minutes": 88,
+          "minutes": 85,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24523,7 +24523,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0.33,
-          "mpg": 29
+          "mpg": 28
         },
         {
           "id": 49469,
@@ -24554,7 +24554,7 @@
           "pos": "Defender",
           "number": 21,
           "games": 5,
-          "minutes": 206,
+          "minutes": 201,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24567,7 +24567,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 41
+          "mpg": 40
         },
         {
           "id": 344862,
@@ -24630,21 +24630,21 @@
           "photo": "https://media.api-sports.io/football/players/47323.png",
           "pos": "Attacker",
           "number": 21,
-          "games": 3,
-          "minutes": 153,
-          "goals": 2,
-          "assists": 0,
+          "games": 4,
+          "minutes": 198,
+          "goals": 4,
+          "assists": 1,
           "yellow": 0,
           "red": 0,
-          "fouls": 1,
-          "wcGoals": 0,
-          "wcAssists": 0,
+          "fouls": 2,
+          "wcGoals": 2,
+          "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.67,
-          "apg": 0,
-          "fpg": 0.33,
-          "mpg": 51
+          "gpg": 1,
+          "apg": 0.25,
+          "fpg": 0.5,
+          "mpg": 50
         },
         {
           "id": 931,
@@ -24652,20 +24652,20 @@
           "photo": "https://media.api-sports.io/football/players/931.png",
           "pos": "Attacker",
           "number": 7,
-          "games": 5,
-          "minutes": 215,
+          "games": 6,
+          "minutes": 260,
           "goals": 1,
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "fouls": 3,
+          "fouls": 4,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
-          "apg": 0.2,
-          "fpg": 0.6,
+          "gpg": 0.17,
+          "apg": 0.17,
+          "fpg": 0.67,
           "mpg": 43
         },
         {
@@ -24691,26 +24691,48 @@
           "mpg": 36
         },
         {
+          "id": 386828,
+          "name": "Lamine Yamal",
+          "photo": "https://media.api-sports.io/football/players/386828.png",
+          "pos": "Midfielder",
+          "number": 19,
+          "games": 4,
+          "minutes": 172,
+          "goals": 1,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 3,
+          "wcGoals": 1,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.25,
+          "apg": 0,
+          "fpg": 0.75,
+          "mpg": 43
+        },
+        {
           "id": 1323,
           "name": "Dani Olmo",
           "photo": "https://media.api-sports.io/football/players/1323.png",
           "pos": "Midfielder",
           "number": 10,
-          "games": 5,
-          "minutes": 144,
+          "games": 6,
+          "minutes": 205,
           "goals": 0,
-          "assists": 1,
+          "assists": 2,
           "yellow": 0,
           "red": 0,
-          "fouls": 1,
+          "fouls": 2,
           "wcGoals": 0,
-          "wcAssists": 0,
+          "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.2,
-          "fpg": 0.2,
-          "mpg": 29
+          "apg": 0.33,
+          "fpg": 0.33,
+          "mpg": 34
         },
         {
           "id": 340626,
@@ -24735,13 +24757,35 @@
           "mpg": 45
         },
         {
+          "id": 622,
+          "name": "Aymeric Laporte",
+          "photo": "https://media.api-sports.io/football/players/622.png",
+          "pos": "Defender",
+          "number": 14,
+          "games": 5,
+          "minutes": 315,
+          "goals": 0,
+          "assists": 1,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 2,
+          "wcGoals": 0,
+          "wcAssists": 1,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0,
+          "apg": 0.2,
+          "fpg": 0.4,
+          "mpg": 63
+        },
+        {
           "id": 396623,
           "name": "Pau Cubarsí Paredes",
           "photo": "https://media.api-sports.io/football/players/396623.png",
           "pos": "Defender",
           "number": 4,
-          "games": 3,
-          "minutes": 173,
+          "games": 4,
+          "minutes": 263,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
@@ -24752,9 +24796,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.33,
-          "fpg": 0.33,
-          "mpg": 58
+          "apg": 0.25,
+          "fpg": 0.25,
+          "mpg": 66
         },
         {
           "id": 44,
@@ -24762,8 +24806,8 @@
           "photo": "https://media.api-sports.io/football/players/44.png",
           "pos": "Midfielder",
           "number": 16,
-          "games": 4,
-          "minutes": 209,
+          "games": 5,
+          "minutes": 299,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -24775,8 +24819,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1.25,
-          "mpg": 52
+          "fpg": 1,
+          "mpg": 60
         },
         {
           "id": 563,
@@ -24916,21 +24960,21 @@
           "photo": "https://media.api-sports.io/football/players/47519.png",
           "pos": "Defender",
           "number": 12,
-          "games": 3,
-          "minutes": 163,
+          "games": 4,
+          "minutes": 253,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 2,
+          "fouls": 3,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.67,
-          "mpg": 54
+          "fpg": 0.75,
+          "mpg": 63
         },
         {
           "id": 133609,
@@ -24938,8 +24982,8 @@
           "photo": "https://media.api-sports.io/football/players/133609.png",
           "pos": "Midfielder",
           "number": 20,
-          "games": 4,
-          "minutes": 180,
+          "games": 5,
+          "minutes": 250,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -24951,8 +24995,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.25,
-          "mpg": 45
+          "fpg": 0.2,
+          "mpg": 50
         },
         {
           "id": 182219,
@@ -24960,21 +25004,21 @@
           "photo": "https://media.api-sports.io/football/players/182219.png",
           "pos": "Midfielder",
           "number": 15,
-          "games": 3,
-          "minutes": 145,
+          "games": 4,
+          "minutes": 206,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 48
+          "fpg": 0.25,
+          "mpg": 52
         },
         {
           "id": 182718,
@@ -25004,21 +25048,21 @@
           "photo": "https://media.api-sports.io/football/players/184226.png",
           "pos": "Midfielder",
           "number": 11,
-          "games": 4,
-          "minutes": 75,
+          "games": 5,
+          "minutes": 120,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 3,
+          "fouls": 5,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.75,
-          "mpg": 19
+          "fpg": 1,
+          "mpg": 24
         },
         {
           "id": 333682,
@@ -25065,28 +25109,6 @@
           "mpg": 90
         },
         {
-          "id": 386828,
-          "name": "Lamine Yamal",
-          "photo": "https://media.api-sports.io/football/players/386828.png",
-          "pos": "Midfielder",
-          "number": 19,
-          "games": 3,
-          "minutes": 127,
-          "goals": 0,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 3,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0,
-          "apg": 0,
-          "fpg": 1,
-          "mpg": 42
-        },
-        {
           "id": 23,
           "name": "Sergio Gómez",
           "photo": "https://media.api-sports.io/football/players/23.png",
@@ -25129,28 +25151,6 @@
           "apg": 0,
           "fpg": 0.5,
           "mpg": 23
-        },
-        {
-          "id": 622,
-          "name": "Aymeric Laporte",
-          "photo": "https://media.api-sports.io/football/players/622.png",
-          "pos": "Defender",
-          "number": 14,
-          "games": 4,
-          "minutes": 225,
-          "goals": 0,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 1,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0,
-          "apg": 0,
-          "fpg": 0.25,
-          "mpg": 56
         },
         {
           "id": 753,
@@ -25202,8 +25202,8 @@
           "photo": "https://media.api-sports.io/football/players/47270.png",
           "pos": "Goalkeeper",
           "number": 23,
-          "games": 3,
-          "minutes": 180,
+          "games": 4,
+          "minutes": 270,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25211,12 +25211,12 @@
           "fouls": 0,
           "wcGoals": 0,
           "wcAssists": 0,
-          "saves": 3,
+          "saves": 4,
           "conceded": 1,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 60
+          "mpg": 68
         },
         {
           "id": 47311,
@@ -25224,8 +25224,8 @@
           "photo": "https://media.api-sports.io/football/players/47311.png",
           "pos": "Midfielder",
           "number": 6,
-          "games": 3,
-          "minutes": 41,
+          "games": 4,
+          "minutes": 70,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25237,8 +25237,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.33,
-          "mpg": 14
+          "fpg": 0.25,
+          "mpg": 18
         },
         {
           "id": 47315,
@@ -25268,21 +25268,21 @@
           "photo": "https://media.api-sports.io/football/players/47380.png",
           "pos": "Defender",
           "number": 24,
-          "games": 3,
-          "minutes": 180,
+          "games": 4,
+          "minutes": 270,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 2,
+          "fouls": 4,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.67,
-          "mpg": 60
+          "fpg": 1,
+          "mpg": 68
         },
         {
           "id": 179139,
@@ -25510,8 +25510,8 @@
           "photo": "https://media.api-sports.io/football/players/328.png",
           "pos": "Midfielder",
           "number": 8,
-          "games": 1,
-          "minutes": 71,
+          "games": 2,
+          "minutes": 91,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25524,7 +25524,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 71
+          "mpg": 46
         },
         {
           "id": 183799,
@@ -25532,8 +25532,8 @@
           "photo": "https://media.api-sports.io/football/players/183799.png",
           "pos": "Attacker",
           "number": 17,
-          "games": 1,
-          "minutes": 9,
+          "games": 2,
+          "minutes": 38,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25546,7 +25546,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 9
+          "mpg": 19
         }
       ],
       "leaders": {
@@ -25560,13 +25560,57 @@
       "id": 1533,
       "players": [
         {
+          "id": 96512,
+          "name": "Kevin Pina",
+          "photo": "https://media.api-sports.io/football/players/96512.png",
+          "pos": "Midfielder",
+          "number": 6,
+          "games": 2,
+          "minutes": 161,
+          "goals": 1,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 1,
+          "wcGoals": 1,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.5,
+          "apg": 0,
+          "fpg": 0.5,
+          "mpg": 81
+        },
+        {
+          "id": 291024,
+          "name": "Hélio Varela",
+          "photo": "https://media.api-sports.io/football/players/291024.png",
+          "pos": "Attacker",
+          "number": 26,
+          "games": 1,
+          "minutes": 35,
+          "goals": 1,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 0,
+          "wcGoals": 1,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 1,
+          "apg": 0,
+          "fpg": 0,
+          "mpg": 35
+        },
+        {
           "id": 15304,
           "name": "Vózinha",
           "photo": "https://media.api-sports.io/football/players/15304.png",
           "pos": "Goalkeeper",
           "number": 1,
-          "games": 1,
-          "minutes": 90,
+          "games": 2,
+          "minutes": 183,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25575,11 +25619,11 @@
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 7,
-          "conceded": 0,
+          "conceded": 2,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 92
         },
         {
           "id": 22139,
@@ -25587,8 +25631,8 @@
           "photo": "https://media.api-sports.io/football/players/22139.png",
           "pos": "Defender",
           "number": 22,
-          "games": 1,
-          "minutes": 90,
+          "games": 2,
+          "minutes": 183,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25601,7 +25645,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 92
         },
         {
           "id": 69260,
@@ -25609,8 +25653,8 @@
           "photo": "https://media.api-sports.io/football/players/69260.png",
           "pos": "Defender",
           "number": 4,
-          "games": 1,
-          "minutes": 90,
+          "games": 2,
+          "minutes": 183,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25623,7 +25667,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 92
         },
         {
           "id": 41608,
@@ -25631,8 +25675,8 @@
           "photo": "https://media.api-sports.io/football/players/41608.png",
           "pos": "Defender",
           "number": 3,
-          "games": 1,
-          "minutes": 90,
+          "games": 2,
+          "minutes": 183,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25645,7 +25689,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 92
         },
         {
           "id": 308689,
@@ -25653,13 +25697,13 @@
           "photo": "https://media.api-sports.io/football/players/308689.png",
           "pos": "Defender",
           "number": 13,
-          "games": 1,
-          "minutes": 76,
+          "games": 2,
+          "minutes": 169,
           "goals": 0,
           "assists": 0,
-          "yellow": 1,
+          "yellow": 2,
           "red": 0,
-          "fouls": 1,
+          "fouls": 2,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
@@ -25667,29 +25711,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 1,
-          "mpg": 76
-        },
-        {
-          "id": 96512,
-          "name": "Kevin Pina",
-          "photo": "https://media.api-sports.io/football/players/96512.png",
-          "pos": "Midfielder",
-          "number": 6,
-          "games": 1,
-          "minutes": 90,
-          "goals": 0,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 0,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0,
-          "apg": 0,
-          "fpg": 0,
-          "mpg": 90
+          "mpg": 85
         },
         {
           "id": 50270,
@@ -25697,8 +25719,8 @@
           "photo": "https://media.api-sports.io/football/players/50270.png",
           "pos": "Midfielder",
           "number": 20,
-          "games": 1,
-          "minutes": 90,
+          "games": 2,
+          "minutes": 183,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25711,7 +25733,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 92
         },
         {
           "id": 37436,
@@ -25719,8 +25741,8 @@
           "photo": "https://media.api-sports.io/football/players/37436.png",
           "pos": "Midfielder",
           "number": 15,
-          "games": 1,
-          "minutes": 61,
+          "games": 2,
+          "minutes": 83,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25733,7 +25755,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 61
+          "mpg": 42
         },
         {
           "id": 50745,
@@ -25741,8 +25763,8 @@
           "photo": "https://media.api-sports.io/football/players/50745.png",
           "pos": "Midfielder",
           "number": 10,
-          "games": 1,
-          "minutes": 79,
+          "games": 2,
+          "minutes": 159,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25755,7 +25777,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 79
+          "mpg": 80
         },
         {
           "id": 1494,
@@ -25807,21 +25829,21 @@
           "photo": "https://media.api-sports.io/football/players/37435.png",
           "pos": "Midfielder",
           "number": 14,
-          "games": 1,
-          "minutes": 29,
+          "games": 2,
+          "minutes": 77,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 29
+          "fpg": 0.5,
+          "mpg": 39
         },
         {
           "id": 113580,
@@ -25851,8 +25873,8 @@
           "photo": "https://media.api-sports.io/football/players/22265.png",
           "pos": "Attacker",
           "number": 21,
-          "games": 1,
-          "minutes": 29,
+          "games": 2,
+          "minutes": 64,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25865,7 +25887,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 29
+          "mpg": 32
         },
         {
           "id": 142016,
@@ -25895,8 +25917,8 @@
           "photo": "https://media.api-sports.io/football/players/265556.png",
           "pos": "Midfielder",
           "number": 18,
-          "games": 1,
-          "minutes": 11,
+          "games": 2,
+          "minutes": 56,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -25909,7 +25931,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 11
+          "mpg": 28
         },
         {
           "id": 41764,
@@ -26005,8 +26027,8 @@
           "photo": "https://media.api-sports.io/football/players/44612.png",
           "pos": "Attacker",
           "number": 11,
-          "games": 0,
-          "minutes": 0,
+          "games": 1,
+          "minutes": 58,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -26019,7 +26041,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 0
+          "mpg": 58
         },
         {
           "id": 128007,
@@ -26027,21 +26049,21 @@
           "photo": "https://media.api-sports.io/football/players/128007.png",
           "pos": "Midfielder",
           "number": 16,
-          "games": 0,
-          "minutes": 0,
+          "games": 1,
+          "minutes": 13,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 0
+          "fpg": 1,
+          "mpg": 13
         },
         {
           "id": 268806,
@@ -26066,35 +26088,13 @@
           "mpg": 0
         },
         {
-          "id": 291024,
-          "name": "Hélio Varela",
-          "photo": "https://media.api-sports.io/football/players/291024.png",
-          "pos": "Attacker",
-          "number": 26,
-          "games": 0,
-          "minutes": 0,
-          "goals": 0,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 0,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0,
-          "apg": 0,
-          "fpg": 0,
-          "mpg": 0
-        },
-        {
           "id": 309182,
           "name": "Gilson Benchimol",
           "photo": "https://media.api-sports.io/football/players/309182.png",
           "pos": "Attacker",
           "number": 9,
-          "games": 0,
-          "minutes": 0,
+          "games": 1,
+          "minutes": 58,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -26107,7 +26107,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 0
+          "mpg": 58
         },
         {
           "id": 332056,
@@ -26133,7 +26133,7 @@
         }
       ],
       "leaders": {
-        "goals": "Vózinha",
+        "goals": "Hélio Varela",
         "assists": "Vózinha",
         "fouls": "S. Lopes Cabral"
       },
@@ -26148,8 +26148,8 @@
           "photo": "https://media.api-sports.io/football/players/25458.png",
           "pos": "Attacker",
           "number": 14,
-          "games": 3,
-          "minutes": 120,
+          "games": 4,
+          "minutes": 158,
           "goals": 4,
           "assists": 0,
           "yellow": 0,
@@ -26159,9 +26159,9 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 1.33,
+          "gpg": 1,
           "apg": 0,
-          "fpg": 0.67,
+          "fpg": 0.5,
           "mpg": 40
         },
         {
@@ -26192,8 +26192,8 @@
           "photo": "https://media.api-sports.io/football/players/2926.png",
           "pos": "Midfielder",
           "number": 8,
-          "games": 5,
-          "minutes": 337,
+          "games": 6,
+          "minutes": 433,
           "goals": 1,
           "assists": 2,
           "yellow": 0,
@@ -26203,10 +26203,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
-          "apg": 0.4,
-          "fpg": 1.4,
-          "mpg": 67
+          "gpg": 0.17,
+          "apg": 0.33,
+          "fpg": 1.17,
+          "mpg": 72
         },
         {
           "id": 907,
@@ -26214,21 +26214,21 @@
           "photo": "https://media.api-sports.io/football/players/907.png",
           "pos": "Attacker",
           "number": 9,
-          "games": 3,
-          "minutes": 69,
+          "games": 4,
+          "minutes": 142,
           "goals": 1,
           "assists": 1,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
-          "fouls": 1,
+          "fouls": 2,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.33,
-          "apg": 0.33,
-          "fpg": 0.33,
-          "mpg": 23
+          "gpg": 0.25,
+          "apg": 0.25,
+          "fpg": 0.5,
+          "mpg": 36
         },
         {
           "id": 629,
@@ -26236,8 +26236,8 @@
           "photo": "https://media.api-sports.io/football/players/629.png",
           "pos": "Midfielder",
           "number": 7,
-          "games": 5,
-          "minutes": 375,
+          "games": 6,
+          "minutes": 462,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -26247,10 +26247,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
+          "gpg": 0.17,
           "apg": 0,
-          "fpg": 0.6,
-          "mpg": 75
+          "fpg": 0.5,
+          "mpg": 77
         },
         {
           "id": 2120,
@@ -26258,21 +26258,21 @@
           "photo": "https://media.api-sports.io/football/players/2120.png",
           "pos": "Midfielder",
           "number": 23,
-          "games": 5,
-          "minutes": 224,
+          "games": 6,
+          "minutes": 282,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 3,
+          "fouls": 4,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
+          "gpg": 0.17,
           "apg": 0,
-          "fpg": 0.6,
-          "mpg": 45
+          "fpg": 0.67,
+          "mpg": 47
         },
         {
           "id": 162714,
@@ -26324,21 +26324,21 @@
           "photo": "https://media.api-sports.io/football/players/1946.png",
           "pos": "Midfielder",
           "number": 10,
-          "games": 2,
-          "minutes": 164,
+          "games": 3,
+          "minutes": 260,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.5,
+          "gpg": 0.33,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 82
+          "fpg": 0.33,
+          "mpg": 87
         },
         {
           "id": 1422,
@@ -26368,20 +26368,20 @@
           "photo": "https://media.api-sports.io/football/players/264.png",
           "pos": "Defender",
           "number": 15,
-          "games": 5,
-          "minutes": 290,
+          "games": 6,
+          "minutes": 348,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "fouls": 6,
+          "fouls": 7,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.2,
-          "fpg": 1.2,
+          "apg": 0.17,
+          "fpg": 1.17,
           "mpg": 58
         },
         {
@@ -26390,8 +26390,8 @@
           "photo": "https://media.api-sports.io/football/players/1417.png",
           "pos": "Midfielder",
           "number": 22,
-          "games": 3,
-          "minutes": 147,
+          "games": 4,
+          "minutes": 205,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
@@ -26402,9 +26402,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.33,
-          "fpg": 1.33,
-          "mpg": 49
+          "apg": 0.25,
+          "fpg": 1,
+          "mpg": 51
         },
         {
           "id": 162007,
@@ -26412,8 +26412,8 @@
           "photo": "https://media.api-sports.io/football/players/162007.png",
           "pos": "Defender",
           "number": 5,
-          "games": 5,
-          "minutes": 256,
+          "games": 6,
+          "minutes": 352,
           "goals": 0,
           "assists": 1,
           "yellow": 2,
@@ -26424,9 +26424,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.2,
-          "fpg": 0.8,
-          "mpg": 51
+          "apg": 0.17,
+          "fpg": 0.67,
+          "mpg": 59
         },
         {
           "id": 78,
@@ -26434,8 +26434,8 @@
           "photo": "https://media.api-sports.io/football/players/78.png",
           "pos": "Midfielder",
           "number": 20,
-          "games": 3,
-          "minutes": 60,
+          "games": 4,
+          "minutes": 98,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
@@ -26446,9 +26446,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.33,
+          "apg": 0.25,
           "fpg": 0,
-          "mpg": 20
+          "mpg": 25
         },
         {
           "id": 20,
@@ -26478,21 +26478,21 @@
           "photo": "https://media.api-sports.io/football/players/69.png",
           "pos": "Defender",
           "number": 4,
-          "games": 4,
-          "minutes": 268,
+          "games": 5,
+          "minutes": 364,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 3,
+          "fouls": 4,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.75,
-          "mpg": 67
+          "fpg": 0.8,
+          "mpg": 73
         },
         {
           "id": 86,
@@ -26522,8 +26522,8 @@
           "photo": "https://media.api-sports.io/football/players/2920.png",
           "pos": "Defender",
           "number": 21,
-          "games": 4,
-          "minutes": 212,
+          "games": 5,
+          "minutes": 250,
           "goals": 0,
           "assists": 0,
           "yellow": 2,
@@ -26535,8 +26535,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1.5,
-          "mpg": 53
+          "fpg": 1.2,
+          "mpg": 50
         },
         {
           "id": 162141,
@@ -26588,20 +26588,20 @@
           "photo": "https://media.api-sports.io/football/players/312964.png",
           "pos": "Defender",
           "number": 20,
-          "games": 5,
-          "minutes": 352,
+          "games": 6,
+          "minutes": 418,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
-          "red": 0,
-          "fouls": 3,
+          "red": 1,
+          "fouls": 5,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.6,
+          "fpg": 0.83,
           "mpg": 70
         },
         {
@@ -26654,8 +26654,8 @@
           "photo": "https://media.api-sports.io/football/players/730.png",
           "pos": "Goalkeeper",
           "number": 1,
-          "games": 3,
-          "minutes": 274,
+          "games": 4,
+          "minutes": 370,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -26663,12 +26663,12 @@
           "fouls": 0,
           "wcGoals": 0,
           "wcAssists": 0,
-          "saves": 4,
+          "saves": 7,
           "conceded": 1,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 91
+          "mpg": 93
         },
         {
           "id": 1924,
@@ -26720,8 +26720,8 @@
           "photo": "https://media.api-sports.io/football/players/204043.png",
           "pos": "Defender",
           "number": 3,
-          "games": 2,
-          "minutes": 108,
+          "games": 3,
+          "minutes": 131,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -26733,8 +26733,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.5,
-          "mpg": 54
+          "fpg": 0.33,
+          "mpg": 44
         },
         {
           "id": 322560,
@@ -26786,8 +26786,8 @@
           "photo": "https://media.api-sports.io/football/players/340077.png",
           "pos": "Attacker",
           "number": 26,
-          "games": 3,
-          "minutes": 47,
+          "games": 4,
+          "minutes": 56,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -26800,7 +26800,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 16
+          "mpg": 14
         },
         {
           "id": 340151,
@@ -26863,65 +26863,21 @@
           "photo": "https://media.api-sports.io/football/players/395075.png",
           "pos": "Midfielder",
           "number": 11,
-          "games": 3,
-          "minutes": 208,
-          "goals": 2,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 1,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0.67,
-          "apg": 0,
-          "fpg": 0.33,
-          "mpg": 69
-        },
-        {
-          "id": 16871,
-          "name": "Zizo",
-          "photo": "https://media.api-sports.io/football/players/16871.png",
-          "pos": "Midfielder",
-          "number": 25,
-          "games": 5,
-          "minutes": 192,
-          "goals": 1,
+          "games": 4,
+          "minutes": 284,
+          "goals": 3,
           "assists": 1,
           "yellow": 0,
           "red": 0,
-          "fouls": 1,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0.2,
-          "apg": 0.2,
-          "fpg": 0.2,
-          "mpg": 38
-        },
-        {
-          "id": 17269,
-          "name": "Emam Ashour",
-          "photo": "https://media.api-sports.io/football/players/17269.png",
-          "pos": "Midfielder",
-          "number": 8,
-          "games": 5,
-          "minutes": 209,
-          "goals": 1,
-          "assists": 1,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 0,
+          "fouls": 3,
           "wcGoals": 1,
-          "wcAssists": 0,
+          "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
-          "apg": 0.2,
-          "fpg": 0,
-          "mpg": 42
+          "gpg": 0.75,
+          "apg": 0.25,
+          "fpg": 0.75,
+          "mpg": 71
         },
         {
           "id": 2664,
@@ -26929,21 +26885,87 @@
           "photo": "https://media.api-sports.io/football/players/2664.png",
           "pos": "Attacker",
           "number": 7,
-          "games": 4,
-          "minutes": 169,
-          "goals": 1,
+          "games": 5,
+          "minutes": 194,
+          "goals": 2,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 4,
+          "fouls": 5,
+          "wcGoals": 1,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.4,
+          "apg": 0,
+          "fpg": 1,
+          "mpg": 39
+        },
+        {
+          "id": 306,
+          "name": "Mohamed Salah",
+          "photo": "https://media.api-sports.io/football/players/306.png",
+          "pos": "Attacker",
+          "number": 10,
+          "games": 3,
+          "minutes": 205,
+          "goals": 1,
+          "assists": 2,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 2,
+          "wcGoals": 1,
+          "wcAssists": 2,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.33,
+          "apg": 0.67,
+          "fpg": 0.67,
+          "mpg": 68
+        },
+        {
+          "id": 16871,
+          "name": "Zizo",
+          "photo": "https://media.api-sports.io/football/players/16871.png",
+          "pos": "Midfielder",
+          "number": 25,
+          "games": 6,
+          "minutes": 208,
+          "goals": 1,
+          "assists": 1,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.25,
-          "apg": 0,
-          "fpg": 1,
-          "mpg": 42
+          "gpg": 0.17,
+          "apg": 0.17,
+          "fpg": 0.17,
+          "mpg": 35
+        },
+        {
+          "id": 17269,
+          "name": "Emam Ashour",
+          "photo": "https://media.api-sports.io/football/players/17269.png",
+          "pos": "Midfielder",
+          "number": 8,
+          "games": 6,
+          "minutes": 294,
+          "goals": 1,
+          "assists": 1,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 1,
+          "wcGoals": 1,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.17,
+          "apg": 0.17,
+          "fpg": 0.17,
+          "mpg": 49
         },
         {
           "id": 16901,
@@ -26973,8 +26995,8 @@
           "photo": "https://media.api-sports.io/football/players/81573.png",
           "pos": "Attacker",
           "number": 22,
-          "games": 5,
-          "minutes": 390,
+          "games": 6,
+          "minutes": 466,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -26984,9 +27006,9 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
+          "gpg": 0.17,
           "apg": 0,
-          "fpg": 1.2,
+          "fpg": 1,
           "mpg": 78
         },
         {
@@ -26995,21 +27017,21 @@
           "photo": "https://media.api-sports.io/football/players/2654.png",
           "pos": "Defender",
           "number": 3,
-          "games": 5,
-          "minutes": 416,
+          "games": 6,
+          "minutes": 517,
           "goals": 0,
-          "assists": 2,
+          "assists": 3,
           "yellow": 1,
           "red": 0,
           "fouls": 4,
           "wcGoals": 0,
-          "wcAssists": 0,
+          "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.4,
-          "fpg": 0.8,
-          "mpg": 83
+          "apg": 0.5,
+          "fpg": 0.67,
+          "mpg": 86
         },
         {
           "id": 2649,
@@ -27017,8 +27039,8 @@
           "photo": "https://media.api-sports.io/football/players/2649.png",
           "pos": "Defender",
           "number": 13,
-          "games": 4,
-          "minutes": 329,
+          "games": 5,
+          "minutes": 430,
           "goals": 0,
           "assists": 1,
           "yellow": 1,
@@ -27029,31 +27051,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.25,
-          "fpg": 0.5,
-          "mpg": 82
-        },
-        {
-          "id": 306,
-          "name": "Mohamed Salah",
-          "photo": "https://media.api-sports.io/football/players/306.png",
-          "pos": "Attacker",
-          "number": 10,
-          "games": 2,
-          "minutes": 120,
-          "goals": 0,
-          "assists": 1,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 2,
-          "wcGoals": 0,
-          "wcAssists": 1,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0,
-          "apg": 0.5,
-          "fpg": 1,
-          "mpg": 60
+          "apg": 0.2,
+          "fpg": 0.4,
+          "mpg": 86
         },
         {
           "id": 2668,
@@ -27105,8 +27105,8 @@
           "photo": "https://media.api-sports.io/football/players/16804.png",
           "pos": "Defender",
           "number": 2,
-          "games": 5,
-          "minutes": 414,
+          "games": 6,
+          "minutes": 515,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -27118,8 +27118,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.4,
-          "mpg": 83
+          "fpg": 0.33,
+          "mpg": 86
         },
         {
           "id": 16805,
@@ -27127,21 +27127,21 @@
           "photo": "https://media.api-sports.io/football/players/16805.png",
           "pos": "Defender",
           "number": 5,
-          "games": 3,
-          "minutes": 100,
+          "games": 4,
+          "minutes": 160,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 2,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 33
+          "fpg": 0.5,
+          "mpg": 40
         },
         {
           "id": 16813,
@@ -27149,8 +27149,8 @@
           "photo": "https://media.api-sports.io/football/players/16813.png",
           "pos": "Defender",
           "number": 14,
-          "games": 4,
-          "minutes": 348,
+          "games": 5,
+          "minutes": 389,
           "goals": 0,
           "assists": 0,
           "yellow": 2,
@@ -27162,8 +27162,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1,
-          "mpg": 87
+          "fpg": 0.8,
+          "mpg": 78
         },
         {
           "id": 16841,
@@ -27171,13 +27171,13 @@
           "photo": "https://media.api-sports.io/football/players/16841.png",
           "pos": "Midfielder",
           "number": 17,
-          "games": 5,
-          "minutes": 393,
+          "games": 6,
+          "minutes": 494,
           "goals": 0,
           "assists": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
-          "fouls": 5,
+          "fouls": 6,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
@@ -27185,7 +27185,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 1,
-          "mpg": 79
+          "mpg": 82
         },
         {
           "id": 20844,
@@ -27259,8 +27259,8 @@
           "photo": "https://media.api-sports.io/football/players/190575.png",
           "pos": "Midfielder",
           "number": 19,
-          "games": 5,
-          "minutes": 431,
+          "games": 6,
+          "minutes": 532,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -27272,8 +27272,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1.4,
-          "mpg": 86
+          "fpg": 1.17,
+          "mpg": 89
         },
         {
           "id": 269174,
@@ -27281,8 +27281,8 @@
           "photo": "https://media.api-sports.io/football/players/269174.png",
           "pos": "Goalkeeper",
           "number": 23,
-          "games": 5,
-          "minutes": 371,
+          "games": 6,
+          "minutes": 472,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -27290,12 +27290,12 @@
           "fouls": 0,
           "wcGoals": 0,
           "wcAssists": 0,
-          "saves": 13,
-          "conceded": 3,
+          "saves": 17,
+          "conceded": 4,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 74
+          "mpg": 79
         },
         {
           "id": 269621,
@@ -27303,8 +27303,8 @@
           "photo": "https://media.api-sports.io/football/players/269621.png",
           "pos": "Defender",
           "number": 4,
-          "games": 3,
-          "minutes": 38,
+          "games": 4,
+          "minutes": 52,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -27316,7 +27316,7 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.33,
+          "fpg": 0.25,
           "mpg": 13
         },
         {
@@ -27435,8 +27435,8 @@
           "photo": "https://media.api-sports.io/football/players/196343.png",
           "pos": "Defender",
           "number": 6,
-          "games": 3,
-          "minutes": 96,
+          "games": 4,
+          "minutes": 98,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -27448,8 +27448,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.67,
-          "mpg": 32
+          "fpg": 0.5,
+          "mpg": 25
         },
         {
           "id": 292695,
@@ -27523,21 +27523,21 @@
           "photo": "https://media.api-sports.io/football/players/550547.png",
           "pos": "Attacker",
           "number": 9,
-          "games": 3,
-          "minutes": 27,
+          "games": 4,
+          "minutes": 52,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 9
+          "fpg": 0.25,
+          "mpg": 13
         },
         {
           "id": 628633,
@@ -27578,21 +27578,21 @@
           "photo": "https://media.api-sports.io/football/players/44324.png",
           "pos": "Attacker",
           "number": 9,
-          "games": 20,
-          "minutes": 1393,
+          "games": 21,
+          "minutes": 1453,
           "goals": 5,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 6,
+          "fouls": 7,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.25,
+          "gpg": 0.24,
           "apg": 0,
-          "fpg": 0.3,
-          "mpg": 70
+          "fpg": 0.33,
+          "mpg": 69
         },
         {
           "id": 44551,
@@ -27622,8 +27622,8 @@
           "photo": "https://media.api-sports.io/football/players/306380.png",
           "pos": "Midfielder",
           "number": 8,
-          "games": 20,
-          "minutes": 1005,
+          "games": 21,
+          "minutes": 1050,
           "goals": 3,
           "assists": 3,
           "yellow": 0,
@@ -27633,9 +27633,9 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.15,
-          "apg": 0.15,
-          "fpg": 0.3,
+          "gpg": 0.14,
+          "apg": 0.14,
+          "fpg": 0.29,
           "mpg": 50
         },
         {
@@ -27666,11 +27666,11 @@
           "photo": "https://media.api-sports.io/football/players/44340.png",
           "pos": "Midfielder",
           "number": 10,
-          "games": 18,
-          "minutes": 1407,
+          "games": 19,
+          "minutes": 1497,
           "goals": 2,
           "assists": 1,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
           "fouls": 8,
           "wcGoals": 0,
@@ -27678,9 +27678,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0.11,
-          "apg": 0.06,
-          "fpg": 0.44,
-          "mpg": 78
+          "apg": 0.05,
+          "fpg": 0.42,
+          "mpg": 79
         },
         {
           "id": 44586,
@@ -27732,8 +27732,8 @@
           "photo": "https://media.api-sports.io/football/players/44507.png",
           "pos": "Defender",
           "number": 4,
-          "games": 15,
-          "minutes": 892,
+          "games": 16,
+          "minutes": 982,
           "goals": 1,
           "assists": 0,
           "yellow": 2,
@@ -27743,10 +27743,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.07,
+          "gpg": 0.06,
           "apg": 0,
-          "fpg": 1,
-          "mpg": 59
+          "fpg": 0.94,
+          "mpg": 61
         },
         {
           "id": 301526,
@@ -27776,8 +27776,8 @@
           "photo": "https://media.api-sports.io/football/players/44382.png",
           "pos": "Attacker",
           "number": 11,
-          "games": 13,
-          "minutes": 323,
+          "games": 14,
+          "minutes": 368,
           "goals": 1,
           "assists": 0,
           "yellow": 1,
@@ -27787,10 +27787,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.08,
+          "gpg": 0.07,
           "apg": 0,
-          "fpg": 0.54,
-          "mpg": 25
+          "fpg": 0.5,
+          "mpg": 26
         },
         {
           "id": 44475,
@@ -27798,8 +27798,8 @@
           "photo": "https://media.api-sports.io/football/players/44475.png",
           "pos": "Defender",
           "number": 4,
-          "games": 7,
-          "minutes": 297,
+          "games": 8,
+          "minutes": 357,
           "goals": 1,
           "assists": 0,
           "yellow": 1,
@@ -27809,10 +27809,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.14,
+          "gpg": 0.13,
           "apg": 0,
-          "fpg": 0.29,
-          "mpg": 42
+          "fpg": 0.25,
+          "mpg": 45
         },
         {
           "id": 312652,
@@ -27864,8 +27864,8 @@
           "photo": "https://media.api-sports.io/football/players/44594.png",
           "pos": "Midfielder",
           "number": 12,
-          "games": 19,
-          "minutes": 1251,
+          "games": 20,
+          "minutes": 1341,
           "goals": 0,
           "assists": 2,
           "yellow": 4,
@@ -27876,9 +27876,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.11,
-          "fpg": 0.95,
-          "mpg": 66
+          "apg": 0.1,
+          "fpg": 0.9,
+          "mpg": 67
         },
         {
           "id": 44309,
@@ -27952,8 +27952,8 @@
           "photo": "https://media.api-sports.io/football/players/44339.png",
           "pos": "Midfielder",
           "number": 15,
-          "games": 16,
-          "minutes": 866,
+          "games": 17,
+          "minutes": 955,
           "goals": 0,
           "assists": 1,
           "yellow": 3,
@@ -27965,8 +27965,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0.06,
-          "fpg": 0.94,
-          "mpg": 54
+          "fpg": 0.88,
+          "mpg": 56
         },
         {
           "id": 44349,
@@ -27974,21 +27974,21 @@
           "photo": "https://media.api-sports.io/football/players/44349.png",
           "pos": "Midfielder",
           "number": 23,
-          "games": 16,
-          "minutes": 961,
+          "games": 17,
+          "minutes": 1006,
           "goals": 0,
           "assists": 1,
-          "yellow": 6,
+          "yellow": 7,
           "red": 1,
-          "fouls": 11,
+          "fouls": 12,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0.06,
-          "fpg": 0.69,
-          "mpg": 60
+          "fpg": 0.71,
+          "mpg": 59
         },
         {
           "id": 296656,
@@ -28062,8 +28062,8 @@
           "photo": "https://media.api-sports.io/football/players/43953.png",
           "pos": "Midfielder",
           "number": 30,
-          "games": 0,
-          "minutes": 18,
+          "games": 1,
+          "minutes": 48,
           "goals": 0,
           "assists": 1,
           "yellow": 0,
@@ -28074,9 +28074,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0,
-          "fpg": 0,
-          "mpg": 0
+          "apg": 1,
+          "fpg": 1,
+          "mpg": 48
         },
         {
           "id": 44332,
@@ -28128,8 +28128,8 @@
           "photo": "https://media.api-sports.io/football/players/44362.png",
           "pos": "Defender",
           "number": 17,
-          "games": 17,
-          "minutes": 1367,
+          "games": 18,
+          "minutes": 1457,
           "goals": 0,
           "assists": 0,
           "yellow": 3,
@@ -28141,8 +28141,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.76,
-          "mpg": 80
+          "fpg": 0.72,
+          "mpg": 81
         },
         {
           "id": 44411,
@@ -28150,8 +28150,8 @@
           "photo": "https://media.api-sports.io/football/players/44411.png",
           "pos": "Goalkeeper",
           "number": 21,
-          "games": 12,
-          "minutes": 935,
+          "games": 13,
+          "minutes": 1025,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -28159,12 +28159,12 @@
           "fouls": 0,
           "wcGoals": 0,
           "wcAssists": 0,
-          "saves": 33,
-          "conceded": 9,
+          "saves": 38,
+          "conceded": 13,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 78
+          "mpg": 79
         },
         {
           "id": 44483,
@@ -28546,8 +28546,8 @@
           "photo": "https://media.api-sports.io/football/players/44701.png",
           "pos": "Attacker",
           "number": 16,
-          "games": 4,
-          "minutes": 77,
+          "games": 5,
+          "minutes": 86,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -28560,7 +28560,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 19
+          "mpg": 17
         },
         {
           "id": 187953,
@@ -28700,8 +28700,8 @@
           "photo": "https://media.api-sports.io/football/players/44315.png",
           "pos": "Midfielder",
           "number": 15,
-          "games": 12,
-          "minutes": 522,
+          "games": 13,
+          "minutes": 567,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -28713,7 +28713,7 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.67,
+          "fpg": 0.62,
           "mpg": 44
         },
         {
@@ -28942,8 +28942,8 @@
           "photo": "https://media.api-sports.io/football/players/202381.png",
           "pos": "Defender",
           "number": 13,
-          "games": 8,
-          "minutes": 407,
+          "games": 9,
+          "minutes": 497,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -28955,8 +28955,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.25,
-          "mpg": 51
+          "fpg": 0.22,
+          "mpg": 55
         },
         {
           "id": 286667,
@@ -29558,8 +29558,8 @@
           "photo": "https://media.api-sports.io/football/players/403087.png",
           "pos": "Midfielder",
           "number": 26,
-          "games": 4,
-          "minutes": 143,
+          "games": 5,
+          "minutes": 173,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -29571,8 +29571,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1,
-          "mpg": 36
+          "fpg": 0.8,
+          "mpg": 35
         },
         {
           "id": 442343,
@@ -29635,8 +29635,8 @@
           "photo": "https://media.api-sports.io/football/players/51617.png",
           "pos": "Attacker",
           "number": 9,
-          "games": 16,
-          "minutes": 1070,
+          "games": 17,
+          "minutes": 1093,
           "goals": 5,
           "assists": 2,
           "yellow": 1,
@@ -29646,10 +29646,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.31,
-          "apg": 0.13,
-          "fpg": 0.94,
-          "mpg": 67
+          "gpg": 0.29,
+          "apg": 0.12,
+          "fpg": 0.88,
+          "mpg": 64
         },
         {
           "id": 5995,
@@ -29657,8 +29657,8 @@
           "photo": "https://media.api-sports.io/football/players/5995.png",
           "pos": "Midfielder",
           "number": 7,
-          "games": 10,
-          "minutes": 599,
+          "games": 11,
+          "minutes": 622,
           "goals": 3,
           "assists": 3,
           "yellow": 1,
@@ -29668,10 +29668,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.3,
-          "apg": 0.3,
-          "fpg": 1.5,
-          "mpg": 60
+          "gpg": 0.27,
+          "apg": 0.27,
+          "fpg": 1.36,
+          "mpg": 57
         },
         {
           "id": 16482,
@@ -29701,8 +29701,8 @@
           "photo": "https://media.api-sports.io/football/players/756.png",
           "pos": "Midfielder",
           "number": 15,
-          "games": 18,
-          "minutes": 1582,
+          "games": 19,
+          "minutes": 1675,
           "goals": 3,
           "assists": 0,
           "yellow": 3,
@@ -29712,10 +29712,32 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.17,
+          "gpg": 0.16,
           "apg": 0,
-          "fpg": 0.61,
+          "fpg": 0.58,
           "mpg": 88
+        },
+        {
+          "id": 51776,
+          "name": "M. Araújo",
+          "photo": "https://media.api-sports.io/football/players/51776.png",
+          "pos": "Attacker",
+          "number": 13,
+          "games": 19,
+          "minutes": 1512,
+          "goals": 2,
+          "assists": 5,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 22,
+          "wcGoals": 2,
+          "wcAssists": 1,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.11,
+          "apg": 0.26,
+          "fpg": 1.16,
+          "mpg": 80
         },
         {
           "id": 2612,
@@ -29740,26 +29762,26 @@
           "mpg": 65
         },
         {
-          "id": 51776,
-          "name": "M. Araújo",
-          "photo": "https://media.api-sports.io/football/players/51776.png",
+          "id": 51603,
+          "name": "A. Canobbio",
+          "photo": "https://media.api-sports.io/football/players/51603.png",
           "pos": "Attacker",
-          "number": 13,
-          "games": 18,
-          "minutes": 1431,
-          "goals": 1,
-          "assists": 4,
-          "yellow": 0,
+          "number": 14,
+          "games": 7,
+          "minutes": 393,
+          "goals": 2,
+          "assists": 0,
+          "yellow": 1,
           "red": 0,
-          "fouls": 21,
+          "fouls": 12,
           "wcGoals": 1,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.06,
-          "apg": 0.22,
-          "fpg": 1.17,
-          "mpg": 80
+          "gpg": 0.29,
+          "apg": 0,
+          "fpg": 1.71,
+          "mpg": 56
         },
         {
           "id": 47254,
@@ -29767,21 +29789,21 @@
           "photo": "https://media.api-sports.io/football/players/47254.png",
           "pos": "Defender",
           "number": 16,
-          "games": 16,
-          "minutes": 1160,
+          "games": 17,
+          "minutes": 1253,
           "goals": 1,
           "assists": 1,
-          "yellow": 4,
+          "yellow": 5,
           "red": 0,
-          "fouls": 7,
+          "fouls": 8,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0.06,
           "apg": 0.06,
-          "fpg": 0.44,
-          "mpg": 73
+          "fpg": 0.47,
+          "mpg": 74
         },
         {
           "id": 51494,
@@ -29789,20 +29811,20 @@
           "photo": "https://media.api-sports.io/football/players/51494.png",
           "pos": "Midfielder",
           "number": 5,
-          "games": 19,
-          "minutes": 1529,
+          "games": 20,
+          "minutes": 1599,
           "goals": 1,
           "assists": 0,
           "yellow": 6,
           "red": 0,
-          "fouls": 32,
+          "fouls": 33,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0.05,
           "apg": 0,
-          "fpg": 1.68,
+          "fpg": 1.65,
           "mpg": 80
         },
         {
@@ -29811,8 +29833,8 @@
           "photo": "https://media.api-sports.io/football/players/51530.png",
           "pos": "Attacker",
           "number": 22,
-          "games": 8,
-          "minutes": 272,
+          "games": 9,
+          "minutes": 342,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -29822,32 +29844,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.13,
+          "gpg": 0.11,
           "apg": 0,
-          "fpg": 0.75,
-          "mpg": 34
-        },
-        {
-          "id": 51603,
-          "name": "A. Canobbio",
-          "photo": "https://media.api-sports.io/football/players/51603.png",
-          "pos": "Attacker",
-          "number": 14,
-          "games": 6,
-          "minutes": 300,
-          "goals": 1,
-          "assists": 0,
-          "yellow": 1,
-          "red": 0,
-          "fouls": 9,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0.17,
-          "apg": 0,
-          "fpg": 1.5,
-          "mpg": 50
+          "fpg": 0.67,
+          "mpg": 38
         },
         {
           "id": 101814,
@@ -29921,21 +29921,21 @@
           "photo": "https://media.api-sports.io/football/players/863.png",
           "pos": "Midfielder",
           "number": 6,
-          "games": 10,
-          "minutes": 830,
+          "games": 11,
+          "minutes": 923,
           "goals": 0,
           "assists": 1,
-          "yellow": 3,
+          "yellow": 4,
           "red": 0,
-          "fouls": 16,
+          "fouls": 18,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.1,
-          "fpg": 1.6,
-          "mpg": 83
+          "apg": 0.09,
+          "fpg": 1.64,
+          "mpg": 84
         },
         {
           "id": 1290,
@@ -29943,8 +29943,8 @@
           "photo": "https://media.api-sports.io/football/players/1290.png",
           "pos": "Defender",
           "number": 20,
-          "games": 11,
-          "minutes": 780,
+          "games": 12,
+          "minutes": 873,
           "goals": 0,
           "assists": 1,
           "yellow": 1,
@@ -29955,9 +29955,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.09,
-          "fpg": 0.36,
-          "mpg": 71
+          "apg": 0.08,
+          "fpg": 0.33,
+          "mpg": 73
         },
         {
           "id": 51618,
@@ -29965,8 +29965,8 @@
           "photo": "https://media.api-sports.io/football/players/51618.png",
           "pos": "Midfielder",
           "number": 10,
-          "games": 10,
-          "minutes": 451,
+          "games": 11,
+          "minutes": 463,
           "goals": 0,
           "assists": 1,
           "yellow": 1,
@@ -29977,9 +29977,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.1,
-          "fpg": 0.6,
-          "mpg": 45
+          "apg": 0.09,
+          "fpg": 0.55,
+          "mpg": 42
         },
         {
           "id": 51357,
@@ -31043,8 +31043,8 @@
           "photo": "https://media.api-sports.io/football/players/51535.png",
           "pos": "Defender",
           "number": 2,
-          "games": 14,
-          "minutes": 1071,
+          "games": 15,
+          "minutes": 1164,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
@@ -31056,8 +31056,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.71,
-          "mpg": 77
+          "fpg": 0.67,
+          "mpg": 78
         },
         {
           "id": 51605,
@@ -31835,8 +31835,8 @@
           "photo": "https://media.api-sports.io/football/players/429.png",
           "pos": "Goalkeeper",
           "number": 23,
-          "games": 2,
-          "minutes": 180,
+          "games": 3,
+          "minutes": 273,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -31845,11 +31845,11 @@
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 6,
-          "conceded": 2,
+          "conceded": 4,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 91
         },
         {
           "id": 51464,
@@ -31879,8 +31879,8 @@
           "photo": "https://media.api-sports.io/football/players/162891.png",
           "pos": "Midfielder",
           "number": 8,
-          "games": 3,
-          "minutes": 59,
+          "games": 4,
+          "minutes": 152,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -31893,7 +31893,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 20
+          "mpg": 38
         },
         {
           "id": 377326,
@@ -31934,8 +31934,8 @@
           "photo": "https://media.api-sports.io/football/players/134217.png",
           "pos": "Midfielder",
           "number": 8,
-          "games": 10,
-          "minutes": 495,
+          "games": 11,
+          "minutes": 561,
           "goals": 6,
           "assists": 0,
           "yellow": 2,
@@ -31945,10 +31945,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.6,
+          "gpg": 0.55,
           "apg": 0,
-          "fpg": 0.5,
-          "mpg": 50
+          "fpg": 0.45,
+          "mpg": 51
         },
         {
           "id": 42315,
@@ -31956,21 +31956,21 @@
           "photo": "https://media.api-sports.io/football/players/42315.png",
           "pos": "Forward",
           "number": 9,
-          "games": 16,
-          "minutes": 883,
+          "games": 17,
+          "minutes": 979,
           "goals": 5,
           "assists": 4,
           "yellow": 0,
           "red": 0,
-          "fouls": 5,
+          "fouls": 7,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.31,
-          "apg": 0.25,
-          "fpg": 0.31,
-          "mpg": 55
+          "gpg": 0.29,
+          "apg": 0.24,
+          "fpg": 0.41,
+          "mpg": 58
         },
         {
           "id": 1221,
@@ -32000,8 +32000,8 @@
           "photo": "https://media.api-sports.io/football/players/2691.png",
           "pos": "Defender",
           "number": 23,
-          "games": 4,
-          "minutes": 360,
+          "games": 5,
+          "minutes": 456,
           "goals": 3,
           "assists": 1,
           "yellow": 1,
@@ -32011,10 +32011,10 @@
           "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.75,
-          "apg": 0.25,
+          "gpg": 0.6,
+          "apg": 0.2,
           "fpg": 0,
-          "mpg": 90
+          "mpg": 91
         },
         {
           "id": 29781,
@@ -32066,8 +32066,8 @@
           "photo": "https://media.api-sports.io/football/players/136880.png",
           "pos": "Defender",
           "number": 2,
-          "games": 11,
-          "minutes": 540,
+          "games": 12,
+          "minutes": 585,
           "goals": 1,
           "assists": 0,
           "yellow": 1,
@@ -32077,9 +32077,9 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.09,
+          "gpg": 0.08,
           "apg": 0,
-          "fpg": 0.73,
+          "fpg": 0.67,
           "mpg": 49
         },
         {
@@ -32088,8 +32088,8 @@
           "photo": "https://media.api-sports.io/football/players/29937.png",
           "pos": "Midfielder",
           "number": 18,
-          "games": 5,
-          "minutes": 103,
+          "games": 6,
+          "minutes": 114,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -32099,10 +32099,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.2,
+          "gpg": 0.17,
           "apg": 0,
-          "fpg": 0.8,
-          "mpg": 21
+          "fpg": 0.67,
+          "mpg": 19
         },
         {
           "id": 29775,
@@ -32132,8 +32132,8 @@
           "photo": "https://media.api-sports.io/football/players/2688.png",
           "pos": "Defender",
           "number": 5,
-          "games": 15,
-          "minutes": 836,
+          "games": 16,
+          "minutes": 866,
           "goals": 0,
           "assists": 1,
           "yellow": 3,
@@ -32144,9 +32144,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.07,
-          "fpg": 0.53,
-          "mpg": 56
+          "apg": 0.06,
+          "fpg": 0.5,
+          "mpg": 54
         },
         {
           "id": 2699,
@@ -32154,21 +32154,21 @@
           "photo": "https://media.api-sports.io/football/players/2699.png",
           "pos": "Midfielder",
           "number": 14,
-          "games": 14,
-          "minutes": 565,
+          "games": 15,
+          "minutes": 644,
           "goals": 0,
           "assists": 1,
           "yellow": 2,
           "red": 0,
-          "fouls": 6,
+          "fouls": 7,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0.07,
-          "fpg": 0.43,
-          "mpg": 40
+          "fpg": 0.47,
+          "mpg": 43
         },
         {
           "id": 2687,
@@ -32176,8 +32176,8 @@
           "photo": "https://media.api-sports.io/football/players/2687.png",
           "pos": "Defender",
           "number": 13,
-          "games": 0,
-          "minutes": 396,
+          "games": 1,
+          "minutes": 492,
           "goals": 0,
           "assists": 1,
           "yellow": 3,
@@ -32188,9 +32188,9 @@
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0,
-          "fpg": 0,
-          "mpg": 0
+          "apg": 1,
+          "fpg": 2,
+          "mpg": 492
         },
         {
           "id": 2694,
@@ -32638,21 +32638,21 @@
           "photo": "https://media.api-sports.io/football/players/2685.png",
           "pos": "Defender",
           "number": 3,
-          "games": 3,
-          "minutes": 115,
+          "games": 4,
+          "minutes": 181,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
           "red": 0,
-          "fouls": 1,
+          "fouls": 2,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.33,
-          "mpg": 38
+          "fpg": 0.5,
+          "mpg": 45
         },
         {
           "id": 2682,
@@ -32660,8 +32660,8 @@
           "photo": "https://media.api-sports.io/football/players/2682.png",
           "pos": "Goalkeeper",
           "number": 1,
-          "games": 14,
-          "minutes": 904,
+          "games": 15,
+          "minutes": 1000,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -32669,12 +32669,12 @@
           "fouls": 0,
           "wcGoals": 0,
           "wcAssists": 0,
-          "saves": 24,
+          "saves": 31,
           "conceded": 10,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 65
+          "mpg": 67
         },
         {
           "id": 343405,
@@ -32726,21 +32726,21 @@
           "photo": "https://media.api-sports.io/football/players/29704.png",
           "pos": "Defender",
           "number": 4,
-          "games": 14,
-          "minutes": 775,
+          "games": 15,
+          "minutes": 871,
           "goals": 0,
           "assists": 0,
           "yellow": 1,
           "red": 1,
-          "fouls": 5,
+          "fouls": 6,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.36,
-          "mpg": 55
+          "fpg": 0.4,
+          "mpg": 58
         },
         {
           "id": 8564,
@@ -32770,21 +32770,21 @@
           "photo": "https://media.api-sports.io/football/players/2700.png",
           "pos": "Attacker",
           "number": 7,
-          "games": 10,
-          "minutes": 392,
+          "games": 11,
+          "minutes": 443,
           "goals": 0,
           "assists": 0,
           "yellow": 2,
           "red": 0,
-          "fouls": 10,
+          "fouls": 12,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1,
-          "mpg": 39
+          "fpg": 1.09,
+          "mpg": 40
         },
         {
           "id": 2697,
@@ -32792,8 +32792,8 @@
           "photo": "https://media.api-sports.io/football/players/2697.png",
           "pos": "Midfielder",
           "number": 16,
-          "games": 4,
-          "minutes": 30,
+          "games": 5,
+          "minutes": 60,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -32806,7 +32806,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 8
+          "mpg": 12
         },
         {
           "id": 19614,
@@ -32814,21 +32814,21 @@
           "photo": "https://media.api-sports.io/football/players/19614.png",
           "pos": "Midfielder",
           "number": 6,
-          "games": 14,
-          "minutes": 787,
+          "games": 15,
+          "minutes": 872,
           "goals": 0,
           "assists": 0,
-          "yellow": 1,
+          "yellow": 2,
           "red": 0,
-          "fouls": 14,
+          "fouls": 16,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1,
-          "mpg": 56
+          "fpg": 1.07,
+          "mpg": 58
         },
         {
           "id": 89982,
@@ -32836,8 +32836,8 @@
           "photo": "https://media.api-sports.io/football/players/89982.png",
           "pos": "Attacker",
           "number": 19,
-          "games": 9,
-          "minutes": 173,
+          "games": 10,
+          "minutes": 190,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -32849,7 +32849,7 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.56,
+          "fpg": 0.5,
           "mpg": 19
         },
         {
@@ -33056,8 +33056,8 @@
           "photo": "https://media.api-sports.io/football/players/29809.png",
           "pos": "Defender",
           "number": 13,
-          "games": 0,
-          "minutes": 598,
+          "games": 1,
+          "minutes": 694,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -33069,8 +33069,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 0
+          "fpg": 5,
+          "mpg": 694
         },
         {
           "id": 29825,
@@ -33295,8 +33295,8 @@
       ],
       "leaders": {
         "goals": "M. Ghaedi",
-        "assists": "M. Mohebi",
-        "fouls": "M. Ghaedi"
+        "assists": "H. Kanani",
+        "fouls": "A. Nemati"
       },
       "season": 2026
     },
@@ -33309,21 +33309,21 @@
           "photo": "https://media.api-sports.io/football/players/18931.png",
           "pos": "Attacker",
           "number": 9,
-          "games": 8,
-          "minutes": 499,
+          "games": 9,
+          "minutes": 600,
           "goals": 9,
           "assists": 2,
           "yellow": 1,
           "red": 0,
-          "fouls": 1,
+          "fouls": 2,
           "wcGoals": 0,
           "wcAssists": 2,
           "saves": 0,
           "conceded": 0,
-          "gpg": 1.13,
-          "apg": 0.25,
-          "fpg": 0.13,
-          "mpg": 62
+          "gpg": 1,
+          "apg": 0.22,
+          "fpg": 0.22,
+          "mpg": 67
         },
         {
           "id": 94333,
@@ -33331,21 +33331,21 @@
           "photo": "https://media.api-sports.io/football/players/94333.png",
           "pos": "Attacker",
           "number": 11,
-          "games": 8,
-          "minutes": 405,
+          "games": 9,
+          "minutes": 490,
           "goals": 6,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 1,
+          "fouls": 2,
           "wcGoals": 2,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.75,
+          "gpg": 0.67,
           "apg": 0,
-          "fpg": 0.13,
-          "mpg": 51
+          "fpg": 0.22,
+          "mpg": 54
         },
         {
           "id": 430835,
@@ -33353,21 +33353,21 @@
           "photo": "https://media.api-sports.io/football/players/430835.png",
           "pos": "Defender",
           "number": 4,
-          "games": 7,
-          "minutes": 389,
+          "games": 8,
+          "minutes": 405,
           "goals": 3,
           "assists": 0,
           "yellow": 1,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.43,
+          "gpg": 0.38,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 56
+          "fpg": 0.13,
+          "mpg": 51
         },
         {
           "id": 94322,
@@ -33375,21 +33375,21 @@
           "photo": "https://media.api-sports.io/football/players/94322.png",
           "pos": "Midfielder",
           "number": 20,
-          "games": 7,
-          "minutes": 276,
+          "games": 8,
+          "minutes": 342,
           "goals": 2,
           "assists": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
-          "fouls": 1,
+          "fouls": 3,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.29,
+          "gpg": 0.25,
           "apg": 0,
-          "fpg": 0.14,
-          "mpg": 39
+          "fpg": 0.38,
+          "mpg": 43
         },
         {
           "id": 6865,
@@ -33419,21 +33419,21 @@
           "photo": "https://media.api-sports.io/football/players/6935.png",
           "pos": "Midfielder",
           "number": 10,
-          "games": 7,
-          "minutes": 407,
+          "games": 8,
+          "minutes": 483,
           "goals": 2,
           "assists": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 0,
-          "fouls": 5,
+          "fouls": 6,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.29,
+          "gpg": 0.25,
           "apg": 0,
-          "fpg": 0.71,
-          "mpg": 58
+          "fpg": 0.75,
+          "mpg": 60
         },
         {
           "id": 6938,
@@ -33463,21 +33463,21 @@
           "photo": "https://media.api-sports.io/football/players/94346.png",
           "pos": "Defender",
           "number": 2,
-          "games": 6,
-          "minutes": 382,
+          "games": 7,
+          "minutes": 467,
           "goals": 1,
-          "assists": 0,
+          "assists": 1,
           "yellow": 0,
           "red": 0,
-          "fouls": 2,
+          "fouls": 3,
           "wcGoals": 0,
-          "wcAssists": 0,
+          "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.17,
-          "apg": 0,
-          "fpg": 0.33,
-          "mpg": 64
+          "gpg": 0.14,
+          "apg": 0.14,
+          "fpg": 0.43,
+          "mpg": 67
         },
         {
           "id": 94405,
@@ -33485,30 +33485,8 @@
           "photo": "https://media.api-sports.io/football/players/94405.png",
           "pos": "Defender",
           "number": 3,
-          "games": 5,
-          "minutes": 164,
-          "goals": 1,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 0,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0.2,
-          "apg": 0,
-          "fpg": 0,
-          "mpg": 33
-        },
-        {
-          "id": 51149,
-          "name": "M. Boxall",
-          "photo": "https://media.api-sports.io/football/players/51149.png",
-          "pos": "Defender",
-          "number": 5,
           "games": 6,
-          "minutes": 445,
+          "minutes": 180,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -33521,7 +33499,51 @@
           "gpg": 0.17,
           "apg": 0,
           "fpg": 0,
-          "mpg": 74
+          "mpg": 30
+        },
+        {
+          "id": 210165,
+          "name": "F. Surman",
+          "photo": "https://media.api-sports.io/football/players/210165.png",
+          "pos": "Defender",
+          "number": 16,
+          "games": 5,
+          "minutes": 366,
+          "goals": 1,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 3,
+          "wcGoals": 1,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.2,
+          "apg": 0,
+          "fpg": 0.6,
+          "mpg": 73
+        },
+        {
+          "id": 51149,
+          "name": "M. Boxall",
+          "photo": "https://media.api-sports.io/football/players/51149.png",
+          "pos": "Defender",
+          "number": 5,
+          "games": 7,
+          "minutes": 546,
+          "goals": 1,
+          "assists": 0,
+          "yellow": 0,
+          "red": 0,
+          "fouls": 1,
+          "wcGoals": 0,
+          "wcAssists": 0,
+          "saves": 0,
+          "conceded": 0,
+          "gpg": 0.14,
+          "apg": 0,
+          "fpg": 0.14,
+          "mpg": 78
         },
         {
           "id": 180455,
@@ -33551,8 +33573,8 @@
           "photo": "https://media.api-sports.io/football/players/179862.png",
           "pos": "Midfielder",
           "number": 8,
-          "games": 8,
-          "minutes": 595,
+          "games": 9,
+          "minutes": 696,
           "goals": 1,
           "assists": 0,
           "yellow": 0,
@@ -33562,10 +33584,10 @@
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
-          "gpg": 0.13,
+          "gpg": 0.11,
           "apg": 0,
-          "fpg": 0.38,
-          "mpg": 74
+          "fpg": 0.33,
+          "mpg": 77
         },
         {
           "id": 94332,
@@ -33595,8 +33617,8 @@
           "photo": "https://media.api-sports.io/football/players/179856.png",
           "pos": "Attacker",
           "number": 19,
-          "games": 4,
-          "minutes": 123,
+          "games": 5,
+          "minutes": 158,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -33609,7 +33631,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 31
+          "mpg": 32
         },
         {
           "id": 6934,
@@ -33727,8 +33749,8 @@
           "photo": "https://media.api-sports.io/football/players/158688.png",
           "pos": "Attacker",
           "number": 21,
-          "games": 3,
-          "minutes": 30,
+          "games": 4,
+          "minutes": 55,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -33741,7 +33763,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 10
+          "mpg": 14
         },
         {
           "id": 94344,
@@ -33788,48 +33810,26 @@
           "mpg": 0
         },
         {
-          "id": 210165,
-          "name": "F. Surman",
-          "photo": "https://media.api-sports.io/football/players/210165.png",
-          "pos": "Defender",
-          "number": 16,
-          "games": 4,
-          "minutes": 265,
-          "goals": 0,
-          "assists": 0,
-          "yellow": 0,
-          "red": 0,
-          "fouls": 0,
-          "wcGoals": 0,
-          "wcAssists": 0,
-          "saves": 0,
-          "conceded": 0,
-          "gpg": 0,
-          "apg": 0,
-          "fpg": 0,
-          "mpg": 66
-        },
-        {
           "id": 94541,
           "name": "J. Bell",
           "photo": "https://media.api-sports.io/football/players/94541.png",
           "pos": "Midfielder",
           "number": 6,
-          "games": 6,
-          "minutes": 433,
+          "games": 7,
+          "minutes": 534,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 1,
+          "fouls": 3,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0.17,
-          "mpg": 72
+          "fpg": 0.43,
+          "mpg": 76
         },
         {
           "id": 18110,
@@ -33837,8 +33837,8 @@
           "photo": "https://media.api-sports.io/football/players/18110.png",
           "pos": "Goalkeeper",
           "number": 1,
-          "games": 7,
-          "minutes": 534,
+          "games": 8,
+          "minutes": 635,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -33846,12 +33846,12 @@
           "fouls": 0,
           "wcGoals": 0,
           "wcAssists": 0,
-          "saves": 4,
-          "conceded": 3,
+          "saves": 8,
+          "conceded": 6,
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 76
+          "mpg": 79
         },
         {
           "id": 242,
@@ -33859,8 +33859,8 @@
           "photo": "https://media.api-sports.io/football/players/242.png",
           "pos": "Midfielder",
           "number": 23,
-          "games": 1,
-          "minutes": 22,
+          "games": 2,
+          "minutes": 47,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -33872,8 +33872,8 @@
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 2,
-          "mpg": 22
+          "fpg": 1,
+          "mpg": 24
         },
         {
           "id": 6931,
@@ -33881,21 +33881,21 @@
           "photo": "https://media.api-sports.io/football/players/6931.png",
           "pos": "Defender",
           "number": 13,
-          "games": 8,
-          "minutes": 475,
+          "games": 9,
+          "minutes": 551,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
           "red": 0,
-          "fouls": 0,
+          "fouls": 1,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 0,
-          "mpg": 59
+          "fpg": 0.11,
+          "mpg": 61
         },
         {
           "id": 6932,
@@ -33924,7 +33924,7 @@
           "name": "L. Rogerson",
           "photo": "https://media.api-sports.io/football/players/26161.png",
           "pos": "Attacker",
-          "number": null,
+          "number": 7,
           "games": 3,
           "minutes": 80,
           "goals": 0,
@@ -40536,21 +40536,21 @@
           "photo": "https://media.api-sports.io/football/players/1095.png",
           "pos": "Midfielder",
           "number": 4,
-          "games": 3,
-          "minutes": 199,
+          "games": 4,
+          "minutes": 294,
           "goals": 0,
           "assists": 2,
           "yellow": 0,
           "red": 0,
-          "fouls": 3,
+          "fouls": 6,
           "wcGoals": 0,
           "wcAssists": 1,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
-          "apg": 0.67,
-          "fpg": 1,
-          "mpg": 66
+          "apg": 0.5,
+          "fpg": 1.5,
+          "mpg": 74
         },
         {
           "id": 715,
@@ -40866,8 +40866,8 @@
           "photo": "https://media.api-sports.io/football/players/505.png",
           "pos": "Defender",
           "number": 8,
-          "games": 3,
-          "minutes": 133,
+          "games": 4,
+          "minutes": 200,
           "goals": 0,
           "assists": 0,
           "yellow": 0,
@@ -40880,7 +40880,7 @@
           "gpg": 0,
           "apg": 0,
           "fpg": 0,
-          "mpg": 44
+          "mpg": 50
         },
         {
           "id": 1157,
@@ -40888,21 +40888,21 @@
           "photo": "https://media.api-sports.io/football/players/1157.png",
           "pos": "Midfielder",
           "number": 20,
-          "games": 3,
-          "minutes": 205,
+          "games": 4,
+          "minutes": 300,
           "goals": 0,
           "assists": 0,
-          "yellow": 0,
+          "yellow": 1,
           "red": 1,
-          "fouls": 4,
+          "fouls": 5,
           "wcGoals": 0,
           "wcAssists": 0,
           "saves": 0,
           "conceded": 0,
           "gpg": 0,
           "apg": 0,
-          "fpg": 1.33,
-          "mpg": 68
+          "fpg": 1.25,
+          "mpg": 75
         },
         {
           "id": 1725,
@@ -40995,7 +40995,7 @@
       ],
       "leaders": {
         "goals": "M. Sabitzer",
-        "assists": "X. Schlager",
+        "assists": "M. Sabitzer",
         "fouls": "S. Posch"
       },
       "season": 2026
@@ -103029,6 +103029,22 @@
                 "photo": "https://media.api-sports.io/football/players/6009.png"
               },
               {
+                "id": 529,
+                "name": "Nicolás Tagliafico",
+                "number": 3,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/529.png"
+              },
+              {
+                "id": 271,
+                "name": "Leandro Paredes",
+                "number": 5,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/271.png"
+              },
+              {
                 "id": 2465,
                 "name": "Juan Musso",
                 "number": 1,
@@ -103043,14 +103059,6 @@
                 "pos": "G",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/47296.png"
-              },
-              {
-                "id": 529,
-                "name": "Nicolás Tagliafico",
-                "number": 3,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/529.png"
               },
               {
                 "id": 6610,
@@ -103083,14 +103091,6 @@
                 "pos": "F",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/350037.png"
-              },
-              {
-                "id": 271,
-                "name": "Leandro Paredes",
-                "number": 5,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/271.png"
               },
               {
                 "id": 323935,
@@ -103222,6 +103222,46 @@
             ],
             "subs": [
               {
+                "id": 25314,
+                "name": "Marco Friedl",
+                "number": 23,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/25314.png"
+              },
+              {
+                "id": 7327,
+                "name": "Alexander Prass",
+                "number": 22,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/7327.png"
+              },
+              {
+                "id": 18830,
+                "name": "Marko Arnautović",
+                "number": 7,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/18830.png"
+              },
+              {
+                "id": 126642,
+                "name": "Patrick Wimmer",
+                "number": 21,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/126642.png"
+              },
+              {
+                "id": 138935,
+                "name": "Carney Chukwuemeka",
+                "number": 17,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/138935.png"
+              },
+              {
                 "id": 7598,
                 "name": "Patrick Pentz",
                 "number": 13,
@@ -103246,14 +103286,6 @@
                 "photo": "https://media.api-sports.io/football/players/126640.png"
               },
               {
-                "id": 25314,
-                "name": "Marco Friedl",
-                "number": 23,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/25314.png"
-              },
-              {
                 "id": 7090,
                 "name": "Michael Svoboda",
                 "number": 25,
@@ -103270,14 +103302,6 @@
                 "photo": "https://media.api-sports.io/football/players/26240.png"
               },
               {
-                "id": 7327,
-                "name": "Alexander Prass",
-                "number": 22,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/7327.png"
-              },
-              {
                 "id": 1725,
                 "name": "Dejan Ljubičić",
                 "number": 19,
@@ -103286,28 +103310,12 @@
                 "photo": "https://media.api-sports.io/football/players/1725.png"
               },
               {
-                "id": 126642,
-                "name": "Patrick Wimmer",
-                "number": 21,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/126642.png"
-              },
-              {
                 "id": 719,
                 "name": "Florian Grillitsch",
                 "number": 10,
                 "pos": "M",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/719.png"
-              },
-              {
-                "id": 138935,
-                "name": "Carney Chukwuemeka",
-                "number": 17,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/138935.png"
               },
               {
                 "id": 417,
@@ -103332,14 +103340,6 @@
                 "pos": "F",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/7722.png"
-              },
-              {
-                "id": 18830,
-                "name": "Marko Arnautović",
-                "number": 7,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/18830.png"
               }
             ]
           }
@@ -104226,7 +104226,7 @@
             "startXI": [
               {
                 "id": 22221,
-                "name": "M. Maignan",
+                "name": "Mike Maignan",
                 "number": 16,
                 "pos": "G",
                 "grid": "1:1",
@@ -104234,7 +104234,7 @@
               },
               {
                 "id": 1257,
-                "name": "J. Kounde",
+                "name": "Jules Koundé",
                 "number": 5,
                 "pos": "D",
                 "grid": "2:4",
@@ -104242,7 +104242,7 @@
               },
               {
                 "id": 1149,
-                "name": "D. Upamecano",
+                "name": "Dayot Upamecano",
                 "number": 4,
                 "pos": "D",
                 "grid": "2:3",
@@ -104250,63 +104250,63 @@
               },
               {
                 "id": 22090,
-                "name": "W. Saliba",
+                "name": "William Saliba",
                 "number": 17,
                 "pos": "D",
                 "grid": "2:2",
                 "photo": "https://media.api-sports.io/football/players/22090.png"
               },
               {
-                "id": 47300,
-                "name": "T. Hernandez",
-                "number": 19,
+                "id": 2724,
+                "name": "Lucas Digne",
+                "number": 3,
                 "pos": "D",
                 "grid": "2:1",
-                "photo": "https://media.api-sports.io/football/players/47300.png"
+                "photo": "https://media.api-sports.io/football/players/2724.png"
               },
               {
-                "id": 1271,
-                "name": "A. Tchouameni",
-                "number": 8,
+                "id": 22147,
+                "name": "Manu Koné",
+                "number": 6,
                 "pos": "M",
                 "grid": "3:2",
-                "photo": "https://media.api-sports.io/football/players/1271.png"
+                "photo": "https://media.api-sports.io/football/players/22147.png"
               },
               {
                 "id": 272,
-                "name": "A. Rabiot",
+                "name": "Adrien Rabiot",
                 "number": 14,
                 "pos": "M",
                 "grid": "3:1",
                 "photo": "https://media.api-sports.io/football/players/272.png"
               },
               {
-                "id": 19617,
-                "name": "M. Olise",
-                "number": 11,
-                "pos": "M",
-                "grid": "4:3",
-                "photo": "https://media.api-sports.io/football/players/19617.png"
-              },
-              {
                 "id": 153,
-                "name": "O. Dembele",
+                "name": "Ousmane Dembélé",
                 "number": 7,
                 "pos": "M",
-                "grid": "4:2",
+                "grid": "4:3",
                 "photo": "https://media.api-sports.io/football/players/153.png"
               },
               {
-                "id": 343027,
-                "name": "D. Doue",
-                "number": 20,
+                "id": 19617,
+                "name": "Michael Olise",
+                "number": 11,
+                "pos": "M",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/19617.png"
+              },
+              {
+                "id": 161904,
+                "name": "Bradley Barcola",
+                "number": 12,
                 "pos": "M",
                 "grid": "4:1",
-                "photo": "https://media.api-sports.io/football/players/343027.png"
+                "photo": "https://media.api-sports.io/football/players/161904.png"
               },
               {
                 "id": 278,
-                "name": "K. Mbappe",
+                "name": "Kylian Mbappé",
                 "number": 10,
                 "pos": "F",
                 "grid": "5:1",
@@ -104316,7 +104316,7 @@
             "subs": [
               {
                 "id": 21628,
-                "name": "B. Samba",
+                "name": "Brice Samba",
                 "number": 1,
                 "pos": "G",
                 "grid": null,
@@ -104324,134 +104324,134 @@
               },
               {
                 "id": 347211,
-                "name": "R. Risser",
+                "name": "Robin Risser",
                 "number": 23,
                 "pos": "G",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/347211.png"
               },
               {
-                "id": 1145,
-                "name": "I. Konate",
-                "number": 15,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/1145.png"
-              },
-              {
-                "id": 20995,
-                "name": "M. Lacroix",
-                "number": 26,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/20995.png"
-              },
-              {
                 "id": 161907,
-                "name": "M. Gusto",
+                "name": "Malo Gusto",
                 "number": 2,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/161907.png"
               },
               {
-                "id": 274300,
-                "name": "M. Akliouche",
-                "number": 25,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/274300.png"
-              },
-              {
-                "id": 336657,
-                "name": "W. Zaire-Emery",
-                "number": 18,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/336657.png"
-              },
-              {
-                "id": 2724,
-                "name": "L. Digne",
-                "number": 3,
+                "id": 1145,
+                "name": "Ibrahima Konaté",
+                "number": 15,
                 "pos": "D",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/2724.png"
-              },
-              {
-                "id": 2290,
-                "name": "N. Kante",
-                "number": 13,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/2290.png"
+                "photo": "https://media.api-sports.io/football/players/1145.png"
               },
               {
                 "id": 33,
-                "name": "L. Hernandez",
+                "name": "Lucas Hernández",
                 "number": 21,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/33.png"
               },
               {
-                "id": 21509,
-                "name": "M. Thuram",
-                "number": 9,
-                "pos": "F",
+                "id": 47300,
+                "name": "Theo Hernández",
+                "number": 19,
+                "pos": "D",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/21509.png"
+                "photo": "https://media.api-sports.io/football/players/47300.png"
               },
               {
-                "id": 25927,
-                "name": "J. Mateta",
-                "number": 22,
-                "pos": "F",
+                "id": 20995,
+                "name": "Maxence Lacroix",
+                "number": 26,
+                "pos": "D",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/25927.png"
+                "photo": "https://media.api-sports.io/football/players/20995.png"
+              },
+              {
+                "id": 1271,
+                "name": "Aurélien Tchouaméni",
+                "number": 8,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/1271.png"
+              },
+              {
+                "id": 2290,
+                "name": "N'Golo Kanté",
+                "number": 13,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/2290.png"
+              },
+              {
+                "id": 336657,
+                "name": "Warren Zaïre-Emery",
+                "number": 18,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/336657.png"
+              },
+              {
+                "id": 274300,
+                "name": "Maghnes Akliouche",
+                "number": 25,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/274300.png"
               },
               {
                 "id": 156477,
-                "name": "R. Cherki",
+                "name": "Rayan Cherki",
                 "number": 24,
                 "pos": "M",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/156477.png"
               },
               {
-                "id": 22147,
-                "name": "M. Kone",
-                "number": 6,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/22147.png"
-              },
-              {
-                "id": 161904,
-                "name": "B. Barcola",
-                "number": 12,
+                "id": 25927,
+                "name": "Jean-Philippe Mateta",
+                "number": 22,
                 "pos": "F",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/161904.png"
+                "photo": "https://media.api-sports.io/football/players/25927.png"
+              },
+              {
+                "id": 21509,
+                "name": "Marcus Thuram",
+                "number": 9,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/21509.png"
+              },
+              {
+                "id": 343027,
+                "name": "Désiré Doué",
+                "number": 20,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/343027.png"
               }
             ]
           },
           "away": {
             "team": "Iraq",
-            "formation": "4-4-2",
+            "formation": "4-1-4-1",
             "coach": "Graham Arnold",
             "startXI": [
               {
-                "id": 53886,
-                "name": "J. Hassan",
-                "number": 12,
+                "id": 197933,
+                "name": "Ahmed Basil",
+                "number": 22,
                 "pos": "G",
                 "grid": "1:1",
-                "photo": "https://media.api-sports.io/football/players/53886.png"
+                "photo": "https://media.api-sports.io/football/players/197933.png"
               },
               {
                 "id": 145465,
-                "name": "H. Ali",
+                "name": "Hussein Ali",
                 "number": 3,
                 "pos": "D",
                 "grid": "2:4",
@@ -104459,7 +104459,7 @@
               },
               {
                 "id": 296373,
-                "name": "Z. Tahseen",
+                "name": "Zaid Tahseen",
                 "number": 4,
                 "pos": "D",
                 "grid": "2:3",
@@ -104467,7 +104467,7 @@
               },
               {
                 "id": 453073,
-                "name": "A. Hashem",
+                "name": "Akam Hashem",
                 "number": 5,
                 "pos": "D",
                 "grid": "2:2",
@@ -104475,186 +104475,186 @@
               },
               {
                 "id": 271444,
-                "name": "M. Doski",
+                "name": "Merchas Doski",
                 "number": 23,
                 "pos": "D",
                 "grid": "2:1",
                 "photo": "https://media.api-sports.io/football/players/271444.png"
               },
               {
-                "id": 140747,
-                "name": "I. Bayesh",
-                "number": 8,
-                "pos": "M",
-                "grid": "3:4",
-                "photo": "https://media.api-sports.io/football/players/140747.png"
-              },
-              {
-                "id": 626479,
-                "name": "Z. Ismaeel",
-                "number": 24,
-                "pos": "M",
-                "grid": "3:3",
-                "photo": "https://media.api-sports.io/football/players/626479.png"
-              },
-              {
                 "id": 47792,
-                "name": "A. Al Ammari",
+                "name": "Amir Al-Ammari",
                 "number": 16,
                 "pos": "M",
-                "grid": "3:2",
+                "grid": "3:1",
                 "photo": "https://media.api-sports.io/football/players/47792.png"
               },
               {
-                "id": 542644,
-                "name": "A. Jasim",
-                "number": 17,
+                "id": 229112,
+                "name": "Ahmed Qasem",
+                "number": 11,
                 "pos": "M",
-                "grid": "3:1",
-                "photo": "https://media.api-sports.io/football/players/542644.png"
+                "grid": "4:4",
+                "photo": "https://media.api-sports.io/football/players/229112.png"
+              },
+              {
+                "id": 626479,
+                "name": "Zaid Ismail",
+                "number": 24,
+                "pos": "M",
+                "grid": "4:3",
+                "photo": "https://media.api-sports.io/football/players/626479.png"
+              },
+              {
+                "id": 284295,
+                "name": "Zidane Iqbal",
+                "number": 14,
+                "pos": "M",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/284295.png"
+              },
+              {
+                "id": 140747,
+                "name": "Ibrahim Bayesh",
+                "number": 8,
+                "pos": "M",
+                "grid": "4:1",
+                "photo": "https://media.api-sports.io/football/players/140747.png"
               },
               {
                 "id": 49451,
-                "name": "A. Hussein",
+                "name": "Aymen Hussein",
                 "number": 18,
                 "pos": "F",
-                "grid": "4:2",
+                "grid": "5:1",
                 "photo": "https://media.api-sports.io/football/players/49451.png"
-              },
-              {
-                "id": 299813,
-                "name": "A. Al Hamadi",
-                "number": 9,
-                "pos": "F",
-                "grid": "4:1",
-                "photo": "https://media.api-sports.io/football/players/299813.png"
               }
             ],
             "subs": [
               {
-                "id": 197933,
-                "name": "A. Basil",
-                "number": 22,
-                "pos": "G",
+                "id": 299813,
+                "name": "Ali Al-Hamadi",
+                "number": 9,
+                "pos": "F",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/197933.png"
+                "photo": "https://media.api-sports.io/football/players/299813.png"
               },
               {
                 "id": 123802,
-                "name": "F. Talib",
+                "name": "Fahad Talib",
                 "number": 1,
                 "pos": "G",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/123802.png"
               },
               {
-                "id": 15769,
-                "name": "F. Putros",
-                "number": 26,
-                "pos": "D",
+                "id": 53886,
+                "name": "Jalal Hassan",
+                "number": 12,
+                "pos": "G",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/15769.png"
-              },
-              {
-                "id": 229112,
-                "name": "A. Qasem",
-                "number": 11,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/229112.png"
-              },
-              {
-                "id": 163854,
-                "name": "A. Yousif",
-                "number": 13,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/163854.png"
-              },
-              {
-                "id": 284295,
-                "name": "Z. Iqbal",
-                "number": 14,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/284295.png"
-              },
-              {
-                "id": 265448,
-                "name": "M. Farji",
-                "number": 21,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/265448.png"
-              },
-              {
-                "id": 53894,
-                "name": "Meme",
-                "number": 10,
-                "pos": null,
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/53894.png"
-              },
-              {
-                "id": 42261,
-                "name": "R. Sulaka",
-                "number": 2,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/42261.png"
-              },
-              {
-                "id": 48025,
-                "name": "K. Yakob",
-                "number": 19,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/48025.png"
-              },
-              {
-                "id": 48129,
-                "name": "A. Sher",
-                "number": 20,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/48129.png"
-              },
-              {
-                "id": 282065,
-                "name": "Y. Amyn",
-                "number": 7,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/282065.png"
-              },
-              {
-                "id": 665478,
-                "name": "A. Al Reeshawee",
-                "number": 15,
-                "pos": null,
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/665478.png"
+                "photo": "https://media.api-sports.io/football/players/53886.png"
               },
               {
                 "id": 295394,
-                "name": "M. Younis",
+                "name": "Munaf Younus",
                 "number": 6,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/295394.png"
               },
               {
+                "id": 292253,
+                "name": "Ahmed Hasan Maknazi",
+                "number": 15,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/292253.png"
+              },
+              {
+                "id": 15769,
+                "name": "Frans Putros",
+                "number": 26,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/15769.png"
+              },
+              {
                 "id": 427187,
-                "name": "M. Saadoon",
+                "name": "Mustafa Saadoon",
                 "number": 25,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/427187.png"
+              },
+              {
+                "id": 42261,
+                "name": "Rebin Sulaka",
+                "number": 2,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/42261.png"
+              },
+              {
+                "id": 542644,
+                "name": "Ali Jasim",
+                "number": 17,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/542644.png"
+              },
+              {
+                "id": 48129,
+                "name": "Aimar Sher",
+                "number": 20,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/48129.png"
+              },
+              {
+                "id": 48025,
+                "name": "Kevin Yakob",
+                "number": 19,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/48025.png"
+              },
+              {
+                "id": 265448,
+                "name": "Marko Farji",
+                "number": 21,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/265448.png"
+              },
+              {
+                "id": 282065,
+                "name": "Youssef Amyn",
+                "number": 7,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/282065.png"
+              },
+              {
+                "id": 163854,
+                "name": "Ali Yousif",
+                "number": 13,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/163854.png"
+              },
+              {
+                "id": 154767,
+                "name": "Mohanad Ali",
+                "number": 10,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/154767.png"
               }
             ]
           }
         },
-        "kind": "recent"
+        "kind": "live"
       }
     },
     "Norway|Senegal": {
@@ -112965,7 +112965,7 @@
             "startXI": [
               {
                 "id": 22221,
-                "name": "M. Maignan",
+                "name": "Mike Maignan",
                 "number": 16,
                 "pos": "G",
                 "grid": "1:1",
@@ -112973,7 +112973,7 @@
               },
               {
                 "id": 1257,
-                "name": "J. Kounde",
+                "name": "Jules Koundé",
                 "number": 5,
                 "pos": "D",
                 "grid": "2:4",
@@ -112981,7 +112981,7 @@
               },
               {
                 "id": 1149,
-                "name": "D. Upamecano",
+                "name": "Dayot Upamecano",
                 "number": 4,
                 "pos": "D",
                 "grid": "2:3",
@@ -112989,63 +112989,63 @@
               },
               {
                 "id": 22090,
-                "name": "W. Saliba",
+                "name": "William Saliba",
                 "number": 17,
                 "pos": "D",
                 "grid": "2:2",
                 "photo": "https://media.api-sports.io/football/players/22090.png"
               },
               {
-                "id": 47300,
-                "name": "T. Hernandez",
-                "number": 19,
+                "id": 2724,
+                "name": "Lucas Digne",
+                "number": 3,
                 "pos": "D",
                 "grid": "2:1",
-                "photo": "https://media.api-sports.io/football/players/47300.png"
+                "photo": "https://media.api-sports.io/football/players/2724.png"
               },
               {
-                "id": 1271,
-                "name": "A. Tchouameni",
-                "number": 8,
+                "id": 22147,
+                "name": "Manu Koné",
+                "number": 6,
                 "pos": "M",
                 "grid": "3:2",
-                "photo": "https://media.api-sports.io/football/players/1271.png"
+                "photo": "https://media.api-sports.io/football/players/22147.png"
               },
               {
                 "id": 272,
-                "name": "A. Rabiot",
+                "name": "Adrien Rabiot",
                 "number": 14,
                 "pos": "M",
                 "grid": "3:1",
                 "photo": "https://media.api-sports.io/football/players/272.png"
               },
               {
-                "id": 19617,
-                "name": "M. Olise",
-                "number": 11,
-                "pos": "M",
-                "grid": "4:3",
-                "photo": "https://media.api-sports.io/football/players/19617.png"
-              },
-              {
                 "id": 153,
-                "name": "O. Dembele",
+                "name": "Ousmane Dembélé",
                 "number": 7,
                 "pos": "M",
-                "grid": "4:2",
+                "grid": "4:3",
                 "photo": "https://media.api-sports.io/football/players/153.png"
               },
               {
-                "id": 343027,
-                "name": "D. Doue",
-                "number": 20,
+                "id": 19617,
+                "name": "Michael Olise",
+                "number": 11,
+                "pos": "M",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/19617.png"
+              },
+              {
+                "id": 161904,
+                "name": "Bradley Barcola",
+                "number": 12,
                 "pos": "M",
                 "grid": "4:1",
-                "photo": "https://media.api-sports.io/football/players/343027.png"
+                "photo": "https://media.api-sports.io/football/players/161904.png"
               },
               {
                 "id": 278,
-                "name": "K. Mbappe",
+                "name": "Kylian Mbappé",
                 "number": 10,
                 "pos": "F",
                 "grid": "5:1",
@@ -113055,7 +113055,7 @@
             "subs": [
               {
                 "id": 21628,
-                "name": "B. Samba",
+                "name": "Brice Samba",
                 "number": 1,
                 "pos": "G",
                 "grid": null,
@@ -113063,115 +113063,115 @@
               },
               {
                 "id": 347211,
-                "name": "R. Risser",
+                "name": "Robin Risser",
                 "number": 23,
                 "pos": "G",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/347211.png"
               },
               {
-                "id": 1145,
-                "name": "I. Konate",
-                "number": 15,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/1145.png"
-              },
-              {
-                "id": 20995,
-                "name": "M. Lacroix",
-                "number": 26,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/20995.png"
-              },
-              {
                 "id": 161907,
-                "name": "M. Gusto",
+                "name": "Malo Gusto",
                 "number": 2,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/161907.png"
               },
               {
-                "id": 274300,
-                "name": "M. Akliouche",
-                "number": 25,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/274300.png"
-              },
-              {
-                "id": 336657,
-                "name": "W. Zaire-Emery",
-                "number": 18,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/336657.png"
-              },
-              {
-                "id": 2724,
-                "name": "L. Digne",
-                "number": 3,
+                "id": 1145,
+                "name": "Ibrahima Konaté",
+                "number": 15,
                 "pos": "D",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/2724.png"
-              },
-              {
-                "id": 2290,
-                "name": "N. Kante",
-                "number": 13,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/2290.png"
+                "photo": "https://media.api-sports.io/football/players/1145.png"
               },
               {
                 "id": 33,
-                "name": "L. Hernandez",
+                "name": "Lucas Hernández",
                 "number": 21,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/33.png"
               },
               {
-                "id": 21509,
-                "name": "M. Thuram",
-                "number": 9,
-                "pos": "F",
+                "id": 47300,
+                "name": "Theo Hernández",
+                "number": 19,
+                "pos": "D",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/21509.png"
+                "photo": "https://media.api-sports.io/football/players/47300.png"
               },
               {
-                "id": 25927,
-                "name": "J. Mateta",
-                "number": 22,
-                "pos": "F",
+                "id": 20995,
+                "name": "Maxence Lacroix",
+                "number": 26,
+                "pos": "D",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/25927.png"
+                "photo": "https://media.api-sports.io/football/players/20995.png"
+              },
+              {
+                "id": 1271,
+                "name": "Aurélien Tchouaméni",
+                "number": 8,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/1271.png"
+              },
+              {
+                "id": 2290,
+                "name": "N'Golo Kanté",
+                "number": 13,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/2290.png"
+              },
+              {
+                "id": 336657,
+                "name": "Warren Zaïre-Emery",
+                "number": 18,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/336657.png"
+              },
+              {
+                "id": 274300,
+                "name": "Maghnes Akliouche",
+                "number": 25,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/274300.png"
               },
               {
                 "id": 156477,
-                "name": "R. Cherki",
+                "name": "Rayan Cherki",
                 "number": 24,
                 "pos": "M",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/156477.png"
               },
               {
-                "id": 22147,
-                "name": "M. Kone",
-                "number": 6,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/22147.png"
-              },
-              {
-                "id": 161904,
-                "name": "B. Barcola",
-                "number": 12,
+                "id": 25927,
+                "name": "Jean-Philippe Mateta",
+                "number": 22,
                 "pos": "F",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/161904.png"
+                "photo": "https://media.api-sports.io/football/players/25927.png"
+              },
+              {
+                "id": 21509,
+                "name": "Marcus Thuram",
+                "number": 9,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/21509.png"
+              },
+              {
+                "id": 343027,
+                "name": "Désiré Doué",
+                "number": 20,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/343027.png"
               }
             ]
           }
@@ -113414,20 +113414,20 @@
           },
           "away": {
             "team": "Iraq",
-            "formation": "4-4-2",
+            "formation": "4-1-4-1",
             "coach": "Graham Arnold",
             "startXI": [
               {
-                "id": 53886,
-                "name": "J. Hassan",
-                "number": 12,
+                "id": 197933,
+                "name": "Ahmed Basil",
+                "number": 22,
                 "pos": "G",
                 "grid": "1:1",
-                "photo": "https://media.api-sports.io/football/players/53886.png"
+                "photo": "https://media.api-sports.io/football/players/197933.png"
               },
               {
                 "id": 145465,
-                "name": "H. Ali",
+                "name": "Hussein Ali",
                 "number": 3,
                 "pos": "D",
                 "grid": "2:4",
@@ -113435,7 +113435,7 @@
               },
               {
                 "id": 296373,
-                "name": "Z. Tahseen",
+                "name": "Zaid Tahseen",
                 "number": 4,
                 "pos": "D",
                 "grid": "2:3",
@@ -113443,7 +113443,7 @@
               },
               {
                 "id": 453073,
-                "name": "A. Hashem",
+                "name": "Akam Hashem",
                 "number": 5,
                 "pos": "D",
                 "grid": "2:2",
@@ -113451,181 +113451,181 @@
               },
               {
                 "id": 271444,
-                "name": "M. Doski",
+                "name": "Merchas Doski",
                 "number": 23,
                 "pos": "D",
                 "grid": "2:1",
                 "photo": "https://media.api-sports.io/football/players/271444.png"
               },
               {
-                "id": 140747,
-                "name": "I. Bayesh",
-                "number": 8,
-                "pos": "M",
-                "grid": "3:4",
-                "photo": "https://media.api-sports.io/football/players/140747.png"
-              },
-              {
-                "id": 626479,
-                "name": "Z. Ismaeel",
-                "number": 24,
-                "pos": "M",
-                "grid": "3:3",
-                "photo": "https://media.api-sports.io/football/players/626479.png"
-              },
-              {
                 "id": 47792,
-                "name": "A. Al Ammari",
+                "name": "Amir Al-Ammari",
                 "number": 16,
                 "pos": "M",
-                "grid": "3:2",
+                "grid": "3:1",
                 "photo": "https://media.api-sports.io/football/players/47792.png"
               },
               {
-                "id": 542644,
-                "name": "A. Jasim",
-                "number": 17,
+                "id": 229112,
+                "name": "Ahmed Qasem",
+                "number": 11,
                 "pos": "M",
-                "grid": "3:1",
-                "photo": "https://media.api-sports.io/football/players/542644.png"
+                "grid": "4:4",
+                "photo": "https://media.api-sports.io/football/players/229112.png"
+              },
+              {
+                "id": 626479,
+                "name": "Zaid Ismail",
+                "number": 24,
+                "pos": "M",
+                "grid": "4:3",
+                "photo": "https://media.api-sports.io/football/players/626479.png"
+              },
+              {
+                "id": 284295,
+                "name": "Zidane Iqbal",
+                "number": 14,
+                "pos": "M",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/284295.png"
+              },
+              {
+                "id": 140747,
+                "name": "Ibrahim Bayesh",
+                "number": 8,
+                "pos": "M",
+                "grid": "4:1",
+                "photo": "https://media.api-sports.io/football/players/140747.png"
               },
               {
                 "id": 49451,
-                "name": "A. Hussein",
+                "name": "Aymen Hussein",
                 "number": 18,
                 "pos": "F",
-                "grid": "4:2",
+                "grid": "5:1",
                 "photo": "https://media.api-sports.io/football/players/49451.png"
-              },
-              {
-                "id": 299813,
-                "name": "A. Al Hamadi",
-                "number": 9,
-                "pos": "F",
-                "grid": "4:1",
-                "photo": "https://media.api-sports.io/football/players/299813.png"
               }
             ],
             "subs": [
               {
-                "id": 197933,
-                "name": "A. Basil",
-                "number": 22,
-                "pos": "G",
+                "id": 299813,
+                "name": "Ali Al-Hamadi",
+                "number": 9,
+                "pos": "F",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/197933.png"
+                "photo": "https://media.api-sports.io/football/players/299813.png"
               },
               {
                 "id": 123802,
-                "name": "F. Talib",
+                "name": "Fahad Talib",
                 "number": 1,
                 "pos": "G",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/123802.png"
               },
               {
-                "id": 15769,
-                "name": "F. Putros",
-                "number": 26,
-                "pos": "D",
+                "id": 53886,
+                "name": "Jalal Hassan",
+                "number": 12,
+                "pos": "G",
                 "grid": null,
-                "photo": "https://media.api-sports.io/football/players/15769.png"
-              },
-              {
-                "id": 229112,
-                "name": "A. Qasem",
-                "number": 11,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/229112.png"
-              },
-              {
-                "id": 163854,
-                "name": "A. Yousif",
-                "number": 13,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/163854.png"
-              },
-              {
-                "id": 284295,
-                "name": "Z. Iqbal",
-                "number": 14,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/284295.png"
-              },
-              {
-                "id": 265448,
-                "name": "M. Farji",
-                "number": 21,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/265448.png"
-              },
-              {
-                "id": 53894,
-                "name": "Meme",
-                "number": 10,
-                "pos": null,
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/53894.png"
-              },
-              {
-                "id": 42261,
-                "name": "R. Sulaka",
-                "number": 2,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/42261.png"
-              },
-              {
-                "id": 48025,
-                "name": "K. Yakob",
-                "number": 19,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/48025.png"
-              },
-              {
-                "id": 48129,
-                "name": "A. Sher",
-                "number": 20,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/48129.png"
-              },
-              {
-                "id": 282065,
-                "name": "Y. Amyn",
-                "number": 7,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/282065.png"
-              },
-              {
-                "id": 665478,
-                "name": "A. Al Reeshawee",
-                "number": 15,
-                "pos": null,
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/665478.png"
+                "photo": "https://media.api-sports.io/football/players/53886.png"
               },
               {
                 "id": 295394,
-                "name": "M. Younis",
+                "name": "Munaf Younus",
                 "number": 6,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/295394.png"
               },
               {
+                "id": 292253,
+                "name": "Ahmed Hasan Maknazi",
+                "number": 15,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/292253.png"
+              },
+              {
+                "id": 15769,
+                "name": "Frans Putros",
+                "number": 26,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/15769.png"
+              },
+              {
                 "id": 427187,
-                "name": "M. Saadoon",
+                "name": "Mustafa Saadoon",
                 "number": 25,
                 "pos": "D",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/427187.png"
+              },
+              {
+                "id": 42261,
+                "name": "Rebin Sulaka",
+                "number": 2,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/42261.png"
+              },
+              {
+                "id": 542644,
+                "name": "Ali Jasim",
+                "number": 17,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/542644.png"
+              },
+              {
+                "id": 48129,
+                "name": "Aimar Sher",
+                "number": 20,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/48129.png"
+              },
+              {
+                "id": 48025,
+                "name": "Kevin Yakob",
+                "number": 19,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/48025.png"
+              },
+              {
+                "id": 265448,
+                "name": "Marko Farji",
+                "number": 21,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/265448.png"
+              },
+              {
+                "id": 282065,
+                "name": "Youssef Amyn",
+                "number": 7,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/282065.png"
+              },
+              {
+                "id": 163854,
+                "name": "Ali Yousif",
+                "number": 13,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/163854.png"
+              },
+              {
+                "id": 154767,
+                "name": "Mohanad Ali",
+                "number": 10,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/154767.png"
               }
             ]
           }
@@ -117546,6 +117546,46 @@
             ],
             "subs": [
               {
+                "id": 25314,
+                "name": "Marco Friedl",
+                "number": 23,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/25314.png"
+              },
+              {
+                "id": 7327,
+                "name": "Alexander Prass",
+                "number": 22,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/7327.png"
+              },
+              {
+                "id": 18830,
+                "name": "Marko Arnautović",
+                "number": 7,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/18830.png"
+              },
+              {
+                "id": 126642,
+                "name": "Patrick Wimmer",
+                "number": 21,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/126642.png"
+              },
+              {
+                "id": 138935,
+                "name": "Carney Chukwuemeka",
+                "number": 17,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/138935.png"
+              },
+              {
                 "id": 7598,
                 "name": "Patrick Pentz",
                 "number": 13,
@@ -117570,14 +117610,6 @@
                 "photo": "https://media.api-sports.io/football/players/126640.png"
               },
               {
-                "id": 25314,
-                "name": "Marco Friedl",
-                "number": 23,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/25314.png"
-              },
-              {
                 "id": 7090,
                 "name": "Michael Svoboda",
                 "number": 25,
@@ -117594,14 +117626,6 @@
                 "photo": "https://media.api-sports.io/football/players/26240.png"
               },
               {
-                "id": 7327,
-                "name": "Alexander Prass",
-                "number": 22,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/7327.png"
-              },
-              {
                 "id": 1725,
                 "name": "Dejan Ljubičić",
                 "number": 19,
@@ -117610,28 +117634,12 @@
                 "photo": "https://media.api-sports.io/football/players/1725.png"
               },
               {
-                "id": 126642,
-                "name": "Patrick Wimmer",
-                "number": 21,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/126642.png"
-              },
-              {
                 "id": 719,
                 "name": "Florian Grillitsch",
                 "number": 10,
                 "pos": "M",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/719.png"
-              },
-              {
-                "id": 138935,
-                "name": "Carney Chukwuemeka",
-                "number": 17,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/138935.png"
               },
               {
                 "id": 417,
@@ -117656,14 +117664,6 @@
                 "pos": "F",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/7722.png"
-              },
-              {
-                "id": 18830,
-                "name": "Marko Arnautović",
-                "number": 7,
-                "pos": "F",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/18830.png"
               }
             ]
           }
@@ -118024,6 +118024,22 @@
                 "photo": "https://media.api-sports.io/football/players/6009.png"
               },
               {
+                "id": 529,
+                "name": "Nicolás Tagliafico",
+                "number": 3,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/529.png"
+              },
+              {
+                "id": 271,
+                "name": "Leandro Paredes",
+                "number": 5,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/271.png"
+              },
+              {
                 "id": 2465,
                 "name": "Juan Musso",
                 "number": 1,
@@ -118038,14 +118054,6 @@
                 "pos": "G",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/47296.png"
-              },
-              {
-                "id": 529,
-                "name": "Nicolás Tagliafico",
-                "number": 3,
-                "pos": "D",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/529.png"
               },
               {
                 "id": 6610,
@@ -118078,14 +118086,6 @@
                 "pos": "F",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/350037.png"
-              },
-              {
-                "id": 271,
-                "name": "Leandro Paredes",
-                "number": 5,
-                "pos": "M",
-                "grid": null,
-                "photo": "https://media.api-sports.io/football/players/271.png"
               },
               {
                 "id": 323935,

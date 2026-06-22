@@ -1,40 +1,22 @@
 {
   "source": "ESPN FIFA World Cup + per-player news feeds",
-  "updated": "2026-06-22T20:42:27.773Z",
+  "updated": "2026-06-22T22:28:35.760Z",
   "counts": {
-    "news": 28,
-    "celebration": 8,
-    "preview": 7,
-    "injury": 3,
-    "offfield": 2
+    "celebration": 7,
+    "preview": 11,
+    "news": 21,
+    "offfield": 5,
+    "injury": 4
   },
   "items": [
     {
-      "id": "49141065",
-      "headline": "World Cup Daily: Lamine Yamal meets his lookalike; Mbappé, Haaland in action",
-      "description": "It's another week of 2026 FIFA World Cup action, and we have some big teams playing today, including Argentina, France and Norway.",
-      "published": "2026-06-22T20:39:11Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49141065/world-cup-daily-crying-belgium-fan-saved-var-messi-mbappe-haaland-action",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677798_1296x729_16-9.jpg",
-      "byline": "ESPN",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Argentina",
-        "France",
-        "Norway"
-      ],
-      "players": [],
-      "score": 210
-    },
-    {
-      "id": "49096236",
-      "headline": "World Cup recap: Messi makes history in Argentina's win vs. Austria",
-      "description": "Lionel Messi is now the all-time leading scorer in men's World Cup history following Argentina's 2-0 win over Austria. Here's how it happened in Dallas, Texas on Monday.",
-      "published": "2026-06-22T20:39:24Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49096236/fifa-world-cup-live-updates-argentina-vs-austria-lionel-messi-chases-history",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677709_1296x729_16-9.jpg",
-      "byline": "ESPN",
+      "id": "49147641",
+      "headline": "Lionel Messi makes World Cup history in win over Austria",
+      "description": "Lionel Messi scores a historic brace and his 18th WC goal to become the World Cup's all-time leading goal scorer in Argentina's 2-0 victory against Austria.",
+      "published": "2026-06-22T22:26:33Z",
+      "url": "https://www.espn.com/video/clip/_/id/49147641/lionel-messi-makes-world-cup-history-win-austria",
+      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_World_Cup_Highlight_Lionel_Messi_makes_World_Cup_history_in_win_over_Austria__20260623_AUS_ONLY/dm_260622_World_Cup_Highlight_Lionel_Messi_makes_World_Cup_history_in_win_over_Austria__20260623_AUS_ONLY.jpg",
+      "byline": null,
       "kind": "celebration",
       "kindLabel": "Celebration",
       "teams": [
@@ -42,15 +24,36 @@
         "Austria"
       ],
       "players": [],
-      "score": 207
+      "score": 217
     },
     {
-      "id": "49146705",
-      "headline": "Messi 'so happy' after breaking World Cup goal record in 2-0 win",
-      "description": "Messi 'so happy' after breaking World Cup goal record in 2-0 win",
-      "published": "2026-06-22T20:39:22Z",
-      "url": "https://www.espn.com/video/clip/_/id/49146705/messi-happy-breaking-world-cup-goal-record-2-0-win",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_COM_SOC_Interview_Messi_so_happy_after_breaking_World_Cup_goal_record_in_2_0_win_20260622_GLOB/dm_260622_COM_SOC_Interview_Messi_so_happy_after_breaking_World_Cup_goal_record_in_2_0_win_20260622_GLOB.jpg",
+      "id": "49116820",
+      "headline": "England vs. Ghana: Kick-off time, team news, how to watch FIFA World Cup clash",
+      "description": "Ghana under Carlos Queiroz have many players who will be a known quantity for England, but the Black Stars pose a threat at the World Cup.",
+      "published": "2026-06-22T22:27:18Z",
+      "url": "https://www.espn.com/espn/story/_/id/49116820/kick-team-news-how-watch-fifa-world-cup-clash",
+      "image": "https://a.espncdn.com/photo/2026/0619/r1676261_1296x729_16-9.png",
+      "byline": "Leonard Solms",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Ghana",
+        "England"
+      ],
+      "players": [
+        "Thomas Partey",
+        "Antoine Semenyo",
+        "Harry Kane"
+      ],
+      "score": 212
+    },
+    {
+      "id": "49147538",
+      "headline": "Álvarez admits he wants to leave Atlético Madrid to 'fulfill dream'",
+      "description": "Álvarez admits he wants to leave Atlético Madrid to 'fulfill dream'",
+      "published": "2026-06-22T22:18:05Z",
+      "url": "https://www.espn.com/video/clip/_/id/49147538/alvarezadmits-wants-leave-atletico-madrid-fulfill-dream",
+      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_COM_SOC_Interview_Alvarezadmits_he_wants_to_leave_Atletico_Madrid_to_fulfill_dream_20260622_G/dm_260622_COM_SOC_Interview_Alvarezadmits_he_wants_to_leave_Atletico_Madrid_to_fulfill_dream_20260622_G.jpg",
       "byline": null,
       "kind": "news",
       "kindLabel": "News",
@@ -58,9 +61,278 @@
         "Argentina"
       ],
       "players": [
-        "Lionel Messi"
+        "Julián Álvarez"
       ],
       "score": 193
+    },
+    {
+      "id": "49141065",
+      "headline": "World Cup Daily: France-Iraq temporarily suspended due to severe weather",
+      "description": "It's another week of 2026 FIFA World Cup action, and we have some big teams playing today, including Argentina, France and Norway.",
+      "published": "2026-06-22T22:13:22Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49141065/world-cup-daily-crying-belgium-fan-saved-var-messi-mbappe-haaland-action",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677847_1296x729_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "offfield",
+      "kindLabel": "Off the field",
+      "teams": [
+        "France",
+        "Iraq",
+        "Norway",
+        "Argentina"
+      ],
+      "players": [],
+      "score": 182
+    },
+    {
+      "id": "49147454",
+      "headline": "France vs. Iraq delayed amid thunderstorms in Philadelphia",
+      "description": "The match between France and Iraq in Philadelphia has been delayed by at least 15 minutes due to thunderstorms in the area.",
+      "published": "2026-06-22T22:18:27Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49147454/france-vs-iraq-delayed-amid-thunderstorms-philadelphia-world-cup",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677871_1296x729_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "France",
+        "Iraq"
+      ],
+      "players": [],
+      "score": 180
+    },
+    {
+      "id": "49146756",
+      "headline": "Messi shows why he's the G.O.A.T. with record-breaking goals",
+      "description": "Amazing doesn't even begin to describe Lionel Messi, whose two goals in Argentina's win over Austria made him the top men's or women's World Cup scorer. And he's not done yet.",
+      "published": "2026-06-22T22:11:00Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49146756/lionel-messi-world-cup-goals-record-argentina-austria-analysis",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677870_1296x729_16-9.jpg",
+      "byline": "Lizzy Becherano",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Argentina",
+        "Austria"
+      ],
+      "players": [
+        "Lionel Messi"
+      ],
+      "score": 163
+    },
+    {
+      "id": "49147185",
+      "headline": "Inside the Socceroos' plans to make history in the World Cup knockouts",
+      "description": "Hayden Foxe has tells ESPN extensive work has been done to ensure the Socceroos will be ready to pursue a first-ever knockout stage win regardless of where they end up after the Paraguay clash.",
+      "published": "2026-06-22T21:57:40Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49147185/inside-australia-socceroos-plans-make-history-world-cup-knockouts-paraguay-group-d",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677864_1296x729_16-9.jpg",
+      "byline": "Joey Lynch",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Australia",
+        "Paraguay"
+      ],
+      "players": [],
+      "score": 158
+    },
+    {
+      "id": "49147003",
+      "headline": "Ghana's Thomas Partey 'ready' for England, visa issues 'out of control'",
+      "description": "Thomas Partey has said he is \"ready to play\" against England on Tuesday after being denied entry to Canada for Ghana's World Cup opener.",
+      "published": "2026-06-22T21:34:56Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49147003/ghana-thomas-partey-ready-england-denied-entry-world-cup-opener",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677841_1296x729_16-9.jpg",
+      "byline": "ESPN News Services",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "England",
+        "Ghana",
+        "Canada"
+      ],
+      "players": [
+        "Thomas Partey"
+      ],
+      "score": 156
+    },
+    {
+      "id": "49145667",
+      "headline": "USMNT riding good vibes as Christian Pulisic back in training",
+      "description": "The good vibes continued for the United States men's national team as Christian Pulisic returned to full training for the first time since June 11, having recovered from an injured left calf.",
+      "published": "2026-06-22T21:19:58Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49145667/usmnt-riding-good-vibes-christian-pulisic-back-training",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677762_1296x729_16-9.jpg",
+      "byline": "Jeff Carlisle",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "USA"
+      ],
+      "players": [
+        "Alejandro Zendejas",
+        "Folarin Balogun",
+        "Christian Pulisic",
+        "Cristian Roldan"
+      ],
+      "score": 145
+    },
+    {
+      "id": "49146959",
+      "headline": "Argentina coach Scaloni awaits tests to learn extent of Cristian Romero knee injury",
+      "description": "Argentina head coach Lionel Scaloni confirmed on Monday that he won't know the extent of the knee injury to center-back Cristian \"Cuti\" Romero until after team doctors complete tests.",
+      "published": "2026-06-22T21:13:59Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49146959/argentina-coach-scaloni-awaits-tests-extent-cristian-romero-knee-injury",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677735_1296x729_16-9.jpg",
+      "byline": "ESPN News Services",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "Argentina"
+      ],
+      "players": [
+        "Cristian Romero"
+      ],
+      "score": 145
+    },
+    {
+      "id": "49143768",
+      "headline": "Germany's Nico Schlotterbeck to miss rest of World Cup with ankle injury",
+      "description": "Germany defender Nico Schlotterbeck will miss the remainder of the World Cup after sustaining a medial ankle ligament injury.",
+      "published": "2026-06-22T20:58:26Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49143768/germany-nico-schlotterbeck-miss-rest-world-cup-ankle-injury",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677589_594x334_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "Germany"
+      ],
+      "players": [
+        "Nico Schlotterbeck"
+      ],
+      "score": 145
+    },
+    {
+      "id": "49146136",
+      "headline": "Temwa Chawinga renews Kansas City Current contract through 2029",
+      "description": "Two-time reigning NWSL MVP and Golden Boot winner Temwa Chawinga has signed a new contract with the Kansas City Current that will keep her with the club through the 2029 season.",
+      "published": "2026-06-22T21:41:48Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49146136/temwa-chawinga-renews-kansas-city-current-contract-2029-nwsl",
+      "image": "https://a.espncdn.com/photo/2026/0313/r1627945_1296x729_16-9.jpg",
+      "byline": "Jeff Kassouf",
+      "kind": "offfield",
+      "kindLabel": "Off the field",
+      "teams": [
+        "Ghana"
+      ],
+      "players": [
+        "Temwa Chawinga",
+        "Antoine Semenyo"
+      ],
+      "score": 144
+    },
+    {
+      "id": "49147076",
+      "headline": "Transfer rumours: Arsenal's Piero Hincapié to Real Madrid",
+      "description": "Real Madrid are still looking to bring in another centre-back this summer and one of the names they have inquired about is Arsenal's Piero Hincapié, multiple sources have told ESPN.",
+      "published": "2026-06-22T21:41:42Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49147076/real-madrid-enquire-arsenal-piero-hincapie-sources",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677831_1296x729_16-9.jpg",
+      "byline": "Alex Kirkland",
+      "kind": "offfield",
+      "kindLabel": "Off the field",
+      "teams": [
+        "Ghana"
+      ],
+      "players": [
+        "Piero Hincapié",
+        "Antoine Semenyo"
+      ],
+      "score": 144
+    },
+    {
+      "id": "49146731",
+      "headline": "Tunisia head coach Herve Renard's deal ends after just two FIFA World Cup matches",
+      "description": "Tunisia head coach Herve Renard has confirmed speculation that his contract to oversee the Carthage Eagles only runs until the end of the FIFA World Cup, with no current plans to extend beyond the tournament.",
+      "published": "2026-06-22T21:34:51Z",
+      "url": "https://www.espn.com/espn/story/_/id/49146731/tunisia-head-coach-herve-renard-deal-ends-just-two-fifa-world-cup-matches",
+      "image": "https://a.espncdn.com/photo/2026/0617/r1674922_1296x729_16-9.jpg",
+      "byline": "Ed Dove",
+      "kind": "offfield",
+      "kindLabel": "Off the field",
+      "teams": [
+        "Tunisia"
+      ],
+      "players": [],
+      "score": 141
+    },
+    {
+      "id": "49146848",
+      "headline": "Carlos Queiroz says Ghana's '33 million lions' ready for England challenge",
+      "description": "Ghana coach Carlos Queiroz says England may wear three lions on their crest, but his Black Stars carry an entire nation of 33 million lions of their own, from which they will draw strength when the Black Stars face England.",
+      "published": "2026-06-22T22:08:12Z",
+      "url": "https://www.espn.com/espn/story/_/id/49146848/carlos-queiroz-says-ghana-33-million-lions-ready-england-challenge",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677832_1296x729_16-9.jpg",
+      "byline": "Colin Udoh",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Ghana",
+        "England"
+      ],
+      "players": [],
+      "score": 138
+    },
+    {
+      "id": "49031236",
+      "headline": "2026 World Cup: How teams can advance to the knockout rounds",
+      "description": "Who can secure qualification before the group stage ends, and whose World Cup dreams could be shattered? Here's what you need to know.",
+      "published": "2026-06-22T21:01:02Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49031236/2026-world-cup-group-stage-clinching-scenarios-knockout-rounds-elimination",
+      "image": "https://a.espncdn.com/photo/2026/0617/r1674586_1296x729_16-9.jpg",
+      "byline": "Nicholas Som",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Algeria",
+        "Argentina",
+        "Australia",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Colombia",
+        "Croatia",
+        "Ecuador",
+        "England",
+        "Egypt",
+        "France",
+        "Germany",
+        "Ghana",
+        "IR Iran",
+        "Côte d'Ivoire",
+        "Japan",
+        "Morocco",
+        "Netherlands",
+        "New Zealand",
+        "Panama",
+        "Paraguay",
+        "Portugal",
+        "Qatar",
+        "Saudi Arabia",
+        "Senegal",
+        "Korea Republic",
+        "Spain",
+        "Switzerland",
+        "Tunisia",
+        "USA",
+        "Uruguay",
+        "Uzbekistan"
+      ],
+      "players": [],
+      "score": 137
     },
     {
       "id": "49140402",
@@ -79,44 +351,23 @@
       "players": [
         "Lionel Messi"
       ],
-      "score": 190
+      "score": 137
     },
     {
-      "id": "49146002",
-      "headline": "Jérémy Doku to rejoin Belgium in Seattle after son's birth",
-      "description": "The Belgian soccer federation congratulated Jérémy Doku on the birth of his son, Praise, on Monday, with a statement from the team adding the Manchester City winger would be back with the team in Seattle on Tuesday.",
-      "published": "2026-06-22T20:24:35Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49146002/jeremy-doku-rejoin-belgium-seattle-son-birth",
-      "image": "https://a.espncdn.com/photo/2025/1118/r1577367_1296x729_16-9.jpg",
-      "byline": "ESPN News Services",
-      "kind": "news",
-      "kindLabel": "News",
+      "id": "49136952",
+      "headline": "Senegal's Pape Thiaw: Federation's non-payment, admin issues resolved, a matter of 'principle and respect'",
+      "description": "Senegal head coach Pape Thiaw has criticised his federation's handling of administrative issues related to his own contract and the payment of players' bonuses during the ongoing World Cup.",
+      "published": "2026-06-22T19:25:36Z",
+      "url": "https://www.espn.com/espn/story/_/id/49136952/senegal-pape-thiaw-federation-world-cup-administration-payment-principle-respect",
+      "image": "https://a.espncdn.com/photo/2026/0621/r1677233_1296x729_16-9.jpg",
+      "byline": "Ed Dove",
+      "kind": "offfield",
+      "kindLabel": "Off the field",
       "teams": [
-        "Belgium"
+        "Senegal"
       ],
-      "players": [
-        "Jérémy Doku"
-      ],
-      "score": 173
-    },
-    {
-      "id": "49146131",
-      "headline": "Houston Rockets' Clint Capela dunks on DR Congo's footballers during FIFA World Cup visit",
-      "description": "The Leopards, who have the World Cup base camp in Houston, spent part of their weekend visiting the Houston Rockets' training facility, where they were welcomed by veteran NBA center Clint Capela.",
-      "published": "2026-06-22T19:54:49Z",
-      "url": "https://www.espn.com/espn/story/_/id/49146131/houston-rockets-clint-capela-dunks-dr-congo-footballers-fifa-world-cup-visit",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677789_1296x729_16-9.jpg",
-      "byline": "Colin Udoh",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "DR Congo"
-      ],
-      "players": [
-        "Clint Capela",
-        "Noah Sadiki"
-      ],
-      "score": 162
+      "players": [],
+      "score": 137
     },
     {
       "id": "49146151",
@@ -133,62 +384,7 @@
         "Brazil"
       ],
       "players": [],
-      "score": 158
-    },
-    {
-      "id": "49145667",
-      "headline": "USMNT riding good vibes as Christian Pulisic back in training",
-      "description": "The good vibes continued for the United States men's national team as Christian Pulisic returned to full training for the first time since June 11, having recovered from an injured left calf.",
-      "published": "2026-06-22T20:34:53Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49145667/usmnt-riding-good-vibes-christian-pulisic-back-training",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677762_1296x729_16-9.jpg",
-      "byline": "Jeff Carlisle",
-      "kind": "injury",
-      "kindLabel": "Injury",
-      "teams": [
-        "USA"
-      ],
-      "players": [
-        "Alejandro Zendejas",
-        "Folarin Balogun",
-        "Christian Pulisic",
-        "Cristian Roldan"
-      ],
-      "score": 147
-    },
-    {
-      "id": "49136952",
-      "headline": "Senegal's Pape Thiaw: Federation's non-payment, admin issues resolved, a matter of 'principle and respect'",
-      "description": "Senegal head coach Pape Thiaw has criticised his federation's handling of administrative issues related to his own contract and the payment of players' bonuses during the ongoing World Cup.",
-      "published": "2026-06-22T19:25:36Z",
-      "url": "https://www.espn.com/espn/story/_/id/49136952/senegal-pape-thiaw-federation-world-cup-administration-payment-principle-respect",
-      "image": "https://a.espncdn.com/photo/2026/0621/r1677233_1296x729_16-9.jpg",
-      "byline": "Ed Dove",
-      "kind": "offfield",
-      "kindLabel": "Off the field",
-      "teams": [
-        "Senegal"
-      ],
-      "players": [],
-      "score": 140
-    },
-    {
-      "id": "49146144",
-      "headline": "Will Argentina rest Messi against Jordan?",
-      "description": "Will Argentina rest Messi against Jordan?",
-      "published": "2026-06-22T19:42:13Z",
-      "url": "https://www.espn.com/video/clip/_/id/49146144/will-argentina-rest-messi-jordan",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_COM_SOC_Analysis_Will_Argentina_rest_Messi_against_Jordan3F__GLOBAL_2026-06-22/dm_260622_COM_SOC_Analysis_Will_Argentina_rest_Messi_against_Jordan3F__GLOBAL_2026-06-22.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Argentina",
-        "Austria",
-        "Jordan"
-      ],
-      "players": [],
-      "score": 138
+      "score": 136
     },
     {
       "id": "49019838",
@@ -207,7 +403,24 @@
         "Kylian Mbappé",
         "Lionel Messi"
       ],
-      "score": 138
+      "score": 135
+    },
+    {
+      "id": "49096236",
+      "headline": "World Cup recap: Messi makes history in Argentina's win vs. Austria",
+      "description": "Lionel Messi is now the all-time leading scorer in men's World Cup history following Argentina's 2-0 win over Austria. Here's how it happened in Dallas, Texas on Monday.",
+      "published": "2026-06-22T20:39:24Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49096236/fifa-world-cup-live-updates-argentina-vs-austria-lionel-messi-chases-history",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677709_1296x729_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "celebration",
+      "kindLabel": "Celebration",
+      "teams": [
+        "Argentina",
+        "Austria"
+      ],
+      "players": [],
+      "score": 134
     },
     {
       "id": "49111689",
@@ -224,25 +437,7 @@
         "Austria"
       ],
       "players": [],
-      "score": 137
-    },
-    {
-      "id": "49143768",
-      "headline": "Germany's Nico Schlotterbeck to miss rest of World Cup with ankle injury",
-      "description": "Germany defender Nico Schlotterbeck will miss the remainder of the World Cup after sustaining a medial ankle ligament injury.",
-      "published": "2026-06-22T14:05:28Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49143768/germany-nico-schlotterbeck-miss-rest-world-cup-ankle-injury",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677589_594x334_16-9.jpg",
-      "byline": "ESPN",
-      "kind": "injury",
-      "kindLabel": "Injury",
-      "teams": [
-        "Germany"
-      ],
-      "players": [
-        "Nico Schlotterbeck"
-      ],
-      "score": 137
+      "score": 134
     },
     {
       "id": "49145450",
@@ -260,7 +455,64 @@
       "players": [
         "Lionel Messi"
       ],
-      "score": 136
+      "score": 133
+    },
+    {
+      "id": "49147171",
+      "headline": "Álvarez says move from Atlético Madrid is best for everyone",
+      "description": "Julián Álvarez told ESPN he wants to leave Atlético Madrid this summer as Europe's top clubs jostle for the forward's signature.",
+      "published": "2026-06-22T22:02:18Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49147171/alvarez-says-move-atletico-madrid-best-everyone",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677862_1296x729_16-9.jpg",
+      "byline": "Sam Marsden and Moises Llorens",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Ghana",
+        "Argentina"
+      ],
+      "players": [
+        "Julián Álvarez",
+        "Antoine Semenyo"
+      ],
+      "score": 132
+    },
+    {
+      "id": "49146949",
+      "headline": "USMNT riding good vibes as Christian Pulisic back in training",
+      "description": "USMNT riding good vibes as Christian Pulisic back in training",
+      "published": "2026-06-22T21:09:48Z",
+      "url": "https://www.espn.com/video/clip/_/id/49146949/usmnt-riding-good-vibes-christian-pulisic-back-training",
+      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_USMNT_IA/dm_260622_USMNT_IA.jpg",
+      "byline": null,
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Ghana",
+        "USA"
+      ],
+      "players": [
+        "Antoine Semenyo"
+      ],
+      "score": 131
+    },
+    {
+      "id": "49146818",
+      "headline": "Lionel Messi's World Cup dominance in numbers",
+      "description": "Lionel Messi's World Cup dominance in numbers",
+      "published": "2026-06-22T20:53:03Z",
+      "url": "https://www.espn.com/video/clip/_/id/49146818/lionel-messi-world-cup-dominance-numbers",
+      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_Lionel_Messis_World_Cup_dominance_in_numbers/dm_260622_Lionel_Messis_World_Cup_dominance_in_numbers.jpg",
+      "byline": null,
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Argentina"
+      ],
+      "players": [
+        "Lionel Messi"
+      ],
+      "score": 131
     },
     {
       "id": "49144478",
@@ -277,7 +529,43 @@
         "Korea Republic"
       ],
       "players": [],
-      "score": 134
+      "score": 131
+    },
+    {
+      "id": "49146705",
+      "headline": "Messi 'so happy' after breaking World Cup goal record in 2-0 win",
+      "description": "Messi 'so happy' after breaking World Cup goal record in 2-0 win",
+      "published": "2026-06-22T20:39:22Z",
+      "url": "https://www.espn.com/video/clip/_/id/49146705/messi-happy-breaking-world-cup-goal-record-2-0-win",
+      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_COM_SOC_Interview_Messi_so_happy_after_breaking_World_Cup_goal_record_in_2_0_win_20260622_GLOB/dm_260622_COM_SOC_Interview_Messi_so_happy_after_breaking_World_Cup_goal_record_in_2_0_win_20260622_GLOB.jpg",
+      "byline": null,
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Argentina"
+      ],
+      "players": [
+        "Lionel Messi"
+      ],
+      "score": 130
+    },
+    {
+      "id": "49146002",
+      "headline": "Jérémy Doku to rejoin Belgium in Seattle after son's birth",
+      "description": "The Belgian soccer federation congratulated Jérémy Doku on the birth of his son, Praise, on Monday, with a statement from the team adding the Manchester City winger would be back with the team in Seattle on Tuesday.",
+      "published": "2026-06-22T20:24:35Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49146002/jeremy-doku-rejoin-belgium-seattle-son-birth",
+      "image": "https://a.espncdn.com/photo/2025/1118/r1577367_1296x729_16-9.jpg",
+      "byline": "ESPN News Services",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Belgium"
+      ],
+      "players": [
+        "Jérémy Doku"
+      ],
+      "score": 130
     },
     {
       "id": "49145310",
@@ -293,7 +581,7 @@
         "Mexico"
       ],
       "players": [],
-      "score": 133
+      "score": 130
     },
     {
       "id": "48386952",
@@ -346,7 +634,26 @@
         "Haiti"
       ],
       "players": [],
-      "score": 132
+      "score": 130
+    },
+    {
+      "id": "49146131",
+      "headline": "Houston Rockets' Clint Capela dunks on DR Congo's footballers during FIFA World Cup visit",
+      "description": "The Leopards, who have the World Cup base camp in Houston, spent part of their weekend visiting the Houston Rockets' training facility, where they were welcomed by veteran NBA center Clint Capela.",
+      "published": "2026-06-22T19:54:49Z",
+      "url": "https://www.espn.com/espn/story/_/id/49146131/houston-rockets-clint-capela-dunks-dr-congo-footballers-fifa-world-cup-visit",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677789_1296x729_16-9.jpg",
+      "byline": "Colin Udoh",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "DR Congo"
+      ],
+      "players": [
+        "Clint Capela",
+        "Noah Sadiki"
+      ],
+      "score": 129
     },
     {
       "id": "49143400",
@@ -367,25 +674,7 @@
         "Son Heung-Min",
         "Lee Kang-In"
       ],
-      "score": 132
-    },
-    {
-      "id": "49146027",
-      "headline": "Man United take step forward in stadium redevelopment",
-      "description": "",
-      "published": "2026-06-22T19:26:42Z",
-      "url": "https://www.espn.com/video/clip/_/id/49146027/man-united-take-step-forward-stadium-redevelopment",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_COM_SOC_ANALYSIS_Man_United_take_step_forward_in_stadium_redevelopment_2026_6_22/dm_260622_COM_SOC_ANALYSIS_Man_United_take_step_forward_in_stadium_redevelopment_2026_6_22.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Argentina"
-      ],
-      "players": [
-        "Lionel Messi"
-      ],
-      "score": 131
+      "score": 129
     },
     {
       "id": "49142576",
@@ -407,7 +696,7 @@
         "Thomas Partey",
         "Jude Bellingham"
       ],
-      "score": 131
+      "score": 128
     },
     {
       "id": "49146134",
@@ -424,40 +713,7 @@
         "Austria"
       ],
       "players": [],
-      "score": 130
-    },
-    {
-      "id": "49108137",
-      "headline": "Ghana scouting report: Can Antoine Semenyo and co. shock England?",
-      "description": "The lowdown on the Black Stars ahead of their group stage encounter against Thomas Tuchel's England.",
-      "published": "2026-06-22T14:41:32Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49108137/ghana-scouting-report-antoine-semenyo-co-shock-england",
-      "image": "https://a.espncdn.com/photo/2026/0618/r1675510_1296x729_16-9.jpg",
-      "byline": "Shubi Arun",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Ghana",
-        "England"
-      ],
-      "players": [],
-      "score": 130
-    },
-    {
-      "id": "49027532",
-      "headline": "World Cup VAR review: Why was Iran's goal ruled out? Did Ngoy deserve red card?",
-      "description": "For the tournament, we are taking a look at the major incidents to examine and explain the process in terms of both VAR protocol and the laws of the game.",
-      "published": "2026-06-22T11:34:43Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49027532/world-cup-2026-var-review-red-card-penalty-handball-goal-line-technology",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677519_1296x729_16-9.jpg",
-      "byline": "Andy Davies",
-      "kind": "injury",
-      "kindLabel": "Injury",
-      "teams": [
-        "IR Iran"
-      ],
-      "players": [],
-      "score": 130
+      "score": 127
     },
     {
       "id": "49145542",
@@ -475,7 +731,42 @@
       "players": [
         "Folarin Balogun"
       ],
-      "score": 129
+      "score": 127
+    },
+    {
+      "id": "49108137",
+      "headline": "Ghana scouting report: Can Antoine Semenyo and co. shock England?",
+      "description": "The lowdown on the Black Stars ahead of their group stage encounter against Thomas Tuchel's England.",
+      "published": "2026-06-22T14:41:32Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49108137/ghana-scouting-report-antoine-semenyo-co-shock-england",
+      "image": "https://a.espncdn.com/photo/2026/0618/r1675510_1296x729_16-9.jpg",
+      "byline": "Shubi Arun",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Ghana",
+        "England"
+      ],
+      "players": [],
+      "score": 127
+    },
+    {
+      "id": "49146144",
+      "headline": "Will Argentina rest Messi against Jordan?",
+      "description": "Will Argentina rest Messi against Jordan?",
+      "published": "2026-06-22T19:42:13Z",
+      "url": "https://www.espn.com/video/clip/_/id/49146144/will-argentina-rest-messi-jordan",
+      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_COM_SOC_Analysis_Will_Argentina_rest_Messi_against_Jordan3F__GLOBAL_2026-06-22/dm_260622_COM_SOC_Analysis_Will_Argentina_rest_Messi_against_Jordan3F__GLOBAL_2026-06-22.jpg",
+      "byline": null,
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Argentina",
+        "Austria",
+        "Jordan"
+      ],
+      "players": [],
+      "score": 126
     },
     {
       "id": "49142156",
@@ -492,7 +783,7 @@
         "Japan"
       ],
       "players": [],
-      "score": 128
+      "score": 125
     },
     {
       "id": "49142068",
@@ -510,7 +801,7 @@
         "Brazil"
       ],
       "players": [],
-      "score": 128
+      "score": 125
     },
     {
       "id": "49145799",
@@ -526,7 +817,7 @@
         "Netherlands"
       ],
       "players": [],
-      "score": 127
+      "score": 125
     },
     {
       "id": "49142494",
@@ -545,7 +836,7 @@
       "players": [
         "Marcus Rashford"
       ],
-      "score": 126
+      "score": 124
     },
     {
       "id": "49142360",
@@ -563,42 +854,7 @@
       "players": [
         "Lamine Yamal"
       ],
-      "score": 125
-    },
-    {
-      "id": "48811876",
-      "headline": "Socceroos World Cup Daily: Socceroos are walking the tightrope",
-      "description": "Join Joey Lynch and Alex Hatzikostas each day as they go behind the scenes in the Socceroos camp and give the inside word on all the action at the 2026 FIFA World Cup.",
-      "published": "2026-06-22T07:08:00Z",
-      "url": "https://www.espn.com/soccer/story/_/id/48811876/socceroos-world-cup-daily-news-updates-all-need-know",
-      "image": "https://a.espncdn.com/photo/2023/0710/r1196087_1296x518_5-2.jpg",
-      "byline": "ESPN",
-      "kind": "offfield",
-      "kindLabel": "Off the field",
-      "teams": [
-        "Australia",
-        "USA"
-      ],
-      "players": [
-        "Kai Trewin"
-      ],
-      "score": 125
-    },
-    {
-      "id": "49144590",
-      "headline": "Why are England fans singing 'Wonderwall' at the World Cup?",
-      "description": "It was one of the moments of the tournament so far. Why are England fans singing Wonderwall at the World Cup?",
-      "published": "2026-06-22T16:36:29Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49144590/why-england-fans-singing-wonderwall-world-cup",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677653_1296x729_16-9.jpg",
-      "byline": "Jamie Barton",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "England"
-      ],
-      "players": [],
-      "score": 124
+      "score": 123
     },
     {
       "id": "49144125",
@@ -618,7 +874,23 @@
         "Charles De Ketelaere",
         "Romelu Lukaku"
       ],
-      "score": 124
+      "score": 122
+    },
+    {
+      "id": "49144590",
+      "headline": "Why are England fans singing 'Wonderwall' at the World Cup?",
+      "description": "It was one of the moments of the tournament so far. Why are England fans singing Wonderwall at the World Cup?",
+      "published": "2026-06-22T16:36:29Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49144590/why-england-fans-singing-wonderwall-world-cup",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677653_1296x729_16-9.jpg",
+      "byline": "Jamie Barton",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "England"
+      ],
+      "players": [],
+      "score": 121
     },
     {
       "id": "49143333",
@@ -637,7 +909,7 @@
       "players": [
         "Ollie Watkins"
       ],
-      "score": 124
+      "score": 121
     },
     {
       "id": "49142311",
@@ -657,7 +929,7 @@
         "Kylian Mbappé",
         "Lionel Messi"
       ],
-      "score": 124
+      "score": 121
     },
     {
       "id": "48847593",
@@ -671,239 +943,7 @@
       "kindLabel": "News",
       "teams": [],
       "players": [],
-      "score": 122
-    },
-    {
-      "id": "49143450",
-      "headline": "How do you defend against Messi and Argentina?",
-      "description": "How do you defend against Messi and Argentina?",
-      "published": "2026-06-22T13:04:00Z",
-      "url": "https://www.espn.com/video/clip/_/id/49143450/how-do-defend-messi-argentina",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_How_do_you_defend_against_Messi_and_Argentina/dm_260622_How_do_you_defend_against_Messi_and_Argentina.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Argentina"
-      ],
-      "players": [
-        "Lionel Messi"
-      ],
-      "score": 122
-    },
-    {
-      "id": "49142208",
-      "headline": "Djed Spence after telling-off goes viral: England boss Thomas Tuchel has 'high standards'",
-      "description": "Djed Spence revealed it is not just him in the firing line of England boss Thomas Tuchel after clips of him getting told off in training went viral.",
-      "published": "2026-06-22T09:01:45Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49142208/djed-spence-telling-goes-viral-england-boss-thomas-tuchel-high-standards",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677522_1296x729_16-9.jpg",
-      "byline": "PA",
-      "kind": "celebration",
-      "kindLabel": "Celebration",
-      "teams": [
-        "England"
-      ],
-      "players": [
-        "Djed Spence",
-        "Ollie Watkins"
-      ],
-      "score": 122
-    },
-    {
-      "id": "49142000",
-      "headline": "Duarte brothers celebrate Cape Verde's latest World Cup upset: 'We could have even won here'",
-      "description": "Cape Verde won hearts again in a 2-2 draw World Cup with Uruguay. Laros Duarte and Deroy Duarte were proud of the performance.",
-      "published": "2026-06-22T08:56:10Z",
-      "url": "https://www.espn.com/espn/story/_/id/49142000/even-won-here",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677515_1296x729_16-9.jpg",
-      "byline": "Door Rick Pasker",
-      "kind": "celebration",
-      "kindLabel": "Celebration",
-      "teams": [
-        "Cabo Verde",
-        "Uruguay"
-      ],
-      "players": [
-        "Federico Valverde"
-      ],
-      "score": 122
-    },
-    {
-      "id": "49143743",
-      "headline": "Rowing & Rapping: Chris Turner with Norway fans",
-      "description": "Rowing & Rapping: Chris Turner with Norway fans.",
-      "published": "2026-06-22T13:49:30Z",
-      "url": "https://www.espn.com/video/clip/_/id/49143743/chris-turner-norway-fans",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_Rowing_and_Rapping_Chris_Turner_with_Norway_fans/dm_260622_Rowing_and_Rapping_Chris_Turner_with_Norway_fans.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Norway"
-      ],
-      "players": [],
-      "score": 120
-    },
-    {
-      "id": "49143083",
-      "headline": "İlkay Gündoğan has his say on whether Undav should start for Germany vs. Ecuador",
-      "description": "İlkay Gündoğan has his say on whether Undav should start for Germany vs. Ecuador.",
-      "published": "2026-06-22T11:58:17Z",
-      "url": "https://www.espn.com/video/clip/_/id/49143083/ilkay-gundoan-say-whether-undav-start-germany-vs-ecuador",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_Ilkay_Gundogan_has_his_say_on_whether_Undav_should_start_for_Germany_vs_Ecuador/dm_260622_Ilkay_Gundogan_has_his_say_on_whether_Undav_should_start_for_Germany_vs_Ecuador.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Germany",
-        "Ecuador"
-      ],
-      "players": [
-        "Deniz Undav",
-        "Ilkay Gündogan"
-      ],
-      "score": 120
-    },
-    {
-      "id": "49142264",
-      "headline": "Iran leave note in World Cup dressing room mentioning 'peace'",
-      "description": "Iran left a handwritten note in their dressing room at Los Angeles Stadium after their 0-0 draw with Belgium on Sunday, thanking the people of Los Angeles for their hospitality.",
-      "published": "2026-06-22T13:31:38Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49142264/iran-thank-note-los-angeles-world-cup-hospitality",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677523_1296x729_16-9.jpg",
-      "byline": "Jamie Barton",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "IR Iran",
-        "Belgium"
-      ],
-      "players": [],
       "score": 119
-    },
-    {
-      "id": "49140112",
-      "headline": "USMNT faces World Cup dilemma vs. Turkiye: Rotate squad or keep same XI?",
-      "description": "The USMNT has clinched a spot in the World Cup knockouts, so should the team rotate in its final Group D match or stay consistent?",
-      "published": "2026-06-22T10:34:49Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49140112/usmnt-faces-world-cup-dilemma-vs-turkiye-rotate-squad-keep-same-xi",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677430_1296x729_16-9.jpg",
-      "byline": "Jeff Carlisle",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "USA"
-      ],
-      "players": [
-        "Tyler Adams"
-      ],
-      "score": 118
-    },
-    {
-      "id": "49142463",
-      "headline": "Mohamed Salah pleased 'to make the people happy' after Egypt's first World Cup win",
-      "description": "Mohamed Salah has spoken of his pride at the chance \"to make the people happy in Egypt\" after his team beat New Zealand 3-1 to claim the nation's first ever World Cup win.",
-      "published": "2026-06-22T10:21:00Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49142463/mohamed-salah-egypt-first-world-cup-win-new-zealand",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677529_1296x729_16-9.jpg",
-      "byline": "ESPN",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Egypt",
-        "New Zealand"
-      ],
-      "players": [],
-      "score": 114
-    },
-    {
-      "id": "49083534",
-      "headline": "World Cup 'smart' ball is a game changer. Just remember to charge it",
-      "description": "Everything in soccer can always be improved -- even the humble game ball. The 2026 World Cup has the Trionda, filled with chips and sensors, and so far, it's been well-received.",
-      "published": "2026-06-22T07:12:40Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49083534/world-cup-smart-ball-adidas-trionda-charge-balls-sam-borden",
-      "image": "https://a.espncdn.com/photo/2026/0616/r1674296_1296x729_16-9.jpg",
-      "byline": "Sam Borden",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "USA"
-      ],
-      "players": [
-        "Malik Tillman"
-      ],
-      "score": 113
-    },
-    {
-      "id": "49138526",
-      "headline": "Four years later, same debate for Portugal: Why is Ronaldo still starting?",
-      "description": "Little has changed since the 2022 World Cup; Cristiano Ronaldo is goalless, and Portugal are struggling. How long can this go on?",
-      "published": "2026-06-22T07:11:40Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49138526/four-years-later-same-debate-portugal-why-ronaldo-starting-2026-fifa-world-cup",
-      "image": "https://a.espncdn.com/photo/2026/0621/r1677325_1296x729_16-9.jpg",
-      "byline": "Rob Dawson",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Portugal"
-      ],
-      "players": [
-        "Cristiano Ronaldo"
-      ],
-      "score": 113
-    },
-    {
-      "id": "49141711",
-      "headline": "Salah: We made Egypt happy and proud with first win",
-      "description": "Salah: We made Egypt happy and proud with first win.",
-      "published": "2026-06-22T07:03:58Z",
-      "url": "https://www.espn.com/video/clip/_/id/49141711/made-egypt-happy-proud-first-win",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_Salah_We_made_Egypt_happy_and_proud_with_first_win/dm_260622_Salah_We_made_Egypt_happy_and_proud_with_first_win.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Egypt"
-      ],
-      "players": [
-        "Mohamed Salah"
-      ],
-      "score": 113
-    },
-    {
-      "id": "49141846",
-      "headline": "Cape Verde boss angered by Uruguay: 'Marcelo Bielsa taught us to have fair play'",
-      "description": "Cape Verde coach Bubista said he was \"upset\" after a Uruguay player broke off from helping treat one of his players leading to an equaliser.",
-      "published": "2026-06-22T08:42:46Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49141846/cape-verde-boss-angered-uruguay-marcelo-bielsa-taught-us-fair-play",
-      "image": "https://a.espncdn.com/photo/2026/0622/r1677513_1296x729_16-9.jpg",
-      "byline": "ESPN News Services",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Uruguay",
-        "Cabo Verde"
-      ],
-      "players": [],
-      "score": 112
-    },
-    {
-      "id": "49142113",
-      "headline": "Cape Verde boss criticises Uruguay over 'fair play' double standard",
-      "description": "Cape Verde boss criticises Uruguay over 'fair play' double standard.",
-      "published": "2026-06-22T08:42:11Z",
-      "url": "https://www.espn.com/video/clip/_/id/49142113/cape-verde-boss-criticises-uruguay-fair-play-double-standard",
-      "image": "https://a.espncdn.com/media/motion/2026/0622/dm_260622_Cape_Verde_boss_criticises_Uruguay_over_fair_play_double_standard/dm_260622_Cape_Verde_boss_criticises_Uruguay_over_fair_play_double_standard.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Cabo Verde",
-        "Uruguay"
-      ],
-      "players": [],
-      "score": 112
     }
   ]
 }
