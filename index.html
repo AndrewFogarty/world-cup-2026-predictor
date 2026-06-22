@@ -118,6 +118,11 @@
         <div class="bracket-scroll">
           <div id="official-bracket" class="bracket two-sided"><!-- filled by app.js --></div>
         </div>
+        <div class="official-standings-head">
+          <h3>Official Group Standings</h3>
+          <span class="os-legend"><b>x</b> clinched 1st · <b>y</b> clinched 2nd · <span class="os-key adv">advancing</span> · <span class="os-key out">out</span></span>
+        </div>
+        <div id="official-standings" class="official-standings"><!-- filled by app.js --></div>
       </section>
 
       <section id="schedule-section" class="schedule" aria-label="Upcoming matches">
@@ -265,7 +270,9 @@
           <div class="bracket-scroll">
             <div id="second-bracket" class="bracket two-sided"><!-- filled by app.js --></div>
           </div>
+          <div id="second-eliminated" class="second-eliminated"><!-- filled by app.js --></div>
           <div class="submit-bar">
+            <button id="copy-main-bracket" class="btn ghost" type="button">⤵ Copy my main bracket</button>
             <button id="submit-second" class="btn" type="button">🔒 Submit second-chance bracket</button>
           </div>
         </div>

@@ -221,7 +221,23 @@ function escapeHtml(str) {
    containing a kicked-off-but-unfinished match (which can no longer be
    predicted) would never count as complete, leaving even its winner (e.g. 1B)
    unresolved while Switzerland–Bosnia is still on the pitch. */
+/* Real (official) results only — unplayed matches stay blank. Used for the
+   official bracket/standings and clinch math, so nothing leaks the viewer's
+   own predictions into "official" views. */
+function realScores(group) {
+  const arr = (liveResults()[group] || []);
+  return FIXTURES.map((_, i) => {
+    const a = arr[i];
+    return (a && a[0] != null && a[1] != null) ? a : [null, null];
+  });
+}
+
+/* When set, every standings path below (rankGroup, groupComplete, resolveR32…)
+   uses real results only. Toggled around the official renders. */
+let useRealStandings = false;
+
 function effScores(group) {
+  if (useRealStandings) return realScores(group);
   const live = liveResults();
   const names = state.names[group] || [];
   return state.scores[group].map((pred, i) => {
@@ -235,6 +251,60 @@ function effScores(group) {
 }
 function rankGroup(group) {
   return GSB.rankGroup(state.names[group], effScores(group));
+}
+/* Run fn() with official (real-results-only) standings in effect. */
+function withRealStandings(fn) {
+  const prev = useRealStandings;
+  useRealStandings = true;
+  try { return fn(); } finally { useRealStandings = prev; }
+}
+
+/* Clinch math (real results only): brute-force the remaining matches' W/D/L and
+   decide, conservatively (points only — ties count against the team, so we
+   never over-claim), whether each team has locked 1st (`x`) or exactly 2nd
+   (`y`). Returns flags by team index + which finishing positions are locked. */
+function clinchInfo(group) {
+  const names = state.names[group];
+  const base = realScores(group);
+  const rem = [];
+  base.forEach((s, i) => { if (s[0] == null) rem.push(i); });
+  const out = { x: {}, y: {}, posClinched: { 1: false, 2: false } };
+  if (rem.length === 0) {
+    // Group finished — 1st and 2nd are final, mark them directly (handles
+    // positions decided on GD/GF tiebreakers, which the points-only path can't).
+    const r = GSB.rankGroup(names, base);
+    if (r[0]) { out.x[r[0].idx] = true; out.posClinched[1] = true; }
+    if (r[1]) { out.y[r[1].idx] = true; out.posClinched[2] = true; }
+    return out;
+  }
+  if (rem.length > 4) return out; // too early — nothing can be clinched yet
+
+  const WDL = [[1, 0], [0, 0], [0, 1]];
+  // For each team: worst case = max number of other teams that reach/exceed its
+  // points across all remaining-result scenarios.
+  const worstAhead = names.map(() => 0);
+  const scenario = base.map((s) => s.slice());
+  (function rec(k) {
+    if (k === rem.length) {
+      const st = GSB.computeStats(names, scenario);
+      st.forEach((t) => {
+        const ahead = st.filter((o) => o.idx !== t.idx && o.pts >= t.pts).length;
+        if (ahead > worstAhead[t.idx]) worstAhead[t.idx] = ahead;
+      });
+      return;
+    }
+    for (const o of WDL) { scenario[rem[k]] = o; rec(k + 1); }
+  })(0);
+
+  let firstIdx = null;
+  names.forEach((_, i) => { if (worstAhead[i] === 0) { out.x[i] = true; firstIdx = i; } });
+  // y = clinched exactly 2nd: locked into top-2 AND 1st already taken by another.
+  if (firstIdx !== null) {
+    names.forEach((_, i) => { if (i !== firstIdx && worstAhead[i] <= 1) out.y[i] = true; });
+  }
+  out.posClinched[1] = firstIdx !== null;
+  out.posClinched[2] = Object.keys(out.y).length > 0;
+  return out;
 }
 
 /* Genuinely-missing entries: matches with no official result, no in-play live
@@ -541,7 +611,7 @@ function officialPicks() {
      • main   → state.bracket,  interactive, frozen once knockoutOpen()
      • second → state.bracket2, interactive once knockoutOpen(), per-match lock
      • official → officialPicks() from live results, read-only            */
-function bmRow(id, side, p, selected, acc, disabled) {
+function bmRow(id, side, p, selected, acc, disabled, locked) {
   const known = p.known && p.name;
   const prov = !known && p.provisional && p.name;     // seeded from partial standings
   const show = known || prov;
@@ -549,9 +619,10 @@ function bmRow(id, side, p, selected, acc, disabled) {
     ? `<span class="bm-name${prov ? " prov" : ""}"${prov ? ' title="Provisional — from current standings; finish the group to lock it"' : ""}>${escapeHtml(p.name)}${prov ? '<span class="bm-prov">~</span>' : ""}</span>`
     : `<span class="bm-name ph">${escapeHtml(p.label || "—")}</span>`;
   const flag = show ? flagHtml(p.code) : "•";
-  const mark = acc === "correct" ? '<span class="bm-mark ok">✓</span>'
+  const mark = locked ? '<span class="bm-clinch" title="Locked — this team has clinched its group spot">✓</span>'
+    : acc === "correct" ? '<span class="bm-mark ok">✓</span>'
     : acc === "wrong" ? '<span class="bm-mark no">✗</span>' : "";
-  return `<button class="bm-row ${selected ? "sel" : ""} ${acc || ""}" data-id="${id}" data-side="${side}" type="button"${disabled ? " disabled" : ""}>
+  return `<button class="bm-row ${selected ? "sel" : ""} ${locked ? "clinched" : acc || ""}" data-id="${id}" data-side="${side}" type="button"${disabled ? " disabled" : ""}>
       <span class="flag">${flag}</span>${label}${mark}
     </button>`;
 }
@@ -564,13 +635,15 @@ function bmCard(id, ctx, extraClass) {
   const acc = w ? bracketAccuracy(id, w, picks) : "";
   const v = VENUE.byNum[id];
   const locked = ctx.lockedFn ? ctx.lockedFn(id) : false;
+  const hMark = ctx.lockMark ? ctx.lockMark(id, "home") : false;
+  const aMark = ctx.lockMark ? ctx.lockMark(id, "away") : false;
   const disabled = locked || !ctx.interactive;
   const lockBadge = locked
     ? '<span class="bm-lock" title="Locked — this match has kicked off; the pick can no longer be changed" aria-hidden="true">🔒</span>'
     : "";
   return `<div class="bm ${extraClass || ""}${locked ? " ko-locked" : ""}" data-id="${id}">
-      ${bmRow(id, "home", h, w === "home", w === "home" ? acc : "", disabled)}
-      ${bmRow(id, "away", a, w === "away", w === "away" ? acc : "", disabled)}
+      ${bmRow(id, "home", h, w === "home", w === "home" ? acc : "", disabled, hMark)}
+      ${bmRow(id, "away", a, w === "away", w === "away" ? acc : "", disabled, aMark)}
       ${lockBadge}
       ${v ? `<div class="bm-venue">${escapeHtml(v)}</div>` : ""}
     </div>`;
@@ -701,18 +774,66 @@ function renderOfficialBracket() {
   const host = document.getElementById("official-bracket");
   if (!host) return;
   const open = knockoutOpen();
-  renderBracketInto(host, {
-    picks: officialPicks(),
-    interactive: false,
-    lockedFn: () => false,
-    champLabel: "Champion",
-    emptyLabel: open ? "To be decided" : "Group stage in progress",
+  // Real standings only, and a per-group clinch map so locked R32 slots get a ✓.
+  withRealStandings(() => {
+    const clinch = {};
+    GROUP_LETTERS.forEach((g) => { clinch[g] = clinchInfo(g); });
+    renderBracketInto(host, {
+      picks: officialPicks(),
+      interactive: false,
+      lockedFn: () => false,
+      lockMark: (id, side) => {
+        if (BRACKET[id].round !== "R32") return false;
+        const spec = side === "home" ? BRACKET[id].home : BRACKET[id].away;
+        if (typeof spec !== "string") return false;
+        const g = spec[1];
+        if (spec[0] === "1") return !!(clinch[g] && clinch[g].posClinched[1]);
+        if (spec[0] === "2") return !!(clinch[g] && clinch[g].posClinched[2]);
+        return false; // 3rd-place slots: cross-group clinch not marked
+      },
+      champLabel: "Champion",
+      emptyLabel: open ? "To be decided" : "Group stage in progress",
+    });
   });
   const pill = document.getElementById("official-status");
   if (pill) {
     pill.textContent = open ? "🔒 Official — locked" : "⏳ Provisional";
     pill.className = "official-pill " + (open ? "is-official" : "is-temp");
   }
+  renderOfficialStandings();
+}
+
+/* Compact real-results group standings under the Official Bracket: flag + code,
+   W-D-L · GD · Pts, with x/y clinch markers and advance(green)/out(red) rows. */
+function renderOfficialStandings() {
+  const host = document.getElementById("official-standings");
+  if (!host) return;
+  withRealStandings(() => {
+    const advancing = new Set(rankedThirds().slice(0, 8).map((t) => t.group));
+    host.innerHTML = GROUP_LETTERS.map((g) => {
+      const ranked = rankGroup(g);
+      const cl = clinchInfo(g);
+      const rows = ranked.map((s, pos) => {
+        const cls = pos < 2 ? "qualified" : pos === 2 ? (advancing.has(g) ? "adv" : "out") : "out";
+        const mark = cl.x[s.idx] ? '<span class="os-x">x</span>'
+          : cl.y[s.idx] ? '<span class="os-y">y</span>' : "";
+        return `<tr class="${cls}">
+            <td class="op">${pos + 1}</td>
+            <td class="oc"><span class="flag">${flagHtml(codeFor(g, s.idx))}</span><span class="ocode">${escapeHtml(code3(s.name))}</span>${mark}</td>
+            <td>${s.w}</td><td>${s.d}</td><td>${s.l}</td>
+            <td>${s.gd > 0 ? "+" + s.gd : s.gd}</td>
+            <td class="opts">${s.pts}</td>
+          </tr>`;
+      }).join("");
+      return `<div class="os-group">
+          <div class="os-gtitle">Group ${g}</div>
+          <table class="os-table">
+            <thead><tr><th></th><th></th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pt</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }).join("");
+  });
 }
 
 /* Second-chance knockout-only bracket. Seeds resolve from the real Round of 32
@@ -728,6 +849,25 @@ function renderSecondBracket() {
     lockedFn: (id) => koMatchLocked(id),
     champLabel: "Your champion",
     emptyLabel: open ? "Pick winners to crown a champion" : "Opens when the group stage ends",
+  });
+  renderSecondEliminated();
+}
+
+/* The four third-placed teams that did NOT make the top 8 — shown struck-out
+   at the bottom of the Second-Chance bracket (projected until the groups end,
+   then official). Real standings only. */
+function renderSecondEliminated() {
+  const host = document.getElementById("second-eliminated");
+  if (!host) return;
+  withRealStandings(() => {
+    const open = knockoutOpen();
+    const out = rankedThirds().slice(8); // 9th–12th best thirds are eliminated
+    const chips = out.map((s) =>
+      `<span class="elim-chip"><span class="flag">${flagHtml(codeFor(s.group, s.idx))}</span><span class="elim-code">${escapeHtml(code3(s.name))}</span><span class="elim-grp">${s.group}</span></span>`
+    ).join("");
+    host.innerHTML =
+      `<div class="elim-head">${open ? "Eliminated 3rd-place teams" : "Projected eliminated 3rd-place teams"}</div>
+       <div class="elim-row">${chips || '<span class="elim-none">—</span>'}</div>`;
   });
 }
 
@@ -775,11 +915,17 @@ function setView(view) {
   fitBrackets(); // size whichever brackets just became visible
 }
 function refreshViewControls() {
-  const vSecond = document.getElementById("view-second");
-  if (!vSecond) return;
   const open = knockoutOpen();
-  vSecond.disabled = !open;
-  vSecond.title = open ? "Second-chance knockout round" : "Opens when the group stage is decided";
+  const vSecond = document.getElementById("view-second");
+  if (vSecond) {
+    vSecond.disabled = !open;
+    vSecond.title = open ? "Second-chance knockout round" : "Opens when the group stage is decided";
+  }
+  const copyMain = document.getElementById("copy-main-bracket");
+  if (copyMain) {
+    copyMain.disabled = !open;
+    copyMain.title = open ? "Copy your main bracket (eliminated teams left off)" : "Opens when the group stage is decided";
+  }
 }
 
 /* ================= Live (actual) results ================= */
@@ -1585,6 +1731,30 @@ function markSecondDirty() {
   const btn = document.getElementById("submit-second");
   if (btn) btn.classList.remove("submitted");
   updateSecondSubmitLabel();
+}
+
+/* Carry the main-predictor knockout picks into the Second-Chance bracket,
+   keeping only teams that actually qualified (a pick whose team isn't a real
+   participant of that match is simply skipped). */
+function copyMainToSecond() {
+  if (!knockoutOpen()) { alert("The second-chance round opens once the group stage is decided."); return; }
+  const hasPicks = Object.values(state.bracket2 || {}).some(Boolean);
+  if (hasPicks && !confirm("Replace your current second-chance picks with your main bracket (eliminated teams left blank)?")) return;
+  const next = {};
+  const ids = [].concat(ROUND_ORDER.R32, ROUND_ORDER.R16, ROUND_ORDER.QF, ROUND_ORDER.SF, [104]);
+  for (const id of ids) {
+    const w = winnerOf(id, state.bracket); // team I picked to win this match in the main bracket
+    if (!w || !w.known || !w.name) continue;
+    for (const side of ["home", "away"]) {
+      const p = participant(id, side, next); // real participant given picks so far
+      if (p && p.name === w.name) { next[id] = side; break; }
+    }
+  }
+  state.bracket2 = next;
+  saveState();
+  renderSecondBracket();
+  fitBrackets();
+  markSecondDirty();
 }
 function updateSecondSubmitLabel() {
   const btn = document.getElementById("submit-second");
@@ -3262,6 +3432,8 @@ function wireEvents() {
   if (vSecond) vSecond.addEventListener("click", () => setView("second"));
   const submitSecond = document.getElementById("submit-second");
   if (submitSecond) submitSecond.addEventListener("click", submitSecondChance);
+  const copyMain = document.getElementById("copy-main-bracket");
+  if (copyMain) copyMain.addEventListener("click", copyMainToSecond);
 
   bracketEl.addEventListener("click", (e) => {
     const row = e.target.closest(".bm-row");

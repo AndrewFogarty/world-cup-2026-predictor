@@ -667,6 +667,108 @@ body.view-second .stars-banner { display: none; }
 .official-pill.is-temp { background: rgba(245, 181, 10, 0.22); color: #b8860b; border: 1px solid rgba(245, 181, 10, 0.6); }
 .official-pill.is-official { background: rgba(24, 160, 90, 0.18); color: #0f7a45; border: 1px solid rgba(24, 160, 90, 0.55); }
 
+/* ---- Official Group Standings (real results, under the official bracket) ---- */
+.official-standings-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.4rem 0 0.6rem;
+}
+.official-standings-head h3 {
+  margin: 0;
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffd23f;
+  font-size: 1rem;
+}
+.os-legend { font-size: 0.72rem; color: rgba(255, 255, 255, 0.78); display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.os-legend b { color: #fff; }
+.os-key { padding: 0 0.35rem; border-radius: 4px; }
+.os-key.adv { background: rgba(24, 160, 90, 0.3); color: #d6ffe6; }
+.os-key.out { background: rgba(239, 47, 80, 0.28); color: #ffd9df; text-decoration: line-through; }
+
+.official-standings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+  gap: 0.6rem;
+}
+.os-group {
+  background: rgba(12, 18, 40, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+  padding: 0.45rem 0.55rem 0.5rem;
+}
+.os-gtitle {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.25rem;
+}
+.os-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; color: #eaf0fb; }
+.os-table th {
+  font-weight: 600;
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-align: center;
+  padding: 0 0.15rem 0.15rem;
+}
+.os-table td { text-align: center; padding: 0.13rem 0.15rem; }
+.os-table .op { color: rgba(255, 255, 255, 0.5); width: 1.1rem; }
+.os-table .oc { text-align: left; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+.os-table .oc .flag { font-size: 0.95rem; }
+.os-table .ocode { font-weight: 700; letter-spacing: 0.02em; }
+.os-table .opts { font-weight: 800; }
+.os-table tr.qualified td { background: rgba(24, 160, 90, 0.14); }
+.os-table tr.qualified .op { color: #5be59a; }
+.os-table tr.adv td { background: rgba(24, 160, 90, 0.1); }
+.os-table tr.adv .ocode { color: #7ef0ab; }
+.os-table tr.out td { background: rgba(239, 47, 80, 0.1); }
+.os-table tr.out .ocode { color: #ff9aab; text-decoration: line-through; text-decoration-color: rgba(239, 47, 80, 0.9); }
+.os-x, .os-y {
+  font-weight: 800;
+  font-size: 0.66rem;
+  margin-left: 0.15rem;
+  padding: 0 0.2rem;
+  border-radius: 3px;
+}
+.os-x { background: #ffd23f; color: #1b1300; }     /* clinched 1st */
+.os-y { background: rgba(255, 255, 255, 0.85); color: #15233f; } /* clinched 2nd */
+
+/* clinched-slot ✓ in the (provisional) official bracket */
+.bm-clinch { margin-left: auto; color: #5be59a; font-weight: 800; font-size: 0.8rem; }
+.bm-row.clinched .bm-name { color: #d6ffe6; }
+
+/* ---- Eliminated 3rd-place teams under the Second-Chance bracket ---- */
+.second-eliminated { margin: 0.8rem 0 0.2rem; }
+.elim-head {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  color: #ff9aab;
+  margin-bottom: 0.4rem;
+}
+.elim-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.elim-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(239, 47, 80, 0.12);
+  border: 1px solid rgba(239, 47, 80, 0.45);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.8rem;
+  color: #ffd9df;
+}
+.elim-chip .elim-code { font-weight: 700; text-decoration: line-through; text-decoration-color: rgba(239, 47, 80, 0.9); }
+.elim-chip .elim-grp { font-size: 0.66rem; opacity: 0.7; }
+.elim-none { color: rgba(255, 255, 255, 0.5); }
+
 /* "knockout begun — bracket locked" banner (green, not the red warn) */
 .bracket-warn.locked-note {
   background: rgba(24, 160, 90, 0.16);
