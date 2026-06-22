@@ -173,6 +173,49 @@ body {
   background: transparent;
 }
 
+/* ---- header countdowns (sit in the space above the toggles) ---- */
+.countdowns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  margin-bottom: 0.15rem;
+}
+.cd {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+.cd-label {
+  font-family: var(--cond);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.cd-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #fff;
+}
+.cd-knockout .cd-label {
+  font-size: 0.74rem;
+  color: #ffd23f;
+}
+.cd-knockout .cd-time {
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+.cd-groups .cd-label {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+.cd-groups .cd-time {
+  font-size: 0.78rem;
+}
+@media (max-width: 640px) {
+  .countdowns { align-items: flex-start; }
+}
+
 .btn {
   font-family: var(--cond);
   font-weight: 600;

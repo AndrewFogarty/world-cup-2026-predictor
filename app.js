@@ -3412,6 +3412,54 @@ buildVenues();
 syncInputs();
 wireEvents();
 setMode(state.mode);
+/* ===== Header countdowns ===== */
+/* First knockout (Round of 32) kickoff = earliest scheduled match carrying a
+   numeric `n` (only knockout matches do). */
+function firstKnockoutKickoffMs() {
+  const sched = (window.WC_LIVE && window.WC_LIVE.schedule) || [];
+  let min = Infinity;
+  for (const m of sched) {
+    if (m.n == null) continue;
+    const ko = kickoffMs(m.d, m.t);
+    if (ko != null && ko < min) min = ko;
+  }
+  return min === Infinity ? null : min;
+}
+/* Group stage "ends" ≈ the last group match kicks off + ~2h to finish, which is
+   roughly when results land and the second-chance round opens. */
+function groupStageEndsMs() {
+  const sched = (window.WC_LIVE && window.WC_LIVE.schedule) || [];
+  let max = -Infinity;
+  for (const m of sched) {
+    // Group matches use a single-letter stage AND carry no numeric `n`
+    // (knockout matches do — note the Final's stage code is also "F").
+    if (m.n != null || !(m.s && m.s.length === 1)) continue;
+    const ko = kickoffMs(m.d, m.t);
+    if (ko != null && ko > max) max = ko;
+  }
+  return max === -Infinity ? null : max + 2 * 60 * 60 * 1000;
+}
+function fmtCountdown(ms) {
+  if (ms == null || ms <= 0) return null;
+  const s = Math.floor(ms / 1000);
+  const p2 = (n) => String(n).padStart(2, "0");
+  return `${Math.floor(s / 86400)}d ${p2(Math.floor((s % 86400) / 3600))}:${p2(Math.floor((s % 3600) / 60))}:${p2(s % 60)}`;
+}
+let cdKnockoutAt = null, cdGroupsAt = null;
+function tickCountdowns() {
+  const now = Date.now();
+  const kEl = document.getElementById("cd-knockout-time");
+  const gEl = document.getElementById("cd-groups-time");
+  if (kEl) kEl.textContent = fmtCountdown(cdKnockoutAt != null ? cdKnockoutAt - now : null) || "Underway";
+  if (gEl) gEl.textContent = fmtCountdown(cdGroupsAt != null ? cdGroupsAt - now : null) || (knockoutOpen() ? "Open now!" : "Underway");
+}
+function initCountdowns() {
+  cdKnockoutAt = firstKnockoutKickoffMs();
+  cdGroupsAt = groupStageEndsMs();
+  tickCountdowns();
+  setInterval(tickCountdowns, 1000);
+}
+
 renderAll();
 renderSchedule();
 renderHistory();
@@ -3423,6 +3471,7 @@ markConfirmedMatches();
 layoutGroups();
 initTitleScreen();
 initAuth();
+initCountdowns();
 
 // Re-lock matches as their kickoff time passes while the page stays open.
 setInterval(markConfirmedMatches, 15000);
