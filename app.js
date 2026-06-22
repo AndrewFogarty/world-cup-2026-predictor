@@ -3088,18 +3088,24 @@ function liveWcMap() {
   return map;
 }
 
-/* Normalised name key for matching ESPN scorer names to record players. */
-function normName(s) {
-  return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z]/g, "");
+/* Last-name + first-initial key, so ESPN's full names ("Lionel Messi") match
+   the squad feed's abbreviated names ("L. Messi"). */
+function nameMatchKey(name) {
+  const cleaned = (name || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z. ]/g, " ").trim();
+  const toks = cleaned.split(/\s+/).filter(Boolean);
+  if (!toks.length) return { last: "", initial: "" };
+  const last = toks[toks.length - 1].replace(/\./g, "");
+  const first = toks.length > 1 ? toks[0].replace(/\./g, "") : "";
+  return { last, initial: first ? first[0] : "" };
 }
 
-/* Provisional in-play goals by normalised player name, parsed straight from the
-   ESPN scoreboard (live matches only). Lets the all-time records reflect a goal
-   the instant it's scored — before the official per-player stats catch up. No
-   double-count: these are goals from matches still in progress, which the
-   official `wcGoals` (finished matches) doesn't include yet. */
-function espnLiveGoals() {
-  const map = {};
+/* Provisional in-play goals parsed straight from the ESPN scoreboard (live
+   matches only), as a list of { last, initial, goals }. Lets every goals/G+A
+   board — all-time and live 2026 — reflect a goal the instant it's scored,
+   before the official per-player stats catch up. No double-count: these come
+   from matches still in progress, which the official `wcGoals` doesn't include. */
+function espnScorers() {
+  const out = [];
   const events = (lastEspn && lastEspn.events) || [];
   for (const e of events) {
     const st = (e.status && e.status.type) || {};
@@ -3110,23 +3116,38 @@ function espnLiveGoals() {
       if (/own goal/i.test((d.type && d.type.text) || "")) continue; // not credited to scorer
       const scorer = (d.athletesInvolved || [])[0];
       if (!scorer || !scorer.displayName) continue;
-      const k = normName(scorer.displayName);
-      map[k] = (map[k] || 0) + 1;
+      const k = nameMatchKey(scorer.displayName);
+      if (!k.last) continue;
+      let row = out.find((r) => r.last === k.last && r.initial === k.initial);
+      if (!row) { row = { last: k.last, initial: k.initial, goals: 0 }; out.push(row); }
+      row.goals++;
     }
   }
-  return map;
+  return out;
 }
 
-/* Top goal+assist contributors in the current tournament (fully live). */
-function tournamentGARows() {
+/* In-play goals for a given player name, fuzzy-matched against ESPN scorers. */
+function liveGoalsForName(name, scorers) {
+  const k = nameMatchKey(name);
+  if (!k.last) return 0;
+  for (const s of scorers) {
+    if (s.last === k.last && (!s.initial || !k.initial || s.initial === k.initial)) return s.goals;
+  }
+  return 0;
+}
+
+/* Top goal+assist contributors in the current tournament. `scorers` adds the
+   in-play goals on top of the official tally so it updates live. */
+function tournamentGARows(scorers) {
   const f = window.WC_FOOTBALL;
   const rows = [];
   if (f && f.teams) {
     for (const [team, t] of Object.entries(f.teams)) {
       const code = NAME_CODE[team] || "";
       for (const p of t.players || []) {
-        const g = p.wcGoals || 0, a = p.wcAssists || 0;
-        if (g + a > 0) rows.push({ name: p.name, code, displayValue: g + a, g, a, sub: `${g} G · ${a} A` });
+        const prov = liveGoalsForName(p.name, scorers || []);
+        const g = (p.wcGoals || 0) + prov, a = p.wcAssists || 0;
+        if (g + a > 0) rows.push({ name: p.name, code, displayValue: g + a, g, a, sub: `${g} G · ${a} A`, prov });
       }
     }
   }
@@ -3134,17 +3155,18 @@ function tournamentGARows() {
   return rows.slice(0, 10);
 }
 
-/* Top 10 in a single live tournament metric (wcGoals / wcAssists), per player
-   across every squad. */
-function tournamentStatRows(metric) {
+/* Top 10 in a single live tournament metric. For goals, the in-play `scorers`
+   bump is added so the board updates the instant a goal is scored. */
+function tournamentStatRows(metric, scorers) {
   const f = window.WC_FOOTBALL;
   const rows = [];
   if (f && f.teams) {
     for (const [team, t] of Object.entries(f.teams)) {
       const code = NAME_CODE[team] || "";
       for (const p of t.players || []) {
-        const v = p[metric] || 0;
-        if (v > 0) rows.push({ name: p.name, code, displayValue: v, sub: team });
+        const prov = metric === "wcGoals" ? liveGoalsForName(p.name, scorers || []) : 0;
+        const v = (p[metric] || 0) + prov;
+        if (v > 0) rows.push({ name: p.name, code, displayValue: v, sub: team, prov });
       }
     }
   }
@@ -3193,20 +3215,20 @@ function renderHistory() {
   const noteEl = document.querySelector(".wch-note");
   if (noteEl) noteEl.textContent = data.note || "";
   const live = liveWcMap();
-  const espnLive = espnLiveGoals(); // provisional in-play goals by normalised name
+  const scorers = espnScorers(); // provisional in-play goals (live matches)
 
   grid.innerHTML = (data.panels || []).map((p) => {
     let rows;
     if (p.live) {
-      rows = p.key === "tournament_goals" ? tournamentStatRows("wcGoals")
-        : p.key === "tournament_assists" ? tournamentStatRows("wcAssists")
+      rows = p.key === "tournament_goals" ? tournamentStatRows("wcGoals", scorers)
+        : p.key === "tournament_assists" ? tournamentStatRows("wcAssists", scorers)
         : p.key === "tournament_cleansheets" ? tournamentCleanSheetRows()
-        : tournamentGARows();
+        : tournamentGARows(scorers);
     } else {
       rows = (p.rows || []).map((r) => {
         const L = r.id ? live[r.id] : null;
         // Provisional in-play goals for this player (goals panels only).
-        const prov = (p.key === "goals" || p.key === "ga") ? (espnLive[normName(r.name)] || 0) : 0;
+        const prov = (p.key === "goals" || p.key === "ga") ? liveGoalsForName(r.name, scorers) : 0;
         let value, sub = r.sub, add = 0;
         if (p.key === "ga") {
           let g = r.g || 0, a = r.a || 0;
