@@ -1938,16 +1938,9 @@ body {
   background-size: cover, 150px auto;
 }
 
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: url("images/trophy.jpg") right center / auto 120% no-repeat;
-  -webkit-mask-image: linear-gradient(90deg, transparent 52%, #000 90%);
-  mask-image: linear-gradient(90deg, transparent 52%, #000 90%);
-  pointer-events: none;
-}
+/* Trophy is painted as a header background layer (below) for reliable
+   cross-browser rendering; the masked ::before overlay is no longer used. */
+.site-header::before { content: none; }
 
 /* =================================================================
    Polish pass — #5 calmer backdrop, #4 consistent panels,
@@ -1967,12 +1960,16 @@ body {
   background-attachment: fixed, fixed, fixed;
 }
 
-/* hero backdrop matches: blurred flags, deeper tint */
+/* hero backdrop: deep tint (fades right) -> trophy photo (right) -> blurred
+   flag mosaic. Plain background layers so it renders reliably everywhere. */
 .site-header {
   background-image:
-    linear-gradient(100deg, rgba(8, 12, 24, 0.94) 0%, rgba(8, 12, 24, 0.7) 48%, rgba(8, 12, 24, 0.6) 100%),
+    linear-gradient(100deg, rgba(8, 12, 24, 0.94) 0%, rgba(8, 12, 24, 0.72) 46%, rgba(8, 12, 24, 0.5) 100%),
+    url("images/trophy.jpg"),
     url("images/flag-mosaic-blur.png");
-  background-size: cover, 300px auto;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: center, right center, center;
+  background-size: cover, auto 120%, 300px auto;
 }
 
 /* #4: one consistent treatment for every content panel */
