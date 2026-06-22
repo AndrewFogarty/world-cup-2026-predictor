@@ -3136,35 +3136,76 @@ function liveGoalsForName(name, scorers) {
   return 0;
 }
 
-/* Monotonic 2026 goal count: max(official wcGoals + live in-play goals) ever
-   seen for a player, persisted per browser. This stops the count going
-   *backwards* when a live match ends but the official per-player stats haven't
-   caught up yet — the goal stays counted through that gap, then reconciles
-   with the official number (no dip, no double-count). A stale held value
-   reconciles down to official after 6h (covers a rare VAR/correction). */
-let _gmax = null;
-function gmaxStore() {
-  if (_gmax) return _gmax;
-  try { _gmax = JSON.parse(localStorage.getItem("wc2026-gmax") || "{}"); } catch (e) { _gmax = {}; }
-  return _gmax;
+/* ---- Full-tournament 2026 goal totals from ESPN ----
+   The official per-player feed (API-Football) lags on goal attribution after a
+   match, so we count 2026 goals straight from ESPN across EVERY tournament day
+   (finished + in-play). This is accurate and live, and never goes backwards
+   once a goal is logged. Past days are cached (their goals are final) so each
+   refresh only re-fetches days still in progress. */
+const WC_START = "2026-06-11";
+let espnDayCache = {}; // "YYYYMMDD" -> { final, goals: {nameKey: count} }
+function espnTournamentDates() {
+  const out = [];
+  const d = new Date(WC_START + "T00:00:00Z");
+  const today = new Date();
+  for (; d <= today; d.setUTCDate(d.getUTCDate() + 1)) out.push(d.toISOString().slice(0, 10).replace(/-/g, ""));
+  return out;
 }
-function bumped2026Goals(name, official, prov) {
-  const current = (official || 0) + (prov || 0);
-  const m = nameMatchKey(name);
-  if (!m.last) return current;
-  const key = m.last + "|" + m.initial;
-  const store = gmaxStore();
-  const e = store[key];
-  const now = Date.now();
-  const stale = e && (now - e.t) > 6 * 3600 * 1000;
-  if (!e || current >= e.v || stale) {
-    if (!e || e.v !== current) {
-      store[key] = { v: current, t: now };
-      try { localStorage.setItem("wc2026-gmax", JSON.stringify(store)); } catch (_) {}
+function parseDayGoals(events) {
+  const goals = {};
+  let any = false, allFinal = true;
+  for (const e of events || []) {
+    const st = ((e.status || {}).type || {}).state;
+    any = true;
+    if (st !== "post") allFinal = false;
+    if (st !== "in" && st !== "post") continue;   // skip not-yet-started
+    const c = (e.competitions || [])[0] || {};
+    for (const det of c.details || []) {
+      if (!det.scoringPlay) continue;
+      if (/own goal/i.test((det.type && det.type.text) || "")) continue;
+      const a = (det.athletesInvolved || [])[0];
+      if (!a || !a.displayName) continue;
+      const k = nameMatchKey(a.displayName);
+      if (!k.last) continue;
+      const key = k.last + "|" + k.initial;
+      goals[key] = (goals[key] || 0) + 1;
     }
-    return current;
   }
-  return e.v; // hold the higher value until official catches up
+  return { final: any && allFinal, goals };
+}
+async function refreshEspnGoals() {
+  const dates = espnTournamentDates();
+  const today = dates[dates.length - 1];
+  await Promise.all(dates.map(async (ds) => {
+    const cached = espnDayCache[ds];
+    if (cached && cached.final && ds !== today) return; // finished past day — reuse
+    try {
+      const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=${ds}`);
+      if (!r.ok) return;
+      const j = await r.json();
+      espnDayCache[ds] = parseDayGoals(j.events);
+    } catch (e) { /* keep any prior cache for this day */ }
+  }));
+  const total = {};
+  for (const ds of dates) {
+    const c = espnDayCache[ds];
+    if (!c) continue;
+    for (const [k, v] of Object.entries(c.goals)) total[k] = (total[k] || 0) + v;
+  }
+  window.WC_ESPN_GOALS = total;
+  renderHistory();
+}
+/* ESPN's full-tournament goal total for a player name (0 if none/unmatched). */
+function espn2026Goals(name) {
+  const m = nameMatchKey(name);
+  if (!m.last) return 0;
+  return (window.WC_ESPN_GOALS || {})[m.last + "|" + m.initial] || 0;
+}
+/* Best live 2026 goal count: the higher of the official tally and ESPN's
+   full-tournament count (+ any current in-play bump as a floor). Both are
+   totals, so taking the max never double-counts and never goes backwards. */
+function bumped2026Goals(name, official, prov) {
+  return Math.max((official || 0) + (prov || 0), espn2026Goals(name));
 }
 
 /* Top goal+assist contributors in the current tournament. `scorers` adds the
@@ -3836,6 +3877,10 @@ pollEspnLive();
 setInterval(pollEspnLive, 45000);
 pollLiveScores();
 setInterval(pollLiveScores, 120000);
+// Count 2026 goals straight from ESPN across all tournament days (live + final),
+// so the records don't wait on the laggy per-player feed.
+refreshEspnGoals();
+setInterval(refreshEspnGoals, 60000);
 
 // Re-flow the masonry columns when the viewport width changes.
 let layoutTimer = null;
