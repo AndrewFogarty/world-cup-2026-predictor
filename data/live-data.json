@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-24T10:29:11.098Z",
+  "updated": "2026-06-24T22:02:57.506Z",
   "results": {
     "A": [
       [
@@ -39,8 +39,14 @@
         1,
         4
       ],
-      null,
-      null
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        1
+      ]
     ],
     "C": [
       [
@@ -357,8 +363,8 @@
       "s": "B",
       "h": "Switzerland",
       "a": "Canada",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 1,
       "v": "BC Place (Vancouver, CAN)"
     },
     {
@@ -367,8 +373,8 @@
       "s": "B",
       "h": "Bosnia",
       "a": "Qatar",
-      "hg": null,
-      "ag": null,
+      "hg": 3,
+      "ag": 1,
       "v": "Lumen Field (Seattle, USA)"
     },
     {
