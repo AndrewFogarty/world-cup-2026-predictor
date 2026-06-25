@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-25T17:34:10.798Z",
+  "updated": "2026-06-25T23:00:30.092Z",
   "results": {
     "A": [
       [
@@ -117,8 +117,14 @@
         0,
         0
       ],
-      null,
-      null
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ]
     ],
     "F": [
       [
@@ -555,8 +561,8 @@
       "s": "E",
       "h": "Curaçao",
       "a": "Côte d'Ivoire",
-      "hg": null,
-      "ag": null,
+      "hg": 0,
+      "ag": 2,
       "v": "Lincoln Financial Field (Philadelphia, USA)"
     },
     {
@@ -565,8 +571,8 @@
       "s": "E",
       "h": "Ecuador",
       "a": "Germany",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 1,
       "v": "MetLife Stadium (New York/New Jersey, USA)"
     },
     {
