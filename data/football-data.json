@@ -1,6 +1,6 @@
 {
   "source": "API-Football (api-sports.io)",
-  "updated": "2026-06-26T10:38:07.183Z",
+  "updated": "2026-06-26T17:18:59.937Z",
   "season": 2026,
   "teams": {
     "Mexico": {
@@ -134622,6 +134622,898 @@
                 "pos": "F",
                 "grid": null,
                 "photo": "https://media.api-sports.io/football/players/351587.png"
+              }
+            ]
+          }
+        },
+        "kind": "recent"
+      }
+    },
+    "Brazil|Japan": {
+      "h2h": {
+        "home": "Brazil",
+        "away": "Japan",
+        "total": 4,
+        "homeWins": 3,
+        "awayWins": 1,
+        "draws": 0,
+        "homeWinPct": 75,
+        "awayWinPct": 25,
+        "drawPct": 0,
+        "years": 26
+      },
+      "fixtureId": 1562344,
+      "lineup": {
+        "sides": {
+          "home": {
+            "team": "Brazil",
+            "formation": "4-3-3",
+            "coach": "Carlo Ancelotti",
+            "startXI": [
+              {
+                "id": 280,
+                "name": "Alisson",
+                "number": 1,
+                "pos": "G",
+                "grid": "1:1",
+                "photo": "https://media.api-sports.io/football/players/280.png"
+              },
+              {
+                "id": 618,
+                "name": "Danilo",
+                "number": 13,
+                "pos": "D",
+                "grid": "2:4",
+                "photo": "https://media.api-sports.io/football/players/618.png"
+              },
+              {
+                "id": 257,
+                "name": "Marquinhos",
+                "number": 4,
+                "pos": "D",
+                "grid": "2:3",
+                "photo": "https://media.api-sports.io/football/players/257.png"
+              },
+              {
+                "id": 22224,
+                "name": "Gabriel",
+                "number": 3,
+                "pos": "D",
+                "grid": "2:2",
+                "photo": "https://media.api-sports.io/football/players/22224.png"
+              },
+              {
+                "id": 24866,
+                "name": "Douglas Santos",
+                "number": 16,
+                "pos": "D",
+                "grid": "2:1",
+                "photo": "https://media.api-sports.io/football/players/24866.png"
+              },
+              {
+                "id": 10135,
+                "name": "Bruno Guimaraes",
+                "number": 8,
+                "pos": "M",
+                "grid": "3:3",
+                "photo": "https://media.api-sports.io/football/players/10135.png"
+              },
+              {
+                "id": 747,
+                "name": "Casemiro",
+                "number": 5,
+                "pos": "M",
+                "grid": "3:2",
+                "photo": "https://media.api-sports.io/football/players/747.png"
+              },
+              {
+                "id": 1646,
+                "name": "Lucas Paqueta",
+                "number": 20,
+                "pos": "M",
+                "grid": "3:1",
+                "photo": "https://media.api-sports.io/football/players/1646.png"
+              },
+              {
+                "id": 407806,
+                "name": "Rayan",
+                "number": 26,
+                "pos": "F",
+                "grid": "4:3",
+                "photo": "https://media.api-sports.io/football/players/407806.png"
+              },
+              {
+                "id": 1165,
+                "name": "M. Cunha",
+                "number": 9,
+                "pos": "F",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/1165.png"
+              },
+              {
+                "id": 762,
+                "name": "Vinicius Junior",
+                "number": 7,
+                "pos": "F",
+                "grid": "4:1",
+                "photo": "https://media.api-sports.io/football/players/762.png"
+              }
+            ],
+            "subs": [
+              {
+                "id": 617,
+                "name": "Ederson",
+                "number": 23,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/617.png"
+              },
+              {
+                "id": 2410,
+                "name": "Weverton",
+                "number": 12,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/2410.png"
+              },
+              {
+                "id": 276,
+                "name": "Neymar",
+                "number": 10,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/276.png"
+              },
+              {
+                "id": 860,
+                "name": "Alex Sandro",
+                "number": 6,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/860.png"
+              },
+              {
+                "id": 10124,
+                "name": "Leo Pereira",
+                "number": 15,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/10124.png"
+              },
+              {
+                "id": 30424,
+                "name": "Ibanez",
+                "number": 24,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/30424.png"
+              },
+              {
+                "id": 127769,
+                "name": "G. Martinelli",
+                "number": 22,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/127769.png"
+              },
+              {
+                "id": 10097,
+                "name": "Ederson",
+                "number": 2,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/10097.png"
+              },
+              {
+                "id": 265785,
+                "name": "Luiz Henrique",
+                "number": 21,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/265785.png"
+              },
+              {
+                "id": 377122,
+                "name": "Endrick",
+                "number": 19,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/377122.png"
+              },
+              {
+                "id": 299,
+                "name": "Fabinho",
+                "number": 17,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/299.png"
+              },
+              {
+                "id": 30497,
+                "name": "Bremer",
+                "number": 14,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/30497.png"
+              },
+              {
+                "id": 196156,
+                "name": "I. Thiago",
+                "number": 25,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/196156.png"
+              },
+              {
+                "id": 275170,
+                "name": "Danilo Santos",
+                "number": 18,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/275170.png"
+              }
+            ]
+          },
+          "away": {
+            "team": "Japan",
+            "formation": "3-4-2-1",
+            "coach": "Hajime Moriyasu",
+            "startXI": [
+              {
+                "id": 199578,
+                "name": "Zion Suzuki",
+                "number": 1,
+                "pos": "G",
+                "grid": "1:1",
+                "photo": "https://media.api-sports.io/football/players/199578.png"
+              },
+              {
+                "id": 33165,
+                "name": "Ayumu Seko",
+                "number": 20,
+                "pos": "D",
+                "grid": "2:3",
+                "photo": "https://media.api-sports.io/football/players/33165.png"
+              },
+              {
+                "id": 38114,
+                "name": "Ko Itakura",
+                "number": 4,
+                "pos": "D",
+                "grid": "2:2",
+                "photo": "https://media.api-sports.io/football/players/38114.png"
+              },
+              {
+                "id": 32893,
+                "name": "Hiroki Itō",
+                "number": 21,
+                "pos": "D",
+                "grid": "2:1",
+                "photo": "https://media.api-sports.io/football/players/32893.png"
+              },
+              {
+                "id": 32887,
+                "name": "Yukinari Sugawara",
+                "number": 2,
+                "pos": "M",
+                "grid": "3:4",
+                "photo": "https://media.api-sports.io/football/players/32887.png"
+              },
+              {
+                "id": 32966,
+                "name": "Ao Tanaka",
+                "number": 7,
+                "pos": "M",
+                "grid": "3:3",
+                "photo": "https://media.api-sports.io/football/players/32966.png"
+              },
+              {
+                "id": 2601,
+                "name": "Daichi Kamada",
+                "number": 15,
+                "pos": "M",
+                "grid": "3:2",
+                "photo": "https://media.api-sports.io/football/players/2601.png"
+              },
+              {
+                "id": 33321,
+                "name": "Keito Nakamura",
+                "number": 13,
+                "pos": "M",
+                "grid": "3:1",
+                "photo": "https://media.api-sports.io/football/players/33321.png"
+              },
+              {
+                "id": 2598,
+                "name": "Ritsu Doan",
+                "number": 10,
+                "pos": "F",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/2598.png"
+              },
+              {
+                "id": 33224,
+                "name": "Daizen Maeda",
+                "number": 11,
+                "pos": "F",
+                "grid": "4:1",
+                "photo": "https://media.api-sports.io/football/players/33224.png"
+              },
+              {
+                "id": 72155,
+                "name": "Ayase Ueda",
+                "number": 18,
+                "pos": "F",
+                "grid": "5:1",
+                "photo": "https://media.api-sports.io/football/players/72155.png"
+              }
+            ],
+            "subs": [
+              {
+                "id": 32954,
+                "name": "Shogo Taniguchi",
+                "number": 3,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/32954.png"
+              },
+              {
+                "id": 33289,
+                "name": "Koki Ogawa",
+                "number": 19,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/33289.png"
+              },
+              {
+                "id": 1942,
+                "name": "Junya Ito",
+                "number": 14,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/1942.png"
+              },
+              {
+                "id": 32858,
+                "name": "Tsuyoshi Watanabe",
+                "number": 16,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/32858.png"
+              },
+              {
+                "id": 440,
+                "name": "Yuto Nagatomo",
+                "number": 5,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/440.png"
+              },
+              {
+                "id": 33034,
+                "name": "Keisuke Osako",
+                "number": 12,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/33034.png"
+              },
+              {
+                "id": 304782,
+                "name": "Tomoki Hayakawa",
+                "number": 23,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/304782.png"
+              },
+              {
+                "id": 351014,
+                "name": "Junnosuke Suzuki",
+                "number": 25,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/351014.png"
+              },
+              {
+                "id": 2597,
+                "name": "Takehiro Tomiyasu",
+                "number": 22,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/2597.png"
+              },
+              {
+                "id": 199143,
+                "name": "Yuito Suzuki",
+                "number": 17,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/199143.png"
+              },
+              {
+                "id": 33889,
+                "name": "Kaishu Sano",
+                "number": 24,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/33889.png"
+              },
+              {
+                "id": 422572,
+                "name": "Kento Shiogai",
+                "number": 26,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/422572.png"
+              },
+              {
+                "id": 106851,
+                "name": "Shuto Machino",
+                "number": 6,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/106851.png"
+              },
+              {
+                "id": 375930,
+                "name": "Keisuke Goto",
+                "number": 9,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/375930.png"
+              }
+            ]
+          }
+        },
+        "kind": "recent"
+      }
+    },
+    "Netherlands|Morocco": {
+      "h2h": {
+        "home": "Netherlands",
+        "away": "Morocco",
+        "total": 1,
+        "homeWins": 1,
+        "awayWins": 0,
+        "draws": 0,
+        "homeWinPct": 100,
+        "awayWinPct": 0,
+        "drawPct": 0,
+        "years": 26
+      },
+      "fixtureId": 1562345,
+      "lineup": {
+        "sides": {
+          "home": {
+            "team": "Netherlands",
+            "formation": "4-3-3",
+            "coach": "Ronald Koeman",
+            "startXI": [
+              {
+                "id": 129058,
+                "name": "Bart Verbruggen",
+                "number": 1,
+                "pos": "G",
+                "grid": "1:1",
+                "photo": "https://media.api-sports.io/football/players/129058.png"
+              },
+              {
+                "id": 226,
+                "name": "Denzel Dumfries",
+                "number": 22,
+                "pos": "D",
+                "grid": "2:4",
+                "photo": "https://media.api-sports.io/football/players/226.png"
+              },
+              {
+                "id": 38695,
+                "name": "Jan Paul van Hecke",
+                "number": 6,
+                "pos": "D",
+                "grid": "2:3",
+                "photo": "https://media.api-sports.io/football/players/38695.png"
+              },
+              {
+                "id": 290,
+                "name": "Virgil van Dijk",
+                "number": 4,
+                "pos": "D",
+                "grid": "2:2",
+                "photo": "https://media.api-sports.io/football/players/290.png"
+              },
+              {
+                "id": 18861,
+                "name": "Nathan Aké",
+                "number": 5,
+                "pos": "D",
+                "grid": "2:1",
+                "photo": "https://media.api-sports.io/football/players/18861.png"
+              },
+              {
+                "id": 542,
+                "name": "Ryan Gravenberch",
+                "number": 8,
+                "pos": "M",
+                "grid": "3:3",
+                "photo": "https://media.api-sports.io/football/players/542.png"
+              },
+              {
+                "id": 538,
+                "name": "Frenkie de Jong",
+                "number": 21,
+                "pos": "M",
+                "grid": "3:2",
+                "photo": "https://media.api-sports.io/football/players/538.png"
+              },
+              {
+                "id": 36902,
+                "name": "Tijjani Reijnders",
+                "number": 14,
+                "pos": "M",
+                "grid": "3:1",
+                "photo": "https://media.api-sports.io/football/players/36902.png"
+              },
+              {
+                "id": 249,
+                "name": "Donyell Malen",
+                "number": 18,
+                "pos": "F",
+                "grid": "4:3",
+                "photo": "https://media.api-sports.io/football/players/249.png"
+              },
+              {
+                "id": 38750,
+                "name": "Brian Brobbey",
+                "number": 19,
+                "pos": "F",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/38750.png"
+              },
+              {
+                "id": 247,
+                "name": "Cody Gakpo",
+                "number": 11,
+                "pos": "F",
+                "grid": "4:1",
+                "photo": "https://media.api-sports.io/football/players/247.png"
+              }
+            ],
+            "subs": [
+              {
+                "id": 36899,
+                "name": "Teun Koopmeiners",
+                "number": 20,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/36899.png"
+              },
+              {
+                "id": 792,
+                "name": "Justin Kluivert",
+                "number": 7,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/792.png"
+              },
+              {
+                "id": 37724,
+                "name": "Crysencio Summerville",
+                "number": 24,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/37724.png"
+              },
+              {
+                "id": 667,
+                "name": "Memphis Depay",
+                "number": 10,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/667.png"
+              },
+              {
+                "id": 544,
+                "name": "Noa Lang",
+                "number": 17,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/544.png"
+              },
+              {
+                "id": 194536,
+                "name": "Robin Roefs",
+                "number": 13,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/194536.png"
+              },
+              {
+                "id": 26232,
+                "name": "Mark Flekken",
+                "number": 23,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/26232.png"
+              },
+              {
+                "id": 341642,
+                "name": "Jorrel Hato",
+                "number": 25,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/341642.png"
+              },
+              {
+                "id": 92993,
+                "name": "Mats Wieffer",
+                "number": 12,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/92993.png"
+              },
+              {
+                "id": 152849,
+                "name": "Micky van de Ven",
+                "number": 15,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/152849.png"
+              },
+              {
+                "id": 37143,
+                "name": "Lutsharel Geertruida",
+                "number": 2,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/37143.png"
+              },
+              {
+                "id": 38747,
+                "name": "Quinten Timber",
+                "number": 26,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/38747.png"
+              },
+              {
+                "id": 36905,
+                "name": "Guus Til",
+                "number": 16,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/36905.png"
+              },
+              {
+                "id": 30432,
+                "name": "Marten de Roon",
+                "number": 3,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/30432.png"
+              },
+              {
+                "id": 25416,
+                "name": "Wout Weghorst",
+                "number": 9,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/25416.png"
+              }
+            ]
+          },
+          "away": {
+            "team": "Morocco",
+            "formation": "4-2-3-1",
+            "coach": "Mohamed Ouahbi",
+            "startXI": [
+              {
+                "id": 2701,
+                "name": "Bono",
+                "number": 1,
+                "pos": "G",
+                "grid": "1:1",
+                "photo": "https://media.api-sports.io/football/players/2701.png"
+              },
+              {
+                "id": 9,
+                "name": "A. Hakimi",
+                "number": 2,
+                "pos": "D",
+                "grid": "2:4",
+                "photo": "https://media.api-sports.io/football/players/9.png"
+              },
+              {
+                "id": 326183,
+                "name": "R. Halhal",
+                "number": 25,
+                "pos": "D",
+                "grid": "2:3",
+                "photo": "https://media.api-sports.io/football/players/326183.png"
+              },
+              {
+                "id": 278898,
+                "name": "C. Riad",
+                "number": 18,
+                "pos": "D",
+                "grid": "2:2",
+                "photo": "https://media.api-sports.io/football/players/278898.png"
+              },
+              {
+                "id": 162451,
+                "name": "A. Salah-Eddine",
+                "number": 26,
+                "pos": "D",
+                "grid": "2:1",
+                "photo": "https://media.api-sports.io/football/players/162451.png"
+              },
+              {
+                "id": 277003,
+                "name": "N. El Aynaoui",
+                "number": 24,
+                "pos": "M",
+                "grid": "3:2",
+                "photo": "https://media.api-sports.io/football/players/277003.png"
+              },
+              {
+                "id": 74,
+                "name": "S. Amrabat",
+                "number": 4,
+                "pos": "M",
+                "grid": "3:1",
+                "photo": "https://media.api-sports.io/football/players/74.png"
+              },
+              {
+                "id": 744,
+                "name": "B. Diaz",
+                "number": 10,
+                "pos": "M",
+                "grid": "4:3",
+                "photo": "https://media.api-sports.io/football/players/744.png"
+              },
+              {
+                "id": 161897,
+                "name": "I. Saibari",
+                "number": 11,
+                "pos": "M",
+                "grid": "4:2",
+                "photo": "https://media.api-sports.io/football/players/161897.png"
+              },
+              {
+                "id": 340573,
+                "name": "B. El Khannouss",
+                "number": 23,
+                "pos": "M",
+                "grid": "4:1",
+                "photo": "https://media.api-sports.io/football/players/340573.png"
+              },
+              {
+                "id": 2722,
+                "name": "A. El Kaabi",
+                "number": 20,
+                "pos": "F",
+                "grid": "5:1",
+                "photo": "https://media.api-sports.io/football/players/2722.png"
+              }
+            ],
+            "subs": [
+              {
+                "id": 2703,
+                "name": "A. Tagnaouti",
+                "number": 22,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/2703.png"
+              },
+              {
+                "id": 2702,
+                "name": "Munir",
+                "number": 12,
+                "pos": "G",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/2702.png"
+              },
+              {
+                "id": 18814,
+                "name": "I. Diop",
+                "number": 14,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/18814.png"
+              },
+              {
+                "id": 545,
+                "name": "N. Mazraoui",
+                "number": 3,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/545.png"
+              },
+              {
+                "id": 146772,
+                "name": "Y. Belammari",
+                "number": 19,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/146772.png"
+              },
+              {
+                "id": 191289,
+                "name": "A. Sbai",
+                "number": 17,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/191289.png"
+              },
+              {
+                "id": 336659,
+                "name": "C. Talbi",
+                "number": 7,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/336659.png"
+              },
+              {
+                "id": 415431,
+                "name": "S. El Mourabet",
+                "number": 15,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/415431.png"
+              },
+              {
+                "id": 369544,
+                "name": "G. Yassine",
+                "number": 16,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/369544.png"
+              },
+              {
+                "id": 50042,
+                "name": "M. Saadane",
+                "number": 5,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/50042.png"
+              },
+              {
+                "id": 129678,
+                "name": "A. Ounahi",
+                "number": 8,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/129678.png"
+              },
+              {
+                "id": 36579,
+                "name": "S. Rahimi",
+                "number": 9,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/36579.png"
+              },
+              {
+                "id": 535046,
+                "name": "A. Amaimouni",
+                "number": 21,
+                "pos": "F",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/535046.png"
+              },
+              {
+                "id": 283252,
+                "name": "Z. El Ouahdi",
+                "number": 13,
+                "pos": "D",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/283252.png"
+              },
+              {
+                "id": 438688,
+                "name": "A. Bouaddi",
+                "number": 6,
+                "pos": "M",
+                "grid": null,
+                "photo": "https://media.api-sports.io/football/players/438688.png"
               }
             ]
           }

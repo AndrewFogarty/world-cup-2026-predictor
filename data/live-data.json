@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-26T10:37:52.232Z",
+  "updated": "2026-06-26T17:18:42.450Z",
   "results": {
     "A": [
       [
@@ -1034,7 +1034,7 @@
       "d": "2026-06-29",
       "t": "19:00 UTC-6",
       "s": "R32",
-      "h": "1F",
+      "h": "Netherlands",
       "a": "Morocco",
       "hg": null,
       "ag": null,
@@ -1046,7 +1046,7 @@
       "t": "12:00 UTC-5",
       "s": "R32",
       "h": "Brazil",
-      "a": "2F",
+      "a": "Japan",
       "hg": null,
       "ag": null,
       "v": "NRG Stadium (Houston, USA)"
@@ -1067,7 +1067,7 @@
       "d": "2026-06-30",
       "t": "12:00 UTC-5",
       "s": "R32",
-      "h": "2E",
+      "h": "Côte d'Ivoire",
       "a": "2I",
       "hg": null,
       "ag": null,
@@ -1177,7 +1177,7 @@
       "d": "2026-07-03",
       "t": "13:00 UTC-5",
       "s": "R32",
-      "h": "2D",
+      "h": "Australia",
       "a": "2G",
       "hg": null,
       "ag": null,
