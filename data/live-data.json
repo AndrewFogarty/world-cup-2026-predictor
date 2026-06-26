@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-26T17:18:42.450Z",
+  "updated": "2026-06-26T21:50:29.911Z",
   "results": {
     "A": [
       [
@@ -215,8 +215,14 @@
         2,
         3
       ],
-      null,
-      null
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        0
+      ]
     ],
     "J": [
       [
@@ -813,8 +819,8 @@
       "s": "I",
       "h": "Norway",
       "a": "France",
-      "hg": null,
-      "ag": null,
+      "hg": 1,
+      "ag": 4,
       "v": "Gillette Stadium (Boston, USA)"
     },
     {
@@ -823,8 +829,8 @@
       "s": "I",
       "h": "Senegal",
       "a": "Iraq",
-      "hg": null,
-      "ag": null,
+      "hg": 5,
+      "ag": 0,
       "v": "BMO Field (Toronto, CAN)"
     },
     {
