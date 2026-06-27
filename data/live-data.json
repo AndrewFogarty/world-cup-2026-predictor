@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-06-26T21:50:29.911Z",
+  "updated": "2026-06-27T08:10:21.295Z",
   "results": {
     "A": [
       [
@@ -175,8 +175,14 @@
         3,
         1
       ],
-      null,
-      null
+      [
+        5,
+        1
+      ],
+      [
+        1,
+        1
+      ]
     ],
     "H": [
       [
@@ -195,8 +201,14 @@
         2,
         2
       ],
-      null,
-      null
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
     ],
     "I": [
       [
@@ -699,8 +711,8 @@
       "s": "G",
       "h": "Egypt",
       "a": "IR Iran",
-      "hg": null,
-      "ag": null,
+      "hg": 1,
+      "ag": 1,
       "v": "Lumen Field (Seattle, USA)"
     },
     {
@@ -709,8 +721,8 @@
       "s": "G",
       "h": "New Zealand",
       "a": "Belgium",
-      "hg": null,
-      "ag": null,
+      "hg": 1,
+      "ag": 5,
       "v": "BC Place (Vancouver, CAN)"
     },
     {
@@ -759,8 +771,8 @@
       "s": "H",
       "h": "Cabo Verde",
       "a": "Saudi Arabia",
-      "hg": null,
-      "ag": null,
+      "hg": 0,
+      "ag": 0,
       "v": "NRG Stadium (Houston, USA)"
     },
     {
@@ -769,8 +781,8 @@
       "s": "H",
       "h": "Uruguay",
       "a": "Spain",
-      "hg": null,
-      "ag": null,
+      "hg": 0,
+      "ag": 1,
       "v": "Estadio Akron (Guadalajara, MEX)"
     },
     {
