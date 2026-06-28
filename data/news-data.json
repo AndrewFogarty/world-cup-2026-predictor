@@ -1,13 +1,199 @@
 {
   "source": "ESPN FIFA World Cup + per-player news feeds",
-  "updated": "2026-06-28T15:07:14.714Z",
+  "updated": "2026-06-28T19:58:58.520Z",
   "counts": {
-    "preview": 14,
-    "injury": 5,
+    "preview": 16,
     "news": 25,
-    "celebration": 4
+    "offfield": 1,
+    "injury": 5,
+    "celebration": 1
   },
   "items": [
+    {
+      "id": "49208179",
+      "headline": "Balogun says United States finding 'another gear' for knockouts",
+      "description": "United States forward Folarin Balogun said he can \"feel the difference\" in the atmosphere around the World Cup now that the knockout stages have begun.",
+      "published": "2026-06-28T19:50:40Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49208179/balogun-united-states-finding-another-gear-knockouts",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681083_1296x729_16-9.jpg",
+      "byline": "Jeff Carlisle",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "USA"
+      ],
+      "players": [],
+      "score": 219
+    },
+    {
+      "id": "49204325",
+      "headline": "World Cup Daily LIVE: South Africa vs. Canada LIVE; Iran despair after late Austria drama",
+      "description": "The knockout stage has officially begun! The round of 32 at the 2026 World Cup begins with our first match being South Africa against co-hosts Canada in Inglewood, California.",
+      "published": "2026-06-28T19:53:17Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49204325/world-cup-daily-live-iran-despair-late-austria-drama-south-africa-face-canada-round-32-begins",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681135_1296x729_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Canada",
+        "South Africa",
+        "IR Iran",
+        "Austria"
+      ],
+      "players": [],
+      "score": 209
+    },
+    {
+      "id": "49208682",
+      "headline": "Balogun and Dest 'very confident' ahead of Bosnia knockout game",
+      "description": "Balogun and Dest 'very confident' ahead of Bosnia knockout game.",
+      "published": "2026-06-28T19:11:52Z",
+      "url": "https://www.espn.com/video/clip/_/id/49208682/balogun-dest-very-confident-ahead-bosnia-knockout-game",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_Balogun_and_Dest_very_confident_ahead_of_Bosnia_knockout_game/dm_260628_Balogun_and_Dest_very_confident_ahead_of_Bosnia_knockout_game.jpg",
+      "byline": null,
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "USA",
+        "Bosnia"
+      ],
+      "players": [
+        "Folarin Balogun",
+        "Sergiño Dest"
+      ],
+      "score": 191
+    },
+    {
+      "id": "49208415",
+      "headline": "Marcotti's Best XI of World Cup group stage: Messi, Mbappe and who else?",
+      "description": "The 2026 World Cup group stage has given us tons to cheer about, from superstars on form to wonderful underdog stories? How do you turn that into a Best XI? Gab Marcotti gives it a shot.",
+      "published": "2026-06-28T19:45:43Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49208415/world-cup-best-xi-group-stage-lionel-messi-kylian-mbappe-vinicius-junior-gab-marcotti",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681138_1296x729_16-9.jpg",
+      "byline": "Gabriele Marcotti",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Argentina",
+        "Belgium",
+        "Colombia",
+        "Spain",
+        "Netherlands",
+        "Brazil",
+        "England",
+        "France"
+      ],
+      "players": [],
+      "score": 190
+    },
+    {
+      "id": "49208667",
+      "headline": "South Korea coach Hong Myung-Bo quits after World Cup exit, criticism from president",
+      "description": "South Korea coach Hong Myung-Bo resigned Sunday, a day after the team's quick elimination from the World Cup and following heavy criticism from the country's president.",
+      "published": "2026-06-28T19:54:54Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49208667/south-korea-coach-hong-myung-bo-quits-world-cup-exit-criticism-president",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681116_1296x729_16-9.jpg",
+      "byline": "ESPN News Services",
+      "kind": "offfield",
+      "kindLabel": "Off the field",
+      "teams": [
+        "Korea Republic"
+      ],
+      "players": [],
+      "score": 182
+    },
+    {
+      "id": "49207966",
+      "headline": "Canada vs South Africa LIVE - Bafana and Les Rouges seek first-ever R16 spot at FIFA World Cup",
+      "description": "History is being made in Los Angeles today, as South Africa and Canada contest both countries' first ever FIFA World Cup knockout match, in the round of 32. Follow our live blog here!",
+      "published": "2026-06-28T19:52:57Z",
+      "url": "https://www.espn.com/espn/story/_/id/49207966/canada-vs-south-africa-live-bafana-les-rouges-seek-first-ever-r16-spot-fifa-world-cup",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681145_1296x729_16-9.jpg",
+      "byline": "Lindsay du Plessis",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "South Africa",
+        "Canada"
+      ],
+      "players": [],
+      "score": 159
+    },
+    {
+      "id": "49208061",
+      "headline": "Will the real England please stand up? Thomas Tuchel's side enter knockouts still searching for identity",
+      "description": "ESPN's Tom Hamilton assesses England's group stage, the questions still surrounding Thomas Tuchel's side and why the knockouts will reveal their true identity.",
+      "published": "2026-06-28T18:52:22Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49208061/will-real-england-stand-world-cup-2026-thomas-tuchel-knockouts-identity",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681081_1296x729_16-9.jpg",
+      "byline": "Tom Hamilton",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "England"
+      ],
+      "players": [],
+      "score": 158
+    },
+    {
+      "id": "49207806",
+      "headline": "Uruguay, Man United's Manuel Ugarte suffers knee ligament injury",
+      "description": "Uruguay midfielder Manuel Ugarte has suffered a knee ligament injury in his final World Cup group stage match against Spain, Manchester United have confirmed.",
+      "published": "2026-06-28T17:09:17Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49207806/uruguay-manuel-ugarte-faces-long-injury-lay-following-knee-ligament-injury",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1681045_1296x729_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "Uruguay",
+        "Spain"
+      ],
+      "players": [
+        "Manuel Ugarte"
+      ],
+      "score": 143
+    },
+    {
+      "id": "49208057",
+      "headline": "Gyökeres: Sweden 'have to be perfect' to beat France",
+      "description": "Gyökeres: Sweden 'have to be perfect' to beat France",
+      "published": "2026-06-28T17:51:25Z",
+      "url": "https://www.espn.com/video/clip/_/id/49208057/sweden-perfect-beat-france",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_Gyokeres_Sweden_have_to_be_perfect_to_beat_France/dm_260628_Gyokeres_Sweden_have_to_be_perfect_to_beat_France.jpg",
+      "byline": null,
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
+        "Sweden",
+        "France"
+      ],
+      "players": [
+        "Viktor Gyökeres"
+      ],
+      "score": 140
+    },
+    {
+      "id": "49201916",
+      "headline": "Yaya Sithole's redemption arc key to South Africa's recovery from disastrous start at FIFA World Cup",
+      "description": "Yaya Sithole could have been forgiven for questioning whether he was in a waking nightmare midway through his first ever FIFA World Cup game, for South Africa against Mexico on July 11.",
+      "published": "2026-06-28T14:55:43Z",
+      "url": "https://www.espn.com/espn/story/_/id/49201916/yaya-sithole-redemption-arc-key-south-africa-recovery-disastrous-start-fifa-world-cup",
+      "image": "https://a.espncdn.com/photo/2026/0627/r1680739_1296x729_16-9.jpg",
+      "byline": "Ed Dove",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "South Africa",
+        "Canada",
+        "Mexico"
+      ],
+      "players": [
+        "Sphephelo Sithole"
+      ],
+      "score": 139
+    },
     {
       "id": "49173329",
       "headline": "Aubrey Modiba: Canada must beware of Bafana 'upset' despite 'home' advantage",
@@ -25,7 +211,25 @@
       "players": [
         "Aubrey Modiba"
       ],
-      "score": 222
+      "score": 135
+    },
+    {
+      "id": "49207302",
+      "headline": "France, Argentina top World Cup odds; U.S. put sportsbooks at risk",
+      "description": "Star-powered France and Argentina top the odds board to win the World Cup as the tournament moves into the knockout stage, while the United States' positive momentum will have sportsbooks sweating more with each game they win.",
+      "published": "2026-06-28T16:51:13Z",
+      "url": "https://www.espn.com/sports-betting/story/_/id/49207302/france-argentina-top-world-cup-odds-us-puts-sportsbooks-risk",
+      "image": "https://a.espncdn.com/photo/2026/0526/r1663696_1296x729_16-9.jpg",
+      "byline": "Doug Greenberg",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Argentina",
+        "France",
+        "USA"
+      ],
+      "players": [],
+      "score": 134
     },
     {
       "id": "49195887",
@@ -48,27 +252,97 @@
         "Ime Okon",
         "Khuliso Mudau"
       ],
-      "score": 212
+      "score": 134
     },
     {
-      "id": "49201916",
-      "headline": "Yaya Sithole's redemption arc key to South Africa's recovery from disastrous start at FIFA World Cup",
-      "description": "Yaya Sithole could have been forgiven for questioning whether he was in a waking nightmare midway through his first ever FIFA World Cup game, for South Africa against Mexico on July 11.",
-      "published": "2026-06-28T14:55:43Z",
-      "url": "https://www.espn.com/espn/story/_/id/49201916/yaya-sithole-redemption-arc-key-south-africa-recovery-disastrous-start-fifa-world-cup",
-      "image": "https://a.espncdn.com/photo/2026/0627/r1680739_1296x729_16-9.jpg",
-      "byline": "Ed Dove",
+      "id": "49027532",
+      "headline": "World Cup VAR review: Colombia goal ruled out for 'toenail' offside",
+      "description": "For the tournament, we are taking a look at the major incidents to examine and explain the process in terms of both VAR protocol and the laws of the game.",
+      "published": "2026-06-28T12:34:05Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49027532/world-cup-2026-var-review-red-card-penalty-handball-goal-line-technology",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1680918_590x332_16-9.jpg",
+      "byline": "Andy Davies",
       "kind": "injury",
       "kindLabel": "Injury",
       "teams": [
-        "South Africa",
+        "Colombia"
+      ],
+      "players": [],
+      "score": 133
+    },
+    {
+      "id": "49166381",
+      "headline": "2026 World Cup: Best bets for the knockout round",
+      "description": "Looking to place some World Cup bets? Here's what our expert is considering ahead of the first knockout round.",
+      "published": "2026-06-28T15:37:32Z",
+      "url": "https://www.espn.com/espn/betting/story/_/id/49166381/fifa-world-cup-betting-knockout-round-best-bets-picks-odds-props-futures-2026",
+      "image": "https://a.espncdn.com/photo/2026/0627/r1680675_1296x729_16-9.jpg",
+      "byline": "Victoria Matiash",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Norway",
+        "Brazil",
+        "Japan",
+        "Australia",
+        "Egypt",
+        "Côte d'Ivoire"
+      ],
+      "players": [],
+      "score": 132
+    },
+    {
+      "id": "48386952",
+      "headline": "Every team's championship odds for the 2026 World Cup",
+      "description": "Odds for every team to advance through the knockout stage and to win the 2026 World Cup.",
+      "published": "2026-06-28T15:19:01Z",
+      "url": "https://www.espn.com/espn/betting/story/_/id/48386952/espn-soccer-futbol-world-cup-betting-odds-championship-groups",
+      "image": "https://a.espncdn.com/photo/2026/0627/r1680476_1296x729_16-9.jpg",
+      "byline": "Doug Greenberg",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "France",
+        "Brazil",
+        "England",
+        "Spain",
+        "Argentina",
+        "Portugal",
+        "Germany",
+        "Netherlands",
+        "Belgium",
+        "Colombia",
+        "Japan",
         "Canada",
-        "Mexico"
+        "Mexico",
+        "Norway",
+        "Morocco",
+        "Uruguay",
+        "Ecuador",
+        "Sweden",
+        "Croatia",
+        "Switzerland",
+        "Austria",
+        "Australia",
+        "Senegal",
+        "Czechia",
+        "Paraguay",
+        "Scotland",
+        "Egypt",
+        "Algeria",
+        "Korea Republic",
+        "Ghana",
+        "Panama",
+        "South Africa",
+        "New Zealand",
+        "Iraq",
+        "Cabo Verde",
+        "Uzbekistan",
+        "Jordan",
+        "Haiti"
       ],
-      "players": [
-        "Sphephelo Sithole"
-      ],
-      "score": 207
+      "players": [],
+      "score": 132
     },
     {
       "id": "49204443",
@@ -89,51 +363,211 @@
         "Senegal"
       ],
       "players": [],
-      "score": 189
+      "score": 131
     },
     {
-      "id": "49166381",
-      "headline": "2026 World Cup: Best bets for the knockout round",
-      "description": "Looking to place some World Cup bets? Here's what our expert is considering ahead of the first knockout round.",
-      "published": "2026-06-28T14:21:08Z",
-      "url": "https://www.espn.com/espn/betting/story/_/id/49166381/fifa-world-cup-betting-knockout-round-best-bets-picks-odds-props-futures-2026",
-      "image": "https://a.espncdn.com/photo/2026/0627/r1680675_1296x729_16-9.jpg",
-      "byline": "Victoria Matiash",
+      "id": "49167690",
+      "headline": "Judging overreactions to World Cup bracket: How far could USMNT go?",
+      "description": "The bracket for the World Cup knockout rounds is now set! How far will the U.S. go, and who should be the favorites to win it all? Let's judge some overreactions!",
+      "published": "2026-06-28T14:24:06Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49167690/judging-overreactions-world-cup-bracket-knockout-rounds-usmnt-argentina-france-cape-verde",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1680795_1296x729_16-9.jpg",
+      "byline": "Nicholas Som",
       "kind": "preview",
       "kindLabel": "Match preview",
       "teams": [
-        "Norway",
-        "Brazil",
-        "Japan",
-        "Australia",
-        "Egypt",
-        "Côte d'Ivoire"
+        "USA",
+        "Argentina",
+        "Mexico"
       ],
       "players": [],
-      "score": 178
+      "score": 131
     },
     {
-      "id": "49206849",
-      "headline": "How much more can Brazil offer in the knockouts?",
-      "description": "How much more can Brazil offer in the knockouts?",
-      "published": "2026-06-28T14:05:39Z",
-      "url": "https://www.espn.com/video/clip/_/id/49206849/how-much-more-brazil-offer-knockouts",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Analysis_How_much_more_can_Brazil_offer_in_the_knockouts_20260628_GLOBAL_FIFA_WORLD_CUP/dm_260628_COM_SOC_Analysis_How_much_more_can_Brazil_offer_in_the_knockouts_20260628_GLOBAL_FIFA_WORLD_CUP.jpg",
+      "id": "49204988",
+      "headline": "Thomas Tuchel admits England World Cup worry amid 'tight race' for injured stars",
+      "description": "Thomas Tuchel has admitted he is worried about England's right-back situation heading into the World Cup knockout phase.",
+      "published": "2026-06-28T09:25:08Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49204988/thomas-tuchel-admits-england-world-cup-worry-amid-tight-race-injured-stars",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1680925_1296x729_16-9.jpg",
+      "byline": "PA",
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "England"
+      ],
+      "players": [
+        "Jarell Quansah"
+      ],
+      "score": 131
+    },
+    {
+      "id": "49205245",
+      "headline": "Tuchel concerned by England's right-back injury crisis",
+      "description": "Tuchel concerned by England's right-back injury crisis",
+      "published": "2026-06-28T09:23:55Z",
+      "url": "https://www.espn.com/video/clip/_/id/49205245/tuchel-concerned-england-right-back-injury-crisis",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Presser_Tuchel_concerned_by_Englands_rightback_injury_crisis_20260628_GLOBAL_FIFA_WORL/dm_260628_COM_SOC_Presser_Tuchel_concerned_by_Englands_rightback_injury_crisis_20260628_GLOBAL_FIFA_WORL.jpg",
+      "byline": null,
+      "kind": "injury",
+      "kindLabel": "Injury",
+      "teams": [
+        "England",
+        "Panama"
+      ],
+      "players": [
+        "Jarell Quansah"
+      ],
+      "score": 131
+    },
+    {
+      "id": "49207552",
+      "headline": "Hislop explains why he does not think Klopp will return to management",
+      "description": "Hislop explains why he does not think Klopp will return to management.",
+      "published": "2026-06-28T16:16:17Z",
+      "url": "https://www.espn.com/video/clip/_/id/49207552/hislop-explains-why-does-not-think-klopp-return-management",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_Hislop_explains_why_he_does_not_think_Klopp_will_return_to_management/dm_260628_Hislop_explains_why_he_does_not_think_Klopp_will_return_to_management.jpg",
       "byline": null,
       "kind": "news",
       "kindLabel": "News",
       "teams": [
+        "USA"
+      ],
+      "players": [
+        "Folarin Balogun"
+      ],
+      "score": 127
+    },
+    {
+      "id": "49117037",
+      "headline": "2026 World Cup Golden Boot tracker: Will Messi, Mbappe, or other score most goals?",
+      "description": "We're into the round of 32 at the 2026 FIFA World Cup, and the race for the Golden Boot -- given to the tournament's top goal scorer -- is red-hot.",
+      "published": "2026-06-28T10:06:31Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49117037/lionel-messi-erling-haaland-kylian-mbappe-harry-kane-folarin-balogun-world-cup-golden-boot-top-scorer",
+      "image": "https://a.espncdn.com/photo/2026/0619/r1676221_1296x729_16-9.jpg",
+      "byline": "Connor O'Halloran",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "England",
+        "Argentina",
+        "France",
+        "Norway",
+        "USA"
+      ],
+      "players": [
+        "Harry Kane",
+        "Lionel Messi",
+        "Kylian Mbappé",
+        "Erling Haaland",
+        "Folarin Balogun"
+      ],
+      "score": 127
+    },
+    {
+      "id": "49204852",
+      "headline": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
+      "description": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
+      "published": "2026-06-28T08:20:54Z",
+      "url": "https://www.espn.com/video/clip/_/id/49204852/dalot-admits-portugal-fell-short-group-stages-ahead-croatia-clash",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_2026/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_2026.jpg",
+      "byline": null,
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Colombia",
+        "Portugal",
+        "Croatia"
+      ],
+      "players": [
+        "Diogo Dalot"
+      ],
+      "score": 125
+    },
+    {
+      "id": "49118437",
+      "headline": "Why every round-of-32 team will, won't win FIFA World Cup",
+      "description": "Then there were 32. Let's review why each team still alive at the 2026 World Cup could win the whole thing -- and why each probably won't.",
+      "published": "2026-06-28T16:02:00Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49118437/fifa-world-cup-predictions-analysis-projections-usa-mexico-spain-brazil-england-argentina-germany-france",
+      "image": "https://a.espncdn.com/photo/2026/0622/r1677800_1296x729_16-9.jpg",
+      "byline": "Bill Connelly",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [
         "Brazil",
-        "Japan"
+        "Canada",
+        "Egypt",
+        "Germany",
+        "Japan",
+        "Mexico",
+        "Netherlands",
+        "Spain",
+        "Switzerland",
+        "USA",
+        "Argentina",
+        "France",
+        "Norway",
+        "Ghana",
+        "England",
+        "Colombia",
+        "Portugal",
+        "South Africa",
+        "Ecuador",
+        "Paraguay",
+        "Australia",
+        "Sweden",
+        "Côte d'Ivoire",
+        "Algeria",
+        "Austria",
+        "DR Congo",
+        "Croatia",
+        "Senegal"
       ],
       "players": [],
-      "score": 158
+      "score": 124
+    },
+    {
+      "id": "49205347",
+      "headline": "This World Cup's United States team the best in country's history - Jürgen Klopp",
+      "description": "Jürgen Klopp has told ESPN he believes Mauricio Pochettino's United States are the best version of the national team in the country's history.",
+      "published": "2026-06-28T11:00:05Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49205347/this-world-cup-united-states-team-best-country-history-jurgen-klopp",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1680931_1296x729_16-9.jpg",
+      "byline": "ESPN",
+      "kind": "celebration",
+      "kindLabel": "Celebration",
+      "teams": [
+        "USA"
+      ],
+      "players": [],
+      "score": 124
+    },
+    {
+      "id": "49204819",
+      "headline": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
+      "description": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
+      "published": "2026-06-28T07:56:02Z",
+      "url": "https://www.espn.com/video/clip/_/id/49204819/dalot-admits-portugal-fell-short-group-stages-ahead-croatia-clash",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_202606/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_202606.jpg",
+      "byline": null,
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Colombia",
+        "Portugal",
+        "Croatia"
+      ],
+      "players": [
+        "Diogo Dalot"
+      ],
+      "score": 124
     },
     {
       "id": "49196824",
       "headline": "World Cup 2026 Power Rankings after group stage: Who's No. 1?",
       "description": "And then there were 32. We're done with the group stage, but what do our writers and experts think the field of favorites looks like as we enter the win-or-go-home phase?",
-      "published": "2026-06-28T14:49:31Z",
+      "published": "2026-06-28T15:34:13Z",
       "url": "https://www.espn.com/soccer/story/_/id/49196824/fifa-world-cup-power-rankings-spain-brazil-germany-usa-mexico-england-argentina-france",
       "image": "https://a.espncdn.com/photo/2026/0618/soc_wc_power-rankings_16x9.jpg",
       "byline": "James Tyler",
@@ -157,23 +591,44 @@
         "Belgium"
       ],
       "players": [],
-      "score": 150
+      "score": 123
     },
     {
-      "id": "49027532",
-      "headline": "World Cup VAR review: Colombia goal ruled out for 'toenail' offside",
-      "description": "For the tournament, we are taking a look at the major incidents to examine and explain the process in terms of both VAR protocol and the laws of the game.",
-      "published": "2026-06-28T12:34:05Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49027532/world-cup-2026-var-review-red-card-penalty-handball-goal-line-technology",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680918_590x332_16-9.jpg",
-      "byline": "Andy Davies",
-      "kind": "injury",
-      "kindLabel": "Injury",
+      "id": "49204902",
+      "headline": "Argentina not underestimating 'tough opponent' Cape Verde in World Cup round of 32",
+      "description": "Argentina head coach Lionel Scaloni has warned his players not to underestimate round of 32 opponent Cape Verde.",
+      "published": "2026-06-28T08:46:19Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49204902/argentina-not-underestimating-tough-opponent-cape-verde-world-cup-round-32",
+      "image": "https://a.espncdn.com/photo/2026/0628/r1680924_1296x729_16-9.jpg",
+      "byline": "Lizzy Becherano",
+      "kind": "preview",
+      "kindLabel": "Match preview",
       "teams": [
-        "Colombia"
+        "Argentina",
+        "Cabo Verde"
       ],
       "players": [],
-      "score": 140
+      "score": 122
+    },
+    {
+      "id": "48972466",
+      "headline": "World Cup 2026: Can Lionel Messi and Cristiano Ronaldo finally meet on biggest stage?",
+      "description": "In a sixth World Cup for Lionel Messi and Cristiano Ronaldo, could the pair finally face each other in the tournament?",
+      "published": "2026-06-28T06:41:52Z",
+      "url": "https://www.espn.com/soccer/story/_/id/48972466/world-cup-2026-lionel-messi-cristiano-ronaldo-showdown-knockouts-argentina-portugal",
+      "image": "https://a.espncdn.com/photo/2026/0605/r1668521_608x342_16-9.png",
+      "byline": "Anirudh Menon",
+      "kind": "preview",
+      "kindLabel": "Match preview",
+      "teams": [
+        "Argentina",
+        "Portugal"
+      ],
+      "players": [
+        "Lionel Messi",
+        "Cristiano Ronaldo"
+      ],
+      "score": 122
     },
     {
       "id": "49178425",
@@ -203,234 +658,24 @@
         "Korea Republic"
       ],
       "players": [],
-      "score": 139
+      "score": 121
     },
     {
-      "id": "49167690",
-      "headline": "Judging overreactions to World Cup bracket: How far could USMNT go?",
-      "description": "The bracket for the World Cup knockout rounds is now set! How far will the U.S. go, and who should be the favorites to win it all? Let's judge some overreactions!",
-      "published": "2026-06-28T14:24:06Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49167690/judging-overreactions-world-cup-bracket-knockout-rounds-usmnt-argentina-france-cape-verde",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680795_1296x729_16-9.jpg",
-      "byline": "Nicholas Som",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "USA",
-        "Argentina",
-        "Mexico"
-      ],
-      "players": [],
-      "score": 138
-    },
-    {
-      "id": "49204988",
-      "headline": "Thomas Tuchel admits England World Cup worry amid 'tight race' for injured stars",
-      "description": "Thomas Tuchel has admitted he is worried about England's right-back situation heading into the World Cup knockout phase.",
-      "published": "2026-06-28T09:25:08Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49204988/thomas-tuchel-admits-england-world-cup-worry-amid-tight-race-injured-stars",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680925_1296x729_16-9.jpg",
-      "byline": "PA",
-      "kind": "injury",
-      "kindLabel": "Injury",
-      "teams": [
-        "England"
-      ],
-      "players": [
-        "Jarell Quansah"
-      ],
-      "score": 138
-    },
-    {
-      "id": "49205245",
-      "headline": "Tuchel concerned by England's right-back injury crisis",
-      "description": "Tuchel concerned by England's right-back injury crisis",
-      "published": "2026-06-28T09:23:55Z",
-      "url": "https://www.espn.com/video/clip/_/id/49205245/tuchel-concerned-england-right-back-injury-crisis",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Presser_Tuchel_concerned_by_Englands_rightback_injury_crisis_20260628_GLOBAL_FIFA_WORL/dm_260628_COM_SOC_Presser_Tuchel_concerned_by_Englands_rightback_injury_crisis_20260628_GLOBAL_FIFA_WORL.jpg",
+      "id": "49206849",
+      "headline": "How much more can Brazil offer in the knockouts?",
+      "description": "How much more can Brazil offer in the knockouts?",
+      "published": "2026-06-28T14:05:39Z",
+      "url": "https://www.espn.com/video/clip/_/id/49206849/how-much-more-brazil-offer-knockouts",
+      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Analysis_How_much_more_can_Brazil_offer_in_the_knockouts_20260628_GLOBAL_FIFA_WORLD_CUP/dm_260628_COM_SOC_Analysis_How_much_more_can_Brazil_offer_in_the_knockouts_20260628_GLOBAL_FIFA_WORLD_CUP.jpg",
       "byline": null,
-      "kind": "injury",
-      "kindLabel": "Injury",
-      "teams": [
-        "England",
-        "Panama"
-      ],
-      "players": [
-        "Jarell Quansah"
-      ],
-      "score": 138
-    },
-    {
-      "id": "49204325",
-      "headline": "World Cup Daily LIVE: Iran despair after late Austria drama; South Africa face Canada as round of 32 begins",
-      "description": "The knockout stage has officially begun! The round of 32 at the 2026 World Cup begins with our first match being South Africa against co-hosts Canada in Inglewood, California.",
-      "published": "2026-06-28T12:16:18Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49204325/world-cup-daily-live-iran-despair-late-austria-drama-south-africa-face-canada-round-32-begins",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680917_1296x729_16-9.jpg",
-      "byline": "ESPN",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "South Africa",
-        "Canada",
-        "IR Iran",
-        "Austria"
-      ],
-      "players": [],
-      "score": 135
-    },
-    {
-      "id": "49117037",
-      "headline": "2026 World Cup Golden Boot tracker: Will Messi, Mbappe, or other score most goals?",
-      "description": "We're into the round of 32 at the 2026 FIFA World Cup, and the race for the Golden Boot -- given to the tournament's top goal scorer -- is red-hot.",
-      "published": "2026-06-28T10:06:31Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49117037/lionel-messi-erling-haaland-kylian-mbappe-harry-kane-folarin-balogun-world-cup-golden-boot-top-scorer",
-      "image": "https://a.espncdn.com/photo/2026/0619/r1676221_1296x729_16-9.jpg",
-      "byline": "Connor O'Halloran",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "England",
-        "Argentina",
-        "France",
-        "Norway",
-        "USA"
-      ],
-      "players": [
-        "Harry Kane",
-        "Lionel Messi",
-        "Kylian Mbappé",
-        "Erling Haaland",
-        "Folarin Balogun"
-      ],
-      "score": 134
-    },
-    {
-      "id": "49204852",
-      "headline": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
-      "description": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
-      "published": "2026-06-28T08:20:54Z",
-      "url": "https://www.espn.com/video/clip/_/id/49204852/dalot-admits-portugal-fell-short-group-stages-ahead-croatia-clash",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_2026/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_2026.jpg",
-      "byline": null,
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Colombia",
-        "Portugal",
-        "Croatia"
-      ],
-      "players": [
-        "Diogo Dalot"
-      ],
-      "score": 132
-    },
-    {
-      "id": "49205347",
-      "headline": "This World Cup's United States team the best in country's history - Jürgen Klopp",
-      "description": "Jürgen Klopp has told ESPN he believes Mauricio Pochettino's United States are the best version of the national team in the country's history.",
-      "published": "2026-06-28T11:00:05Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49205347/this-world-cup-united-states-team-best-country-history-jurgen-klopp",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680931_1296x729_16-9.jpg",
-      "byline": "ESPN",
-      "kind": "celebration",
-      "kindLabel": "Celebration",
-      "teams": [
-        "USA"
-      ],
-      "players": [],
-      "score": 131
-    },
-    {
-      "id": "49204819",
-      "headline": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
-      "description": "Dalot admits Portugal 'fell short' in group stages ahead of Croatia clash",
-      "published": "2026-06-28T07:56:02Z",
-      "url": "https://www.espn.com/video/clip/_/id/49204819/dalot-admits-portugal-fell-short-group-stages-ahead-croatia-clash",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_202606/dm_260628_COM_SOC_Presser_Dalot_admits_Portugal_fell_short_in_group_stages_ahead_of_Croatia_clash_202606.jpg",
-      "byline": null,
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Colombia",
-        "Portugal",
-        "Croatia"
-      ],
-      "players": [
-        "Diogo Dalot"
-      ],
-      "score": 131
-    },
-    {
-      "id": "49204123",
-      "headline": "Nine out of ten African teams secure World Cup round of 32 berth",
-      "description": "Africa completed a historic World Cup group stage on Sunday, sending nine out of 10 teams to the round of 32 after Congo and Algeria secured knockout berths.",
-      "published": "2026-06-28T05:59:34Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49204123/nine-ten-african-teams-secure-world-cup-round-32-berth",
-      "image": "https://a.espncdn.com/photo/2026/0625/r1679174_1296x729_16-9.jpg",
-      "byline": "Associated Press",
-      "kind": "injury",
-      "kindLabel": "Injury",
-      "teams": [
-        "Algeria"
-      ],
-      "players": [],
-      "score": 130
-    },
-    {
-      "id": "49204902",
-      "headline": "Argentina not underestimating 'tough opponent' Cape Verde in World Cup round of 32",
-      "description": "Argentina head coach Lionel Scaloni has warned his players not to underestimate round of 32 opponent Cape Verde.",
-      "published": "2026-06-28T08:46:19Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49204902/argentina-not-underestimating-tough-opponent-cape-verde-world-cup-round-32",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680924_1296x729_16-9.jpg",
-      "byline": "Lizzy Becherano",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Argentina",
-        "Cabo Verde"
-      ],
-      "players": [],
-      "score": 129
-    },
-    {
-      "id": "48972466",
-      "headline": "World Cup 2026: Can Lionel Messi and Cristiano Ronaldo finally meet on biggest stage?",
-      "description": "In a sixth World Cup for Lionel Messi and Cristiano Ronaldo, could the pair finally face each other in the tournament?",
-      "published": "2026-06-28T06:41:52Z",
-      "url": "https://www.espn.com/soccer/story/_/id/48972466/world-cup-2026-lionel-messi-cristiano-ronaldo-showdown-knockouts-argentina-portugal",
-      "image": "https://a.espncdn.com/photo/2026/0605/r1668521_608x342_16-9.png",
-      "byline": "Anirudh Menon",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Argentina",
-        "Portugal"
-      ],
-      "players": [
-        "Lionel Messi",
-        "Cristiano Ronaldo"
-      ],
-      "score": 129
-    },
-    {
-      "id": "48939282",
-      "headline": "2026 FIFA World Cup match schedule: Fixtures, results, features",
-      "description": "Check out all the fixtures, features and results for the 2026 FIFA World Cup in the United States, Mexico and Canada.",
-      "published": "2026-06-28T14:04:36Z",
-      "url": "https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket",
-      "image": "https://a.espncdn.com/photo/2025/1204/r1584809_2_1296x729_16-9.jpg",
-      "byline": "ESPN",
       "kind": "news",
       "kindLabel": "News",
       "teams": [
-        "Mexico",
-        "Canada",
-        "USA"
+        "Brazil",
+        "Japan"
       ],
       "players": [],
-      "score": 128
+      "score": 121
     },
     {
       "id": "49205822",
@@ -446,7 +691,7 @@
         "Ghana"
       ],
       "players": [],
-      "score": 127
+      "score": 120
     },
     {
       "id": "49205641",
@@ -465,7 +710,7 @@
       "players": [
         "Riyad Mahrez"
       ],
-      "score": 127
+      "score": 120
     },
     {
       "id": "49200673",
@@ -481,7 +726,7 @@
         "Scotland"
       ],
       "players": [],
-      "score": 126
+      "score": 118
     },
     {
       "id": "49205373",
@@ -501,7 +746,7 @@
         "Giovani Lo Celso",
         "Lionel Messi"
       ],
-      "score": 125
+      "score": 118
     },
     {
       "id": "49205354",
@@ -520,7 +765,21 @@
       "players": [
         "David Alaba"
       ],
-      "score": 125
+      "score": 118
+    },
+    {
+      "id": "49204950",
+      "headline": "Reranking Europe's top clubs by player performance at World Cup",
+      "description": "Bayern Munich, Real Madrid and PSG players have impressed, but which clubs around the world have had the best players in the tournament after the group stage?",
+      "published": "2026-06-28T13:45:17Z",
+      "url": "https://www.espn.com/soccer/story/_/id/49204950/reranking-europe-top-clubs-player-performance-world-cup-bayern-real-madrid-liverpool",
+      "image": "https://a.espncdn.com/photo/2026/0626/r1680177_1296x729_16-9.jpg",
+      "byline": "Sam Tighe",
+      "kind": "news",
+      "kindLabel": "News",
+      "teams": [],
+      "players": [],
+      "score": 117
     },
     {
       "id": "49205333",
@@ -539,70 +798,7 @@
       "players": [
         "Yoane Wissa"
       ],
-      "score": 125
-    },
-    {
-      "id": "49031236",
-      "headline": "2026 World Cup: How teams advanced to the knockout rounds",
-      "description": "Who can secure qualification before the group stage ends, and whose World Cup dreams could be shattered? Here's what you need to know.",
-      "published": "2026-06-28T05:56:16Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49031236/2026-world-cup-group-stage-clinching-scenarios-knockout-rounds-elimination",
-      "image": "https://a.espncdn.com/photo/2026/0627/r1680216_1296x729_16-9.jpg",
-      "byline": "Nicholas Som",
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Algeria",
-        "Argentina",
-        "Australia",
-        "Austria",
-        "Belgium",
-        "Brazil",
-        "Canada",
-        "Colombia",
-        "Croatia",
-        "Ecuador",
-        "England",
-        "Egypt",
-        "France",
-        "Germany",
-        "Ghana",
-        "IR Iran",
-        "Côte d'Ivoire",
-        "Japan",
-        "Morocco",
-        "Netherlands",
-        "New Zealand",
-        "Panama",
-        "Paraguay",
-        "Portugal",
-        "Qatar",
-        "Saudi Arabia",
-        "Senegal",
-        "Korea Republic",
-        "Spain",
-        "Switzerland",
-        "Tunisia",
-        "USA",
-        "Uruguay",
-        "Uzbekistan"
-      ],
-      "players": [],
-      "score": 125
-    },
-    {
-      "id": "49204950",
-      "headline": "Reranking Europe's top clubs by player performance at World Cup",
-      "description": "Bayern Munich, Real Madrid and PSG players have impressed, but which clubs around the world have had the best players in the tournament after the group stage?",
-      "published": "2026-06-28T13:45:17Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49204950/reranking-europe-top-clubs-player-performance-world-cup-bayern-real-madrid-liverpool",
-      "image": "https://a.espncdn.com/photo/2026/0626/r1680177_1296x729_16-9.jpg",
-      "byline": "Sam Tighe",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [],
-      "players": [],
-      "score": 124
+      "score": 117
     },
     {
       "id": "49205036",
@@ -621,25 +817,7 @@
       "players": [
         "Diogo Jota"
       ],
-      "score": 124
-    },
-    {
-      "id": "49085479",
-      "headline": "Lionel Messi at the World Cup: History, results, stats",
-      "description": "Here's how Lionel Messi has performed for Argentina at the World Cup throughout his career.",
-      "published": "2026-06-28T04:30:18Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49085479/lionel-messi-world-cup-history-results-stats",
-      "image": "https://a.espncdn.com/photo/2026/0616/r1674372_608x342_16-9.jpg",
-      "byline": "Keith Jenkins",
-      "kind": "celebration",
-      "kindLabel": "Celebration",
-      "teams": [
-        "Argentina"
-      ],
-      "players": [
-        "Lionel Messi"
-      ],
-      "score": 124
+      "score": 116
     },
     {
       "id": "49204929",
@@ -658,23 +836,7 @@
       "players": [
         "Luis Díaz"
       ],
-      "score": 123
-    },
-    {
-      "id": "49203914",
-      "headline": "Croatia in familiar territory after advancing at World Cup",
-      "description": "Rob Dawson breaks down Croatia's road ahead after reaching the Round of 32 at the World Cup.",
-      "published": "2026-06-28T04:37:12Z",
-      "url": "https://www.espn.com/video/clip/_/id/49203914/croatia-familiar-territory-advancing-world-cup",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_CroatiaIA/dm_260628_CroatiaIA.jpg",
-      "byline": null,
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [
-        "Croatia"
-      ],
-      "players": [],
-      "score": 123
+      "score": 116
     },
     {
       "id": "49204487",
@@ -693,7 +855,7 @@
       "players": [
         "Lionel Messi"
       ],
-      "score": 122
+      "score": 115
     },
     {
       "id": "48376236",
@@ -711,7 +873,7 @@
       "players": [
         "Harry Kane"
       ],
-      "score": 121
+      "score": 114
     },
     {
       "id": "49204636",
@@ -731,42 +893,7 @@
         "Nikola Vlasic",
         "Petar Sucic"
       ],
-      "score": 121
-    },
-    {
-      "id": "49084603",
-      "headline": "Argentina at the men's World Cup: All-time results and stats",
-      "description": "Take a look at the Argentina men's national team's performance throughout the tournament's history.",
-      "published": "2026-06-28T04:27:49Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49084603/argentina-men-world-cup-all-results-stats",
-      "image": "https://a.espncdn.com/photo/2026/0616/r1674317_608x342_16-9.jpg",
-      "byline": "Keith Jenkins",
-      "kind": "celebration",
-      "kindLabel": "Celebration",
-      "teams": [
-        "Argentina"
-      ],
-      "players": [],
-      "score": 121
-    },
-    {
-      "id": "49003238",
-      "headline": "Who are the oldest and youngest men to score at the World Cup?",
-      "description": "Pelé is the youngest player to score in World Cup history. Check out which other players made the list of oldest and youngest goal scorers.",
-      "published": "2026-06-28T04:27:07Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49003238/who-oldest-youngest-men-score-world-cup",
-      "image": "https://a.espncdn.com/photo/2026/0609/r1670338_608x342_16-9.jpg",
-      "byline": "ESPN",
-      "kind": "celebration",
-      "kindLabel": "Celebration",
-      "teams": [
-        "Mexico",
-        "Brazil",
-        "England",
-        "Portugal"
-      ],
-      "players": [],
-      "score": 121
+      "score": 114
     },
     {
       "id": "49205016",
@@ -783,21 +910,7 @@
         "Ghana"
       ],
       "players": [],
-      "score": 120
-    },
-    {
-      "id": "49204126",
-      "headline": "Predicting every Round of 32 clash at the World Cup",
-      "description": "Predicting every Round of 32 clash at the World Cup",
-      "published": "2026-06-28T05:15:59Z",
-      "url": "https://www.espn.com/video/clip/_/id/49204126/predicting-every-round-32-clash-world-cup",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Analysis_Predicting_every_Round_of_32_clash_at_the_World_Cup_20260627_GLOBAL_FIFA_WORLD/dm_260628_COM_SOC_Analysis_Predicting_every_Round_of_32_clash_at_the_World_Cup_20260627_GLOBAL_FIFA_WORLD.jpg",
-      "byline": null,
-      "kind": "preview",
-      "kindLabel": "Match preview",
-      "teams": [],
-      "players": [],
-      "score": 120
+      "score": 113
     },
     {
       "id": "49204684",
@@ -814,7 +927,7 @@
         "Croatia"
       ],
       "players": [],
-      "score": 119
+      "score": 112
     },
     {
       "id": "49204761",
@@ -831,7 +944,7 @@
         "Panama"
       ],
       "players": [],
-      "score": 119
+      "score": 112
     },
     {
       "id": "49204659",
@@ -848,7 +961,7 @@
         "Portugal"
       ],
       "players": [],
-      "score": 118
+      "score": 111
     },
     {
       "id": "49196528",
@@ -864,71 +977,7 @@
         "USA"
       ],
       "players": [],
-      "score": 118
-    },
-    {
-      "id": "49203962",
-      "headline": "Why Messi scoring off the bench for Argentina was 'inevitable'",
-      "description": "Why Messi scoring off the bench for Argentina was 'inevitable'",
-      "published": "2026-06-28T04:46:58Z",
-      "url": "https://www.espn.com/video/clip/_/id/49203962/why-messi-scoring-bench-argentina-was-inevitable",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/ss_20260628_003714259_357807243/ss_20260628_003714259_357807243.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Argentina"
-      ],
-      "players": [
-        "Lionel Messi"
-      ],
-      "score": 117
-    },
-    {
-      "id": "49204162",
-      "headline": "Nicol: Scotland fans shouldn't forget what Steve Clarke achieved",
-      "description": "Nicol: Scotland fans shouldn't forget what Steve Clarke achieved",
-      "published": "2026-06-28T05:21:37Z",
-      "url": "https://www.espn.com/video/clip/_/id/49204162/scotland-fans-forget-steve-clarke-achieved",
-      "image": "https://a.espncdn.com/media/motion/2026/0628/dm_260628_COM_SOC_Analysis_Nicol_Scotland_fans_shouldnt_forget_what_Steve_Clarke_achieved_20260627_GLOBA/dm_260628_COM_SOC_Analysis_Nicol_Scotland_fans_shouldnt_forget_what_Steve_Clarke_achieved_20260627_GLOBA.jpg",
-      "byline": null,
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "Scotland"
-      ],
-      "players": [],
-      "score": 115
-    },
-    {
-      "id": "49203483",
-      "headline": "FIFA World Cup 2026 stats: Messi sets another World Cup record; Ronaldo second with 25; Kane's 11 best for England; Modric record 40",
-      "description": "ESPN's By The Numbers brings you best stats from the World Cup action on June 27.",
-      "published": "2026-06-28T05:00:07Z",
-      "url": "https://www.espn.com/soccer/story/_/id/49203483/fifa-world-cup-2026-stats-lionel-messi-sets-another-world-cup-record-cristiano-ronaldo-second-25-harry-kane-11-best-england-luka-modric-record-40",
-      "image": "https://a.espncdn.com/photo/2026/0628/r1680890_1296x729_16-9.jpg",
-      "byline": "Sunaadh Sagar",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [
-        "England"
-      ],
-      "players": [],
-      "score": 115
-    },
-    {
-      "id": "48964271",
-      "headline": "World Cup 2026 referees: Complete list of officials and VAR teams",
-      "description": "Find out who the 170 officials are for the 2026 World Cup and when will we find out who is refereeing which game?",
-      "published": "2026-06-28T07:13:42Z",
-      "url": "https://www.espn.com/soccer/story/_/id/48964271/world-cup-2026-referees-complete-list-officials-var-teams",
-      "image": "https://a.espncdn.com/photo/2022/1224/r1110287_1296x729_16-9.jpg",
-      "byline": "Tom Masters",
-      "kind": "news",
-      "kindLabel": "News",
-      "teams": [],
-      "players": [],
-      "score": 114
+      "score": 111
     }
   ]
 }
