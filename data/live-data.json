@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-07-01T10:56:19.612Z",
+  "updated": "2026-07-01T18:21:51.086Z",
   "results": {
     "A": [
       [
@@ -323,7 +323,8 @@
       "Brazil",
       "France",
       "Norway",
-      "Mexico"
+      "Mexico",
+      "England"
     ],
     "QF": [],
     "SF": [],
@@ -1135,8 +1136,8 @@
       "s": "R32",
       "h": "England",
       "a": "DR Congo",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 1,
       "v": "Mercedes-Benz Stadium (Atlanta, USA)"
     },
     {
@@ -1265,7 +1266,7 @@
       "d": "2026-07-05",
       "t": "18:00 UTC-6",
       "s": "R16",
-      "h": "W79",
+      "h": "Mexico",
       "a": "W80",
       "hg": null,
       "ag": null,
