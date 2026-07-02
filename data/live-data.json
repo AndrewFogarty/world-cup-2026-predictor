@@ -1,6 +1,6 @@
 {
   "source": "openfootball/worldcup.json (2026)",
-  "updated": "2026-07-01T18:21:51.086Z",
+  "updated": "2026-07-02T10:15:59.651Z",
   "results": {
     "A": [
       [
@@ -324,7 +324,8 @@
       "France",
       "Norway",
       "Mexico",
-      "England"
+      "England",
+      "USA"
     ],
     "QF": [],
     "SF": [],
@@ -1147,8 +1148,8 @@
       "s": "R32",
       "h": "USA",
       "a": "Bosnia",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 0,
       "v": "Levi's Stadium (San Francisco Bay Area, USA)"
     },
     {
@@ -1158,8 +1159,8 @@
       "s": "R32",
       "h": "Belgium",
       "a": "Senegal",
-      "hg": null,
-      "ag": null,
+      "hg": 2,
+      "ag": 2,
       "v": "Lumen Field (Seattle, USA)"
     },
     {
@@ -1267,7 +1268,7 @@
       "t": "18:00 UTC-6",
       "s": "R16",
       "h": "Mexico",
-      "a": "W80",
+      "a": "England",
       "hg": null,
       "ag": null,
       "v": "Estadio Azteca (Mexico City, MEX)"
@@ -1288,8 +1289,8 @@
       "d": "2026-07-06",
       "t": "17:00 UTC-7",
       "s": "R16",
-      "h": "W81",
-      "a": "W82",
+      "h": "USA",
+      "a": "Belgium",
       "hg": null,
       "ag": null,
       "v": "Lumen Field (Seattle, USA)"
